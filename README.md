@@ -10,5 +10,5 @@ Following workflows are supported by HDM
 1. Cold Migration : The application data is moved on to the On-Cloud byHDM through a process termed as bulk migration
 
 # HDM Components
-
+![Video](PrimaryIO-NTT-Aug2020-Video.mp4)
 # System Requirements
