@@ -14,3 +14,22 @@ The following steps are required to deploy HDM:
 1. On-premises Deployment (estimated time: 10 minutes)
 1. Cloud Deployment (estimated time: 45-60 minutes)
 1. Perform a Cold Migration (estimated time: dependent on VM size)
+
+# Step 1: Review System Requirements
+
+Refer to the System Requirements in Appendix A of this document. Printing a copy of Appendix A to use as a checklist is recommended.
+
+# Step 2: Download PrimaryIO HDM
+To obtain your license and download link for HDM, visit https://www.primaryio.com/ibm/
+
+ 
+
+You will receive an email with the following:
+
+* A link to download the PrimaryIO HDM software
+* A link to training videos
+* A license key for the software
+ 
+
+Before proceeding with the installation, watch the training videos and use this guide.
+
