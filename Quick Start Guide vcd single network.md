@@ -46,7 +46,7 @@ The following is required to complete the network plan:
 1. Network requirements during on-premises deployment
 1. Network requirements during cloud deployment
 
-# Choose or Create an appropriate network:
+**Choose or Create an appropriate network:**
 
 A simple network configuration where all connectivity to the cloud is available through one network (e.g., hdm_network). Here hdm_network should have access to the following:
 
@@ -58,4 +58,16 @@ A simple network configuration where all connectivity to the cloud is available 
 
 The required connectivity is highlighted in figure 1. For all steps in the deployment that require a VMware network as input, provide the identified or created hdm_network. It will also be necessary to create two networks in the cloud, hdm_routed_network and hdm_internal.
 
+**Failure to create, choose, or configure the networks correctly will cause the installation to fail.**
+
+ 
+
+Figure 1: Network Configuration of the Test Environment
+ 
+
+The remainder of this document will assume you have created a network topology like the one shown in Figure 1, and will refer to the networks by those names. In this configuration, all access has been made possible using single VM network, hdm_network. Four static IPs will need to be provisioned on this network for OVF deployment.
+
+ 
+
+Figure 1: Network Configuration of the Test Environment
 
