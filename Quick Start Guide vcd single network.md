@@ -73,3 +73,22 @@ Figure 1: Network Configuration of the Test Environment
 
 [Image source](https://docs.google.com/drawings/d/1b5R6pmcL_TfTPkdaWITcJj6EyS5SKeA5bb_U743D9Yk/edit)
 ![](https://github.com/CacheboxInc/HDM-documentation/blob/master/Single%20Network%20VCS.svg)
+
+You will need to provision
+
+* 20 static IPs on Premise network
+* At least 50 static-pool IPs on Cloud network
+These will be required throughout the installation process.
+
+ 
+
+**NOTE:**
+
+1. Despite the fact that you will be mapping to a single network, separate IP ranges will need to be provided for each network type.
+1. The subnet range 172.17.0.0/16 is not available for the deployment; it is used internally by HDM microservices.
+1. Please add the vCenter FQDN for the on-premises and cloud vCenters on the on-premises and cloud DNS servers.
+
+ 
+
+Before continuing with the rest of this Quick Start Guide, be sure to print Appendix B – Network Settings and complete the forms. This will help you identify the correct networks to configure and identify all networking details.
+
