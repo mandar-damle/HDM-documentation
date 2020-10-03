@@ -33,3 +33,29 @@ You will receive an email with the following:
 
 Before proceeding with the installation, watch the training videos and use this guide.
 
+
+# Step 3: Network Planning and Mapping
+Network configuration information is required at key points throughout the deployment process. So, develop a network connectivity plan prior to deploying HDM. This section will help guide you through that process. The information captured in this section will be employed later in the installation process. If an IPSec tunnel and cloud configuration have not yet been established, these must be done before moving any further. Follow the steps outlined in Appendix C of this document. Please be aware that this process will add 30 minutes to the estimated time to complete this section.
+
+Once connectivity and cloud configuration are complete, be sure to record all applicable details in Appendix B of this document for easy reference later in the deployment process.
+
+The following is required to complete the network plan:
+
+1. IPSec tunnel, firewall, and cloud network configuration information (See Appendix C)
+1. Network requirements during OVF deployment
+1. Network requirements during on-premises deployment
+1. Network requirements during cloud deployment
+
+# Choose or Create an appropriate network:
+
+A simple network configuration where all connectivity to the cloud is available through one network (e.g., hdm_network). Here hdm_network should have access to the following:
+
+* On-premises vCenter
+* Cloud vCenter via WAN link
+* On-premises ESXi
+* Cloud ESXi
+* HDM Appliance
+
+The required connectivity is highlighted in figure 1. For all steps in the deployment that require a VMware network as input, provide the identified or created hdm_network. It will also be necessary to create two networks in the cloud, hdm_routed_network and hdm_internal.
+
+
