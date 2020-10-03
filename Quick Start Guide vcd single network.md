@@ -71,3 +71,5 @@ The remainder of this document will assume you have created a network topology l
 
 Figure 1: Network Configuration of the Test Environment
 
+[Image source](https://docs.google.com/drawings/d/1b5R6pmcL_TfTPkdaWITcJj6EyS5SKeA5bb_U743D9Yk/edit)
+![](Single Network VCS.svg)
