@@ -325,8 +325,27 @@ Single version of ESX throughout the vCenter cluster	|
 ESX in connected state in the vCenter	|
 ESX able to communicate with vCenter	|
 Clusters have ESX 6.5U2+ and 6.7|
+vCenter Web Client: 6.5 or 6.7 (Use of HTML client is recommended with Chrome v.75 +) |
+Datastore should be VMFS, NFS, or NFSv3	|
+E1000E and VMXNet3 network adapters should be available in the on-premises vCenter	|
+DRS is enabled and HA should be enabled on the vCenter cluster|
+**Network Environment** |	
+Network speed: at least 1 Gbps (10 Gbps link is preferred)	|
+VM Network has connectivity to the cloud endpoint	|
+VM Network has access to ESXi|
+**Hardware Requirements** |
+On-premises	Total resources required for HDM 11 vCPU, 16 GB RAM, 336 GB disk |
+1 Appliance (4 vCPU, 8 GB RAM, 144 GB disk),|
+1 PremMgr (3 vCPU, 4 GB RAM, 32 GB disk),1 ESXMgr (4 vCPU, 4GB RAM, 160 GB disk) |
+Cloud	Total resources required for HDM equivalent to 10 vCPU, 26 GB RAM, 64 GB disk, 512 GB Cache|
+1 CloudMgr (4 vCPU, 6 GB RAM, 32 GB disk), |
+1 CloudCache (6 vCPU, 20 GB RAM, 32 GB disk, 512 GB cache) |
+**Cloud Requirements** |
+Network connectivity between on-premises and cloud environments|
+* Network Link: at least 1 Gbps|
+* Network Round Trip Time Latencies: less than 30 ms|
 
-
+Related document: For hardware and system requirements, refer to the VMware Hardware Compatibility List (HCL).
 # Appendix B - Network Settings
 ## Network requirements during OVF deployment
 * Provision four IPs on hdm_network
@@ -335,11 +354,96 @@ Clusters have ESX 6.5U2+ and 6.7|
 Network | IP | Netmask |  Gateway
 --------|----|---------|------
 
-VM Network | *Single IP* | |
-(Management Network)|||
----|---|--|
+VM Network (Management Network)| *Single IP* | |
 HDM_Internal_Network | *Single IP* ||
----|---|--|
 Uplink_WAN_Network | *Single IP* ||
----|---|--|
 ESXi_Network | *Single IP* ||
+
+Common settings for the OVF deployment
+
+Default gateway network	| *This should be the single configured network on-premises which in this document is “hdm_network”*
+NTP Server	|
+Network DNS	|
+Default gateway	| *Provide default gateway for the “hdm_network”*
+Network DNS Search Path	|
+
+## Network requirements during on-premises deployment
+
+Common settings for the gateway, subnet, DNS etc., which will be common across the on-premises networks.
+
+Subnet mask	| *255.255.0.0*
+Gateway	| *192.168.10.1*	
+Domain	| *domain.lan*	
+DNS	| *192.168.5.20, 192.168.5.21*	
+NTP	| *192.168.5.22*	
+
+## HDM_Internal_Network
+
+Provision six IPs on hdm_network. complete the table below for reference throughout deployment.
+
+	|**Example**	| **Fill value here**
+IP range	| *192.168.10.100-192.168.10.120, 192.168.10.130	(2 IPs required from “hdm_network” )*
+
+## Uplink_WAN_Network
+
+	|**Example**	| **Fill value here**
+IP range	| *192.168.10.100-192.168.10.120, 192.168.10.130	(2 IPs required from “hdm_network” )*
+
+## ESXi_Network
+	|**Example**	| **Fill value here**
+IP range	| *192.168.10.100-192.168.10.120, 192.168.10.130	(2 IPs required from “hdm_network” )*
+
+## Network requirements during cloud deployment
+The following cloud credentials are required to deploy to the cloud.
+
+vCloud Director FQDN	|xyzpqr25.vmware-solutions.cloud.ibm.com
+Organization name	|
+Username	|
+Password	|
+
+Similar to the previous two deployment stages, provision IPs and identify the correct networks to satisfy the chosen connectivity requirements. The networks to be configured are HDM Internal network and WAN network configuration from the cloud hdm_wan_network. Only the IP Range is different between the two networks; all other parameters remain the same.
+
+**HDM Internal network**
+
+
+|**Example**	|**Fill value here**
+IP range|	192.168.10.100-192.168.10.120, 192.168.10.130	(20 IPs from HDM “hdm_internal)|
+Subnet mask|	255.255.0.0	|
+Gateway	|192.168.10.1	|
+Domain	|domain.lan|	
+DNS	|192.168.5.20, 192.168.5.21	|
+NTP	|192.168.5.22	|
+
+**WAN network configuration**
+IP range|	192.168.10.100-192.168.10.120, 192.168.10.130	(20 IPs from HDM “hdm_wan_network")|
+Subnet mask|	255.255.0.0	|
+Gateway	|192.168.10.1	|
+Domain	|domain.lan|	
+DNS	|192.168.5.20, 192.168.5.21	|
+NTP	|192.168.5.22	|
+
+# Appendix C - IPSec Configuration
+
+Requirements to deploy HDM:
+
+1. IPSec connectivity between on-premises and the vCD endpoint
+1. Firewall rules configured to enable required traffic
+1. Network configured correctly on the cloud side
+ 
+Each of the above steps are discussed in detail in the HDM 2.1 – Org VDC System and Network Configuration.
+
+ 
+
+Be sure to configure the cloud network as shown in the diagram in Step 3: Network Planning and Mapping.
+
+**Firewall configuration in the cloud**
+
+**NOTE:** The following firewall configuration is recommended for all on-premises and cloud endpoints:
+
+* Source: source subnet
+* Destination: destination subnet
+* Service: any
+
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/images/firewall.png)
+
+
