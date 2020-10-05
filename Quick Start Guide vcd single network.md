@@ -353,7 +353,6 @@ Related document: For hardware and system requirements, refer to the VMware Hard
 
 Network | IP | Netmask |  Gateway
 --------|----|---------|------
-
 VM Network (Management Network)| *Single IP* | |
 HDM_Internal_Network | *Single IP* ||
 Uplink_WAN_Network | *Single IP* ||
@@ -361,10 +360,11 @@ ESXi_Network | *Single IP* ||
 
 Common settings for the OVF deployment
 
-Default gateway network	| *This should be the single configured network on-premises which in this document is “hdm_network”*
-NTP Server	|
-Network DNS	|
-Default gateway	| *Provide default gateway for the “hdm_network”*
+Default gateway network|*This should be the single configured network on-premises which in this document is “hdm_network”*
+-----------------------|-----------------------
+NTP Server|
+Network DNS|
+Default gateway|*Provide default gateway for the “hdm_network”*
 Network DNS Search Path	|
 
 ## Network requirements during on-premises deployment
@@ -372,6 +372,7 @@ Network DNS Search Path	|
 Common settings for the gateway, subnet, DNS etc., which will be common across the on-premises networks.
 
 Subnet mask	| *255.255.0.0*
+-|-
 Gateway	| *192.168.10.1*	
 Domain	| *domain.lan*	
 DNS	| *192.168.5.20, 192.168.5.21*	
@@ -381,22 +382,26 @@ NTP	| *192.168.5.22*
 
 Provision six IPs on hdm_network. complete the table below for reference throughout deployment.
 
-	|**Example**	| **Fill value here**
+Entry |**Example**	|**Fill value here**
+-|-|-
 IP range	| *192.168.10.100-192.168.10.120, 192.168.10.130	(2 IPs required from “hdm_network” )*
 
 ## Uplink_WAN_Network
 
-	|**Example**	| **Fill value here**
+Entry |**Example**	|**Fill value here**
+-|-|-
 IP range	| *192.168.10.100-192.168.10.120, 192.168.10.130	(2 IPs required from “hdm_network” )*
 
 ## ESXi_Network
-	|**Example**	| **Fill value here**
+Entry |**Example**	|**Fill value here**
+-|-|-
 IP range	| *192.168.10.100-192.168.10.120, 192.168.10.130	(2 IPs required from “hdm_network” )*
 
 ## Network requirements during cloud deployment
 The following cloud credentials are required to deploy to the cloud.
 
 vCloud Director FQDN	|xyzpqr25.vmware-solutions.cloud.ibm.com
+-|-
 Organization name	|
 Username	|
 Password	|
@@ -406,7 +411,8 @@ Similar to the previous two deployment stages, provision IPs and identify the co
 **HDM Internal network**
 
 
-|**Example**	|**Fill value here**
+Entry |**Example**	|**Fill value here**
+-|-|-
 IP range|	192.168.10.100-192.168.10.120, 192.168.10.130	(20 IPs from HDM “hdm_internal)|
 Subnet mask|	255.255.0.0	|
 Gateway	|192.168.10.1	|
@@ -415,7 +421,9 @@ DNS	|192.168.5.20, 192.168.5.21	|
 NTP	|192.168.5.22	|
 
 **WAN network configuration**
-IP range|	192.168.10.100-192.168.10.120, 192.168.10.130	(20 IPs from HDM “hdm_wan_network")|
+
+IP range|192.168.10.100-192.168.10.120, 192.168.10.130	(20 IPs from HDM “hdm_wan_network")|
+-|-|-
 Subnet mask|	255.255.0.0	|
 Gateway	|192.168.10.1	|
 Domain	|domain.lan|	
