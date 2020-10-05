@@ -90,5 +90,256 @@ These will be required throughout the installation process.
 
  
 
-Before continuing with the rest of this Quick Start Guide, be sure to print Appendix B – Network Settings and complete the forms. This will help you identify the correct networks to configure and identify all networking details.
+Before continuing with the rest of this Quick Start Guide, be sure to print [Appendix B – Network Settings]() and complete the forms. This will help you identify the correct networks to configure and identify all networking details.
 
+# Step 4: Deploy the HDM Appliance
+
+* Make sure you have at least 10GB free space to download the appliance
+* Unzip the file 1.zip from the download link
+* Deploy the appliance using the vCenter UI
+* Perform the step as directed by the UI.
+* Select hdm_network as the destination for all networks.
+* Please refer to the “Network Configuration for the Appliance” section in the HDM Installation Guide for details on the network configuration.
+
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/images/OVF-deploy.png)
+
+* Complete the network properties as captured in Appendix B – Network Settings
+* Be sure to enter “Default Gateway” the IP address of the default gateway of the network.
+* Power the appliance on after deploying it
+
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/images/OVF-deploy.png)
+
+# Step 5: Validate the Network Configuration
+
+* All ESXi servers in vCenter should be connected
+
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/images/Validate-network-1.png)
+
+* The ESXi server must be able to communicate with vCenter. Test this using the ping command from the ESXi server to the vCenter FQDN (or IP)
+
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/images/Validate-network-2.png)
+
+* Check to ensure the appliance is powered on
+ssh to the HDM appliance that was deployed in step 4. Use the IP given on the “VM Network” (Management Network)
+* Use the following credentials:
+  * UID: root
+  * Password: admin@123
+* Use this session to validate connectivity
+
+**Use the following commands to test connectivity between the endpoints:**
+```
+$ curl -k https://<prem_vcenter_fqdn>
+
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN” “http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
+
+:
+
+:
+
+</body>
+
+</html>
+```
+ 
+
+If the system states, curl: (7) Failed to connect to 10.10.48.2 port 443: Connection refused, the connectivity needs to be debugged.
+
+ 
+```
+$ curl -k https://<cloud_vcenter_fqdn>
+
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN” “http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
+
+:
+
+:
+
+</body>
+
+</html>
+ ```
+
+Ping the on-premises ESXi to verify connectivity.
+
+ 
+```
+$ curl -k https://<on_prem_esxi_ip>
+
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN” “http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
+```
+ 
+# Step 6: On-Premises Deployment
+
+## Add on-premises vCenter
+* Locate the IP address of the appliance
+* Enter https://<appliance-ip> in the appliance web interface
+* Login to the appliance web UI using default password: admin@123
+
+After login, select ![](https://github.com/CacheboxInc/HDM-documentation/blob/master/images/vCenter-icon.png)
+
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/images/add-vcenter-01.png)
+
+* Enter the vCenter credentials
+* Select Add
+
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/images/add-vcenter-02.png)
+
+* Register the vCenter plugin by selecting Register
+
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/images/add-vcenter-03.png)
+
+vCenter configuration is now complete. Log into the newly-configured vCenter.
+
+**Note**
+For the plugin to be visible within vCenter, you will need to logout/login to the vCenter at least twice
+ 
+## Configure the License
+
+Navigate to the Licensing page on the HDM vCenter Plugin
+
+* HDM plugin can be accessed directly via the Menu
+* It can take approximately five minutes to load HDM the first time it is accessed
+* On the Licensing tab, select Add License
+* Add the license key received by mail
+
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/images/Licensing-01.png)
+
+## Configure the On-premises vCenter
+
+* Select Administration, then Configuration
+* Choose the cluster where you want to install vCenter
+* Select Install
+
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/images/config-on-prem-01.png)
+
+* For vCD, choose:
+  * Resource: Ultra-Lite
+  * Deployment: Cluster or Standalone
+* Only choose these options (this guide is only tailored to this configuration)
+
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/images/config-on-prem-02.png)
+
+* Complete all steps to begin the deployment
+* Complete the configuration details using the information you recorded in Appendix B – Network Settings
+* For additional details, refer to the “Deploy HDM On-premises” section in the HDM 2.1 Installation Guide
+* This step will take a few minutes to complete. Progress will be shown on the vCenter task bar.
+
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/images/config-on-prem-03.png)
+
+# Step 7: Cloud Deployment
+
+## Cloud Static-Pool allocation
+
+* Allocate static-pool IPs for hdm_internal and hdm_routed_network
+* The procedure is detailed in document “HDM 2.1 Quick Start Guide – VCD – Single Network”
+* Allocated 20 IPs on hdm_internal
+* Allocate 30 IPs on hdm_routed_network
+* Data in is used to assign these static ranges
+
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/images/cloud-static-pool.png)
+
+## Configure Cloud vCenter
+
+* Select Clouds, then Add Cloud
+* The cloud configuration wizard will pop-up automatically
+
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/images/cloud-deploy-01.png)
+
+* Choose vCloud Director
+* Enter vCD credentials
+* Select Add
+* Please note, it will take approximately 5 minutes to configure vCD and move to the next screen
+
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/images/cloud-deploy-02.png)
+
+* Choose vApp to deploy HDM cloud components
+* Choose the highest performance for rapid transfer
+
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/images/cloud-deploy-03.png)
+
+* For Parts 1 and 2, choose Static Pool
+
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/images/cloud-deploy-04.png)
+
+## WAN Routing Configuration
+
+The following WAN routes are required to gain access between the cloud and on-premises environments:
+
+* On-premises WAN route: The route that is set on the on-premises HDM appliance. The routes enable communication from on-premises to cloud HDM appliances.
+  * Cloud WAN subnet: Location of the deployed HDM appliances
+  * On-premises WAN gateway: Enables access to the cloud WAN subnet
+* On-premises WAN route: The route that is set on the HDM appliance in the cloud. The routes enable communication from the cloud to on-premises HDM appliances.
+  * On-premises WAN subnet: Location of the deployed HDM appliances
+  * Cloud WAN gateway: Enables access to on-premises WAN subnet
+ 
+
+* Complete with the correct routes for the chosen configuration
+
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/images/cloud-deploy-05.png)
+
+* Use the configuration information recorded in Appendix B
+* Map on-premises to the cloud network to enable application connectivity
+* Depending on the chosen configuration and uplink speed, this step may require up to an hour to complete
+
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/images/cloud-deploy-06.png)
+
+* To ensure the deployment has been successful, select HDM from the Menu, followed by the Administration, HDM Health, and Component Health tabs
+* Check the status. If it is green, it is ready to begin migration
+
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/images/cloud-deploy-07.png)
+
+# Step 8: Perform a Cold Migration
+
+During cold migration, the VM being migrated is powered off. After the migration has been completed on the cloud, the VM can be powered back on.
+
+
+**NOTES:**
+
+1. Migrations will be successful for VMs where network and disk interfaces are accessible to HDM via VMware APIs.
+1. If network or disk interfaces are added dynamically, the virtual machine will need to be powered down to allow the newly added network and disk interface information to become available to HDM via VMware APIs.
+1. Before migration is triggered, ensure that the health of the HDM components is green.
+
+* Right-click on the VM
+* Select Migrate
+* The migration wizard will pop-up automatically
+
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/images/Migrate-1.png)
+
+* Complete all steps
+
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/images/Migrate-2.png)
+
+* The migration status will be displayed in the wizard, as well as in vCenter tasks
+* Following successful migration, the VM will be ready for use in the cloud
+* To migrate multiple VMs and the HDM dashboard, please refer to the HDM 2.1 Admin Guide
+
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/images/Migrate-3.png)
+
+# Appendix A - System Requirements
+
+**Requirements** | **Available Y/N**
+--|--
+On-premises Requirements	|
+VMWare Environment	|
+Single version of ESX throughout the vCenter cluster	|
+ESX in connected state in the vCenter	|
+ESX able to communicate with vCenter	|
+Clusters have ESX 6.5U2+ and 6.7|
+
+
+# Appendix B - Network Settings
+## Network requirements during OVF deployment
+* Provision four IPs on hdm_network
+* Use this during OVF deployment
+
+Network | IP | Netmask |  Gateway
+--------|----|---------|------
+
+VM Network | *Single IP* | |
+(Management Network)|||
+---|---|--|
+HDM_Internal_Network | *Single IP* ||
+---|---|--|
+Uplink_WAN_Network | *Single IP* ||
+---|---|--|
+ESXi_Network | *Single IP* ||
