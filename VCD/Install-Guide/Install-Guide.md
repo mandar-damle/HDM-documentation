@@ -264,7 +264,7 @@ Pre-requisites
 1. Ensure that the HDM appliance is powered on and valid vCenter administrator credentials are available.
 
 Steps
-1. Log into the HDM Appliance by accessing https://<appliance ip> in a supported web browser and enter the administrator credentials. The default administrator username and password are ‘administrator’ and ‘admin@123’, respectively. The default password should be changed immediately after the first login.
+1. Log into the HDM Appliance by accessing https://<appliance ip> in a supported web browser and enter the administrator credentials. The default administrator username and password are ‘administrator’ and 2Hdm$aK!N@h! respectively. The default password should be changed immediately after the first login.
 1. Select vCenters from the top pane.
 1. Select Add vCenter at the top right (figure 9).
 Figure 9: Adding vCenter to the HDM Appliance
