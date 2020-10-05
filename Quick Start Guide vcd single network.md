@@ -221,6 +221,7 @@ Navigate to the Licensing page on the HDM vCenter Plugin
 
 * Complete all steps to begin the deployment
 * Complete the configuration details using the information you recorded in Appendix B – Network Settings
+* If there are any errors in the network configuration, please resolve
 * For additional details, refer to the “Deploy HDM On-premises” section in the HDM 2.1 Installation Guide
 * This step will take a few minutes to complete. Progress will be shown on the vCenter task bar.
 
@@ -265,13 +266,13 @@ Navigate to the Licensing page on the HDM vCenter Plugin
 
 The following WAN routes are required to gain access between the cloud and on-premises environments:
 
-* On-premises WAN route: The route that is set on the on-premises HDM appliance. The routes enable communication from on-premises to cloud HDM appliances.
-  * Cloud WAN subnet: Location of the deployed HDM appliances
-  * On-premises WAN gateway: Enables access to the cloud WAN subnet
-* On-premises WAN route: The route that is set on the HDM appliance in the cloud. The routes enable communication from the cloud to on-premises HDM appliances.
-  * On-premises WAN subnet: Location of the deployed HDM appliances
-  * Cloud WAN gateway: Enables access to on-premises WAN subnet
- 
+* Onprem WAN network details: The route that is set on the on-premises HDM appliance. The routes enable communication from on-premises to cloud HDM appliances.
+  * Onprem WAN subnet(s): Location of the deployed HDM appliances
+  * Onprem WAN gateway: Enables access to the cloud WAN subnet
+* Oncloud WAN network details: The route that is set on the HDM appliance in the cloud. The routes enable communication from the cloud to on-premises HDM appliances.
+  * Oncloud WAN subnet(s): Location of the deployed HDM appliances
+  * Oncloud WAN gateway: Enables access to on-premises WAN subnet
+
 
 * Complete with the correct routes for the chosen configuration
 
@@ -279,6 +280,7 @@ The following WAN routes are required to gain access between the cloud and on-pr
 
 * Use the configuration information recorded in Appendix B
 * Map on-premises to the cloud network to enable application connectivity
+* If there are any errors in the network configuration, please resolve
 * Depending on the chosen configuration and uplink speed, this step may require up to an hour to complete
 
 ![](https://github.com/CacheboxInc/HDM-documentation/blob/master/images/cloud-deploy-06.png)
