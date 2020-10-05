@@ -393,3 +393,5 @@ Guest VM boot may fail due to reasons such as VMware tools not starting early en
 
 **NOTE:** Multiple retries can delay the boot. In these cases, the user may have to wait up to 30 minutes for the migration operation to complete.
 
+# Unresolved Issues
+If PrimaryIO technical support is required, refer to the Install Guide for the details.
