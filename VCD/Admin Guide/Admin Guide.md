@@ -38,7 +38,7 @@ HDM 2.1 consists of microservices that have been packaged as VMs that work toget
 * **Sync Daemon:** Located in both environments to deliver compression, encryption, and de-duplication for data being transferred from on-premises to cloud environments. It also provides a mechanism to pause and resume data transfers in the event of a WAN disconnect.
 
 Figure 1: Location of HDM 2.1 components
-![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin Guide/images/Picture1-1.png)
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin%20Guide/images/Picture1-1.png)
 
 # HDM Deployment
 HDM provides a flexible deployment model to support a wide range of user needs regarding use case, performance, scalability, and security. The detailed steps and options for each deployment method are covered in the HDM 2.1 Install Guide. This document focuses on the usage of HDM to migrate VMs to the cloud.
@@ -88,18 +88,18 @@ Steps
 1. Select HDM followed by Migrate
  
 Figure 2: On-Premises vCenter
-![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin Guide/images/Picture2-1.png)
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin%20Guide/images/Picture2-1.png)
 
 3. This will initiate the Migrate Wizard. Select the desired migration type, then NEXT
 Figure 3: Migration Wizard – Step 2
-![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin Guide/images/Picture3-1.png)
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin%20Guide/images/Picture3-1.png)
 
 4. Review the target environment for the migration to ensure adequate resources are available, then select NEXT
 
  
 
 Figure 4: Migration Wizard – Step 3
-![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin Guide/images/Picture4-1.png)
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin%20Guide/images/Picture4-1.png)
 
 5. Select which VMs you wish to migrate, then NEXT
 
@@ -110,7 +110,7 @@ Leave “Application Dependency” selected
  
 
 Figure 5: Migration Wizard – Step 4
-![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin Guide/images/Picture5-1.png)
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin%20Guide/images/Picture5-1.png)
 
 6. Select the vApp target for the migration and the storage profile to be applied to the VM once the migration is complete, then NEXT
 
@@ -119,14 +119,14 @@ Figure 5: Migration Wizard – Step 4
  
 
 Figure 6: Migration Wizard – Step 5
-![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin Guide/images/Picture6-1.png)
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin%20Guide/images/Picture6-1.png)
 
 7. Select the network where the virtual machine should be placed once the migration is complete, then NEXT
 
  
 
 Figure 7: Migration Wizard – Step 6
-![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin Guide/images/Picture7-1.png)
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin%20Guide/images/Picture7-1.png)
 
 8. Confirm your selections, then select MIGRATE
 
@@ -134,28 +134,28 @@ Figure 7: Migration Wizard – Step 6
 
 Figure 8: Migration Wizard – Step 7
 
-![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin Guide/images/Picture8-1.png)
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin%20Guide/images/Picture8-1.png)
 
 The progress of the migration can be seen either on the migration status page (figure 9), or in the vCenter task page (figure 10). The migrated VM can be seen in a new resource pool HDM_MIGRATE_POOL in the on-premises vCenter and will be in a powered off state (figure 11). All migrations can be monitored in vCenter by selecting Cluster à Monitor à HDM, and then selecting the Migration tab, followed by the In Progress tab (figure 12). Virtual machines that have been migrated to the cloud can be seen in vCenter by selecting Cluster à Monitor à HDM, and then selecting the Migration tab, followed by the Summary tab.
 
  
 
 Figure 9: Migration Wizard – VM Migration Status Page
-![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin Guide/images/Picture9-1.png)
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin%20Guide/images/Picture9-1.png)
 
 Figure 10: vCenter Task Page
-![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin Guide/images/Picture10-1.png)
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin%20Guide/images/Picture10-1.png)
 
 Figure 11: vCenter Resource Pool Page
 
-![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin Guide/images/Picture11-1.png)
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin%20Guide/images/Picture11-1.png)
 
 Figure 12: vCenter HDM Migration Progress Tab
-![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin Guide/images/Picture12-1.png)
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin%20Guide/images/Picture12-1.png)
 
 Figure 13: vCenter HDM Migration Summary Tab
 
-![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin Guide/images/Picture13-1.png)
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin%20Guide/images/Picture13-1.png)
 
 # HDM Disk Controller Support
 There are known limitations with virtual machine disk controller configurations when migrating to vCD. HDM does not support the following migrations:
@@ -178,13 +178,13 @@ When there are no failures, the status of all HDM components are listed as Good 
 
 Figure 14: Healthy Components
 
-![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin Guide/images/Picture14-1.png)
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin%20Guide/images/Picture14-1.png)
 
 Figure 15: Component Troubles
-![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin Guide/images/Picture15-1.png)
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin%20Guide/images/Picture15-1.png)
 
 Figure 16: vCenter on the HDM Plug-in
-![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin Guide/images/Picture16-1.png)
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin%20Guide/images/Picture16-1.png)
 
 ## HDM in a Degraded State
 When system health is degraded, it can be viewed using any of the following tools:
@@ -200,7 +200,7 @@ Access the vCenter dashboard by selecting HDM, followed by the Dashboard tab. It
  
 
 Figure 17: vCenter Dashboard
-![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin Guide/images/Picture17-1.png)
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin%20Guide/images/Picture17-1.png)
 
 
 Appliance Control Panel
@@ -209,25 +209,25 @@ The appliance control panel will update the status of failed components as “Po
  
 
 Figure 18: Appliance Control Panel: Determining Failed Components
-![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin Guide/images/Picture18-1.png)
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin%20Guide/images/Picture18-1.png)
 
 Figure 19: Appliance Control Panel: Details on Failed Components
 
-![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin Guide/images/Picture19-1.png)
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin%20Guide/images/Picture19-1.png)
 
 # vCenter Event Log
 Access the vCenter event log by selecting HDM from the menu, followed by the Administration, HDM Health, and Event Logs tabs (figure 20). All failure events that impact the operation of HDM will be recorded here (NOTE: repair and recovery events will also be shown). In the example in figure 20, the most recent failure is unrecoverable and therefore requires an HDM reset. You can obtain additional details on any failure messages by selecting vCenter from the menu, followed by the Monitor and Events tabs (figure 21).
 
 Figure 20: vCenter Event Log
-![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin Guide/images/Picture20-1.png)
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin%20Guide/images/Picture20-1.png)
 
 Figure 21: Event Log Details
-![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin Guide/images/Picture21-1.png)
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin%20Guide/images/Picture21-1.png)
 
 To isolate the events generated by the HDM, a filter can be applied to the “Event Type ID” on the extreme righthand column. Figure 22 illustrates this by applying the filter, “com.hdm” which limits the view to the events generated by HDM.
 
 Figure 22: Applying Filters
-![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin Guide/images/Picture22-1.png)
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin%20Guide/images/Picture22-1.png)
 
 # Failure Handling in HDM
 HDM handles failures in the following manner:
@@ -286,7 +286,7 @@ After recovery, a message is logged in the vCenter events log:
  
 
 Figure 23: Post-Recovery Message in vCenter Events Log
-![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin Guide/images/Picture23-1.png)
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin%20Guide/images/Picture23-1.png)
 
 ## Failure During Migrations
 If a failure occurs during the migration operation, HDM will move to a degraded state. HDM will repair itself and return to a healthy state. The ongoing migration operation will be paused once the failure is detected and resumed once the repair operation is completed and the system has returned to a healthy state.
@@ -317,7 +317,7 @@ VMs that are migrated back as part of a failure recovery are kept in one of two 
 ## HDM_RECOVERY_SUCCESS
 This resource pool hosts the VMs that have been migrated back as part of failure handling and are likely to be successfully booted using the on-premises vCenter. However, they may have some data loss equivalent to the last RTO/RPO flush cycle (default 20 minutes).
 
-![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin Guide/images/Picture24-1.png)
+![](https://github.com/CacheboxInc/HDM-documentation/blob/master/VCD/Admin%20Guide/images/Picture24-1.png)
 
 ## HDM_RECOVERY_FAILED
 This resource pool hosts the VMs that have been migrated back as part of failure handling but are unlikely to have consistent data. These VMs will be required to restore their data from the migration time snapshot.
