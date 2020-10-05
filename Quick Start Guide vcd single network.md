@@ -422,8 +422,9 @@ NTP	|192.168.5.22	|
 
 **WAN network configuration**
 
-IP range|192.168.10.100-192.168.10.120, 192.168.10.130	(20 IPs from HDM “hdm_wan_network")|
+Entry |**Example**	|**Fill value here**
 -|-|-
+IP range|192.168.10.100-192.168.10.120, 192.168.10.130	(20 IPs from HDM “hdm_wan_network")|
 Subnet mask|	255.255.0.0	|
 Gateway	|192.168.10.1	|
 Domain	|domain.lan|	
