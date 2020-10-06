@@ -82,36 +82,35 @@ The following is required to complete the network plan:
 3.  Network requirements during on-premises deployment
 4.  Network requirements during cloud deployment
 
-| **Choose or create an appropriate network:**                             |
-|--------------------------------------------------------------------------|
-|                                                                          |
-| Configuring the correct network for deployment is essential for HDM to   |
-| properly function. Please choose or configure the networks to satisfy    |
-| the required connectivity for your use case.                             |
-|                                                                          |
-| **ESXi\_Network:**                                                       |
-|                                                                          |
-| Network where the ESXi portion of the cluster is reachable.              |
-|                                                                          |
-| **VM\_Network/Management Network:**                                      |
-|                                                                          |
-| The network where the vCenters and management networks are configured.   |
-| You may have the ESXi and vCenters configured over the same network. In  |
-| this case, ESXi\_Network and VM\_Network will be the same.               |
-|                                                                          |
-| **HDM\_Internal\_Network:**                                              |
-|                                                                          |
-| The HDM internal network is used to connect the HDM components for their |
-| private communication.                                                   |
-|                                                                          |
-| **Uplink WAN Network:**                                                  |
-|                                                                          |
-| The network where the on-premises components can communicate with the    |
-| cloud components.                                                        |
-|                                                                          |
-| **Failure to create, choose, or configure the networks correctly will    |
-| cause the installation to fail.**                                        |
-+--------------------------------------------------------------------------+
+**Choose or create an appropriate network:**
+
+Configuring the correct network for deployment is essential for HDM to   
+properly function. Please choose or configure the networks to satisfy    
+the required connectivity for your use case.                             
+                                                                        
+**ESXi\_Network:**                                                       
+                                                                        
+Network where the ESXi portion of the cluster is reachable.              
+                                                                        
+**VM\_Network/Management Network:**                                      
+                                                                        
+The network where the vCenters and management networks are configured.   
+You may have the ESXi and vCenters configured over the same network. In  
+this case, ESXi\_Network and VM\_Network will be the same.               
+                                                                        
+**HDM\_Internal\_Network:**                                              
+                                                                        
+The HDM internal network is used to connect the HDM components for their 
+private communication.                                                   
+                                                                        
+**Uplink WAN Network:**                                                  
+                                                                        
+The network where the on-premises components can communicate with the    
+cloud components.                                                        
+                                                                        
+**Failure to create, choose, or configure the networks correctly will    
+cause the installation to fail.**                                        
+
 
 +--------------------------------------------------------------------------+
 | Figure 1: Network Configuration of the Test Environment                  |
