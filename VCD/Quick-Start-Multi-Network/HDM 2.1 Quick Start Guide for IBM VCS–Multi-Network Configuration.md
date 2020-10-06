@@ -1,47 +1,9 @@
-[Toggle
-navigation](https://www.primaryio.com/xdocs/hdm-2-1-quick-start-guide-ibm-vcs-test-multi-network-standard-standalone/#)
-
--   [**](https://www.primaryio.com/)
--   [**](https://twitter.com/PrimaryIO)
--   [**](https://www.primaryio.com/)
-
-[![](./HDM%202.1%20Quick%20Start%20Guide%20for%20IBM%20VCS–Multi-Network%20Configuration_files/logo2019-v2.png)](https://www.primaryio.com/)
-
--   [Introduction](https://www.primaryio.com/xdocs/hdm-2-1-quick-start-guide-ibm-vcs-test-multi-network-standard-standalone/#introduction)
--   [About this
-    Guide](https://www.primaryio.com/xdocs/hdm-2-1-quick-start-guide-ibm-vcs-test-multi-network-standard-standalone/#about-this-guide)
--   [Steps Required to Deploy
-    HDM](https://www.primaryio.com/xdocs/hdm-2-1-quick-start-guide-ibm-vcs-test-multi-network-standard-standalone/#)
-    -   [Step 1: Review System
-        Requirements](https://www.primaryio.com/xdocs/hdm-2-1-quick-start-guide-ibm-vcs-test-multi-network-standard-standalone/#step-1-review-system-requirements)
-    -   [Step 2: Download PrimaryIO
-        HDM](https://www.primaryio.com/xdocs/hdm-2-1-quick-start-guide-ibm-vcs-test-multi-network-standard-standalone/#step-2-download-primaryio-hdm)
-    -   [Step 3: Network Planning and
-        Mapping](https://www.primaryio.com/xdocs/hdm-2-1-quick-start-guide-ibm-vcs-test-multi-network-standard-standalone/#step-3-network-planning-and-mapping)
-    -   [Step 4: Deploy the HDM
-        Appliance](https://www.primaryio.com/xdocs/hdm-2-1-quick-start-guide-ibm-vcs-test-multi-network-standard-standalone/#step-4-deploy-the-hdm-appliance)
-    -   [Step 5: Validate the Network
-        Configuration](https://www.primaryio.com/xdocs/hdm-2-1-quick-start-guide-ibm-vcs-test-multi-network-standard-standalone/#step-5-validate-the-network-configuration)
-    -   [Step 6: On-premises
-        Deployment](https://www.primaryio.com/xdocs/hdm-2-1-quick-start-guide-ibm-vcs-test-multi-network-standard-standalone/#step-6-on-premises-deployment)
-    -   [Step 7: Cloud
-        Deployment](https://www.primaryio.com/xdocs/hdm-2-1-quick-start-guide-ibm-vcs-test-multi-network-standard-standalone/#step-7-cloud-deployment)
-    -   [Step 8: Perform a Cold
-        Migration](https://www.primaryio.com/xdocs/hdm-2-1-quick-start-guide-ibm-vcs-test-multi-network-standard-standalone/#step-8-perform-a-cold-migration)
--   [Appendix A - System
-    Requirements](https://www.primaryio.com/xdocs/hdm-2-1-quick-start-guide-ibm-vcs-test-multi-network-standard-standalone/#appendix-a-system-requirements)
--   [Appendix B - Network
-    Settings](https://www.primaryio.com/xdocs/hdm-2-1-quick-start-guide-ibm-vcs-test-multi-network-standard-standalone/#appendix-b-network-settings)
--   [Appendix C - IPSec tunnel, firewall, and cloud network
-    configuration](https://www.primaryio.com/xdocs/hdm-2-1-quick-start-guide-ibm-vcs-test-multi-network-standard-standalone/#appendix-c-ipsec-tunnel-firewall-and-cloud-network-configuration)
-
 HDM 2.1 Quick Start Guide for IBM VCS–Multi-Network Configuration
 =================================================================
 
 Version 1.0.0
 
-[**](https://www.primaryio.com/xdocs/hdm-2-1-quick-start-guide-ibm-vcs-test-multi-network-standard-standalone/#about-this-guide)About this Guide {.page-header}
-------------------------------------------------------------------------------------------------------------------------------------------------
+# About this Guide
 
 This quick start guide is intended to help you rapidly deploy PrimaryIO
 HDM to a test environment. The steps are intended for a multi-network
@@ -59,8 +21,7 @@ describes an HDM deployment using the ***Standard, Standalone*** option.
 This option supports all the key features of HDM and can also be used
 for cold migration and validation purposes.
 
-[**](https://www.primaryio.com/xdocs/hdm-2-1-quick-start-guide-ibm-vcs-test-multi-network-standard-standalone/#steps-required-to-deploy-hdm)Steps Required to Deploy HDM {.page-header}
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Steps Required to Deploy HDM
 
 The following steps are required to deploy HDM:
 
@@ -74,14 +35,13 @@ The following steps are required to deploy HDM:
 7.  Cloud Deployment *(estimated time: 45-60 minutes)*
 8.  Migrating a VM to the cloud *(estimated time: dependent on VM size)*
 
-### [Step 1: Review System Requirements](https://www.primaryio.com/xdocs/hdm-2-1-quick-start-guide-ibm-vcs-test-multi-network-standard-standalone/#step-1-review-system-requirements) {.steps-header}
+### Step 1: Review System Requirements
 
 Refer to the System Requirements in Appendix A of this document.
-Printing a copy of [Appendix
-A](https://www.primaryio.com/xdocs/hdm-2-1-quick-start-guide-ibm-vcs-test-multi-network-standard-standalone/#post-3364-_Appendix_A_-)
+Printing a copy of Appendix A
 to use as a checklist is recommended.
 
-### [Step 2: Download PrimaryIO HDM](https://www.primaryio.com/xdocs/hdm-2-1-quick-start-guide-ibm-vcs-test-multi-network-standard-standalone/#step-2-download-primaryio-hdm) {.steps-header}
+### Step 2: Download PrimaryIO HDM
 
 To obtain your license and download link for HDM, visit
 [https://www.primaryio.com/ibm/](https://www.primaryio.com/ibm/)
@@ -95,7 +55,7 @@ You will receive an email with the following:
 Before proceeding with the installation, watch the training videos and
 use this guide.
 
-### [Step 3: Network Planning and Mapping](https://www.primaryio.com/xdocs/hdm-2-1-quick-start-guide-ibm-vcs-test-multi-network-standard-standalone/#step-3-network-planning-and-mapping) {.steps-header}
+### Step 3: Network Planning and Mapping
 
 Network configuration information is required at key points throughout
 the deployment process. So, develop a network connectivity plan prior to
@@ -179,7 +139,7 @@ Settings](https://www.primaryio.com/xdocs/hdm-2-1-quick-start-guide-ibm-vcs-test
 and complete the forms. This will help you identify the correct networks
 to configure and identify all networking details.
 
-### [Step 4: Deploy the HDM Appliance](https://www.primaryio.com/xdocs/hdm-2-1-quick-start-guide-ibm-vcs-test-multi-network-standard-standalone/#step-4-deploy-the-hdm-appliance) {.steps-header}
+### Step 4: Deploy the HDM Appliance
 
 -   Make sure you have at least 10GB free space to download the
     appliance
@@ -233,7 +193,7 @@ to configure and identify all networking details.
 |                                      |     default gateway.                 |
 +--------------------------------------+--------------------------------------+
 
-### [Step 5: Validate the Network Configuration](https://www.primaryio.com/xdocs/hdm-2-1-quick-start-guide-ibm-vcs-test-multi-network-standard-standalone/#step-5-validate-the-network-configuration) {.steps-header}
+### Step 5: Validate the Network Configuration
 
 +--------------------------------------+--------------------------------------+
 | ![](./HDM%202.1%20Quick%20Start%20Gu | -   All ESXi servers in the vCenter  |
@@ -306,7 +266,7 @@ endpoints:**
 
  
 
-### [Step 6: On-premises Deployment](https://www.primaryio.com/xdocs/hdm-2-1-quick-start-guide-ibm-vcs-test-multi-network-standard-standalone/#step-6-on-premises-deployment) {.steps-header}
+### Step 6: On-premises Deployment
 
 Add on-premises vCenter
 -----------------------
@@ -404,7 +364,7 @@ Configure On-premises vCenter
 |                                      |     task bar                         |
 +--------------------------------------+--------------------------------------+
 
-### [Step 7: Cloud Deployment](https://www.primaryio.com/xdocs/hdm-2-1-quick-start-guide-ibm-vcs-test-multi-network-standard-standalone/#step-7-cloud-deployment) {.steps-header}
+### Step 7: Cloud Deployment
 
 Configure Cloud vCenter
 -----------------------
@@ -481,7 +441,7 @@ and on-premises environments:
 |                                      |     migration                        |
 +--------------------------------------+--------------------------------------+
 
-### [Step 8: Perform a Cold Migration](https://www.primaryio.com/xdocs/hdm-2-1-quick-start-guide-ibm-vcs-test-multi-network-standard-standalone/#step-8-perform-a-cold-migration) {.steps-header}
+### Step 8: Perform a Cold Migration
 
 During cold migration, the VM being migrated is powered off. After the
 migration has been completed on the cloud, the VM can be powered back
@@ -643,10 +603,7 @@ on.
 |     Latencies: less than 30 ms       |                                      |
 +--------------------------------------+--------------------------------------+
 
-[**Back to
-Top**](https://www.primaryio.com/xdocs/hdm-2-1-quick-start-guide-ibm-vcs-test-multi-network-standard-standalone/#post-3364-_heading=h.pj7rznux9t2f)
-
-[**](https://www.primaryio.com/xdocs/hdm-2-1-quick-start-guide-ibm-vcs-test-multi-network-standard-standalone/#appendix-b-network-settings)Appendix B - Network Settings {.page-header}
+# Appendix B - Network Settings
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Network requirement during OVF deployment
@@ -789,10 +746,7 @@ networks; all other parameters remain the same.
   **IP range**   *192.168.10.100-192.168.10.120, 192.168.10.130*   **(2 IPs)**
   -------------- ------------------------------------------------- ---------------------
 
-[Back to
-Top](https://www.primaryio.com/xdocs/hdm-2-1-quick-start-guide-ibm-vcs-test-multi-network-standard-standalone/#post-3364-_heading=h.fh32bxmc9gq4)
-
-[**](https://www.primaryio.com/xdocs/hdm-2-1-quick-start-guide-ibm-vcs-test-multi-network-standard-standalone/#appendix-c-ipsec-tunnel-firewall-and-cloud-network-configuration)Appendix C - IPSec tunnel, firewall, and cloud network configuration {.page-header}
+# Appendix C - IPSec tunnel, firewall, and cloud network configuration
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Requirements to deploy HDM:
