@@ -82,8 +82,8 @@ The following is required to complete the network plan:
 3.  Network requirements during on-premises deployment
 4.  Network requirements during cloud deployment
 
-+--------------------------------------------------------------------------+
 | **Choose or create an appropriate network:**                             |
++--------------------------------------------------------------------------+
 |                                                                          |
 | Configuring the correct network for deployment is essential for HDM to   |
 | properly function. Please choose or configure the networks to satisfy    |
