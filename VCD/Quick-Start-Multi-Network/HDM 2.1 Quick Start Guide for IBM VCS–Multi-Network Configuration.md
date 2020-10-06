@@ -112,25 +112,20 @@ cloud components.
 cause the installation to fail.**                                        
 
 
-+--------------------------------------------------------------------------+
-| Figure 1: Network Configuration of the Test Environment                  |
-|                                                                          |
-| ![](./HDM%202.1%20Quick%20Start%20Guide%20for%20IBM%20VCS–Multi-Network% |
-| 20Configuration_files/word-image-118.png)                                |
-+--------------------------------------------------------------------------+
+Figure 1: Network Configuration of the Test Environment                  
+                                                                          
+ ![](./HDM%202.1%20Quick%20Start%20Guide%20for%20IBM%20VCS–Multi-Network% 
+ 20Configuration_files/word-image-118.png)                                
 
 The remainder of this document will assume you have created a network
 topology like the one shown in Figure 1, and will refer to the networks
 by those names.
 
-+--------------------------------------------------------------------------+
-| **NOTES:**                                                               |
-|                                                                          |
-| 1.  The subnet range 172.17.0.0/16 is not available for the deployment;  |
-|     it is used internally by HDM microservices.                          |
-| 2.  Please add the vCenter FQDN for the on-premises and cloud vCenters   |
-|     on the on-premises and cloud DNS servers.                            |
-+--------------------------------------------------------------------------+
+ **NOTES:**                                                               
+1.  The subnet range 172.17.0.0/16 is not available for the deployment;  
+     it is used internally by HDM microservices.                          
+2.  Please add the vCenter FQDN for the on-premises and cloud vCenters   
+     on the on-premises and cloud DNS servers.                            
 
 Before continuing with the rest of this Quick Start Guide, be sure to
 print [Appendix B – Network
