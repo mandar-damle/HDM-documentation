@@ -16,5 +16,8 @@
   * [ ] [Install Guide](docs/vcd/install%20guide/Install%20Guide.md)
   * [ ] [Org VDC System and Network Configuration](docs/vcd/Org%20VDC%20System%20and%20Network%20Configuration/Org%20VDC%20System%20and%20Network%20Configuration.md)
   * [ ] [Quick Start Guide - Single Network](docs/vcd/QSG/Quick%20Start%20Guide-Single%20Network.md)
+  * [ ] [Troubleshooting Guide](docs/vcd/Trouble%20Shooting%20Guide/Trouble%20Shooting%20Guide.md)
+  * [ ] [Deployment Checklist](docs/vcd/Deployment%20Checklist.md)
+  * [ ] [Release Notes](docs/vcd/Release%20Notes.md)
   
   
