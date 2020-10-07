@@ -8,4 +8,7 @@
   * [ ] [Quick Start Guide - IBM VCS Single Network](docs/vcs/Quick%20Start%20Guide%20-%20IBM%20VCS%20-%20Single%20Network%20-%20Standard-Standalone/Quick%20Start%20Guide%20-%20IBM%20VCS%20-%20%20Single%20Network.md)
   * [ ] [Troubleshooting Guide](docs/vcs/Troubleshooting%20Guide/Troubleshooting%20Guide.md)
   * [ ] [Virtual Private Network - IPsec configuration for IBM VCS](docs/vcs/Virtual%20Private%20Network%20-%20IPsec%20configuration%20for%20IBM%20VCS/Virtual%20Private%20Network%20-%20IPsec%20configuration%20for%20IBM%20VCS.md)
+  * [ ] [Deployment Checklist](docs/vcs/Deployment%20Checklist.md)
+  * [ ] [Release Notes](docs/vcs/Release%20Notes.md)
+  * [ ] [System Requirements](docs/vcs/System%20Requirements.md)
   
