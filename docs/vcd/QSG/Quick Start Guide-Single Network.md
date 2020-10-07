@@ -1,7 +1,7 @@
 <!-- Copy and paste the converted output. -->
 
 
-<p style="color: red; font-weight: bold">>>>>>  gd2md-html alert:  ERRORs: 6; WARNINGs: 0; ALERTS: 29.</p>
+<p style="color: red; font-weight: bold">>>>>>  gd2md-html alert:  ERRORs: 6; WARNINGs: 1; ALERTS: 29.</p>
 <ul style="color: red; font-weight: bold"><li>See top comment block for details on ERRORs and WARNINGs. <li>In the converted Markdown or HTML, search for inline alerts that start with >>>>>  gd2md-html alert:  for specific instances that need correction.</ul>
 
 <p style="color: red; font-weight: bold">Links to alert messages:</p><a href="#gdcalert1">alert1</a>
@@ -38,14 +38,18 @@
 
 
 
+
+Contents
+
+
+[TOC]
+
+
+
 ## 
 
 
-
-## **HDM 2.1 Quick Start Guide for VMware Cloud Director**
-## **Single Network**
-
-## About this Guide
+# About this Guide
 
 This quick start guide is intended to help you rapidly deploy PrimaryIO HDM to a test environment. The steps are intended for a single on-premises network environment, with cloud access via a WAN link and no separation of the management and VM network. All IP assignments in this guide are static/static-pool and connectivity between the on-premises and cloud environments is via IPSec. For other types of network configurations, refer to the HDM 2.1 Install Guide.
 
@@ -65,12 +69,12 @@ The following steps are required to deploy HDM:
 8. Perform a Cold Migration_ (estimated time: dependent on VM size)_
 
 
-## Step 1: Review System Requirements
+# Step 1: Review System Requirements
 
 Refer to the [System Requirements](https://docs.google.com/document/d/1X1YOf2LQIT1hdGFygKmUgE2BGPs6QXKp/edit?ts=5f55d761#heading=h.inqccfxv1izt) in Appendix A of this document. Printing a copy of Appendix A to use as a checklist is recommended. 
 
 
-## Step 2: Download PrimaryIO HDM
+# Step 2: Download PrimaryIO HDM
 
 To obtain your license and download link for HDM, visit [https://www.primaryio.com/ibm/](https://www.primaryio.com/ibm/)
 
@@ -85,7 +89,7 @@ You will receive an email with the following:
 Before proceeding with the installation, watch the training videos and use this guide. 
 
 
-## Step 3: Network Planning and Mapping
+# Step 3: Network Planning and Mapping
 
 Network configuration information is required at key points throughout the deployment process. So, develop a network connectivity plan prior to deploying HDM. This section will help guide you through that process. The information captured in this section will be employed later in the installation process. If an IPSec tunnel and cloud configuration have not yet been established, these must be done before moving any further. Follow the steps outlined in 
 
@@ -134,8 +138,8 @@ Figure 1: Network Configuration of the Test Environment
 
 ```
 
-
 ![alt_text](images/image1.png "image_tooltip")
+
 
 The remainder of this document will assume you have created a network topology like the one shown in Figure 1, and will refer to the networks by those names. In this configuration, all access has been made possible using single VM network, _hdm_network_. Four static IPs will need to be provisioned on this network for OVF deployment.
 
@@ -160,7 +164,7 @@ Please add the vCenter FQDN for the on-premises and cloud vCenters on the on-pre
 Before continuing with the rest of this Quick Start Guide, be sure to print [Appendix B - Network Settings](https://docs.google.com/document/d/1X1YOf2LQIT1hdGFygKmUgE2BGPs6QXKp/edit#heading=h.qqzzlrxclsfu) and complete the forms. This will help you identify the correct networks to configure and identify all networking details.
 
 
-## Step 4: Deploy the HDM Appliance
+# Step 4: Deploy the HDM Appliance
 
 
 
@@ -226,7 +230,7 @@ Before continuing with the rest of this Quick Start Guide, be sure to print [App
 
 
 
-## Step 5: Validate the Network Configuration
+# Step 5: Validate the Network Configuration
 
 
 <table>
@@ -265,10 +269,10 @@ Before continuing with the rest of this Quick Start Guide, be sure to print [App
 
 
 
-## Step 6: On-premises Deployment
+# Step 6: On-premises Deployment
 
 
-### Add on-premise vCenter
+## Add on-premise vCenter
 
 
 
@@ -356,7 +360,7 @@ For the plugin to be visible within vCenter, you will need to logout/login to th
 
 
 
-### Configure the License
+## Configure the License
 
 Navigate to the _Licensing_ page on the HDM vCenter Plugin
 
@@ -389,7 +393,7 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
 
 
 
-### Configure the On-premises vCenter
+## Configure the On-premises vCenter
 
 
 <table>
@@ -483,10 +487,10 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
 
 
 
-## Step 7: Cloud Deployment
+# Step 7: Cloud Deployment
 
 
-###      Cloud Static-Pool allocation
+##      Cloud Static-Pool allocation
 
 
 <table>
@@ -519,7 +523,7 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
 
 
 
-### Configure Cloud vCenter
+## Configure Cloud vCenter
 
 
 <table>
@@ -620,7 +624,7 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
 
 
 
-#### WAN Routing Configuration
+### WAN Routing Configuration
 
 The following WAN routes are required to gain access between the cloud and on-premises environments:
 
@@ -712,7 +716,7 @@ The following WAN routes are required to gain access between the cloud and on-pr
 
 
 
-## Step 8: Perform a Cold Migration
+# Step 8: Perform a Cold Migration
 
 During cold migration, the VM being migrated is powered off. After the migration has been completed on the cloud, the VM can be powered back on.
 
@@ -805,10 +809,10 @@ Before migration is triggered, ensure that the health of the HDM components is g
   
 
 
-## 
+# 
 
 
-## Appendix A - System Requirements
+# Appendix A - System Requirements
 
 
 <table>
@@ -972,13 +976,13 @@ Related document: For hardware and system requirements, refer to the [VMware Har
 **[Back to Top](https://docs.google.com/document/d/1X1YOf2LQIT1hdGFygKmUgE2BGPs6QXKp/edit?ts=5f55d761#heading=h.pj7rznux9t2f)**
 
 
-## 
+# 
 
 
-## Appendix B - Network Settings
+# Appendix B - Network Settings
 
 
-### Network requirements during OVF deployment
+## Network requirements during OVF deployment
 
 
 
@@ -1078,7 +1082,7 @@ Common settings for the OVF deployment
 
 
 
-### Network requirements during on-premises deployment
+## Network requirements during on-premises deployment
 
 Common settings for the gateway, subnet, DNS etc., which will be common across the on-premises networks.
 
@@ -1200,7 +1204,7 @@ Uplink_WAN_Network**
 
 
 
-### Network requirements during cloud deployment
+## Network requirements during cloud deployment
 
 The following cloud credentials are required to deploy to the cloud.
 
@@ -1364,7 +1368,7 @@ Similar to the previous two deployment stages, provision IPs and identify the co
 
 
 
-## Appendix C - IPSec Configuration
+# Appendix C - IPSec Configuration
 
 Requirements to deploy HDM:
 
