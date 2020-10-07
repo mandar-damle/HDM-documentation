@@ -14,5 +14,5 @@
 * VCD
   * [ ] [Admin Guide](docs/vcd/Admin%20Guide/Admin%20Guide.md)
   * [ ] [Install Guide](docs/vcd/install%20guide/Install%20Guide.md)
-  * [ ] [Org VDC System and Network Configuration](docs/vcd/Org%20VDC%20System%20and%20Network%20Configuration/Org%20VDC%20System%20and Network%20Configuration.md)
+  * [ ] [Org VDC System and Network Configuration](docs/vcd/Org%20VDC%20System%20and%20Network%20Configuration/Org%20VDC%20System%20and%20Network%20Configuration.md)
   
