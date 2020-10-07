@@ -1,7 +1,7 @@
 # HDM Documentation
 
 * VCS
-  * [ ] [Install Guide](docs/vcd/install%20guide/Install%20Guide.md)
+  * [ ] [Install Guide](docs/vcs/Install%20Guide/Install%20Guide.md)
   * [ ] [Admin Guide](docs/vcs/Admin%20Guide/Admin%20Guide.md)
   * [ ] [Network Configuration](docs/vcs/Network%20Configuration%20Planning/Network%20Configuration.md)
   * [ ] [Quick Start Guide - IBM VCS Multi Network ](docs/vcs/Quick%20Start%20Guide%20-%20IBM%20VCS%20-%20Multi%20Network%20/Quick%20Start%20Guide%20-%20IBM%20VCS%20-%20Multi%20Network%20.md)
@@ -15,4 +15,6 @@
   * [ ] [Admin Guide](docs/vcd/Admin%20Guide/Admin%20Guide.md)
   * [ ] [Install Guide](docs/vcd/install%20guide/Install%20Guide.md)
   * [ ] [Org VDC System and Network Configuration](docs/vcd/Org%20VDC%20System%20and%20Network%20Configuration/Org%20VDC%20System%20and%20Network%20Configuration.md)
+  * [ ] [Quick Start Guide - Single Network](docs/vcd/QSG/Quick%20Start%20Guide-Single%20Network.md)
+  
   
