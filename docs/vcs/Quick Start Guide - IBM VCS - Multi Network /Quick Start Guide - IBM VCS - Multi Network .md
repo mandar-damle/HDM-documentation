@@ -383,64 +383,6 @@ Estimated time 10 minutes
 
 
 
-*   ssh to the HDM Appliance deployed in step 4. Use the IP given on the “VM Network (Management Network)”
-*   Use login:-”root”         Password:- “admin@123”
-*   We will use this session validate connectivity
-
-  
-
-**Following are the examples to test the connectivity between different endpoints:**
-
-
-```
-$ curl -k https://<prem_vcenter_fqdn>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-:
-:
- </body>
-</html>
-```
-
-
-  
-
-If you get a “curl: (7) Failed to connect to 10.10.48.2 port 443: Connection refused” the connectivity needs to be debugged. Alternatively check the firewall rules to allow traffic on port 443. 
-
-
-```
-$ curl -k https://<cloud_vcenter_fqdn>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-:
-:
- </body>
-</html>
-```
-
-
- 
-
-Verify connectivity to Premise esxi by pinging it.
-
-
-```
-$ curl -k https://<on_prem_esxi_ip>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-```
-
-
- 
-
-Verify connectivity to Cloud esxi by pinging it.
-
-
-```
-$ curl -k https://<on_cloud_esxi_ip>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-```
-
-
- 
-
 
 # Step 6/8 : On-Prem Deployment
 
@@ -458,7 +400,7 @@ Estimated time 10 minutes
 *   Power On the appliance
 *   Find the appliance IP
 *   Open the appliance web interface for https://&lt;appliance-ip>
-*   Login to the appliance web UI using default password “admin@123”
+*   Login to the appliance web UI using default password 2Hdm$aK!N@h!
 *   After login in click on 
 
 <p id="gdcalert12" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert13">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
@@ -726,22 +668,16 @@ Estimated time 45 to 60 minutes
 
 ### WAN Routing Configuration
 
-The following WAN routes are required to access on-cloud from on-premise and vice-versa.
+The following WAN routes are required to gain access between the cloud and on-premises environments:
 
 
 
-*   **On-Prem WAN route**
-
-    The route which would be set on HDM appliance on premise. The routes will enable communication from on-premise to HDM appliances on-cloud.
-
-    *   **On-Cloud WAN subnet : **Subnet of cloud WAN network on which HDM appliances are deployed
-    *   **On-Premise WAN gateway : **On premise WAN gateway which allows access to on-cloud WAN subnet
-*   **On-Prem WAN route**
-
-    The route which would be set on HDM appliance on cloud. The routes will enable communication from on-cloud to HDM appliances on-premise.
-
-    *   **On-Premise WAN subnet : **Subnet of premise WAN network on which HDM appliances are deployed
-    *   **On-Cloud WAN gateway : **On cloud WAN gateway which allows access to on-premise WAN subnet
+*   **Onprem WAN network details: **The route that is set on the on-premises HDM appliance. The routes enable communication from on-premises to cloud HDM appliances.
+    *   **Onprem WAN subnet(s): **Location of the deployed HDM appliances
+    *   **Onprem WAN gateway: **Enables access to the cloud WAN subnet
+*   **Oncloud WAN network details: **The route that is set on the HDM appliance in the cloud. The routes enable communication from the cloud to on-premises HDM appliances.
+    *   **Oncloud WAN subnet(s): **Location of the deployed HDM appliances
+    *   **Oncloud WAN gateway: **Enables access to on-premises WAN subnet
 
 <table>
   <tr>
