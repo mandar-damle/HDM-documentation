@@ -1,135 +1,11 @@
 <!-- Copy and paste the converted output. -->
 
 
-<p style="color: red; font-weight: bold">>>>>>  gd2md-html alert:  ERRORs: 4; WARNINGs: 2; ALERTS: 50.</p>
-<ul style="color: red; font-weight: bold"><li>See top comment block for details on ERRORs and WARNINGs. <li>In the converted Markdown or HTML, search for inline alerts that start with >>>>>  gd2md-html alert:  for specific instances that need correction.</ul>
-
-<p style="color: red; font-weight: bold">Links to alert messages:</p><a href="#gdcalert1">alert1</a>
-<a href="#gdcalert2">alert2</a>
-<a href="#gdcalert3">alert3</a>
-<a href="#gdcalert4">alert4</a>
-<a href="#gdcalert5">alert5</a>
-<a href="#gdcalert6">alert6</a>
-<a href="#gdcalert7">alert7</a>
-<a href="#gdcalert8">alert8</a>
-<a href="#gdcalert9">alert9</a>
-<a href="#gdcalert10">alert10</a>
-<a href="#gdcalert11">alert11</a>
-<a href="#gdcalert12">alert12</a>
-<a href="#gdcalert13">alert13</a>
-<a href="#gdcalert14">alert14</a>
-<a href="#gdcalert15">alert15</a>
-<a href="#gdcalert16">alert16</a>
-<a href="#gdcalert17">alert17</a>
-<a href="#gdcalert18">alert18</a>
-<a href="#gdcalert19">alert19</a>
-<a href="#gdcalert20">alert20</a>
-<a href="#gdcalert21">alert21</a>
-<a href="#gdcalert22">alert22</a>
-<a href="#gdcalert23">alert23</a>
-<a href="#gdcalert24">alert24</a>
-<a href="#gdcalert25">alert25</a>
-<a href="#gdcalert26">alert26</a>
-<a href="#gdcalert27">alert27</a>
-<a href="#gdcalert28">alert28</a>
-<a href="#gdcalert29">alert29</a>
-<a href="#gdcalert30">alert30</a>
-<a href="#gdcalert31">alert31</a>
-<a href="#gdcalert32">alert32</a>
-<a href="#gdcalert33">alert33</a>
-<a href="#gdcalert34">alert34</a>
-<a href="#gdcalert35">alert35</a>
-<a href="#gdcalert36">alert36</a>
-<a href="#gdcalert37">alert37</a>
-<a href="#gdcalert38">alert38</a>
-<a href="#gdcalert39">alert39</a>
-<a href="#gdcalert40">alert40</a>
-<a href="#gdcalert41">alert41</a>
-<a href="#gdcalert42">alert42</a>
-<a href="#gdcalert43">alert43</a>
-<a href="#gdcalert44">alert44</a>
-<a href="#gdcalert45">alert45</a>
-<a href="#gdcalert46">alert46</a>
-<a href="#gdcalert47">alert47</a>
-<a href="#gdcalert48">alert48</a>
-<a href="#gdcalert49">alert49</a>
-<a href="#gdcalert50">alert50</a>
-
-<p style="color: red; font-weight: bold">>>>>> PLEASE check and correct alert issues and delete this message and the inline alerts.<hr></p>
-
-
-
-# 
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image1.png "image_tooltip")
-
-
 
 # **HDM 2.1 for VMware Cloud Director**
 
 
 # **Install Guide**
-
- 	            
-
-Version: 2.1
-
-Publish Date: August, 2020
-
-Copyright © 2020 PrimaryIO, Inc.
-
-PrimaryIO, Inc.
-
-300 3rd St.
-
-Los Altos, CA 94022
-
-[http://www.primaryio.com](http://www.primaryio.com)
-
-**Tel:** 877-817-7790
-
-Copyright Notice
-
-Copyright © 2020 PrimaryIO, Inc. 
-
-This document is provided for informational purposes only and PrimaryIO makes no warranties, either expressed or implied in this document. 
-
-Information in this document, including URL and other Internet references, is subject to change without notice. The entire risk of the use or the results from the use of this document remains with the user. 
-
-Unless otherwise noted, the companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted in examples herein are fictitious. 
-
-No association with any real company, organization, product, domain name, e-mail address, logo, person, place, or event is intended or should be inferred. 
-
-Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the written permission of PrimaryIO. 
-
-PrimaryIO may have patents, patent applications, trademarks, copyrights, or other intellectual property rights covering subject matter in this document. Except as explicitly provided in any written license agreement from PrimaryIO, the furnishing of this document does not guarantee any license to these patents, trademarks, copyrights, or other intellectual property. 
-
-© 2012 - 2020 PrimaryIO. 
-
-All rights reserved. 
-
-Trademarks
-
-PrimaryIO HDM™ is a registered trademark of PrimaryIO, Inc in the United States and/or other jurisdictions. 
-
-VMware is a registered trademark of VMware, Inc. in the United States and/or other jurisdictions.
-
-All other trademarks referred to in this guide are owned by their respective companies.
-
-
-
-Contents
-
-
-[TOC]
-
-
-
-## 
-
 
 # About the HDM Install Guide
 
@@ -177,12 +53,7 @@ HDM 2.1 consists of microservices that have been packaged as VMs that work toget
 
 _Figure 1: Location of HDM 2.1 components_
 
-
-
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image2.png "image_tooltip")
+![alt_text](images/image28.png "image_tooltip")
 
 
 
@@ -315,11 +186,7 @@ An ideal network configuration isolates various types of network traffic for max
 _Figure 2: How HDM utilizes the various network types_
 
 
-
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![drawing](https://docs.google.com/drawings/d/12345/export/png)
+![drawing](images/image6.png)
 
 **NOTES:**
 
@@ -331,11 +198,7 @@ _Figure 2: How HDM utilizes the various network types_
 _Figure 3: Selecting and Categorizing Networks_
 
 
-
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image3.png "image_tooltip")
+![alt_text](images/image27.png "image_tooltip")
 
 
 **NOTE: **While each traffic type should ideally employ its own network, configurations that allow one or multiple types of traffic to utilize the same network are also supported by HDM.
@@ -347,21 +210,12 @@ HDM can be deployed in test environments where there may not be separation betwe
 
 _Figure 4: Test Environment Configuration_
 
-
-
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![drawing](https://docs.google.com/drawings/d/12345/export/png)
+![drawing](images/image5.png)
 
 _Figure 5: Mapping Source and Destination Networks in a Single Network Test Environment_
 
 
-
-<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image4.png "image_tooltip")
+![alt_text](images/image30.png "image_tooltip")
 
 
 
@@ -487,8 +341,6 @@ HDM deployment involves the following six steps, each of which is discussed in d
 
 Please see the section on 
 
-<p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "HDM Resource Requirements"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
 [HDM Resource Requirements](#heading=h.3hg9zwdhl9h3). 
 
 
@@ -498,12 +350,7 @@ The HDM appliance must be installed from the OVF in the HDM package. Be sure to 
 
 _Figure 6: Launching the “Deploy OVF” Template in vCenter_
 
-
-
-<p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image5.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image5.png "image_tooltip")
+![alt_text](images/image29.png "image_tooltip")
 
 
 
@@ -514,11 +361,7 @@ Appliance network configuration requires that the available networks be categori
 _Figure 7: Configuring the Network_
 
 
-
-<p id="gdcalert9" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image6.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert10">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image6.png "image_tooltip")
+![alt_text](images/image27.png "image_tooltip")
 
 
 
@@ -547,11 +390,7 @@ For each network type, choose the IP allocation protocol: static or DHCP. The fo
 _Figure 8: Configuring the System for Static IP Protocol_
 
 
-
-<p id="gdcalert10" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image7.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert11">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image7.png "image_tooltip")
+![alt_text](images/image31.png "image_tooltip")
 
 
 
@@ -594,11 +433,7 @@ Steps
 _Figure 9: Adding vCenter to the HDM Appliance_
 
 
-
-<p id="gdcalert11" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image8.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert12">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image8.png "image_tooltip")
+![alt_text](images/image33.png "image_tooltip")
 
 
 
@@ -608,11 +443,7 @@ _Figure 9: Adding vCenter to the HDM Appliance_
 _Figure 10: Viewing the On-Premises vCenter on the HDM Appliance_
 
 
-
-<p id="gdcalert12" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image9.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert13">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image9.png "image_tooltip")
+![alt_text](images/image32.png "image_tooltip")
 
 
 
@@ -625,12 +456,7 @@ _Figure 10: Viewing the On-Premises vCenter on the HDM Appliance_
 
 _Figure 11: HDM Icon on the vCenter Home Page_
 
-
-
-<p id="gdcalert13" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image10.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert14">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image10.png "image_tooltip")
+![alt_text](images/image36.png "image_tooltip")
 
 
 **NOTE:** The PrimaryIO vCenter plug-in will be automatically registered on all vCenter instances that are configured in enhanced linked mode.
@@ -655,32 +481,19 @@ Steps to add the HDM license:
 
 _Figure 12: Add or See HDM Licenses_
 
-
-
-<p id="gdcalert14" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image11.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert15">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image11.png "image_tooltip")
+![alt_text](images/image34.png "image_tooltip")
 
 
 _Figure 13: "Add License" Pop-up_
 
 
-
-<p id="gdcalert15" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image12.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert16">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image12.png "image_tooltip")
+![alt_text](images/image35.png "image_tooltip")
  
 
 _Figure 14: Verify the Addition of the Trial License_
 
 
-
-<p id="gdcalert16" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image13.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert17">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image13.png "image_tooltip")
+![alt_text](images/image37.png "image_tooltip")
 
 
 
@@ -702,11 +515,7 @@ Deployment steps:
 _Figure 15: vCenter On-Premises Cluster Listing_
 
 
-
-<p id="gdcalert17" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image14.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert18">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image14.png "image_tooltip")
+![alt_text](images/image38.png "image_tooltip")
 
 
 
@@ -719,11 +528,7 @@ _Figure 15: vCenter On-Premises Cluster Listing_
 _Figure 16: HDM Installation Wizard_
 
 
-
-<p id="gdcalert18" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image15.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert19">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image15.png "image_tooltip")
+![alt_text](images/image39.png "image_tooltip")
 
 
 
@@ -736,11 +541,7 @@ _Figure 16: HDM Installation Wizard_
 _Figure 17: Resource Pool and Shared Datastore Selection_
 
 
-
-<p id="gdcalert19" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image16.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert20">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image16.png "image_tooltip")
+![alt_text](images/image40.png "image_tooltip")
 
 
 
@@ -766,12 +567,7 @@ _Figure 17: Resource Pool and Shared Datastore Selection_
 
 _Figure 18: Network Configuration Settings_
 
-
-
-<p id="gdcalert20" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image17.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert21">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image17.png "image_tooltip")
+![alt_text](images/image41.png "image_tooltip")
 
 
 
@@ -781,11 +577,7 @@ _Figure 18: Network Configuration Settings_
 _Figure 19: HDM Installation Summary_
 
 
-
-<p id="gdcalert21" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image18.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert22">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image18.png "image_tooltip")
+![alt_text](images/image42.png "image_tooltip")
 
 
 
@@ -795,11 +587,7 @@ _Figure 19: HDM Installation Summary_
 _Figure 20: vCenter HDM Configuration View_
 
 
-
-<p id="gdcalert22" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image19.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert23">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image19.png "image_tooltip")
+![alt_text](images/image13.png "image_tooltip")
 
 
 
@@ -831,11 +619,7 @@ Deployment steps:
 _Figure 21: vCenter Cloud Listing_
 
 
-
-<p id="gdcalert23" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image20.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert24">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image20.png "image_tooltip")
+![alt_text](images/image43.png "image_tooltip")
 
 
 
@@ -847,10 +631,7 @@ _Figure 22: HDM Cloud Wizard_
 
 
 
-<p id="gdcalert24" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image21.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert25">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image21.png "image_tooltip")
+![alt_text](images/image17.png "image_tooltip")
 
 
 
@@ -860,11 +641,7 @@ _Figure 22: HDM Cloud Wizard_
 _Figure 23: Select Cloud Cluster_
 
 
-
-<p id="gdcalert25" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image22.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert26">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image22.png "image_tooltip")
+![alt_text](images/image18.png "image_tooltip")
 
 
 
@@ -875,10 +652,7 @@ _Figure 24: Network Configuration_
 
 
 
-<p id="gdcalert26" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image23.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert27">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image23.png "image_tooltip")
+![alt_text](images/image19.png "image_tooltip")
 
 
 
@@ -887,12 +661,7 @@ _Figure 24: Network Configuration_
 
 _Figure 25: WAN Configuration_
 
-
-
-<p id="gdcalert27" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image24.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert28">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image24.png "image_tooltip")
+![alt_text](images/image20.png "image_tooltip")
 
 
 
@@ -903,10 +672,7 @@ _Figure 26: WAN Route Configuration_
 
 
 
-<p id="gdcalert28" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image25.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert29">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image25.png "image_tooltip")
+![alt_text](images/image21.png "image_tooltip")
 
 
 
@@ -917,10 +683,7 @@ _Figure 27: Network Mapping_
 
 
 
-<p id="gdcalert29" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image26.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert30">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image26.png "image_tooltip")
+![alt_text](images/image22.png "image_tooltip")
 
 
 
@@ -930,21 +693,14 @@ _Figure 27: Network Mapping_
 _Figure 28: Summary and Request Submission_
 
 
-
-<p id="gdcalert30" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image27.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert31">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image27.png "image_tooltip")
+![alt_text](images/image23.png "image_tooltip")
 
 
 _Figure 29: HDM Clouds View_
 
 
 
-<p id="gdcalert31" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image28.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert32">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image28.png "image_tooltip")
+![alt_text](images/image10.png "image_tooltip")
 
 
 
@@ -961,20 +717,13 @@ _Figure 30: HDM Appliance Control Panel_
 
 
 
-<p id="gdcalert32" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image29.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert33">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image29.png "image_tooltip")
+![alt_text](images/image24.png "image_tooltip")
 
 
 _Figure 31: vCenter HDM Plug-In_
 
 
-
-<p id="gdcalert33" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image30.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert34">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image30.png "image_tooltip")
+![alt_text](images/image25.png "image_tooltip")
 
 
 
@@ -986,10 +735,7 @@ _Figure 32: Verify Installation of the Cloud State_
 
 
 
-<p id="gdcalert34" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image31.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert35">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image31.png "image_tooltip")
+![alt_text](images/image7.png "image_tooltip")
 
 
 **NOTE:** Configuration information needs to be gathered and loaded from vCD, so it may take a few minutes to load the Cloud Dashboard for the first time. 
@@ -1028,11 +774,7 @@ Steps
 _Figure 33: vCenter Cloud Listing_
 
 
-
-<p id="gdcalert35" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image32.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert36">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image32.png "image_tooltip")
+![alt_text](images/image8.png "image_tooltip")
 
 
 
@@ -1041,12 +783,7 @@ _Figure 33: vCenter Cloud Listing_
 
 _Figure 34: Delete Cloud Pop-Up_
 
-
-
-<p id="gdcalert36" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image33.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert37">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image33.png "image_tooltip")
+![alt_text](images/image9.png "image_tooltip")
 
 
 
@@ -1056,11 +793,7 @@ _Figure 34: Delete Cloud Pop-Up_
 _Figure 35: HDM Clouds View_
 
 
-
-<p id="gdcalert37" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image34.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert38">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image34.png "image_tooltip")
+![alt_text](images/image10.png "image_tooltip")
 
 
 
@@ -1083,11 +816,7 @@ Steps
 _Figure 36: vCenter On-Premises Cluster Listing_
 
 
-
-<p id="gdcalert38" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image35.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert39">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image35.png "image_tooltip")
+![alt_text](images/image11.png "image_tooltip")
 
 
 
@@ -1097,11 +826,7 @@ _Figure 36: vCenter On-Premises Cluster Listing_
 _Figure 37: Uninstall On-Premises Pop-up_
 
 
-
-<p id="gdcalert39" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image36.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert40">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image36.png "image_tooltip")
+![alt_text](images/image12.png "image_tooltip")
 
 
 
@@ -1112,10 +837,7 @@ _Figure 38: HDM Configuration View_
 
 
 
-<p id="gdcalert40" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image37.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert41">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image37.png "image_tooltip")
+![alt_text](images/image13.png "image_tooltip")
 
 
 
@@ -1136,11 +858,7 @@ Steps
 _Figure 39: HDM Plug-In in the PrimaryIO vCenter Listing_
 
 
-
-<p id="gdcalert41" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image38.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert42">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image38.png "image_tooltip")
+![alt_text](images/image14.png "image_tooltip")
 
 
 
@@ -1168,11 +886,7 @@ Steps
 _Figure 40: HDM Appliance in the PrimaryIO vCenter Listing_
 
 
-
-<p id="gdcalert42" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image39.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert43">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image39.png "image_tooltip")
+![alt_text](images/image15.png "image_tooltip")
 
 
 
@@ -1204,10 +918,8 @@ _Figure 41: Downloading Debug Logs from HDM_
 
 
 
-<p id="gdcalert43" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image40.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert44">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-
-![alt_text](images/image40.png "image_tooltip")
+![alt_text](images/image16.png "image_tooltip")
 
 
 
@@ -1224,11 +936,7 @@ Steps:
 _Figure 42: Downloading System Logs from vCenter_
 
 
-
-<p id="gdcalert44" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image41.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert45">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image41.png "image_tooltip")
+![alt_text](images/image1.png "image_tooltip")
 
 
 
@@ -1283,21 +991,13 @@ Steps
 _Figure 43: vCenter HDM Reset Tab_
 
 
-
-<p id="gdcalert45" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image42.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert46">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image42.png "image_tooltip")
+![alt_text](images/image2.png "image_tooltip")
 
 
 _Figure 44: Reset Task in the On-Premises vCenter_
 
 
-
-<p id="gdcalert46" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image43.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert47">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image43.png "image_tooltip")
+![alt_text](images/image3.png "image_tooltip")
 
 
 
@@ -1308,11 +1008,7 @@ _Figure 44: Reset Task in the On-Premises vCenter_
 _Figure 45: Updated Task in On-Premises vCenter_
 
 
-
-<p id="gdcalert47" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image44.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert48">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image44.png "image_tooltip")
+![alt_text](images/image4.png "image_tooltip")
 
 
 
@@ -1353,16 +1049,8 @@ HDM reset would undo the steps 3 and 4, above, so these have to be executed agai
 
 
 
-1. 
-
-<p id="gdcalert48" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "Deploy HDM on-premises"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert49">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-[Deploy HDM on-premises](#heading=h.dbn9uqe840qe)
-2. 
-
-<p id="gdcalert49" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "Deploy HDM in the cloud"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert50">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-[Deploy HDM in the cloud](#heading=h.dbn9uqe840qe)
+1. [Deploy HDM on-premises](#heading=h.dbn9uqe840qe)
+2. [Deploy HDM in the cloud](#heading=h.dbn9uqe840qe)
 
 
 ## Troubleshooting Common Failure Scenarios
@@ -1409,11 +1097,7 @@ The email should contain the following:
 
 *   **Email subject:** Clearly highlight the issue.
 *   **Email body**: Clearly describe the problem. It can contain the deployment type, the operation being performed, any relevant screenshots, etc.
-*   **Email attachment**: Attach the relevant logs (see the 
-
-<p id="gdcalert50" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "HDM Support Logs"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert51">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-[HDM Support Logs](#heading=h.46et8132q0kj) section for instructions):
+*   **Email attachment**: Attach the relevant logs (see the [HDM Support Logs](#heading=h.46et8132q0kj) section for instructions):
     *   HDM logs
     *   vm-support logs
 
