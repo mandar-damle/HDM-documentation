@@ -370,9 +370,6 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
 <li>Complete all steps to begin the deployment
 
 <li>Complete the configuration details using the information you recorded in 
-
-<p id="gdcalert15" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "Appendix B - Network Settings"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert16">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
 <a href="#heading=h.qqzzlrxclsfu">Appendix B - Network Settings</a>
 
 <li>If there are any errors in the network configuration, please resolve
@@ -555,8 +552,6 @@ The following WAN routes are required to gain access between the cloud and on-pr
 <ul>
 
 <li>Use the configuration information recorded in 
-
-<p id="gdcalert23" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "Appendix B"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert24">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 <a href="#heading=h.qqzzlrxclsfu">Appendix B</a>
 
