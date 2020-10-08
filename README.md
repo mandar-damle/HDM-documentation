@@ -3,7 +3,7 @@
 documents with "tick" have been fixed for images after conversion process. 
 
 * VCS
-  * [ ] [Install Guide](docs/vcs/Install%20Guide/Install%20Guide.md)
+  * [x] [Install Guide](docs/vcs/Install%20Guide/Install%20Guide.md)
   * [x] [Admin Guide](docs/vcs/Admin%20Guide/Admin%20Guide.md)
   * [ ] [Network Configuration](docs/vcs/Network%20Configuration%20Planning/Network%20Configuration.md)
   * [ ] [Quick Start Guide - IBM VCS Multi Network ](docs/vcs/Quick%20Start%20Guide%20-%20IBM%20VCS%20-%20Multi%20Network%20/Quick%20Start%20Guide%20-%20IBM%20VCS%20-%20Multi%20Network%20.md)
