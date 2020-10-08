@@ -58,12 +58,7 @@ HDM 2.1 consists of microservices that have been packaged as VMs that work toget
 
 _Figure 1: Location of HDM 2.1 components_
 
-
-
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image28.png "image_tooltip")
+![alt_text](images/image8.png "image_tooltip")
 
 
 
@@ -130,11 +125,7 @@ Steps
 _Figure 2: On-Premises vCenter_
 
 
-
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image3.png "image_tooltip")
+![alt_text](images/image7.png "image_tooltip")
 
 
 
@@ -145,10 +136,7 @@ _Figure 3: Migration Wizard - Step 2_
 
 
 
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image4.png "image_tooltip")
+![alt_text](images/image10.png "image_tooltip")
 
 
 
@@ -159,10 +147,7 @@ _Figure 4: Migration Wizard – Step 3_
 
 
 
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image5.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image5.png "image_tooltip")
+![alt_text](images/image9.png "image_tooltip")
 
 
 
@@ -177,11 +162,7 @@ _Figure 4: Migration Wizard – Step 3_
 _Figure 5: Migration Wizard - Step 4_
 
 
-
-<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image6.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image6.png "image_tooltip")
+![alt_text](images/image12.png "image_tooltip")
 
 
 
@@ -195,10 +176,7 @@ _Figure 6: Migration Wizard - Step 5_
 
 
 
-<p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image7.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image7.png "image_tooltip")
+![alt_text](images/image11.png "image_tooltip")
 
 
 
@@ -209,10 +187,7 @@ _Figure 7: Migration Wizard - Step 6_
 
 
 
-<p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image8.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image8.png "image_tooltip")
+![alt_text](images/image14.png "image_tooltip")
 
 
 
@@ -222,11 +197,7 @@ _Figure 7: Migration Wizard - Step 6_
 _Figure 8: Migration Wizard – Step 7_
 
 
-
-<p id="gdcalert9" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image9.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert10">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image9.png "image_tooltip")
+![alt_text](images/image13.png "image_tooltip")
 
 
 The progress of the migration can be seen either on the migration status page (figure 9), or in the vCenter task page (figure 10). The migrated VM can be seen in a new resource pool HDM_MIGRATE_POOL in the on-premises vCenter and will be in a powered off state (figure 11). All migrations can be monitored in vCenter by selecting _Cluster 🡪 Monitor 🡪 HDM_, and then selecting the _Migration_ tab, followed by the _In Progress_ tab (figure 12). Virtual machines that have been migrated to the cloud can be seen in vCenter by selecting _Cluster 🡪 Monitor 🡪 HDM_, and then selecting the _Migration _tab, followed by the_ Summary_ tab.
@@ -234,51 +205,30 @@ The progress of the migration can be seen either on the migration status page (f
 _Figure 9: Migration Wizard – VM Migration Status Page_
 
 
-
-<p id="gdcalert10" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image10.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert11">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image10.png "image_tooltip")
+![alt_text](images/image17.png "image_tooltip")
 
 
 _Figure 10: vCenter Task Page_
 
 
-
-<p id="gdcalert11" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image11.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert12">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image11.png "image_tooltip")
+![alt_text](images/image15.png "image_tooltip")
 
 
 _Figure 11: vCenter Resource Pool Page_
 
-
-
-<p id="gdcalert12" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image12.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert13">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image12.png "image_tooltip")
+![alt_text](images/image16.png "image_tooltip")
 
 
 _Figure 12: vCenter HDM Migration Progress Tab_
 
 
-
-<p id="gdcalert13" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image13.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert14">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image13.png "image_tooltip")
+![alt_text](images/image18.png "image_tooltip")
 
 
 _Figure 13: vCenter HDM Migration Summary Tab_
 
 
-
-<p id="gdcalert14" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image14.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert15">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image14.png "image_tooltip")
+![alt_text](images/image19.png "image_tooltip")
 
 
 
@@ -308,31 +258,19 @@ When there are no failures, the status of all HDM components are listed as _Good
 _Figure 14: Healthy Components_
 
 
-
-<p id="gdcalert15" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image15.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert16">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image15.png "image_tooltip")
+![alt_text](images/image20.png "image_tooltip")
 
 
 _Figure 15: Component Troubles_
 
 
-
-<p id="gdcalert16" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image16.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert17">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image16.png "image_tooltip")
+![alt_text](images/image21.png "image_tooltip")
 
 
 _Figure 16: vCenter on the HDM Plug-in_
 
 
-
-<p id="gdcalert17" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image17.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert18">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image17.png "image_tooltip")
+![alt_text](images/image22.png "image_tooltip")
 
 
 
@@ -355,11 +293,7 @@ Access the vCenter dashboard by selecting HDM, followed by the _Dashboard_ tab. 
 _Figure 17: vCenter Dashboard_
 
 
-
-<p id="gdcalert18" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image18.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert19">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image18.png "image_tooltip")
+![alt_text](images/image23.png "image_tooltip")
 
 
 
@@ -372,21 +306,12 @@ The appliance control panel will update the status of failed components as “Po
 _Figure 18: Appliance Control Panel: Determining Failed Components_
 
 
-
-<p id="gdcalert19" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image19.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert20">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image19.png "image_tooltip")
+![alt_text](images/image24.png "image_tooltip")
 
 
 _Figure 19: Appliance Control Panel: Details on Failed Components_
 
-
-
-<p id="gdcalert20" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image20.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert21">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image20.png "image_tooltip")
+![alt_text](images/image25.png "image_tooltip")
 
 
 
@@ -396,22 +321,13 @@ Access the vCenter event log by selecting _HDM_ from the menu, followed by the _
 
 _Figure 20: vCenter Event Log_
 
-
-
-<p id="gdcalert21" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image21.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert22">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image21.png "image_tooltip")
+![alt_text](images/image1.png "image_tooltip")
 
 
 _Figure 21: Event Log Details_
 
 
-
-<p id="gdcalert22" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image22.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert23">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image22.png "image_tooltip")
+![alt_text](images/image2.png "image_tooltip")
 
 
 To isolate the events generated by the HDM, a filter can be applied to the “Event Type ID” on the extreme right hand column. Figure 22 illustrates this by applying the filter, _“com.hdm”_ which limits the view to the events generated by HDM.
@@ -419,11 +335,7 @@ To isolate the events generated by the HDM, a filter can be applied to the “Ev
 _Figure 22: Applying Filters_
 
 
-
-<p id="gdcalert23" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image23.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert24">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image23.png "image_tooltip")
+![alt_text](images/image3.png "image_tooltip")
 
 
 
@@ -495,11 +407,7 @@ After recovery, a message is logged in the vCenter events log:
 _Figure 23: Post-Recovery Message in vCenter Events Log_
 
 
-
-<p id="gdcalert24" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image24.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert25">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image24.png "image_tooltip")
+![alt_text](images/image4.png "image_tooltip")
 
 
 
@@ -536,12 +444,7 @@ VMs that are migrated back as part of a failure recovery are kept in one of two 
 This resource pool hosts the VMs that have been migrated back as part of failure handling and are likely to be successfully booted using the on-premises vCenter. However, they may have some data loss equivalent to the last RTO/RPO flush cycle (default 20 minutes).
 
 
-    
-
-<p id="gdcalert25" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image25.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert26">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image25.png "image_tooltip")
+![alt_text](images/image5.png "image_tooltip")
 
 
 
