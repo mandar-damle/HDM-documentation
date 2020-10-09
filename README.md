@@ -11,7 +11,7 @@ documents with "tick" have been fixed for images after conversion process.
   * [ ] [Troubleshooting Guide](docs/vcs/Troubleshooting%20Guide/Troubleshooting%20Guide)
   * [x] [Virtual Private Network - IPsec configuration for IBM VCS](docs/vcs/Virtual%20Private%20Network%20-%20IPsec%20configuration%20for%20IBM%20VCS/Virtual%20Private%20Network%20-%20IPsec%20configuration%20for%20IBM%20VCS)
   * [x] [Deployment Checklist](docs/vcs/Deployment%20Checklist)
-  * [x] [Release Notes](docs/vcs/Release%20Notes.md)
+  * [x] [Release Notes](docs/vcs/Release%20Notes)
   * [x] [System Requirements](docs/vcs/System%20Requirements)
 * VCD
   * [x] [Admin Guide](docs/vcd/Admin%20Guide/Admin%20Guide)
