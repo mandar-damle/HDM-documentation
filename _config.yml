@@ -1,1 +1,5 @@
 theme: jekyll-theme-leap-day
+
+include:
+  - README.md
+  - landing/docs.md
