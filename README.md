@@ -3,7 +3,9 @@
 https://cacheboxinc.github.io/HDM-documentation/
 
 documents with "tick" have been fixed for images after conversion process. 
-
+* Common
+  * [x] [Release Notes](docs/vcs/Release%20Notes)
+  * [x] [System Requirements](docs/vcs/System%20Requirements)
 * VCS
   * [x] [Install Guide](docs/vcs/Install%20Guide/Install%20Guide)
   * [x] [Admin Guide](docs/vcs/Admin%20Guide/Admin%20Guide)
@@ -12,8 +14,6 @@ documents with "tick" have been fixed for images after conversion process.
   * [ ] [Quick Start Guide - IBM VCS Single Network](docs/vcs/Quick%20Start%20Guide%20-%20IBM%20VCS%20-%20Single%20Network%20-%20Standard-Standalone/Quick%20Start%20Guide%20-%20IBM%20VCS%20-%20%20Single%20Network)
   * [ ] [Troubleshooting Guide](docs/vcs/Troubleshooting%20Guide/Troubleshooting%20Guide)
   * [x] [Deployment Checklist](docs/vcs/Deployment%20Checklist)
-  * [x] [Release Notes](docs/vcs/Release%20Notes)
-  * [x] [System Requirements](docs/vcs/System%20Requirements)
 * VCD
   * [x] [Admin Guide](docs/vcd/Admin%20Guide/Admin%20Guide)
   * [x] [Install Guide](docs/vcd/install%20guide/Install%20Guide)

@@ -24,7 +24,7 @@ The following steps are required to deploy HDM:
 
 # Step 1: Review System Requirements
 
-Refer to the [System Requirements](https://docs.google.com/document/d/1X1YOf2LQIT1hdGFygKmUgE2BGPs6QXKp/edit?ts=5f55d761#heading=h.inqccfxv1izt) in Appendix A of this document. Printing a copy of Appendix A to use as a checklist is recommended. 
+Refer to the [System Requirements](docs/common/System%20Requirements) in Appendix A of this document. Printing a copy of Appendix A to use as a checklist is recommended. 
 
 
 # Step 2: Download PrimaryIO HDM
