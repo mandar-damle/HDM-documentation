@@ -101,7 +101,7 @@ This document uses the below terms and terminologies at multiple places.
 
 *   **Bulk migration**
 
-    Background** **movement of the VM data in case of ARM use case. It is said to be **online **if the transfer is done by HDM and is **offline **if third party mechanism like AWS snowball is used.
+    Background movement of the VM data in case of ARM use case. It is said to be **online** if the transfer is done by HDM and is **offline** if third party mechanism like AWS snowball is used.
 
 *   **Ultra Lite, Lite, Standard or Performance Deployment**
 
@@ -146,10 +146,10 @@ Below is a pictorial representation of the components that constitute the HDM so
 
 
 
-1. **PIO Plugin** PrimaryIO plug-in registered and installed on VMware vCenter for HDM management.
-2. **PIO Manager** The main controlling appliance. This controls and orchestrates the entire system.
-3. **PIO Filter** A **VMware VAIO filter framework** to gather I/O traces from each VM.
-4. **PIO Analyzer** The I/O Analyzer (IOA) aggregates I/O traces from all VMs. It analyzes the I/O traces at a block level to make recommendations on the cloud cache requirements etc.
+1. **PIO Plugin:** PrimaryIO plug-in registered and installed on VMware vCenter for HDM management.
+2. **PIO Manager:** The main controlling appliance. This controls and orchestrates the entire system.
+3. **PIO Filter:** A **VMware VAIO filter framework** to gather I/O traces from each VM.
+4. **PIO Analyzer:** The I/O Analyzer (IOA) aggregates I/O traces from all VMs. It analyzes the I/O traces at a block level to make recommendations on the cloud cache requirements etc.
 5. **Storage Gateway:** Provides access across the WAN link to ensure traffic optimization and redundancy against failures. It also accesses and manage the On-Premise VMDKs for remote VMs that are in the On-Cloud.
 6. **Cloud Storage G/W:** The gateway for the VMs in the On-Cloud for reads and writes back to the On-Premise across the WAN link. It is possible to have multiple gateways across WAN link for redundancy.
 7. **Cloud Cache:** The cloud cache is a fast, reliable, persistent cache for the VMs in the On-Cloud. The cache maintains the working set of the VMs, so that VMs can run efficiently without moving entire data On-Cloud. When there is a cache miss, it is fetched from the On-Premise side by requesting the storage gateway to get blocks from the On-Premise VMDK.
@@ -916,7 +916,7 @@ Steps for deployment
 
 
 1. In the On-Premise vCenter, click on PrimaryIO from Shortcuts or from Menu to access the PrimaryIO dashboard
-2. Select **Administration **from the tab
+2. Select **Administration** from the tab
 3. Click on **Configuration** to access the On-Premise cluster listing. 
 
 ![alt_text](images/image61.png "image_tooltip")
@@ -956,7 +956,7 @@ PS: Make sure enough resources are available on On-Premise and on On-Cloud  when
 3. ESXi Network (ESXi_Network)
 
 
-**Note:  **
+**Note:**
 1. **If all are mapping to single network, separate IP ranges will still need to be provided for each of the network type.**
 2. **The subnet range 172.17.0.0/16 is not available for the deployment; it is internally used by HDM microservices.**
 
@@ -1362,7 +1362,7 @@ Steps
 
 
 1. In the On-Premise vCenter, click on HDM from Shortcuts or from Menu to access the HDM dashboard
-2. Select **Administration **from the tab
+2. Select **Administration** from the tab
 3. Click on **Clouds** to access the On-Cloud listing.
 4. Select the On-Cloud from the listing and click on **DELETE CLOUD**
 
@@ -1410,7 +1410,7 @@ Steps
 
 
 1. In the On-Premise vCenter, click on HDM from Shortcuts or from Menu to access the HDM dashboard
-2. Select **Administration **from the tab
+2. Select **Administration** from the tab
 3. Click on **Configuration** to access the cluster listing
 4. Against the cluster on which HDM is installed, click on **Disable** under monitoring
 
@@ -1447,9 +1447,9 @@ Steps
 
 
 1. In the On-Premise vCenter, click on HDM from Shortcuts or from Menu to access the HDM dashboard
-2. Select **Administration **from the tab
+2. Select **Administration** from the tab
 3. Click on **Configuration** to access the cluster listing
-4. Against the cluster on which HDM is installed, click on **UNINSTALL. **
+4. Against the cluster on which HDM is installed, click on **UNINSTALL.**
 
 
 
@@ -1578,7 +1578,7 @@ Steps
 
 
 
-5. On the popup, click on **Yes **to delete the vCenter from the Appliance.
+5. On the popup, click on **Yes** to delete the vCenter from the Appliance.
 6. Log into vCenter.
 7. From Host and Clusters, power off PrimaryIO Appliance VM.
 8. Right click on the Appliance VM and select Delete from Disk to delete the Appliance.
@@ -1689,7 +1689,7 @@ Steps
 
 
 1. In the On-Premise vCenter, click on HDM from Shortcuts or from Menu to access the HDM dashboard
-2. Select **Administration->HDM Health->HDM Reset **from the tab. If for any failure reason the HDM Reset button is not enabled, then reboot the appliance and try again.
+2. Select **Administration->HDM Health->HDM Reset** from the tab. If for any failure reason the HDM Reset button is not enabled, then reboot the appliance and try again.
 
 ![alt_text](images/image51.png "image_tooltip")
 
