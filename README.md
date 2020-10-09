@@ -11,7 +11,6 @@ documents with "tick" have been fixed for images after conversion process.
   * [ ] [Quick Start Guide - IBM VCS Multi Network ](docs/vcs/Quick%20Start%20Guide%20-%20IBM%20VCS%20-%20Multi%20Network%20/Quick%20Start%20Guide%20-%20IBM%20VCS%20-%20Multi%20Network%20)
   * [ ] [Quick Start Guide - IBM VCS Single Network](docs/vcs/Quick%20Start%20Guide%20-%20IBM%20VCS%20-%20Single%20Network%20-%20Standard-Standalone/Quick%20Start%20Guide%20-%20IBM%20VCS%20-%20%20Single%20Network)
   * [ ] [Troubleshooting Guide](docs/vcs/Troubleshooting%20Guide/Troubleshooting%20Guide)
-  * [x] [Virtual Private Network - IPsec configuration for IBM VCS](docs/vcs/Virtual%20Private%20Network%20-%20IPsec%20configuration%20for%20IBM%20VCS/Virtual%20Private%20Network%20-%20IPsec%20configuration%20for%20IBM%20VCS)
   * [x] [Deployment Checklist](docs/vcs/Deployment%20Checklist)
   * [x] [Release Notes](docs/vcs/Release%20Notes)
   * [x] [System Requirements](docs/vcs/System%20Requirements)
