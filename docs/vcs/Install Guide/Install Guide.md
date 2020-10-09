@@ -146,13 +146,13 @@ Below is a pictorial representation of the components that constitute the HDM so
 
 
 
-1. **PIO Plugin **PrimaryIO plug-in registered and installed on VMware vCenter for HDM management.
+1. **PIO Plugin** PrimaryIO plug-in registered and installed on VMware vCenter for HDM management.
 2. **PIO Manager** The main controlling appliance. This controls and orchestrates the entire system.
-3. **PIO Filter **A** **VMware VAIO filter framework to gather I/O traces from each VM.
+3. **PIO Filter** A **VMware VAIO filter framework** to gather I/O traces from each VM.
 4. **PIO Analyzer** The I/O Analyzer (IOA) aggregates I/O traces from all VMs. It analyzes the I/O traces at a block level to make recommendations on the cloud cache requirements etc.
 5. **Storage Gateway:** Provides access across the WAN link to ensure traffic optimization and redundancy against failures. It also accesses and manage the On-Premise VMDKs for remote VMs that are in the On-Cloud.
-6. **Cloud Storage G/W: **The gateway for the VMs in the On-Cloud for reads and writes back to the On-Premise across the WAN link. It is possible to have multiple gateways across WAN link for redundancy.
-7. **Cloud Cache: **The cloud cache is a fast, reliable, persistent cache for the VMs in the On-Cloud. The cache maintains the working set of the VMs, so that VMs can run efficiently without moving entire data On-Cloud. When there is a cache miss, it is fetched from the On-Premise side by requesting the storage gateway to get blocks from the On-Premise VMDK.
+6. **Cloud Storage G/W:** The gateway for the VMs in the On-Cloud for reads and writes back to the On-Premise across the WAN link. It is possible to have multiple gateways across WAN link for redundancy.
+7. **Cloud Cache:** The cloud cache is a fast, reliable, persistent cache for the VMs in the On-Cloud. The cache maintains the working set of the VMs, so that VMs can run efficiently without moving entire data On-Cloud. When there is a cache miss, it is fetched from the On-Premise side by requesting the storage gateway to get blocks from the On-Premise VMDK.
 
       
 
@@ -203,7 +203,7 @@ Following are the system requirements for HDM deployment
     Related document: For hardware requirements and system requirements refer to the [VMware Hardware Compatibility List (HCL).](https://www.vmware.com/resources/compatibility/search.php)
 
 
-**Note: VM Network (Management Network), HDM_Internal_Network (HDM Internal Network), Uplink_WAN_Network (WAN Network) and ESXi_Network (ESXi Network) can map to a single or more networks. **
+**Note: VM Network (Management Network), HDM_Internal_Network (HDM Internal Network), Uplink_WAN_Network (WAN Network) and ESXi_Network (ESXi Network) can map to a single or more networks.**
 
 In case a single network that provides all these functionality, customers would still need to provide details for each. Here, customers can divide the IP subnet into multiple ranges which can be mapped to these four networks. 
 
