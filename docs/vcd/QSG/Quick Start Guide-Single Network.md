@@ -44,7 +44,7 @@ Before proceeding with the installation, watch the training videos and use this 
 
 # Step 3: Network Planning and Mapping
 
-Network configuration information is required at key points throughout the deployment process. So, develop a network connectivity plan prior to deploying HDM. This section will help guide you through that process. The information captured in this section will be employed later in the installation process. If an IPSec tunnel and cloud configuration have not yet been established, these must be done before moving any further. Follow the steps outlined in [Appendix C](#appendix-c---ipsec-configuration) of this document. Please be aware that this process will add 30 minutes to the estimated time to complete this section. 
+Network configuration information is required at key points throughout the deployment process. So, develop a network connectivity plan prior to deploying HDM. This section will help guide you through that process. The information captured in this section will be employed later in the installation process. If an IPSec tunnel and cloud configuration have not yet been established, these must be done before moving any further. Follow the steps outlined in [Appendix C](#appendix-c) of this document. Please be aware that this process will add 30 minutes to the estimated time to complete this section. 
 
 Once connectivity and cloud configuration are complete, be sure to record all applicable details in [Appendix B](#heading=h.qqzzlrxclsfu) of this document for easy reference later in the deployment process. 
 
@@ -1231,7 +1231,7 @@ Similar to the previous two deployment stages, provision IPs and identify the co
 
 
 
-# Appendix C - IPSec Configuration
+# <a name="appendix-c">Appendix C - IPSec Configuration</a>
 
 Requirements to deploy HDM:
 
