@@ -106,6 +106,8 @@ Before continuing with the rest of this Quick Start Guide, be sure to print [App
 *   Unzip the file _HDM_2.1.zip_ from the download link
 *   Deploy the appliance using the vCenter UI 
 
+
+
 <table>
   <tr>
    <td>
