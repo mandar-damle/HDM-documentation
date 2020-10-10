@@ -1,3 +1,24 @@
-title: "HDM Documentation"
+#
+# Site settings
+#
 remote_theme: LeakyAbstractions/pretty-docs
-search_enabled: true
+url: https://cacheboxinc.github.io/HDM-documentation/
+baseurl: /HDM-documentation
+title: &site_title HDM Documentation
+description: &site_description HDM Documentation
+branding:
+  icon:
+    name: icon_documents_alt
+  highlight: Pretty
+  bold: Docs
+markdown: kramdown
+kramdown:
+  auto_ids: true
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  input: GFM
+  hard_wrap: false
+  footnote_nr: 1
+  parse_block_html: true
+
