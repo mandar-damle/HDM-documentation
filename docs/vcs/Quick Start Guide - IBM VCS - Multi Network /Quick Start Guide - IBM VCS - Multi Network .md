@@ -41,74 +41,11 @@
 
 
 
-# 
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image1.png "image_tooltip")
-
-
 
 # **HDM 2.1 Quick Start Guide for IBM VCS**
 
 
 # **Multi-Network Configuration**
-
- 	                        
-
-Version: 2.1
-
-Publish Date: August, 2020
-
-Copyright © 2020 PrimaryIO, Inc.
-
-PrimaryIO, Inc.
-
-300 3rd St, Los Altos
-
-CA 94022
-
-[http://www.primaryio.com](http://www.primaryio.com)
-
-**Tel:** +1-877-817-7790
-
-Copyright Notice
-
-Copyright © 2020 PrimaryIO, Inc. 
-
-This document is provided for informational purposes only and PrimaryIO makes no warranties, either expressed or implied in this document. 
-
-Information in this document, including URL and other Internet references, is subject to change without notice. The entire risk of the use or the results from the use of this document remains with the user. 
-
-Unless otherwise noted, the companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted in examples herein are fictitious. 
-
-No association with any real company, organization, product, domain name, e-mail address, logo, person, place, or event is intended or should be inferred. 
-
-Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the written permission of PrimaryIO. 
-
-PrimaryIO may have patents, patent applications, trademarks, copyrights, or other intellectual property rights covering subject matter in this document. Except as explicitly provided in any written license agreement from PrimaryIO, the furnishing of this document does not guarantee any license to these patents, trademarks, copyrights, or other intellectual property. 
-
-© 2012 - 2020 PrimaryIO. 
-
-All rights reserved. 
-
-Trademarks
-
-PrimaryIO HDM™ is a registered trademark of PrimaryIO, Inc in the United States and/or other jurisdictions. 
-
-VMware is a registered trademark of VMware, Inc. in the United States and/or other jurisdictions.
-
-All other trademarks referred to in this guide are owned by their respective companies.
-
-
-
-Contents
-
-
-[TOC]
-
-
 
 ## 
 
@@ -141,15 +78,7 @@ Estimated time 15 minutes
 ```
 
 
-Refer to the 
-
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "System Requirements"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-[System Requirements](#heading=h.inqccfxv1izt) in Appendix A of this document. Request you to print a copy of 
-
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "Appendix A "). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-[Appendix A ](#heading=h.inqccfxv1izt)and check off that your infrastructure meets each of the requirements. 
+Refer to the [Appendix A - System Requirements](#appendixasystemrequirementsg=h.inqccfxv1izt) in Appendix A of this document. Request you to print a copy of [Appendix A ](#heading=h.inqccfxv1izt)and check off that your infrastructure meets each of the requirements. 
 
 
 # Step 2/8 : Downloading PrimaryIO HDM
@@ -183,25 +112,11 @@ Estimated time 20 minutes
 ```
 
 
-Prior to HDM deployment, we need to understand and plan the network connectivity. This section will help plan the network settings. Network configuration information is required at a few points in the deployment process. The information captured in this section will be used in the later sections of the installation.  If you don’t have IPSec tunnel and cloud configured this is the very first thing you would need to do. Please refer to 
-
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "Appendix C"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-[Appendix C](#heading=h.8n7jk8n5lwew) at the end of this document, this will add another 30 minutes to the time in this section. After the connectivity and cloud is setup please go through this section and then use the pages from 
-
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "Appendix B"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-[Appendix B](#heading=h.qqzzlrxclsfu) to capture network details. These will be required in the subsequent deployment process. 
+Prior to HDM deployment, we need to understand and plan the network connectivity. This section will help plan the network settings. Network configuration information is required at a few points in the deployment process. The information captured in this section will be used in the later sections of the installation.  If you don’t have IPSec tunnel and cloud configured this is the very first thing you would need to do. Please refer to [Appendix C](#appendix-c---ipsec-configuration-tunnel-firewall-and-cloud-network-configuration) at the end of this document, this will add another 30 minutes to the time in this section. After the connectivity and cloud is setup please go through this section and then use the pages from [Appendix B] to capture network details. These will be required in the subsequent deployment process. 
 
 This section will guide you through the steps required to setup the network - 
 
-
-
-1. IPSec tunnel, firewall and Cloud network configuration (Refer
-
-<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: " Appendix C"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-[ Appendix C](#heading=h.8n7jk8n5lwew))
+1. IPSec tunnel, firewall and Cloud network configuration (Refer [ Appendix C])
 2. Network requirements during OVF deployment
 3. Network requirements during on-premise deployment
 4. Network requirements during on-cloud deployment
@@ -225,20 +140,12 @@ The HDM internal network is used to connect the HDM components for their private
 Uplink WAN Network:
 The network over which the on-premise components can communicate with the cloud components.
 
-
-
 Failure to create or choose or configure the networks correctly will result in failure of the installation below.
-```
-
-
 
 We have to either identify a network which satisfies the above property or you have to **create** a network with connectivity to the above elements. 
 
-
-```
-
-```
-
+Figure 1: Network Configuration of the Test Environment
+![alt_text](images/image9.png "image_tooltip")
 
 For the rest of this document we will assume you have created a network topology depicted in the diagram above. For simplicity we refer to the networks as named in the diagram. However if you choose to name the networks differently just substitute the name of your network for the one above. 
 
@@ -250,11 +157,7 @@ Please add vCenter FQDN both premise and cloud vCenter on both premise and cloud
 ```
 
 
-Please print the 
-
-<p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "Appendix B - Network Settings"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-[Appendix B - Network Settings](#heading=h.qqzzlrxclsfu) and fill in the forms in the appendix. This will allow you to identify the correct networks to configure and identify the other networking details.
+Please print the [Appendix B - Network Settings] and fill in the forms in the appendix. This will allow you to identify the correct networks to configure and identify the other networking details.
 
 
 # Step 4/8 : Deploy PIO Appliance
@@ -263,8 +166,6 @@ Please print the
 ```
 Estimated time 5 minutes
 ```
-
-
 
 
 *   Make sure you have at least 10GB free space to download the appliance.
@@ -282,11 +183,7 @@ Estimated time 5 minutes
   <tr>
    <td>
 
-
-<p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-<img src="images/image2.png" width="" alt="alt_text" title="image_tooltip">
+<img src="images/image1.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -296,7 +193,6 @@ Estimated time 5 minutes
 
 <li>Fill in this screen we data captured in 
 
-<p id="gdcalert9" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "Appendix B - Network Settings"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert10">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 <a href="#heading=h.qqzzlrxclsfu">Appendix B - Network Settings</a>
 
@@ -315,10 +211,7 @@ Estimated time 5 minutes
   <tr>
    <td>
 
-<p id="gdcalert10" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert11">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-<img src="images/image3.png" width="" alt="alt_text" title="image_tooltip">
+<img src="images/image4.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -327,8 +220,6 @@ Estimated time 5 minutes
 <li>Choose the “Default gateway network” as “WAN”.
 
 <li>Fill in the network properties as captured in 
-
-<p id="gdcalert11" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "Appendix B - Network Settings"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert12">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 <a href="#heading=h.qqzzlrxclsfu">Appendix B - Network Settings</a>
 
@@ -353,6 +244,7 @@ Estimated time 10 minutes
 <table>
   <tr>
    <td>
+    <img src="images/image12.png" width="" alt="alt_text" title="image_tooltip">
    </td>
    <td>
 <ul>
@@ -369,6 +261,7 @@ Estimated time 10 minutes
 <table>
   <tr>
    <td>
+    <img src="images/image15.png" width="" alt="alt_text" title="image_tooltip">
    </td>
    <td>
 <ul>
@@ -401,9 +294,9 @@ Estimated time 10 minutes
 *   Find the appliance IP
 *   Open the appliance web interface for https://&lt;appliance-ip>
 *   Login to the appliance web UI using default password 2Hdm$aK!N@h!
-*   After login in click on 
+*   After login in click on ![alt_text](images/image11.png "image_tooltip")
 
-<p id="gdcalert12" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert13">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
 
 
 ![alt_text](images/image4.png "image_tooltip")
