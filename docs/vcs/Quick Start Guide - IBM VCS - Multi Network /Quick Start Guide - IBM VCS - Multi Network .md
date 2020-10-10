@@ -1,44 +1,6 @@
 <!-- Copy and paste the converted output. -->
 
 
-<p style="color: red; font-weight: bold">>>>>>  gd2md-html alert:  ERRORs: 13; WARNINGs: 1; ALERTS: 32.</p>
-<ul style="color: red; font-weight: bold"><li>See top comment block for details on ERRORs and WARNINGs. <li>In the converted Markdown or HTML, search for inline alerts that start with >>>>>  gd2md-html alert:  for specific instances that need correction.</ul>
-
-<p style="color: red; font-weight: bold">Links to alert messages:</p><a href="#gdcalert1">alert1</a>
-<a href="#gdcalert2">alert2</a>
-<a href="#gdcalert3">alert3</a>
-<a href="#gdcalert4">alert4</a>
-<a href="#gdcalert5">alert5</a>
-<a href="#gdcalert6">alert6</a>
-<a href="#gdcalert7">alert7</a>
-<a href="#gdcalert8">alert8</a>
-<a href="#gdcalert9">alert9</a>
-<a href="#gdcalert10">alert10</a>
-<a href="#gdcalert11">alert11</a>
-<a href="#gdcalert12">alert12</a>
-<a href="#gdcalert13">alert13</a>
-<a href="#gdcalert14">alert14</a>
-<a href="#gdcalert15">alert15</a>
-<a href="#gdcalert16">alert16</a>
-<a href="#gdcalert17">alert17</a>
-<a href="#gdcalert18">alert18</a>
-<a href="#gdcalert19">alert19</a>
-<a href="#gdcalert20">alert20</a>
-<a href="#gdcalert21">alert21</a>
-<a href="#gdcalert22">alert22</a>
-<a href="#gdcalert23">alert23</a>
-<a href="#gdcalert24">alert24</a>
-<a href="#gdcalert25">alert25</a>
-<a href="#gdcalert26">alert26</a>
-<a href="#gdcalert27">alert27</a>
-<a href="#gdcalert28">alert28</a>
-<a href="#gdcalert29">alert29</a>
-<a href="#gdcalert30">alert30</a>
-<a href="#gdcalert31">alert31</a>
-<a href="#gdcalert32">alert32</a>
-
-<p style="color: red; font-weight: bold">>>>>> PLEASE check and correct alert issues and delete this message and the inline alerts.<hr></p>
-
 
 
 
@@ -78,7 +40,7 @@ Estimated time 15 minutes
 ```
 
 
-Refer to the [Appendix A - System Requirements](#appendixasystemrequirementsg=h.inqccfxv1izt) in Appendix A(#appendix-a) of this document. Request you to print a copy of [Appendix A ](#appendix-a). 
+Refer to the [Appendix A - System Requirements](#appendix-a) in Appendix A(#appendix-a) of this document. Request you to print a copy of [Appendix A ](#appendix-a). 
 
 
 # Step 2/8 : Downloading PrimaryIO HDM
@@ -112,11 +74,11 @@ Estimated time 20 minutes
 ```
 
 
-Prior to HDM deployment, we need to understand and plan the network connectivity. This section will help plan the network settings. Network configuration information is required at a few points in the deployment process. The information captured in this section will be used in the later sections of the installation.  If you don’t have IPSec tunnel and cloud configured this is the very first thing you would need to do. Please refer to [Appendix C](#appendix-c) at the end of this document, this will add another 30 minutes to the time in this section. After the connectivity and cloud is setup please go through this section and then use the pages from [Appendix B] (#appendix-b) to capture network details. These will be required in the subsequent deployment process. 
+Prior to HDM deployment, we need to understand and plan the network connectivity. This section will help plan the network settings. Network configuration information is required at a few points in the deployment process. The information captured in this section will be used in the later sections of the installation.  If you don’t have IPSec tunnel and cloud configured this is the very first thing you would need to do. Please refer to [Appendix C](#appendix-c) at the end of this document, this will add another 30 minutes to the time in this section. After the connectivity and cloud is setup please go through this section and then use the pages from [Appendix B](#appendix-b) to capture network details. These will be required in the subsequent deployment process. 
 
 This section will guide you through the steps required to setup the network - 
 
-1. IPSec tunnel, firewall and Cloud network configuration (Refer [ Appendix C])(#appendix-c)
+1. IPSec tunnel, firewall and Cloud network configuration (Refer [ Appendix C](#appendix-c))
 2. Network requirements during OVF deployment
 3. Network requirements during on-premise deployment
 4. Network requirements during on-cloud deployment
@@ -858,13 +820,6 @@ Related document: For hardware requirements and system requirements refer to the
 
 
 <p style="text-align: right">
-<strong>
-
-<p id="gdcalert30" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "Back to Top"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert31">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<a href="#heading=h.pj7rznux9t2f">Back to Top</a></strong></p>
-
-
 
 # 
 
@@ -1401,13 +1356,6 @@ The networks to be configured **HDM Internal network** and **WAN network configu
 <p style="text-align: right">
 
 
-<p id="gdcalert31" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "Back to Top"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert32">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<a href="#heading=h.fh32bxmc9gq4">Back to Top</a></p>
-
-
-
-
 
 # <a name="appendix-c">Appendix C - IPSec tunnel, firewall and Cloud network configuration</a>
 
@@ -1425,9 +1373,7 @@ All these three steps are explained in detail in the following “**HDM 2.1 - Ne
 
 *   Configure the cloud side network as depicted in the diagram in the 
 
-<p id="gdcalert32" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "Step 3/8 : Network Planning & Mapping"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert33">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-[Step 3/8 : Network Planning & Mapping](#heading=h.fh32bxmc9gq4).
+[Step 3/8 : Network Planning & Mapping].
 
 For easy configuration of the firewall rules we would recommend to have following Firewall configuration for all on-prem and on- cloud endpoints:
 
