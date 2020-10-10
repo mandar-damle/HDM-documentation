@@ -1,3 +1,4 @@
 title: "HDM Documentation"
 remote_theme: pmarsceill/just-the-docs
+markdown: CommonMark
 search_enabled: false
