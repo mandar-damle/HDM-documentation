@@ -1,5 +1,4 @@
-theme: jekyll-theme-leap-day
-
-include:
-  - README.md
-  - landing/docs.md
+title: "HDM Documentation"
+remote_theme: pmarsceill/just-the-docs
+color_scheme: "dark"
+search_enabled: true
