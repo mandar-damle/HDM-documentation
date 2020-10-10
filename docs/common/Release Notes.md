@@ -39,7 +39,7 @@ Non-Recoverable failure conditions and recovery actions
 *   In pathological failure cases where we cannot recover and the heartbeat status does not recover to “Ready”. In these cases “HDM reset” followed by a redeployment will be required.
 *   Concurrent Infrastructure VM restarts and repeated Infrastructure VM restarts can get into unrecoverable states and require an “HDM reset” 
 
-**Known Issues**
+## Known Issues
 
 Do not delete the component VMs or the content library deployed as part of the HDM product deployment. Doing so will result in the incorrect operation of the product and a “HDM reset” followed by a redeployment will be required.
 
@@ -48,6 +48,9 @@ Do not delete the component VMs or the content library deployed as part of the H
 CP-5262: During the deployment adding a VMware Cloud Director (VCD) target can take upto 5 mins. This is due the time taken by VCD APIs to return information regarding the target environment. 
 
 **The following issues are related to Migration to VMware Cloud**
+
+
+**CP-5612**: VMC does not always honour the disable DRS settings on the components VMs deployed on cloud. This can result in the resources like Cloud_Cache getting seperated from the migrated VMs running of the cloud. This is generally not a cause for concern but can result in the VM becoming unresponsive if the ESXi host were to fail. The system will correctly rollback the VM to premise and start it from the last RTO/RPO checkpoint.
 
 DP-2738:  Occasionally in case of failure of the “On Prem I/O Manager” we are not able to recover from this failure and the component is marked as failed permanently in the Control panel in the appliance UI.To recover from this condition you need to do a “HDM reset” followed by a redeployment.
 
