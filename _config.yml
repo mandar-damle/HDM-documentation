@@ -1,6 +1,3 @@
 title: "HDM Documentation"
-remote_theme: pmarsceill/just-the-docs
-markdown: CommonMark
-search_enabled: false
-
+markdown: kramdown
 theme: jekyll-theme-leap-day
