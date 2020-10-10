@@ -78,7 +78,7 @@ Estimated time 15 minutes
 ```
 
 
-Refer to the [Appendix A - System Requirements](#appendixasystemrequirementsg=h.inqccfxv1izt) in Appendix A of this document. Request you to print a copy of [Appendix A ](#heading=h.inqccfxv1izt)and check off that your infrastructure meets each of the requirements. 
+Refer to the [Appendix A - System Requirements](#appendixasystemrequirementsg=h.inqccfxv1izt) in Appendix A(#appendix-a) of this document. Request you to print a copy of [Appendix A ](#appendix-a). 
 
 
 # Step 2/8 : Downloading PrimaryIO HDM
@@ -112,11 +112,11 @@ Estimated time 20 minutes
 ```
 
 
-Prior to HDM deployment, we need to understand and plan the network connectivity. This section will help plan the network settings. Network configuration information is required at a few points in the deployment process. The information captured in this section will be used in the later sections of the installation.  If you don’t have IPSec tunnel and cloud configured this is the very first thing you would need to do. Please refer to [Appendix C](#appendix-c---ipsec-configuration-tunnel-firewall-and-cloud-network-configuration) at the end of this document, this will add another 30 minutes to the time in this section. After the connectivity and cloud is setup please go through this section and then use the pages from [Appendix B] to capture network details. These will be required in the subsequent deployment process. 
+Prior to HDM deployment, we need to understand and plan the network connectivity. This section will help plan the network settings. Network configuration information is required at a few points in the deployment process. The information captured in this section will be used in the later sections of the installation.  If you don’t have IPSec tunnel and cloud configured this is the very first thing you would need to do. Please refer to [Appendix C](#appendix-c) at the end of this document, this will add another 30 minutes to the time in this section. After the connectivity and cloud is setup please go through this section and then use the pages from [Appendix B] (#appendix-b) to capture network details. These will be required in the subsequent deployment process. 
 
 This section will guide you through the steps required to setup the network - 
 
-1. IPSec tunnel, firewall and Cloud network configuration (Refer [ Appendix C])
+1. IPSec tunnel, firewall and Cloud network configuration (Refer [ Appendix C])(#appendix-c)
 2. Network requirements during OVF deployment
 3. Network requirements during on-premise deployment
 4. Network requirements during on-cloud deployment
@@ -157,7 +157,7 @@ Please add vCenter FQDN both premise and cloud vCenter on both premise and cloud
 ```
 
 
-Please print the [Appendix B - Network Settings] and fill in the forms in the appendix. This will allow you to identify the correct networks to configure and identify the other networking details.
+Please print the [Appendix B - Network Settings] (#appendix-b) and fill in the forms in the appendix. This will allow you to identify the correct networks to configure and identify the other networking details.
 
 
 # Step 4/8 : Deploy PIO Appliance
@@ -191,10 +191,7 @@ Estimated time 5 minutes
 
 <li>Perform the step as directed by the UI.
 
-<li>Fill in this screen we data captured in 
-
-
-<a href="#heading=h.qqzzlrxclsfu">Appendix B - Network Settings</a>
+<li>Fill in this screen we data captured in Appendix B - Network Settings(#appendix-b)
 
 <li>Please refer to the HDM Installation Guide section “Network Configuration for the Appliance” for details on the network configuration.
 
@@ -219,9 +216,7 @@ Estimated time 5 minutes
 
 <li>Choose the “Default gateway network” as “WAN”.
 
-<li>Fill in the network properties as captured in 
-
-<a href="#heading=h.qqzzlrxclsfu">Appendix B - Network Settings</a>
+<li>Fill in the network properties as captured in Appendix B - Network Settings(#appendix-b)
 
 <li><strong>Please make sure you select the correct default gateway interface and in the field “Default Gateway” provide the IP address of the “WAN” gateway . Cloud VC should be accessible from an appliance with default gateway.</strong>
 </li>
@@ -296,21 +291,11 @@ Estimated time 10 minutes
 *   Login to the appliance web UI using default password 2Hdm$aK!N@h!
 *   After login in click on ![alt_text](images/image11.png "image_tooltip")
 
-
-
-
-![alt_text](images/image4.png "image_tooltip")
-
-
 <table>
   <tr>
    <td>
 
-
-<p id="gdcalert13" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image5.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert14">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-<img src="images/image5.png" width="" alt="alt_text" title="image_tooltip">
+<img src="images/image14.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -329,10 +314,8 @@ Estimated time 10 minutes
   <tr>
    <td>
 
-<p id="gdcalert14" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image6.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert15">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-
-<img src="images/image6.png" width="" alt="alt_text" title="image_tooltip">
+<img src="images/image13.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -342,11 +325,7 @@ Estimated time 10 minutes
 
 <li>“Add” to add vCenter
 
-<li>Fill in this screen we data captured in 
-
-<p id="gdcalert15" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "Appendix B"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert16">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<a href="#heading=h.qqzzlrxclsfu">Appendix B</a>
+<li>Fill in this screen we data captured in Appendix B<(#appendix-b)
 </li>
 </ul>
    </td>
@@ -359,10 +338,7 @@ Estimated time 10 minutes
   <tr>
    <td>
 
-<p id="gdcalert16" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image7.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert17">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-<img src="images/image7.png" width="" alt="alt_text" title="image_tooltip">
+<img src="images/image18.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>Register the vCenter plugin by clicking the “Register button”.
@@ -390,10 +366,7 @@ Navigate to the Licensing page on the HDM vCenter Plugin
   <tr>
    <td>
 
-<p id="gdcalert17" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image8.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert18">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-<img src="images/image8.png" width="" alt="alt_text" title="image_tooltip">
+<img src="images/image16.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -421,10 +394,7 @@ Navigate to the Licensing page on the HDM vCenter Plugin
   <tr>
    <td>
 
-<p id="gdcalert18" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image9.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert19">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-<img src="images/image9.png" width="" alt="alt_text" title="image_tooltip">
+<img src="images/image17.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -447,10 +417,8 @@ Navigate to the Licensing page on the HDM vCenter Plugin
   <tr>
    <td>
 
-<p id="gdcalert19" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image10.jpg). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert20">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-
-<img src="images/image10.jpg" width="" alt="alt_text" title="image_tooltip">
+<img src="images/image19.jpg" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -473,10 +441,7 @@ Navigate to the Licensing page on the HDM vCenter Plugin
   <tr>
    <td>
 
-<p id="gdcalert20" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image11.jpg). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert21">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-<img src="images/image11.jpg" width="" alt="alt_text" title="image_tooltip">
+<img src="images/image20.jpg" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -484,7 +449,7 @@ Navigate to the Licensing page on the HDM vCenter Plugin
 
 <li>Complete all the steps to start the deployment.
 
-<li>Refer details captured in <a href="https://docs.google.com/document/d/1jnt7GnUeqkgPQvv5mj-LKH0YDg4yZmIo/edit#heading=h.qqzzlrxclsfu">Appendix B</a> to fill these screens.
+<li>Refer details captured in Appendix B(#appendix-b) to fill these screens.
 
 <li>For further details refer to the HDM Installation Guide section “Deploy HDM On Premise”.
 
@@ -513,10 +478,7 @@ Estimated time 45 to 60 minutes
   <tr>
    <td>
 
-<p id="gdcalert21" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image12.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert22">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-<img src="images/image12.png" width="" alt="alt_text" title="image_tooltip">
+<img src="images/image21.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -539,10 +501,7 @@ Estimated time 45 to 60 minutes
   <tr>
    <td>
 
-<p id="gdcalert22" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image13.jpg). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert23">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-<img src="images/image13.jpg" width="" alt="alt_text" title="image_tooltip">
+<img src="images/image22.jpg" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -576,17 +535,13 @@ The following WAN routes are required to gain access between the cloud and on-pr
   <tr>
    <td>
 
-
-<p id="gdcalert23" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image14.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert24">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-<img src="images/image14.png" width="" alt="alt_text" title="image_tooltip">
+<img src="images/image25.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
 <ul>
 
-<li>Use the Network configuration captured in <a href="https://docs.google.com/document/d/1X1YOf2LQIT1hdGFygKmUgE2BGPs6QXKp/edit#heading=h.qqzzlrxclsfu">Appendix B</a> to fill part 1&2
+<li>Use the Network configuration captured in Appendix B(#appendix-b) to fill part 1&2
 
 <li>Please fill the <strong>Network Configuration - Part 3</strong> correctly.
 </li>
@@ -601,20 +556,14 @@ The following WAN routes are required to gain access between the cloud and on-pr
   <tr>
    <td>
 
-<p id="gdcalert24" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image15.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert25">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-
-<img src="images/image15.png" width="" alt="alt_text" title="image_tooltip">
+<img src="images/image23.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
 <ul>
 
-<li>Fill in this screen we data captured in 
-
-<p id="gdcalert25" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "Appendix B"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert26">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<a href="#heading=h.qqzzlrxclsfu">Appendix B</a>
+<li>Fill in this screen we data captured in Appendix B(#appendix-b)
 
 <li>Please map the premise to the cloud network correctly for applications to have proper connectivity.
 
@@ -631,10 +580,8 @@ The following WAN routes are required to gain access between the cloud and on-pr
   <tr>
    <td>
 
-<p id="gdcalert26" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image16.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert27">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-
-<img src="images/image16.png" width="" alt="alt_text" title="image_tooltip">
+<img src="images/image8.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -670,10 +617,8 @@ Before migration is triggered, ensure that the health of HDM componentes is gree
   <tr>
    <td>
 
-<p id="gdcalert27" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image17.jpg). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert28">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-
-<img src="images/image17.jpg" width="" alt="alt_text" title="image_tooltip">
+<img src="images/image3.jpg" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -697,10 +642,7 @@ Before migration is triggered, ensure that the health of HDM componentes is gree
   <tr>
    <td>
 
-<p id="gdcalert28" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image18.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert29">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-<img src="images/image18.png" width="" alt="alt_text" title="image_tooltip">
+<img src="images/image6.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -722,10 +664,7 @@ Before migration is triggered, ensure that the health of HDM componentes is gree
    <td>
 
 
-<p id="gdcalert29" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image19.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert30">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-<img src="images/image19.png" width="" alt="alt_text" title="image_tooltip">
+<img src="images/image2.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -761,7 +700,7 @@ Before migration is triggered, ensure that the health of HDM componentes is gree
 
 
 
-# Appendix A - System Requirements
+# <a name="appendix-a"> Appendix A - System Requirements</a>
 
 
 <table>
@@ -930,7 +869,7 @@ Related document: For hardware requirements and system requirements refer to the
 # 
 
 
-# Appendix B - Network Settings
+# <a name="appendix-b">Appendix B - Network Settings</a>
 
 
 ## Network requirement during OVF deployment
@@ -1470,7 +1409,7 @@ The networks to be configured **HDM Internal network** and **WAN network configu
 
 
 
-# Appendix C - IPSec tunnel, firewall and Cloud network configuration
+# <a name="appendix-c">Appendix C - IPSec tunnel, firewall and Cloud network configuration</a>
 
 To deploy the HDM product you need to have 
 
