@@ -40,7 +40,7 @@ Estimated time 15 minutes
 ```
 
 
-Refer to the [Appendix A - System Requirements](#appendix-a) in Appendix A(#appendix-a) of this document. Request you to print a copy of [Appendix A ](#appendix-a). 
+Refer to the [Appendix A - System Requirements](#appendix-a) of this document. Request you to print a copy of [Appendix A ](#appendix-a). 
 
 
 # Step 2/8 : Downloading PrimaryIO HDM
@@ -119,7 +119,7 @@ Please add vCenter FQDN both premise and cloud vCenter on both premise and cloud
 ```
 
 
-Please print the [Appendix B - Network Settings] (#appendix-b) and fill in the forms in the appendix. This will allow you to identify the correct networks to configure and identify the other networking details.
+Please print the [Appendix B](#appendix-b) and fill in the forms in the appendix. This will allow you to identify the correct networks to configure and identify the other networking details.
 
 
 # Step 4/8 : Deploy PIO Appliance
@@ -153,7 +153,7 @@ Estimated time 5 minutes
 
 <li>Perform the step as directed by the UI.
 
-<li>Fill in this screen we data captured in Appendix B - Network Settings(#appendix-b)
+<li>Fill in this screen we data captured in [Appendix B](#appendix-b)
 
 <li>Please refer to the HDM Installation Guide section “Network Configuration for the Appliance” for details on the network configuration.
 
@@ -178,7 +178,7 @@ Estimated time 5 minutes
 
 <li>Choose the “Default gateway network” as “WAN”.
 
-<li>Fill in the network properties as captured in Appendix B - Network Settings(#appendix-b)
+<li>Fill in the network properties as captured in [Appendix B](#appendix-b)
 
 <li><strong>Please make sure you select the correct default gateway interface and in the field “Default Gateway” provide the IP address of the “WAN” gateway . Cloud VC should be accessible from an appliance with default gateway.</strong>
 </li>
@@ -287,7 +287,7 @@ Estimated time 10 minutes
 
 <li>“Add” to add vCenter
 
-<li>Fill in this screen we data captured in Appendix B<(#appendix-b)
+<li>Fill in this screen we data captured in [Appendix B](#appendix-b)
 </li>
 </ul>
    </td>
@@ -411,7 +411,7 @@ Navigate to the Licensing page on the HDM vCenter Plugin
 
 <li>Complete all the steps to start the deployment.
 
-<li>Refer details captured in Appendix B(#appendix-b) to fill these screens.
+<li>Refer details captured in [Appendix B](#appendix-b) to fill these screens.
 
 <li>For further details refer to the HDM Installation Guide section “Deploy HDM On Premise”.
 
@@ -503,7 +503,7 @@ The following WAN routes are required to gain access between the cloud and on-pr
    <td>
 <ul>
 
-<li>Use the Network configuration captured in Appendix B(#appendix-b) to fill part 1&2
+<li>Use the Network configuration captured in [Appendix B](#appendix-b) to fill part 1&2
 
 <li>Please fill the <strong>Network Configuration - Part 3</strong> correctly.
 </li>
@@ -525,7 +525,7 @@ The following WAN routes are required to gain access between the cloud and on-pr
    <td>
 <ul>
 
-<li>Fill in this screen we data captured in Appendix B(#appendix-b)
+<li>Fill in this screen we data captured in [Appendix B](#appendix-b)
 
 <li>Please map the premise to the cloud network correctly for applications to have proper connectivity.
 
