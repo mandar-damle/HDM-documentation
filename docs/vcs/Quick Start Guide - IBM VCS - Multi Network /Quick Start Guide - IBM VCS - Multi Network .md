@@ -153,7 +153,7 @@ Estimated time 5 minutes
 
 <li>Perform the step as directed by the UI.
 
-<li>Fill in this screen we data captured in [Appendix B](#appendix-b)
+<li>Fill in this screen we data captured in [Appendix B]
 
 <li>Please refer to the HDM Installation Guide section “Network Configuration for the Appliance” for details on the network configuration.
 
