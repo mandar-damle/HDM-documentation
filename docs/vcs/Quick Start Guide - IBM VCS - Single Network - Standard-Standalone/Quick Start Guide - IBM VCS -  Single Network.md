@@ -61,7 +61,7 @@ You will receive an email with
 To proceed with the installation, you should watch the training videos and use this guide to proceed with the installation. 
 
 
-# Step 3/8 : Network Planning & Mapping
+#<a name="networkplanning">Step 3/8 : Network Planning & Mapping</a>
 
 
 ```
@@ -79,7 +79,7 @@ This section will guide you through the steps required to setup the network -
 3. Network requirements during on-premise deployment
 4. Network requirements during on-cloud deployment
 
-    ```
+```
 Choose or Create "hdm_network/hdm_wan_network":
 
 A simple network configuration where all connectivity is available through one network, for example "hdm_network". Here the "hdm_network" should have access to.
@@ -92,16 +92,11 @@ Appliance
 The connectivity required is depicted in the diagram below. For all steps in the deployment where a vmware network is required as input please provide the identified or created "hdm_network" for premise and "hdm_wan_network" for networks on the cloud. 
 
 Failure to create or choose "hdm_network / hdm_wan_network" correctly will result in failure of the installation below.
+
 ```
-
-
-
 We have to either identify a network which satisfies the above property or you have to **create** a network with connectivity to the above elements. 
 
 ![alt_text](images/image3.png "image_tooltip")
-```
-
-```
 
 
 For the rest of this document we will assume you have created a network topology depicted in the diagram above. For simplicity we refer to the networks as named in the diagram. However if you choose to name the networks differently just substitute the name of your network for the one above. In this configuration all access is possible through the single VM network for this example called “hdm_network / hdm_wan_network”. 
@@ -653,12 +648,8 @@ Before migration is triggered, ensure that the health of HDM componentes is gree
 </table>
 
 
-  
 
-
-
-
-# <a name="appendix-a"> Appendix A - System Requirements</a>
+#<a name="appendix-a">Appendix A - System Requirements</a>
 
 
 <table>
@@ -827,7 +818,7 @@ Related document: For hardware requirements and system requirements refer to the
 # 
 
 
-# <a name="appendix-b"> Appendix B - Network Settings</a>
+#<a name="appendix-b">Appendix B - Network Settings</a>
 
 
 ## Network requirement during OVF deployment
@@ -1164,7 +1155,7 @@ The networks to be configured **HDM Internal network** and **WAN network configu
 
 
 
-# <a name="appendix-c">Appendix C - IPSec tunnel, firewall and Cloud network configuration </a>
+#<a name="appendix-c">Appendix C - IPSec tunnel, firewall and Cloud network configuration</a>
 
 To deploy the HDM product you need to have 
 
@@ -1178,15 +1169,9 @@ All these three steps are explained in detail in the “**HDM 2.1 - Network Conf
 
 
 
-*   Configure the cloud side network as depicted in the diagram in the 
-
-<p id="gdcalert31" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "Step 3/8 : Network Planning & Mapping"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert32">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-[Step 3/8 : Network Planning & Mapping](#heading=h.fh32bxmc9gq4).
+*   Configure the cloud side network as depicted in the diagram in the [Step 3/8 : Network Planning & Mapping](#networkplanning).
 
 For easy configuration of the firewall rules we would recommend to have following Firewall configuration for all on-prem and on- cloud endpoints:
-
-
 
 *   Source - source subnet.
 *   Destination - Destination subnet
