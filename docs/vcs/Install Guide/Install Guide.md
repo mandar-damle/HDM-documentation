@@ -332,7 +332,7 @@ HDM provides a very flexible deployment model providing options to be able to ca
 
 #### HDM Deployment Types
 
-While deploying HDM users need to select a combination of **Deployment Mode** and **Resource Allocation **type. The features of the available options are provided below to guide the user to  choose the deployment type that is best suited for his / requirements. HDM deployed components. 
+While deploying HDM users need to select a combination of **Deployment Mode** and **Resource Allocation** type. The features of the available options are provided below to guide the user to  choose the deployment type that is best suited for his / requirements. HDM deployed components. 
 
 
 #### Deployment Mode : Standalone or Cluster
@@ -488,7 +488,7 @@ Below table depicts the resources required for different deployment types.
 
 
 1. Here the names ESXMgr, CloudCache, PremMgr and CloudMgr are abbreviated names of the VMs containing HDM components. These get created as part of the HDM deployment
-2. **T**he N in Cluster (N) refers to the number of nodes in the On-Cloud cluster.
+2. The N in Cluster (N) refers to the number of nodes in the On-Cloud cluster.
 
 <table>
   <tr>
@@ -625,7 +625,7 @@ Below table depicts the resources required for different deployment types.
 **Recommendation**: It is recommended to use the Standard-Standalone mode for test purposes and any of the Cluster modes for production purposes. 
 
 
-### **Network Topology **
+### **Network Topology**
 
 This needs to be planned well because the HDM components are configured in a certain way within the network. Choice of network topology also matters for VMs to be migrated. It is based on the network security and isolation requirements for the VM once it migrates to the On-Cloud. 
 
@@ -668,7 +668,7 @@ During HDM deployment, users are required to categorise and map and the networks
 ![alt_text](images/image2.png "image_tooltip")
 
 
-**Note: **In an ideal case, different traffic should use different network type. However, a user may have one or multiple types of traffic using the same network. This is deemed as a valid configuration and supported by HDM.
+**Note:** In an ideal case, different traffic should use different network type. However, a user may have one or multiple types of traffic using the same network. This is deemed as a valid configuration and supported by HDM.
 
 
 #### HDM Networking for Test : Single Network Topology
@@ -696,7 +696,7 @@ HDM supports both DHCP or static IP for its components. At deployment time, the 
 
 ## Deployment Checklist
 
-To help user perform the deployment, the document **HDM 2.1 Deployment Checklist - VCF.pdf **is present in the HDM package. User can fill the checklist and make sure that all the required information is there while starting the deployment. 
+To help user perform the deployment, the document **HDM 2.1 Deployment Checklist - VCF.pdf** is present in the HDM package. User can fill the checklist and make sure that all the required information is there while starting the deployment. 
 
 
 ## HDM Deployment Steps
@@ -843,7 +843,7 @@ Steps
 
 
 
-6. Click on **Register **to register the HDM plugin to On-Premise vCenter.
+6. Click on **Register** to register the HDM plugin to On-Premise vCenter.
 7. Logout and login twice(and sometimes more) from the vCenter for the plug-in installation to complete. Successful installation should add a HDM icon in the vCenter home page.
 
 
@@ -851,7 +851,7 @@ Steps
 
 
 
-    **Note:  The PrimaryIO vCenter plugin will be automatically registered on all vCenters that are configured in _enhanced linked mode_. **
+    **Note**:  The PrimaryIO vCenter plugin will be automatically registered on all vCenters that are configured in _enhanced linked mode_.
 
 
 
@@ -866,9 +866,9 @@ Steps to add license:
 
 
 1. In the On-Premise vCenter, click on PrimaryIO from Shortcuts or from Menu to access the PrimaryIO dashboard
-2. Select **Administration **from the tab
+2. Select **Administration** from the tab
 3. Click on **License** to, add or list existing license.
-4. Click on **Add License **to open a popup where the given **Trial license** can be pasted. 
+4. Click on **Add License** to open a popup where the given **Trial license** can be pasted. 
 
 
 
@@ -1021,7 +1021,7 @@ Steps for deployment
 
 
 1. In the On-Premise vCenter, click on HDM from Shortcuts or from Menu to access the HDM dashboard
-2. Select **Administration **from the tab
+2. Select **Administration** from the tab
 3. Click on **Clouds** to access the On-Cloud listing
 
 
@@ -1107,7 +1107,7 @@ Steps for deployment
 
 
 
-12. Confirm the selection and click on **Finish **to submit the request.
+12. Confirm the selection and click on **Finish** to submit the request.
 
 
 ![alt_text](images/image13.png "image_tooltip")
@@ -1212,7 +1212,7 @@ Steps
 
 
 1. In the On-Premise vCenter, click on PrimaryIO from Shortcuts or from Menu to access the PrimaryIO dashboard
-2. Select **Administration **from the tab
+2. Select **Administration** from the tab
 3. Click on **Configuration** to access the cluster listing.
 4. Against the cluster on which HDM is installed, click on **Enable** under monitoring. This will open a popup.
 
@@ -1221,9 +1221,9 @@ Steps
 
 
 
-5. Click on **OK **to enable monitoring.
+5. Click on **OK** to enable monitoring.
 
-This will create a _‘SPBM _policy of cache type for HDM. The default name for the policy is **HDM Analyzer Profile. **You can view this profile in the On-Premise vCenter at:
+This will create a _‘SPBM _policy of cache type for HDM. The default name for the policy is **HDM Analyzer Profile.** You can view this profile in the On-Premise vCenter at:
 
 Home -> Policies and Profiles -> VM Storage Policies
 
@@ -1231,7 +1231,7 @@ Home -> Policies and Profiles -> VM Storage Policies
 ![alt_text](images/image4.png "image_tooltip")
 
 
-This newly created HDM  policy is applied to all the virtual machines under the cluster and monitoring for IO activity gets enabled.  For each virtual machine a reconfiguration task will be generated when applying HDM SPBM policy. If VMs have been successfully reconfigured, VM policies for these virtual machine would have **‘HDM Analyzer Profile’** applied against each of their VMDKs.**  **
+This newly created HDM  policy is applied to all the virtual machines under the cluster and monitoring for IO activity gets enabled.  For each virtual machine a reconfiguration task will be generated when applying HDM SPBM policy. If VMs have been successfully reconfigured, VM policies for these virtual machine would have **‘HDM Analyzer Profile’** applied against each of their VMDKs.
 
 Once the policy has been applied, the user can check  analyzer summaries by selecting **VM->Monitoring->PrimaryIO** from **Host and Clusters** view.
 
@@ -1245,7 +1245,7 @@ Once the policy has been applied, the user can check  analyzer summaries by sele
 
 ### Disabling Monitoring on a VM
 
-**Note**:** this step must not be executed for a VM if you expect the VM to be migrated to On-Cloud**.
+**Note**: this step must not be executed for a VM if you expect the VM to be migrated to On-Cloud.
 
 The monitoring of a VM is a low overhead activity and is done transparently without affecting the ongoing IOs or operation. Still, if in case the user doesn’t want HDM to monitor certain VMs, the following are the steps to be executed. 
 
@@ -1255,7 +1255,7 @@ Steps
 
 1. In the On-Premise vCenter, right click on the VM you do not want to be monitored.
 2. Select VM Policies -> Edit VM Storage Policies
-3. In the popup, if the VM storage policy is HDM Analyzer Profile, then select VM storage policy as **Datastore Default **and click on **Apply to all**
+3. In the popup, if the VM storage policy is HDM Analyzer Profile, then select VM storage policy as **Datastore Default** and click on **Apply to all**
 
 
 ![alt_text](images/image5.png "image_tooltip")
