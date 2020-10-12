@@ -82,14 +82,16 @@ This section will guide you through the steps required to setup the network -
 ```
 Choose or Create "hdm_network/hdm_wan_network":
 
-A simple network configuration where all connectivity is available through one network, for example "hdm_network". Here the "hdm_network" should have access to.
+A simple network configuration where all connectivity is available through one network, for example "hdm_network". 
+Here the "hdm_network" should have access to.
 vCenter on premise
 Cloud vCenter via WAN link
 Premise ESXi
 Cloud ESXi
 Appliance
 
-The connectivity required is depicted in the diagram below. For all steps in the deployment where a vmware network is required as input please provide the identified or created "hdm_network" for premise and "hdm_wan_network" for networks on the cloud. 
+The connectivity required is depicted in the diagram below. For all steps in the deployment where a vmware network 
+is required as input please provide the identified or created "hdm_network" for premise and "hdm_wan_network" for networks on the cloud. 
 
 Failure to create or choose "hdm_network / hdm_wan_network" correctly will result in failure of the installation below.
 
@@ -178,7 +180,7 @@ Estimated time 5 minutes
    <td>
 <ul>
 
-<li>Fill in the network properties as captured in [Appendix B ](#appendix-b)
+<li>Fill in the network properties as captured in [Appendix B]</li>
 
 
 <li><strong>Please make sure you enter “Default Gateway” the IP address of the default gateway of the network.</strong>
@@ -412,7 +414,7 @@ Navigate to the Licensing page on the HDM vCenter Plugin
 
 <li>Complete all the steps to start the deployment.
 
-<li>Refer details captured in [Appendix B - Network Settings](#appendix-b) to fill these screens.
+<li>Refer details captured in [Appendix B - Network Settings] to fill these screens.
 
 <li>For further details refer to the HDM Installation Guide section “Deploy HDM On Premise”.
 
@@ -491,7 +493,7 @@ Estimated time 45 to 60 minutes
    <td>
 <ul>
 
-<li>Use the Network configuration captured in [Appendix B](#appendix-b)
+<li>Use the Network configuration captured in [Appendix B]
 
 
 
@@ -514,7 +516,7 @@ Estimated time 45 to 60 minutes
    <td>
 <ul>
 
-<li>Use the Network configuration captured in [Appendix B](#appendix-b)
+<li>Use the Network configuration captured in [Appendix B]
 
 <li>Please map the premise to the cloud network correctly for applications to have proper connectivity.
 
