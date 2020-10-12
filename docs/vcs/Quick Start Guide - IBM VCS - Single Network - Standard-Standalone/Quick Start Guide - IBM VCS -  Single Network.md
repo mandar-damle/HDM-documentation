@@ -250,13 +250,8 @@ Estimated time 10 minutes
 *   Power On the appliance
 *   Find the appliance IP
 *   Open the appliance web interface for https://&lt;appliance-ip>
-*   Login to the appliance web UI using default password “admin@123”
-*   After login in click on <img src="images/image14.png" width="" alt="alt_text" title="image_tooltip">
-
-
-
-
-![alt_text](images/image16.png "image_tooltip")
+*   Login to the appliance web UI using default password 2Hdm$aK!N@h!
+*   After login in click on ![alt_text](images/image13.png "image_tooltip")
 
 
 <table>
@@ -265,7 +260,7 @@ Estimated time 10 minutes
 
 
 
-<img src="images/image15.png" width="" alt="alt_text" title="image_tooltip">
+<img src="images/image16.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -285,7 +280,7 @@ Estimated time 10 minutes
    <td>
 
 
-<img src="images/image6.png" width="" alt="alt_text" title="image_tooltip">
+<img src="images/image15.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -417,7 +412,7 @@ Navigate to the Licensing page on the HDM vCenter Plugin
 
 <li>Complete all the steps to start the deployment.
 
-<li>Refer details captured in <a href="https://docs.google.com/document/d/1jnt7GnUeqkgPQvv5mj-LKH0YDg4yZmIo/edit#heading=h.qqzzlrxclsfu">Appendix B - Network Settings</a> to fill these screens.
+<li>Refer details captured in [Appendix B - Network Settings](#appendix-b) to fill these screens.
 
 <li>For further details refer to the HDM Installation Guide section “Deploy HDM On Premise”.
 
@@ -496,7 +491,7 @@ Estimated time 45 to 60 minutes
    <td>
 <ul>
 
-<li>Use the Network configuration captured in [Appendix B ](#appendix-b)
+<li>Use the Network configuration captured in [Appendix B](#appendix-b)
 
 
 
@@ -519,7 +514,7 @@ Estimated time 45 to 60 minutes
    <td>
 <ul>
 
-<li>Use the Network configuration captured in [Appendix B ](#appendix-b)
+<li>Use the Network configuration captured in [Appendix B](#appendix-b)
 
 <li>Please map the premise to the cloud network correctly for applications to have proper connectivity.
 
@@ -560,7 +555,9 @@ During the cold migration, the VM that is being migrated is powered off. After t
 
 ```
 Note:
-Migrations will be successful for VMs where network and disk interfaces are accessible to HDM via VMware APIs. In case network or disk interfaces are added dynamically, the virtual machine needs to be powered down so that information about the newly added network and disk interface are available via VMware APIs to HDM. 
+Migrations will be successful for VMs where network and disk interfaces are accessible to HDM via VMware APIs. 
+In case network or disk interfaces are added dynamically, the virtual machine needs to be powered down so that 
+information about the newly added network and disk interface are available via VMware APIs to HDM. 
 Before migration is triggered, ensure that the health of HDM componentes is green. 
 ```
 
@@ -649,7 +646,7 @@ Before migration is triggered, ensure that the health of HDM componentes is gree
 
 
 
-#<a name="appendix-a">Appendix A - System Requirements</a>
+# <a name="appendix-a"> Appendix A - System Requirements</a>
 
 
 <table>
@@ -818,7 +815,7 @@ Related document: For hardware requirements and system requirements refer to the
 # 
 
 
-#<a name="appendix-b">Appendix B - Network Settings</a>
+# <a name="appendix-b"> Appendix B - Network Settings</a>
 
 
 ## Network requirement during OVF deployment
@@ -1155,7 +1152,7 @@ The networks to be configured **HDM Internal network** and **WAN network configu
 
 
 
-#<a name="appendix-c">Appendix C - IPSec tunnel, firewall and Cloud network configuration</a>
+# <a name="appendix-c"> Appendix C - IPSec tunnel, firewall and Cloud network configuration</a>
 
 To deploy the HDM product you need to have 
 
