@@ -806,12 +806,6 @@ Related document: For hardware requirements and system requirements refer to the
 
 
 <p style="text-align: right">
-<strong>
-
-<p id="gdcalert29" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "Back to Top"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert30">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<a href="#heading=h.pj7rznux9t2f">Back to Top</a></strong></p>
-
 
 
 # 
@@ -1144,13 +1138,6 @@ The networks to be configured **HDM Internal network** and **WAN network configu
 
 
 <p style="text-align: right">
-
-
-<p id="gdcalert30" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "Back to Top"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert31">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-<a href="#heading=h.fh32bxmc9gq4">Back to Top</a></p>
-
-
 
 
 
