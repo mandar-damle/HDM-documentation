@@ -42,7 +42,7 @@ You will receive an email with the following:
 Before proceeding with the installation, watch the training videos and use this guide. 
 
 
-# Step 3: Network Planning and Mapping
+# <a name="networkplanning"> Step 3: Network Planning and Mapping </a>
 
 Network configuration information is required at key points throughout the deployment process. So, develop a network connectivity plan prior to deploying HDM. This section will help guide you through that process. The information captured in this section will be employed later in the installation process. If an IPSec tunnel and cloud configuration have not yet been established, these must be done before moving any further. Follow the steps outlined in [Appendix C](#appendix-c) of this document. Please be aware that this process will add 30 minutes to the estimated time to complete this section. 
 
@@ -52,7 +52,7 @@ The following is required to complete the network plan:
 
 
 
-1. IPSec tunnel, firewall, and cloud network configuration information (See [Appendix C](#heading=h.8n7jk8n5lwew))
+1. IPSec tunnel, firewall, and cloud network configuration information (See [Appendix C](#appendix-c))
 2. Network requirements during OVF deployment
 3. Network requirements during on-premises deployment
 4. Network requirements during cloud deployment
@@ -553,9 +553,7 @@ The following WAN routes are required to gain access between the cloud and on-pr
    <td>
 <ul>
 
-<li>Use the configuration information recorded in 
-
-<a href="#heading=h.qqzzlrxclsfu">Appendix B</a>
+<li>Use the configuration information recorded in [Appendix B]
 
 <li>Map on-premises to the cloud network to enable application connectivity
 
@@ -599,13 +597,11 @@ During cold migration, the VM being migrated is powered off. After the migration
 ```
 NOTES:
 Migrations will be successful for VMs where network and disk interfaces are accessible to HDM via VMware APIs.
-If network or disk interfaces are added dynamically, the virtual machine will need to be powered down to allow the newly added 
-network and disk interface information to become available to HDM via VMware APIs.
+If network or disk interfaces are added dynamically, the virtual machine will need to be powered down to allow 
+the newly added network and disk interface information to become available to HDM via VMware APIs.
 Before migration is triggered, ensure that the health of the HDM components is green. 
 ```
 
-
- 
 
 
 <table>
@@ -1247,7 +1243,7 @@ Each of the above steps are discussed in detail in the HDM 2.1 - Org VDC System 
 
 Be sure to configure the cloud network as shown in the diagram in 
 
-[Step 3: Network Planning and Mapping](#heading=h.hfd4xpbh4o9a).
+[Step 3: Network Planning and Mapping](#networkplanning).
 
 **Firewall configuration in the cloud**
 
