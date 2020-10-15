@@ -81,6 +81,7 @@ On-Premise
     *   VMware Cloud on AWS
     *   IBM Cloud for VMware Solution
     *   VMware Cloud Foundation SDDC
+    *   VMware Cloud Director
 *   HDM components should be deployed on Shared Datastore
 *   Network connectivity between On-Premise and On-Cloud
     *   Network Link >= 1 Gbps
