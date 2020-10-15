@@ -332,6 +332,11 @@ User should explicitly make sure that the target has enough free space before at
 During add cloud operation, users should specify the correct default application network On-Cloud or map  On-Premise network to On-Cloud network. Failing to do so, the VM migration may succeed but applications on the migrated VMs may fail. In the SQS based migration, the network mapping can be specified at the migration time. (Ref: **CP-4433)**
 
 
+###### **Enable Virtualized CPU Performance Counters Check flag not reatined on cloud**
+
+Certain virtual machine parameters may not be retained post migration. These will need to be set manually. (Ref : **DP-2859**)
+
+
 ###### **vCenter does not show the option to migrate VM**
 
 After complete deployment, users may not find any action available to migrate VM in vCenter or it may just show ‘loading...’. 
