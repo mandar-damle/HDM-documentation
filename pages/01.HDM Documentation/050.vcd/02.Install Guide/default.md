@@ -37,24 +37,6 @@ The package includes the following components:
     6. HDM 2.1 Deployment Checklist - vCD.pdf
 
 
-## HDM Components
-
-HDM consists of the following components that are dispersed between cloud and on-premises data centers (figure 1). These components are microservices packaged as VMs that work together to provide the data and control path necessary for its use cases. They also provide a flexible deployment model and failure resilience.
-
-HDM 2.1 consists of microservices that have been packaged as VMs that work together to provide the data and control path to support the aforementioned use cases and to provide a flexible deployment model and failure resilience. HDM comprises the following components, dispersed between cloud and on-premises data centers (figure 1): 
-
-
-
-1. **PrimaryIO Plug-in: **Installed and registered on VMware vCenter for HDM management.
-2. **PrimaryIO Manager:** The main controlling appliance that controls and orchestrates the entire system.
-3. **On-premises Storage Gateway:** Provides access across the WAN link to deliver traffic optimization and redundancy against failures. It also accesses and manages the on-premises VMDKs for cloud-based VMs.
-4. **Cloud Storage Gateway: **Provides access across the WAN link to enable cloud-based VMs read/write access back to the on-premises environment. It is possible to have multiple gateways for redundancy.
-5. **Sync Daemon:** Located in both environments to deliver compression, encryption, and de-duplication for data being transferred from on-premises to cloud environments. It also provides a mechanism to pause and resume data transfers in the event of a WAN disconnect.
-
-_Figure 1: Location of HDM 2.1 components_
-
-![alt_text](images/image28.png "image_tooltip")
-
 
 
 # 
