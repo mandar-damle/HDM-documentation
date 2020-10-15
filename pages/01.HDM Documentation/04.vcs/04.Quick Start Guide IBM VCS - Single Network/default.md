@@ -61,7 +61,7 @@ You will receive an email with
 To proceed with the installation, you should watch the training videos and use this guide to proceed with the installation. 
 
 
-#<a name="networkplanning">Step 3/8 : Network Planning & Mapping</a>
+# <a name="networkplanning"> Step 3/8 : Network Planning & Mapping </a>
 
 
 ```
