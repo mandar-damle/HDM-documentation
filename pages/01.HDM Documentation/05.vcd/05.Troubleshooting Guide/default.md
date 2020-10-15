@@ -284,6 +284,12 @@ Similarly, “Add Cloud” may fail if On-Cloud VCD has been configured with FQD
 **Resolution: ** Customers should add rules in their Network to forward resolution of these FQDN to the correct DNS, whether it is for the vCenter or ESXi.
 
 
+###### **Installation Failed - Exception during container create syncd-cloud **
+
+This can happen if the VCD cloud end-point is not reachable. The current operation being performed (deployment, mugration) will fail. The connectivity to cloud end-point needs to be re-established before continuing. (Ref : **CP-5596**) 
+
+
+
 # HDM Migrations
 
 
@@ -309,6 +315,10 @@ Following are known limitations with virtual machine disk controller configurati
 This can happen is the CPU resources are exhausted for the VCD organization into which the migration happened. Do update the CPU resources and try powering-on the VM. (Ref: **CP-5469**) 
 
 
+###### **IPs may not be allocated for virtual machines having Ubuntu16 or SLEL16 Operating System post migration**
+This is a known issue with these operating systems. IP addresses will need to be allocated manually. (Ref : **CP-5626**)
+
+
 ###### **Cold migration may be retried even after the user cancelled the vCenter task**
 
 If the vCentre task for cold migration is cancelled by the user, the existing task gets cancelled. However, HDM re-attempts, the cold migration till all the retry attempts are over. The user should cancel all the re-attempts, so as to truly cancel the operation, (Ref: **CP-4365)**
@@ -326,6 +336,11 @@ User should explicitly make sure that the target has enough free space before at
 ###### **Applications on migrated VMs may fail due to incorrect network mapping specified**
 
 During add cloud operation, users should specify the correct default application network On-Cloud or map  On-Premise network to On-Cloud network. Failing to do so, the VM migration may succeed but applications on the migrated VMs may fail. In the SQS based migration, the network mapping can be specified at the migration time. (Ref: **CP-4433)**
+
+
+###### **Enable Virtualized CPU Performance Counters Check flag not reatined on cloud**
+
+Certain virtual machine parameters may not be retained post migration. These will need to be set manually. (Ref : **DP-2859**)
 
 
 ###### **vCenter does not show the option to migrate VM**
