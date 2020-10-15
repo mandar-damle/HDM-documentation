@@ -17,26 +17,6 @@ The HDM install guide describes how to deploy, configure, and undeploy PrimaryIO
 This document is intended for administrators looking for a virtual machine migration solution to VMware Cloud Director. HDM is designed to address faster migrations to the cloud with minimal data transfer.
 
 
-## **HDM 2.1 Software Package**
-
-HDM is delivered as a virtual/software solution; when HDM software is installed, it consists of a single virtual appliance. Further deployment of HDM 2.1 components then occur on-premises in VMware vCenter and in the cloud on vCD.
-
-The HDM 2.1 package can be downloaded from [http://release.primaryio.com/vmware/HDM_2.1/](http://release.primaryio.com/vmware/HDM_2.1/2.1.2077/)
-
-The package includes the following components:
-
-
-
-1. HDM_2.1 zip (contains the HDM appliance as an Open Virtual Format (OVF) file)
-2. vCD (contains documents for deploying and managing HDM 2.1 on vCD)
-    1. HDM 2.1 Install Guide - vCD.pdf
-    2. HDM 2.1 Admin Guide - vCD.pdf
-    3. HDM 2.1 Troubleshooting Guide - vCD.pdf
-    4. HDM 2.1 Release Notes - vCD.pdf
-    5. [HDM 2.1 Quick Start Guide - vCD.pdf](http://release.primaryio.com/vmware/HDM_2.1/2.1.2077/VCD/HDM%202.1%20Quick%20Start%20Guide%20-%20VCD.pdf)
-    6. HDM 2.1 Deployment Checklist - vCD.pdf
-
-
 
 
 # 

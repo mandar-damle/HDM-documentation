@@ -43,94 +43,10 @@ HDM package can be downloaded from [http://release.primaryio.com/vmware/HDM_2.1/
 
 # HDM Terminology
 
-This document uses the below terms and terminologies at multiple places.
-
-
-
-*   **PrimaryIO or PIO** 
-
-    PIO is often used for PrimaryIO in this document.
-
-*   **HDM**
-
-    Hybrid data management solution from PrimaryIO
-
-*   **Onprem or On-Prem  or On-Premise or source**
-
-    Refers to On-Premise datacenter.
-
-*   **Oncloud or On-Cloud or target**
-
-    Refers to the On-Cloud infrastructure created in connection with the migration of an On-Premise VM.
-
-*   **Appliance or PIO Appliance or HDM Appliance**
-
-    The HDM Appliance VM deployed on the On-Premise vCenter
-
-*   **Agile Rapid Migration or ARM**
-
-    A migration type supported by HDM in which a VM and its data is moved to On-Cloud completely.
-
-*   **Cold migration**
-
-    A migration type supported by HDM, where the VM being migrated is powered off and its data is moved to the On-Cloud either online through HDM or offline through external sources.
-
-*   **Warm migration**
-
-    An migration type supported by HDM where the VM’s compute is migrated to the On-Cloud early and its data set is moved online through HDM or offline through external software in the background.
-
-*   **Compute migration**
-
-    This refers to the VM migrated to the On-Cloud while it continues to access its data On-Premise.
-
-*   **Migrate time snapshot**
-
-    HDM created snapshot of the VM just before migrating it to On-Cloud. This is useful in restoring the VM in case of failures and data consistency issues with migrated VM.
-
-*   **Cloud Burst**
-
-    A VM migration use case supported by HDM in which a VM is migrated to the On-Cloud temporarily due to high resource usage On-Premise.
-
-*   **Try Before Commit**
-
-    A VM migration use case to test whether VMs in On-Cloud perform good enough, before deciding whether to migrate VM’s entire data set. 
-
-*   **SPBM or Storage Policy Based Management**
-
-    Vmware provided mechanism to define storage policies that can be applied to individual VMs.
-
-*   **Bulk migration**
-
-    Background movement of the VM data in case of ARM use case. It is said to be **online** if the transfer is done by HDM and is **offline** if third party mechanism like AWS snowball is used.
-
-*   **Ultra Lite, Lite, Standard or Performance Deployment**
-
-    Type of deployment based on the resource allocation. Lite has least requirements and performance has maximum. 
-
-*   **Standalone or Cluster Deployment**
-
-    Mode of deployment based on the scale and fault tolerance requirements. Standalone has a fixed scale while cluster deployment scales with the number of nodes in the cluster.
-
 
 
 # HDM Introduction
 
-
-## Compute and Data De-Coupling
-
-HDM decouples compute (Virtual Machines - VM) and storage (Virtual Disks - VMDK) functions to move
-
-workloads to public clouds faster and more efficiently. Existing solutions require the full replication of data to the On-Cloud, and the loss of enterprise data control is a major concern. By contrast, HDM identifies the frequently used data (hot dataset) and moves only the minimal hot data to the On-Cloud to bring up workloads within minutes.
-
-
-## HDM Use Cases
-
-
-
-1. Agile Rapid Migration : The capability to decouple compute from data, makes HDM a powerful virtual machine migration tool with minimal downtime requirements. 
-2. Try Before Commit : The ability to quickly test the VMs running On-Cloud, before fully committing to On-Cloud.
-
-Details on how to operate HDM for these use cases are explained in later sections.
 
 
 ## HDM Components
@@ -139,25 +55,6 @@ HDM consists of several components with presence in both On-Cloud and On-Premise
 
 Below is a pictorial representation of the components that constitute the HDM solution.
 
-
-
-![alt_text](images/image54.png "image_tooltip")
-
-
-
-
-1. **PIO Plugin:** PrimaryIO plug-in registered and installed on VMware vCenter for HDM management.
-2. **PIO Manager:** The main controlling appliance. This controls and orchestrates the entire system.
-3. **PIO Filter:** A **VMware VAIO filter framework** to gather I/O traces from each VM.
-4. **PIO Analyzer:** The I/O Analyzer (IOA) aggregates I/O traces from all VMs. It analyzes the I/O traces at a block level to make recommendations on the cloud cache requirements etc.
-5. **Storage Gateway:** Provides access across the WAN link to ensure traffic optimization and redundancy against failures. It also accesses and manage the On-Premise VMDKs for remote VMs that are in the On-Cloud.
-6. **Cloud Storage G/W:** The gateway for the VMs in the On-Cloud for reads and writes back to the On-Premise across the WAN link. It is possible to have multiple gateways across WAN link for redundancy.
-7. **Cloud Cache:** The cloud cache is a fast, reliable, persistent cache for the VMs in the On-Cloud. The cache maintains the working set of the VMs, so that VMs can run efficiently without moving entire data On-Cloud. When there is a cache miss, it is fetched from the On-Premise side by requesting the storage gateway to get blocks from the On-Premise VMDK.
-
-      
-
-
-# 
 
 
 ### System Requirements
