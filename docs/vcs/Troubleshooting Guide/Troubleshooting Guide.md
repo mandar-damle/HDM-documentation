@@ -450,6 +450,11 @@ In an FQDN based deployment, HDM may not be able to resolve On-Cloud vCenter or 
 During add cloud operation, users should specify the correct default application network On-Cloud or map  On-Premise network to On-Cloud network. Failing to do so, the VM migration may succeed but applications on the migrated VMs may fail. In the SQS based migration, the network mapping can be specified at the migration time. (Ref: **CP-4433)**
 
 
+###### **Enable Virtualized CPU Performance Counters Check flag not retained on cloud**
+
+Certain virtual machine parameters will not be retained post migration. These need to be enabled manually. (Ref : **CP-2859**)
+
+
 ###### **VM is present in HDM_MIGRATE_POOL even after migrate back**
 
 After migrating back, moving the VM to its original resource pool can fail at times in vCenter 6.7. In such a case, users would be required to explicitly move the VM from the HDM_MIGRATE_POOL to its original resource pool using the vCenter. (Ref: **CP-4652**)
