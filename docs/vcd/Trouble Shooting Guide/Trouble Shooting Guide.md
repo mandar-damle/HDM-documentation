@@ -309,6 +309,10 @@ Following are known limitations with virtual machine disk controller configurati
 This can happen is the CPU resources are exhausted for the VCD organization into which the migration happened. Do update the CPU resources and try powering-on the VM. (Ref: **CP-5469**) 
 
 
+###### **IPs may not be allocated for virtual machines having Ubuntu16 or SLEL16 Operating System post migration**
+This is a known issue with these operating systems. IP addresses will need to be allocated manually. (Ref : **CP-5626**)
+
+
 ###### **Cold migration may be retried even after the user cancelled the vCenter task**
 
 If the vCentre task for cold migration is cancelled by the user, the existing task gets cancelled. However, HDM re-attempts, the cold migration till all the retry attempts are over. The user should cancel all the re-attempts, so as to truly cancel the operation, (Ref: **CP-4365)**
