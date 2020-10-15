@@ -481,6 +481,11 @@ The SQS initiated migration request can fail if the Appliance does not have acce
 During warm migration, virtual machines On-Cloud have postfix ‘ARM’ to identify virtual machines being managed by HDM. This postfix is later removed once the data has been transferred and changes have been synced to the On-Cloud virtual machine. The renaming of a virtual machine can fail if there is an existing virtual machine with the same name on On-Cloud.
 
 
+###### **Completed Migration may sometimes not show correct status on Wizard **
+
+This could happen if the Wizard continues to remain open while the operation is performed and gets completed. The status on WIzard sometimes may not get updated. For accurate status of the operation, refer to the VCenter tasks. (Ref : **CP-5622**) 
+
+
 ###### **Already completed Migration status for Virtual machine goes into an error state**
 
 For each Virtual Machine migration a vCenter task is created. The progress and status of migration is then updated in the vCenter task object. The same status is also reflected on the Migration’s In-Progress tab on HDN vCenter Plugin for global and cluster view. In cases where the task has been completed, a vSphere server may delete the reference from the vSphere database. In this case, as the task object has been removed, the correct status of migration does not reflect on the UI and shows the migration state as ERROR. Users can check the task status under vCenter task list for the virtual machine to get the correct status.
