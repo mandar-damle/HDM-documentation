@@ -284,6 +284,12 @@ Similarly, “Add Cloud” may fail if On-Cloud VCD has been configured with FQD
 **Resolution: ** Customers should add rules in their Network to forward resolution of these FQDN to the correct DNS, whether it is for the vCenter or ESXi.
 
 
+###### **Installation Failed - Exception during container create syncd-cloud **
+
+This can happen if the VCD cloud end-point is not reachable. The current operation being performed (deployment, mugration) will fail. The connectivity to cloud end-point needs to be re-established before continuing. (Ref : **CP-5596**) 
+
+
+
 # HDM Migrations
 
 
