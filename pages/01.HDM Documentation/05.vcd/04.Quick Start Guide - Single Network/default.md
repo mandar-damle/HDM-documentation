@@ -24,7 +24,7 @@ The following steps are required to deploy HDM:
 
 # Step 1: Review System Requirements
 
-Refer to the [System Requirements](/docs/common/System%20Requirements) in Appendix A of this document. Printing a copy of Appendix A to use as a checklist is recommended. 
+Refer to the [System Requirements](#appendix-a) in Appendix A of this document. Printing a copy of [Appendix A ](#appendix-a) to use as a checklist is recommended. 
 
 
 # Step 2: Download PrimaryIO HDM
@@ -46,7 +46,7 @@ Before proceeding with the installation, watch the training videos and use this 
 
 Network configuration information is required at key points throughout the deployment process. So, develop a network connectivity plan prior to deploying HDM. This section will help guide you through that process. The information captured in this section will be employed later in the installation process. If an IPSec tunnel and cloud configuration have not yet been established, these must be done before moving any further. Follow the steps outlined in [Appendix C](#appendix-c) of this document. Please be aware that this process will add 30 minutes to the estimated time to complete this section. 
 
-Once connectivity and cloud configuration are complete, be sure to record all applicable details in [Appendix B](#heading=h.qqzzlrxclsfu) of this document for easy reference later in the deployment process. 
+Once connectivity and cloud configuration are complete, be sure to record all applicable details in [Appendix B](#appendix-b) of this document for easy reference later in the deployment process. 
 
 The following is required to complete the network plan: 
 
@@ -95,7 +95,7 @@ Please add the vCenter FQDN for the on-premises and cloud vCenters on the on-pre
 ```
 
 
-Before continuing with the rest of this Quick Start Guide, be sure to print [Appendix B - Network Settings]() and complete the forms. This will help you identify the correct networks to configure and identify all networking details.
+Before continuing with the rest of this Quick Start Guide, be sure to print [Appendix B - Network Settings](#appendix-b) and complete the forms. This will help you identify the correct networks to configure and identify all networking details.
 
 
 # Step 4: Deploy the HDM Appliance
@@ -144,7 +144,7 @@ Deploy the appliance using the vCenter UI
    <td>
 <ul>
 
-<li>Complete the network properties as captured in <a href="https://docs.google.com/document/d/1X1YOf2LQIT1hdGFygKmUgE2BGPs6QXKp/edit#heading=h.qqzzlrxclsfu">Appendix B - Network Settings</a>
+<li>Complete the network properties as captured in [Appendix B]
 
 <li>Be sure to enter “Default Gateway” the IP address of the default gateway of the network.
 
@@ -373,8 +373,7 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
 <li>Complete all steps to begin the deployment
 
 <li>Complete the configuration details using the information you recorded in 
-<a href="#heading=h.qqzzlrxclsfu">Appendix B - Network Settings</a>
-
+[Appendix B - Network Settings]
 <li>If there are any errors in the network configuration, please resolve
 
 <li>For additional details, refer to the “Deploy HDM On-premises” section in the HDM 2.1 Installation Guide
@@ -600,7 +599,8 @@ During cold migration, the VM being migrated is powered off. After the migration
 ```
 NOTES:
 Migrations will be successful for VMs where network and disk interfaces are accessible to HDM via VMware APIs.
-If network or disk interfaces are added dynamically, the virtual machine will need to be powered down to allow the newly added network and disk interface information to become available to HDM via VMware APIs.
+If network or disk interfaces are added dynamically, the virtual machine will need to be powered down to allow the newly added 
+network and disk interface information to become available to HDM via VMware APIs.
 Before migration is triggered, ensure that the health of the HDM components is green. 
 ```
 
@@ -678,7 +678,7 @@ Before migration is triggered, ensure that the health of the HDM components is g
 # 
 
 
-# Appendix A - System Requirements
+#<a name="appendix-a">Appendix A - System Requirements</a>
 
 
 <table>
@@ -839,13 +839,12 @@ Related document: For hardware and system requirements, refer to the [VMware Har
 
 
 
-**[Back to Top](https://docs.google.com/document/d/1X1YOf2LQIT1hdGFygKmUgE2BGPs6QXKp/edit?ts=5f55d761#heading=h.pj7rznux9t2f)**
 
 
 # 
 
 
-# Appendix B - Network Settings
+#<a name="appendix-b"> Appendix B - Network Settings </a>
 
 
 ## Network requirements during OVF deployment
