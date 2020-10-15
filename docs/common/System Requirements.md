@@ -5,7 +5,7 @@
 # **HDM 2.1 for VMware**
 
 
-# **System Requirements **
+# **System Requirements**
 
 #### System Requirements
 
@@ -25,6 +25,7 @@ This document describes the system requirements for HDM deployment for test purp
     *   Datastore should be one of: VMFS, NFS, NFSv3.
     *   E1000E and VMXNet3 network adapter should be available in On-Premise vCenter.
     *   DRS and HA should be enabled on the vCenter cluster. 
+    *   Need credentials that will authenticate with the VMware endpoint. Single signon like Workspace ONE are not supported. 
 *   Network requirement:
     *   Network: >= 1 Gbps..
     *   10 Gbps link is preferred. Anything greater than 1 Gbps would work though.
@@ -38,6 +39,7 @@ This document describes the system requirements for HDM deployment for test purp
     *   ESXi, with multiple IP addresses should provide access to port 22 and 443 from all IPs of PIO Appliance
 *   Hardware requirements:
     *   Following are the resource requirements for HDM components for **Standard-Standalone **deployment
+  
 
 <table>
   <tr>
