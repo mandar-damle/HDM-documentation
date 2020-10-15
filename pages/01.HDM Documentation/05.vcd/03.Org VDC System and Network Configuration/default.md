@@ -12,9 +12,9 @@ The document describes the Organization VDC side network and system configuratio
 # Network Configuration
 
 
-## Step 1/3  : Create Routed Network UPLINK_WAN_NETWORK
+## <a name="create-routed-network"> Step 1/3  : Create Routed Network UPLINK_WAN_NETWORK
 
-This network will be connected to the edge gateway. Across WAN communication between on-premise and on-cloud for HDM appliance will be routed through this network. IPsec tunnel in [step 3](#heading=h.yz6gu19o6yv1) will be configured to this network to complete the network configuration.
+This network will be connected to the edge gateway. Across WAN communication between on-premise and on-cloud for HDM appliance will be routed through this network. IPsec tunnel in [step 3](#step-3) will be configured to this network to complete the network configuration.
 
 
 
@@ -107,7 +107,7 @@ This network will be created for HDM appliance communication and for migrating v
 ## 
 
 
-## Step 3/3  : Configure VPN tunnel with Org. Edge Gateway
+## <a name="step-3"> Step 3/3  : Configure VPN tunnel with Org. Edge Gateway </a>
 
 Create an IPSec tunnel between the organization edge gateway and on-premise datacenter. To complete the VPN setting the following information would be required:
 
@@ -115,7 +115,7 @@ Create an IPSec tunnel between the organization edge gateway and on-premise data
 
 *   Local ID - Edge gateway tenant external network IP 
 *   Local Endpoint - Edge gateway tenant external network IP
-*   Local Subnets - Routed network subnet where HDM appliances will be deployed ([Create Routed Network](#heading=h.ocdg71kiwd4b))
+*   Local Subnets - Routed network subnet where HDM appliances will be deployed ([Create Routed Network](#create-routed-network))
 *   Peer ID - Public IP for the on-premise WAN network
 *   Peer Endpoint - Public IP for the on-premise WAN network
 *   Peer Subnets - Subnet of the on-premise WAN network where HDM appliances will be deployed.
