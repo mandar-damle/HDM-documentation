@@ -12,18 +12,6 @@
 The HDM install guide describes how to deploy, configure, and undeploy PrimaryIO Hybrid Data Management (HDM) 2.1 for enabling migrations of virtual machines to VMware Cloud Director (vCD).
 
 
-## Intended Audience
-
-This document is intended for administrators looking for a virtual machine migration solution to VMware Cloud Director. HDM is designed to address faster migrations to the cloud with minimal data transfer.
-
-
-
-
-## Deployment Checklist
-
-To assist in deployment efforts, a check-list, HDM 2.1 Deployment Checklist.pdf, is included** **in the HDM package. Completing the checklist and ensuring that all required information is available is recommended prior to beginning the deployment.
-
-
 ## HDM Deployment Steps
 
 HDM deployment involves the following six steps, each of which is discussed in detail in the sections below:
@@ -47,13 +35,6 @@ HDM deployment involves the following six steps, each of which is discussed in d
 
 1. The appliance must be deployed on the same on-premises vCenter it will manage.
 2. The appliance should reside in a different cluster than the one it will manage for migrations.
-
-
-#### System Requirements for the Appliance 
-
-Please see the section on 
-
-[HDM Resource Requirements](#heading=h.3hg9zwdhl9h3). 
 
 
 #### Deployment and Configuration

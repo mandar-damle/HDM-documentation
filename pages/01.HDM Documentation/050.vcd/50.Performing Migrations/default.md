@@ -1,19 +1,5 @@
 <!-- Copy and paste the converted output. -->
 
-
-
-# **HDM 2.1 for VMware Cloud Director**
-
-
-# **Admin Guide**
-
-
-
-# About the HDM Admin Guide
-
-This Admin Guide describes the deployment and administration of PrimaryIO Hybrid Cloud Data Management (HDM) 2.1 for migration of virtual machines to VMware Cloud Director (vCD). 
-
-
 **NOTE: In HDM 2.1, TBC is only supported for demo and test purposes.**
 
 
