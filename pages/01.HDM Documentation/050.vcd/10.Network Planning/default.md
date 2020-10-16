@@ -1,188 +1,74 @@
-# **HDM 2.1 - Org VDC System and Network Configuration**
 
-By now you understand the use cases for HDM, the resources 
-required and the tradeoffs associated with each of the
-configurations in which HDM may be deployed.
+---
+title:"Network Planning"
+---
 
-In this section we will show you how to configure the Organization VDC side network and system configuration required for HDM deployment.
+Your network topology choices determine how the HDM components will be configured within your network. It also dictates how VMs will be migrated to best support post-migration network security and VM isolation requirements. 
 
+HDM provides the following network configuration flexibility:
 
 
 
-# Network Configuration
+1. Choice of networks HDM components should use
+2. Choice of IP allocation type for HDM components
 
+#### **Network Types**
 
-## <a name="create-routed-network"> Step 1/3  : Create Routed Network UPLINK_WAN_NETWORK
+An ideal network configuration isolates various types of network traffic for maximum security, performance, and access control. HDM assumes the following types of networks can be present in the environment:
 
-This network will be connected to the edge gateway. Across WAN communication between on-premise and on-cloud for HDM appliance will be routed through this network. IPsec tunnel in [step 3](#step-3) will be configured to this network to complete the network configuration.
 
 
+1. Management Network (VM Network): This network usually maps to the VM network and provides access to vCenter. All management API communications with vCenter take place over this network.
+2. ESXi Network (ESXi_Network): This network usually maps to the VM network and provides access to ESXi.
+3. HDM Internal Network (HDM_Internal_Network): This network is used by HDM for communication among its components. It is recommended to configure a dedicated low latency network for this purpose. This network is illustrated in figure 2 as _PrimaryIO On-Premises_ and _PrimaryIO Cloud_.
+4. WAN Network (Uplink_WAN_Network): This network provides access to the cloud. All data transfers between the on-premises and cloud environments take place over this network, via either a public link or a direct connection.
+5. Application Network: This network facilitates application VM data transfers; each application can employ its own network.
 
-1. Create a new network and select Routed Network Type
+_Figure 2: How HDM utilizes the various network types_
 
 
-![alt_text](images/image4.png "image_tooltip")
+![drawing](images/image6.png)
 
+**NOTES:**
 
 
 
-2. Provide the name  “UPLINK_WAN_NETWORK” and Gateway CIDR for the network. Note the CIDR as this would be required when creating VPN connection between premise and edge gateway on cloud.
+1. During deployment, HDM components are configured to access necessary data store and meet component communication requirements.
+2. During HDM deployment, discovered vCenter networks must be categorized according to the types discussed in this section (figure 3). 
 
+_Figure 3: Selecting and Categorizing Networks_
 
-![alt_text](images/image3.png "image_tooltip")
 
+![alt_text](images/image27.png "image_tooltip")
 
 
+**NOTE: **While each traffic type should ideally employ its own network, configurations that allow one or multiple types of traffic to utilize the same network are also supported by HDM.
 
-3. Select the edge gateway 
 
+#### HDM Networking for Test: Single Network Topology
 
+HDM can be deployed in test environments where there may not be separation between the various network types. In this situation, the network configuration would be simplified as illustrated in figure 4. In this case, you will need to map all of the “Source Networks” to the VM Network or the Management Network during the deployment process (figure 5).
 
-![alt_text](images/image1.png "image_tooltip")
+_Figure 4: Test Environment Configuration_
 
-4. Specify static-ip pool of at least 20 IP addresses
+![drawing](images/image5.png)
 
+_Figure 5: Mapping Source and Destination Networks in a Single Network Test Environment_
 
 
-![alt_text](images/image8.png "image_tooltip")
+![alt_text](images/image30.png "image_tooltip")
 
 
 
+#### **IP Allocation**
 
-5. Add DNS records if required
+HDM supports DHCP and static IP protocols. The protocol to be used must be selected during the HDM deployment process. When choosing static IP, an IP allocation range must be provided. The number of IPs required will depend on the number of nodes in the cluster and the deployment mode chosen. 
 
+**NOTE**: HDM does not support the change of IP of its components (Appliance as well as other component VMs). Redeployment is required if IP for HDM components needs to be changed. 
 
-![alt_text](images/image12.png "image_tooltip")
 
+### **OS Requirements**
 
-
-
-6. Review and click on finish to create the routed network
-
-
-![alt_text](images/image14.png "image_tooltip")
-
-
-
-## 
-
-
-## Step 2/3  : Create Isolated Network HDM_INTERNAL_NETWORK
-
-This network will be created for HDM appliance communication and for migrating virtual machines across vApps for the same Org. VDC.
-
-
-
-1. Create a new network and select Isolated Network Type
-
-
-![alt_text](images/image18.png "image_tooltip")
-
-
-
-
-2. Provide the name “HDM_INTERNAL_NETWORK” and Gateway CIDR for the network. Make sure enough IPs are available in the subnet as this would be used for migrating virtual machines. The network would be assigned during migration and then removed post-migration.
-
-
-![alt_text](images/image6.png "image_tooltip")
-
-
-
-
-3. Specify static-ip pool or at least 30 IPs.
-
-![alt_text](images/image5.png "image_tooltip")
-
-
-
-
-4. Review and click on finish to create the isolated network
-
-
-
-![alt_text](images/image9.png "image_tooltip")
-
-
-
-## 
-
-
-## <a name="step-3"> Step 3/3  : Configure VPN tunnel with Org. Edge Gateway </a>
-
-Create an IPSec tunnel between the organization edge gateway and on-premise datacenter. To complete the VPN setting the following information would be required:
-
-
-
-*   Local ID - Edge gateway tenant external network IP 
-*   Local Endpoint - Edge gateway tenant external network IP
-*   Local Subnets - Routed network subnet where HDM appliances will be deployed ([Create Routed Network](#create-routed-network))
-*   Peer ID - Public IP for the on-premise WAN network
-*   Peer Endpoint - Public IP for the on-premise WAN network
-*   Peer Subnets - Subnet of the on-premise WAN network where HDM appliances will be deployed.
-
-
-### Edge gateway VPN config 
-
-
-![alt_text](images/image15.png "image_tooltip")
-
-
-
-### Recommended firewall rules
-
-Add recommended firewall rule by specifying source and destination subnet
-
-
-![alt_text](images/image2.png "image_tooltip")
-
-
-
-### Service/Port level requirement for HDM(Advanced firewall rules)
-
-
-
-1. Premise wan network - Cloud wan network ports(Inbound/Outbound):** **22, 2379, 32820, 2376, 6000-6050, 7000-7050, 8000-8050.
-
-![alt_text](images/image10.png "image_tooltip")
-
-
-
-
-![alt_text](images/image17.png "image_tooltip")
-
-
-You can test the IPsec connectivity using ping command from on prem to cloud side routed network gateway. If you have configured advanced firewall rules please make sure ICMP traffic is allowed.
-
-Ping test from premise to cloud side gateway
-
-
-![alt_text](images/image7.png "image_tooltip")
-
-
-Ping test from Cloud to Premise IP, you need to create test machine on routed network of cloud side.
-
-
-
-![alt_text](images/image16.png "image_tooltip")
-
-
-
-
-# System Configuration
-
-
-## Configure vApp for HDM Deployment
-
-The components of HDM need to be deployed on a vApp. If you don’t already have a vApp for this purpose please create it.
-
-Attach Org VDC network UPLINK_WAN_NETWORK and HDM_INTERNAL_NETWORK which were created in step 1 and 2 earlier in this document to vApp where HDM will be deployed. 
-
-**NOTE: HDM_INTERNAL_NETWORK should be added to all vApps where VMs will be migrated.**
-
-
-![alt_text](images/image11.png "image_tooltip")
-
-
-
+There are no OS limitations for cold migration. 
 
 
