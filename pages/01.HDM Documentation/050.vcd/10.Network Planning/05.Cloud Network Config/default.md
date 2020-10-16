@@ -1,5 +1,5 @@
---- 
-title: "Org VDC System and Network Configuration"
+---
+title: 'Org VDC System and Network Configuration'
 ---
 
 By now you understand the use cases for HDM, the resources 
