@@ -15,30 +15,162 @@ order_manual: ''
 #### On-Premise Requirements
 
 
+<table>
+  <tr>
+   <td><strong>Requirement</strong>
+   </td>
+   <td><strong>Available (Yes / No)</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>On-premises Requirements
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>VMWare Environment
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>Single version of ESX throughout the vCenter cluster
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>ESX in connected state in the vCenter
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>ESX able to communicate with vCenter
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>Clusters have ESX 6.5U2+ and 6.7 
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>vCenter Web Client: 6.5 or 6.7 
+<p>
+(Use of HTML client is recommended with Chrome v.75 +)
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>Datastore should be VMFS, NFS, or NFSv3
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>E1000E and VMXNet3 network adapters should be available in the on-premises vCenter
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>DRS is enabled and HA should be enabled on the vCenter cluster 
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>Network Environment
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>Network speed: at least 1 Gbps (10 Gbps link is preferred)
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>VM Network has connectivity to the cloud endpoint 
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>VM Network has access to ESXi
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>Hardware Requirements
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>
 
-*   VMware Environment
-    *   Single version of ESX throughout the vCenter cluster. 
-    *   ESX in connected state in the vCenter
-    *   ESX can communicate with vCenter
-    *   Clusters with ESX 6.5U2+ and 6.7 are supported.
-    *   vCenter Web Client: 6.5 or 6.7 (Use ofHTML client is recommended with Chrome v.75 +)
-    *   Datastore should be one of: VMFS, NFS, NFSv3.
-    *   E1000E and VMXNet3 network adapter should be available in On-Premise vCenter.
-    *   DRS and HA should be enabled on the vCenter cluster. 
-    *   Need credentials that will authenticate with the VMware endpoint. Single signon like Workspace ONE are not supported. 
-*   Network requirement:
-    *   Network: >= 1 Gbps..
-    *   10 Gbps link is preferred. Anything greater than 1 Gbps would work though.
-    *   PrimaryIO Appliance should have access to following network:
-        *   VM Network (Management Network) - To access and manage virtual machines on 6.x the vcenter.
-        *   VM Network will be used for connectivity to On-Cloud endpoint for HDM deployment and migration
-        *   VM network will also provide access to ESXi. This is required for IOA Analysis and data transfer.
-        *   PrimaryIO Appliance should be accessible from ESXi servers of the cluster from which VMs will be migrated
-        *   PrimaryIO Appliance should be accessible from ESXi.
-    *   PrimaryIO Appliance should have access to On-Cloud vCenter and ESXi at port 443.
-    *   ESXi, with multiple IP addresses should provide access to port 22 and 443 from all IPs of PIO Appliance
-*   Hardware requirements:
-    *   Following are the resource requirements for HDM components for **Standard-Standalone **deployment
+<table>
+  <tr>
+   <td>On-premises
+   </td>
+   <td><strong>Total resources required for HDM</strong>
+<p>
+11 vCPU, 16 GB RAM, 336 GB disk
+   </td>
+   <td><strong>1</strong> Appliance (4 vCPU, 8 GB RAM, 144 GB disk), \
+<strong>1</strong> PremMgr (3 vCPU, 4 GB RAM, 32 GB disk),
+<p>
+<strong>1</strong> ESXMgr (4 vCPU, 4GB RAM, 160 GB disk)
+   </td>
+  </tr>
+  <tr>
+   <td>Cloud
+   </td>
+   <td><strong>Total resources required for HDM equivalent to</strong>
+<p>
+10 vCPU, 26 GB RAM, 64 GB disk, 512 GB Cache
+   </td>
+   <td><strong>1 </strong>CloudMgr (4 vCPU, 6 GB RAM, 32 GB disk), \
+<strong>1</strong> CloudCache (6 vCPU, 20 GB RAM, 32 GB disk, 512 GB cache)
+   </td>
+  </tr>
+</table>
+
+
+Related document: For hardware and system requirements, refer to the [VMware Hardware Compatibility List (HCL).](https://www.vmware.com/resources/compatibility/search.php)
+
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>Cloud Requirements
+
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>Network connectivity between on-premises and cloud environments
+
+
+
+*   Network Link: at least 1 Gbps
+*   Network Round Trip Time Latencies: less than 30 ms
+   </td>
+   <td>
+   </td>
+  </tr>
+</table>
+
 
  **NOTES**:
 
