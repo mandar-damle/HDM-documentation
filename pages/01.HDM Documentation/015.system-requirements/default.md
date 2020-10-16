@@ -1,5 +1,5 @@
 ---
-title: ''
+title: 'System Requirements'
 media_order: ''
 body_classes: ''
 order_by: ''
@@ -10,13 +10,6 @@ order_manual: ''
 
 
 
-# **HDM 2.1 for VMware**
-
-
-# **System Requirements**
-
-
-This document describes the system requirements for HDM deployment for test purposes. 
 
 
 #### On-Premise Requirements

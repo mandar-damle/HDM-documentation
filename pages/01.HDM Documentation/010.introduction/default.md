@@ -1,4 +1,6 @@
-# Introduction
+---
+title: 'Introduction'
+---
 
 ## Compute and Data De-Coupling
 

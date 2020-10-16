@@ -1,5 +1,8 @@
 
-# Download PrimaryIO HDM
+---
+title: 'Download PrimaryIO HDM'
+---
+
 
 To obtain your license and download link for HDM, visit [https://www.primaryio.com/ibm/](https://www.primaryio.com/ibm/)
 
