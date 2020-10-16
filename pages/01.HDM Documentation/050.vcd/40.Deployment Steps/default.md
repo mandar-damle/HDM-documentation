@@ -1,15 +1,7 @@
 <!-- Copy and paste the converted output. -->
 
 
-
-# **HDM 2.1 for VMware Cloud Director**
-
-
-# **Install Guide**
-
-# About the HDM Install Guide
-
-The HDM install guide describes how to deploy, configure, and undeploy PrimaryIO Hybrid Data Management (HDM) 2.1 for enabling migrations of virtual machines to VMware Cloud Director (vCD).
+This section describes how to deploy, configure, and undeploy PrimaryIO Hybrid Data Management (HDM) 2.1 for enabling migrations of virtual machines to VMware Cloud Director (vCD).
 
 
 ## HDM Deployment Steps
