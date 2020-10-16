@@ -1,1 +1,1 @@
-title: VCS
+title: VMware Cloud Foundation

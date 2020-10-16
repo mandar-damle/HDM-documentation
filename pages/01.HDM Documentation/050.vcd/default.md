@@ -1,1 +1,1 @@
-title: VCD
+title: VMware Cloud Director
