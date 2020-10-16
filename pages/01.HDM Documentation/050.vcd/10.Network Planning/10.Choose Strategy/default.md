@@ -1,5 +1,5 @@
 ---
-title:"Choose Network Strategy"
+title: "Choose Network Strategy"
 published: false
 ---
 
