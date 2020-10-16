@@ -1,8 +1,12 @@
+---
+title: 'HDM 2.1 Release Notes'
+media_order: ''
+body_classes: ''
+order_by: ''
+order_manual: ''
+---
 <!-- Copy and paste the converted output. -->
 
-
-
-# HDM 2.1 Release Notes
 
 The HDM 2.1 release has been qualified for production use for the _Cold Migration Use case_ in the Ultra Lite-Standalone and Ultra Lite-Cluster configurations. 
 
