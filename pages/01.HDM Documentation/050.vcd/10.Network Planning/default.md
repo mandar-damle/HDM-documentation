@@ -652,6 +652,7 @@ IP
   </tr>
   <tr>
    <td>
+_
    </td>
    <td>
    </td>
@@ -679,6 +680,7 @@ IP
   </tr>
   <tr>
    <td>
+_
    </td>
    <td>
    </td>
@@ -706,6 +708,7 @@ IP
   </tr>
   <tr>
    <td>
+   _
    </td>
    <td>
    </td>
@@ -733,6 +736,7 @@ IP
   </tr>
   <tr>
    <td>
+   _
    </td>
    <td>
    </td>
@@ -756,6 +760,7 @@ Gateway
   </tr>
   <tr>
    <td>
+   _
    </td>
    <td>
    </td>
@@ -795,6 +800,7 @@ IP Range
   </tr>
   <tr>
    <td>
+   _
    </td>
    <td>
    </td>
@@ -830,6 +836,7 @@ IP Range
   </tr>
   <tr>
    <td>
+   _
    </td>
    <td>
    </td>
@@ -865,6 +872,7 @@ IP Range
   </tr>
   <tr>
    <td>
+   _
    </td>
    <td>
    </td>
@@ -877,8 +885,8 @@ IP Range
 
 
 3. On-Cloud Deployment
-    18. DNS to resolve cloud Director FQDN if private - 
-    19. If required (For On-Cloud not accessible over public network) add routes to access On-Cloud Director in appliance:
+   18. DNS to resolve cloud Director FQDN if private - 
+   19. If required (For On-Cloud not accessible over public network) add routes to access On-Cloud Director in appliance:
         17. Log into PIO Appliance over ssh - root/admin@123
         18. Add entry in /etc/pio.routes - &lt;ethernet_name>|&lt;cloud subnet>|&lt;prem_gateway>
         19. Execute ./setup_network.sh
@@ -904,6 +912,7 @@ IP Range
   </tr>
   <tr>
    <td>
+   _
    </td>
    <td>
    </td>
@@ -934,6 +943,7 @@ IP Range
   </tr>
   <tr>
    <td>
+   _
    </td>
    <td>
    </td>
@@ -953,12 +963,14 @@ IP Range
    <td>
  On-Cloud WAN subnet
    </td>
+   _
    <td>
  On-Premise WAN gateway
    </td>
   </tr>
   <tr>
    <td>
+   _
    </td>
    <td>
    </td>
@@ -978,6 +990,7 @@ On-Premise WAN subnet
   </tr>
   <tr>
    <td>
+   _
    </td>
    <td>
    </td>

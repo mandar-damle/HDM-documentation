@@ -166,6 +166,3 @@ HDM supports DHCP and static IP protocols. The protocol to be used must be selec
 There are no OS limitations for cold migration. 
 
 
-## **Deployment checklist**
-
-
