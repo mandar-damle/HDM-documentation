@@ -1,5 +1,5 @@
 ---
-title: 'HDM 2.1 Release Notes'
+title: 'HDM 2.1.3 Release Notes'
 media_order: ''
 body_classes: ''
 order_by: ''
@@ -8,9 +8,9 @@ order_manual: ''
 <!-- Copy and paste the converted output. -->
 
 
-The HDM 2.1 release has been qualified for production use for the _Cold Migration Use case_ in the Ultra Lite-Standalone and Ultra Lite-Cluster configurations. 
+The HDM 2.1.3 release has been qualified for production use for the _Cold Migration Use case_ in the Ultra Lite-Standalone and Ultra Lite-Cluster configurations. 
 
-What is new in HDM 2.1 Release ?
+What is new in HDM 2.1.3 Release ?
 
 
 

@@ -1,7 +1,7 @@
 <!-- Copy and paste the converted output. -->
 
 
-# **HDM 2.1 for VMware**
+# **HDM 2.1.3 for VMware**
 
 
 # **Network Configuration - Planning**
@@ -12,7 +12,7 @@
 
 # Introduction
 
-This document describes the networking aspects of HDM. The HDM 2.1 Install Guide has the details of various types of network topologies that are supported. This document details the deployment and configuration of HDM for test purposes with a single network having Static IP. 
+This document describes the networking aspects of HDM. The HDM 2.1.3 Install Guide has the details of various types of network topologies that are supported. This document details the deployment and configuration of HDM for test purposes with a single network having Static IP. 
 
 This document also covers the preparatory steps with respect to networking that users must perform prior to deploying HDM. 
 
@@ -809,7 +809,7 @@ Here are the Firewall configuration on premise and at the cloud side.
 
 
 
- if you want to allow specific traffic from source to destination, please refer (&lt;HDM 2.1 for VMware Admin Guide - VCS>)
+ if you want to allow specific traffic from source to destination, please refer (&lt;HDM 2.1.3 for VMware Admin Guide - VCS>)
 
 
 ## Firewall Rules

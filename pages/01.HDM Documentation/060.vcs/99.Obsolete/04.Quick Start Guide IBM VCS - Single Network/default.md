@@ -2,7 +2,7 @@
 
 # 
 
-# **HDM 2.1 Quick Start Guide for IBM VCS**
+# **HDM 2.1.3 Quick Start Guide for IBM VCS**
 
 
 # **Single Network Configuration**
@@ -1151,7 +1151,7 @@ To deploy the HDM product you need to have
 2. Firewall rules setup to allow required traffic
 3. Network configured correctly on the cloud side.
 
-All these three steps are explained in detail in the “**HDM 2.1 - Network Configuration - Planning - VCS**”.  Please make sure of the following
+All these three steps are explained in detail in the “**HDM 2.1.3 - Network Configuration - Planning - VCS**”.  Please make sure of the following
 
 
 

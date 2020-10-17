@@ -1,7 +1,7 @@
 <!-- Copy and paste the converted output. -->
 
 
-This section describes how to deploy, configure, and undeploy PrimaryIO Hybrid Data Management (HDM) 2.1 for enabling migrations of virtual machines to VMware Cloud Director (vCD).
+This section describes how to deploy, configure, and undeploy PrimaryIO Hybrid Data Management (HDM) 2.1.3 for enabling migrations of virtual machines to VMware Cloud Director (vCD).
 
 
 ## HDM Deployment Steps
@@ -428,7 +428,7 @@ _Figure 32: Verify Installation of the Cloud State_
 
 # HDM Migrations
 
-HDM is used to perform VM migrations from on-premises environments to the cloud. Detailed use cases and procedure for using HDM for migrate operations are explained in **HDM 2.1 Admin Guide.pdf.**
+HDM is used to perform VM migrations from on-premises environments to the cloud. Detailed use cases and procedure for using HDM for migrate operations are explained in **HDM 2.1.3 Admin Guide.pdf.**
 
 
 # HDM Undeployment

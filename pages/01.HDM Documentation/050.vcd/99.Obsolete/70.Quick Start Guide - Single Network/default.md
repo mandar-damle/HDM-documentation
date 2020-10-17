@@ -4,9 +4,9 @@
 
 # About this Guide
 
-This quick start guide is intended to help you rapidly deploy PrimaryIO HDM to a test environment. The steps are intended for a single on-premises network environment, with cloud access via a WAN link and no separation of the management and VM network. All IP assignments in this guide are static/static-pool and connectivity between the on-premises and cloud environments is via IPSec. For other types of network configurations, refer to the HDM 2.1 Install Guide.
+This quick start guide is intended to help you rapidly deploy PrimaryIO HDM to a test environment. The steps are intended for a single on-premises network environment, with cloud access via a WAN link and no separation of the management and VM network. All IP assignments in this guide are static/static-pool and connectivity between the on-premises and cloud environments is via IPSec. For other types of network configurations, refer to the HDM 2.1.3 Install Guide.
 
-HDM provides a flexible deployment model to cater to a wide range of user needs, including different use cases, performance requirements, scalability, and levels of security. The HDM 2.1 Install Guide contains full details of every deployment mode. For simplicity, this document describes an HDM deployment using the **_Standalone, Ultra-Lite_** option. This option supports all the key features of HDM and can also be used for cold migration and validation purposes. 
+HDM provides a flexible deployment model to cater to a wide range of user needs, including different use cases, performance requirements, scalability, and levels of security. The HDM 2.1.3 Install Guide contains full details of every deployment mode. For simplicity, this document describes an HDM deployment using the **_Standalone, Ultra-Lite_** option. This option supports all the key features of HDM and can also be used for cold migration and validation purposes. 
 
 The following steps are required to deploy HDM:
 
@@ -376,7 +376,7 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
 [Appendix B - Network Settings]
 <li>If there are any errors in the network configuration, please resolve
 
-<li>For additional details, refer to the “Deploy HDM On-premises” section in the HDM 2.1 Installation Guide
+<li>For additional details, refer to the “Deploy HDM On-premises” section in the HDM 2.1.3 Installation Guide
 
 <li>This step will take a few minutes to complete. Progress will be shown on the vCenter task bar.
 </li>
@@ -660,7 +660,7 @@ Before migration is triggered, ensure that the health of the HDM components is g
 
 <li>Following successful migration, the VM will be ready for use in the cloud
 
-<li>To migrate multiple VMs and the HDM dashboard, please refer to the HDM 2.1 Admin Guide
+<li>To migrate multiple VMs and the HDM dashboard, please refer to the HDM 2.1.3 Admin Guide
 </li>
 </ul>
    </td>
@@ -1239,7 +1239,7 @@ Requirements to deploy HDM:
 2. Firewall rules configured to enable required traffic
 3. Network configured correctly on the cloud side
 
-Each of the above steps are discussed in detail in the HDM 2.1 - Org VDC System and Network Configuration.
+Each of the above steps are discussed in detail in the HDM 2.1.3 - Org VDC System and Network Configuration.
 
 Be sure to configure the cloud network as shown in the diagram in 
 
@@ -1262,4 +1262,4 @@ Be sure to configure the cloud network as shown in the diagram in
 ![alt_text](images/image8.png "image_tooltip")
 
 
-For detailed network configuration please refer to the **HDM 2.1 - Org VDC System and Network Configuration **guide.
+For detailed network configuration please refer to the **HDM 2.1.3 - Org VDC System and Network Configuration **guide.

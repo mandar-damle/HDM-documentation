@@ -2,7 +2,7 @@
 
 
 
-# **HDM 2.1 for VMware**
+# **HDM 2.1.3 for VMware**
 
 
 # **Admin Guide**
@@ -18,7 +18,7 @@
 The Admin guide describes the deployment and administration of the HDM product for migration of VMs. 
 
 
-## **HDM 2.1 Software Package**
+## **HDM 2.1.3 Software Package**
 
 HDM is delivered as a virtual/software solution; when HDM software is installed, it consists of a single virtual appliance from where further deployment of HDM components happen On-Premise and On-Cloud vCenters.
 
@@ -30,11 +30,11 @@ HDM package can be downloaded from [http://release.primaryio.com/vmware/HDM_2.1/
 
 1. HDM_2.1 zip - The zip will contain the HDM appliance OVF
 2. VCF - Contains documents for HDM deployment and management on VCF
-    1. HDM 2.1 Install Guide - VCF.pdf
-    2. HDM 2.1 Admin Guide - VCF.pdf
-    3. HDM 2.1 Troubleshooting Guide - VCF.pdf
-    4. HDM 2.1 Release Notes - VCF.pdf
-    5. HDM 2.1 Deployment Checklist - VCF.pdf
+    1. HDM 2.1.3 Install Guide - VCF.pdf
+    2. HDM 2.1.3 Admin Guide - VCF.pdf
+    3. HDM 2.1.3 Troubleshooting Guide - VCF.pdf
+    4. HDM 2.1.3 Release Notes - VCF.pdf
+    5. HDM 2.1.3 Deployment Checklist - VCF.pdf
 
 
 # HDM Terminology
@@ -160,7 +160,7 @@ Below is a pictorial representation of the components that constitute the HDM so
 
 # HDM Deployment
 
-HDM provides a very flexible deployment model providing options to be able to cater to different user needs in terms of use case, performance, scalability and security.The detailed steps and options for HDM deployment are covered in the **HDM 2.1 Install Guide - VCF.pdf**.
+HDM provides a very flexible deployment model providing options to be able to cater to different user needs in terms of use case, performance, scalability and security.The detailed steps and options for HDM deployment are covered in the **HDM 2.1.3 Install Guide - VCF.pdf**.
 
 This focus of this document is on the usage of HDM in migrating VMs to On-Cloud.
 

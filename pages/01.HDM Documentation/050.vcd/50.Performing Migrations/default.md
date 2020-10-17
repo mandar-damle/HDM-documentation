@@ -1,11 +1,11 @@
 <!-- Copy and paste the converted output. -->
 
-**NOTE: In HDM 2.1, TBC is only supported for demo and test purposes.**
+**NOTE: In HDM 2.1.3, TBC is only supported for demo and test purposes.**
 
 
 ## Migrate a VM using vCenter 
 
-This section describes the steps for executing the migration operation through vCenter. As noted above, only Cold Migration is supported in HDM 2.1. 
+This section describes the steps for executing the migration operation through vCenter. As noted above, only Cold Migration is supported in HDM 2.1.3. 
 
 Pre-requisites
 
@@ -450,6 +450,6 @@ Guest VM boot may fail due to reasons such as VMware tools not starting early en
 
 ### Unresolved Issues
 
-Refer to the HDM 2.1 Troubleshooting Guide if the failure issues are not resolved. The failure may have been caused by a known product issue. 
+Refer to the HDM 2.1.3 Troubleshooting Guide if the failure issues are not resolved. The failure may have been caused by a known product issue. 
 
 If PrimaryIO technical support is required, refer to the Install Guide for the details. 

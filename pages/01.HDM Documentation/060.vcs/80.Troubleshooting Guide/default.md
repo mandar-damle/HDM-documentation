@@ -24,14 +24,14 @@
 
 
 
-# **HDM 2.1 for VMware**
+# **HDM 2.1.3 for VMware**
 
 
 # **Troubleshooting Guide**
 
  	                        
 
-Version: 2.1
+Version: 2.1.3
 
 Publish Date: August, 2020
 
@@ -89,7 +89,7 @@ Contents
 
 # About the HDM Troubleshooting Guide
 
-This document covers troubleshooting for issues known in the HDM 2.1 product. In case there are issues that are not covered in this document or are not resolved easily, users should contact PrimaryIO support for further help. 
+This document covers troubleshooting for issues known in the HDM 2.1.3 product. In case there are issues that are not covered in this document or are not resolved easily, users should contact PrimaryIO support for further help. 
 
 
 # HDM Terminology

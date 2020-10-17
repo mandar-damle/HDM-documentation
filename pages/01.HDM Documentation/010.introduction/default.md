@@ -11,7 +11,7 @@ HDM decouples compute (Virtual Machines - VM) and storage (Virtual Disks - VMDK)
 
 HDM consists of the following components that are dispersed between cloud and on-premises data centers (figure 1). These components are microservices packaged as VMs that work together to provide the data and control path necessary for its use cases. They also provide a flexible deployment model and failure resilience.
 
-HDM 2.1 consists of microservices that have been packaged as VMs that work together to provide the data and control path to support the aforementioned use cases and to provide a flexible deployment model and failure resilience. HDM comprises the following components, dispersed between cloud and on-premises data centers (figure 1): 
+HDM 2.1.3 consists of microservices that have been packaged as VMs that work together to provide the data and control path to support the aforementioned use cases and to provide a flexible deployment model and failure resilience. HDM comprises the following components, dispersed between cloud and on-premises data centers (figure 1): 
 
 The HDM product binaries can be used to on a VMware Cloud Director or
 a VMware Cloud Foundation. The components in play in each of these
@@ -25,7 +25,7 @@ deployment is shown below.
 4. **Cloud Storage Gateway: **Provides access across the WAN link to enable cloud-based VMs read/write access back to the on-premises environment. It is possible to have multiple gateways for redundancy.
 5. **Sync Daemon:** Located in both environments to deliver compression, encryption, and de-duplication for data being transferred from on-premises to cloud environments. It also provides a mechanism to pause and resume data transfers in the event of a WAN disconnect.
 
-_Figure 1: Location of HDM 2.1 components_
+_Figure 1: Location of HDM 2.1.3 components_
 
 ![alt_text](images/image8.png "image_tooltip")
 
@@ -46,12 +46,12 @@ _Figure 2: HDM components_
 
 # HDM Deployment
 
-HDM provides a flexible deployment model to support a wide range of user needs regarding use case, performance, scalability, and security. The detailed steps and options for each deployment method are covered in the **HDM 2.1 Install Guide.** This document focuses on the usage of HDM to migrate VMs to the cloud.
+HDM provides a flexible deployment model to support a wide range of user needs regarding use case, performance, scalability, and security. The detailed steps and options for each deployment method are covered in the **HDM 2.1.3 Install Guide.** This document focuses on the usage of HDM to migrate VMs to the cloud.
 
 
 # HDM Migrations
 
-HDM 2.1 is used to migrate VMs from on-premises environments to the cloud. There are two main use cases for HDM migrations:
+HDM 2.1.3 is used to migrate VMs from on-premises environments to the cloud. There are two main use cases for HDM migrations:
 
 
 
@@ -73,7 +73,7 @@ This use case permanently moves the VM and all of its data to the cloud. Two typ
 
 The choice of which migration type to employ depends on the amount of data in the VM and if the VM needs to be instantly available during the migration, or if prolonged downtime can be tolerated.
 
-**NOTE: In HDM 2.1, only cold migration is supported. **
+**NOTE: In HDM 2.1.3, only cold migration is supported. **
 
 
 ### Try Before Commit (TBC)

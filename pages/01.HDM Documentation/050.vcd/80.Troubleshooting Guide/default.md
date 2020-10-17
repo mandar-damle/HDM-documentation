@@ -1,13 +1,13 @@
 <!-- Copy and paste the converted output. -->
 
-# **HDM 2.1 for VMware Cloud Director**
+# **HDM 2.1.3 for VMware Cloud Director**
 
 
 # **Troubleshooting Guide**
 
  	                        
 
-Version: 2.1
+Version: 2.1.3
 
 Publish Date: August, 2020
 
