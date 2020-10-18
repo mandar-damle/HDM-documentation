@@ -1,9 +1,5 @@
 ---
 title: 'System Requirements'
-media_order: ''
-body_classes: ''
-order_by: ''
-order_manual: ''
 ---
 
 <!-- Copy and paste the converted output. -->
@@ -12,7 +8,7 @@ order_manual: ''
 
 
 
-#### On-Premise Requirements
+#### On-Premises Requirements
 
 
 <table>
@@ -183,7 +179,7 @@ Related document: For hardware and system requirements, refer to the [VMware Har
 <table>
   <tr>
    <td>
-On-Premise
+On-Premises
    </td>
    <td><strong>1</strong> Appliance (4 vCPU, 8 GB RAM, 144 GB disk), \
 <strong>1</strong> PremMgr (3 vCPU, 4 GB RAM, 32 GB disk),
@@ -208,29 +204,29 @@ On-Premise
 
 
 
-*   PIO Appliance should be deployed on the same vCenter and datacenter which it would be managing. Recommendation is to deploy on a cluster not identified for migration.
-*   HDM components should be deployed on Shared Datastore.
+*   The PrimaryIO Appliance should be deployed on the same vCenter and datacenter it will be managing. It is recommended to deploy on a cluster that will not be migrated.
+*   HDM components should be deployed on a shared datastore.
 
 
-#### On-Cloud Requirements
+#### Cloud Requirements
 
 
 
-*   Supported On-Cloud endpoints:
+*   Supported cloud endpoints:
     *   VMware Cloud on AWS
     *   IBM Cloud for VMware Solution
     *   VMware Cloud Foundation SDDC
     *   VMware Cloud Director
 *   HDM components should be deployed on Shared Datastore
-*   Network connectivity between On-Premise and On-Cloud
+*   Network connectivity between on-premises and the cloud
     *   Network Link >= 1 Gbps
     *   Network Round Trip Time Latencies: &lt; 30 ms
 *   Network requirement:
-    *   On-Cloud HDM components should have access to the WAN network.
-    *   On-Cloud VCenter and ESXi should be accessible from On-Premise at port 443.
-    *   E1000E and VMXNet3 network adapter should be available in On-Cloud vCenter.
-    *   Network on which HDM components are deployed should have access to On-Cloud vCenter at port 443 and On-Cloud ESXi at port 443 and 902.
-    *   Firewall Rules for On-Cloud access for HDM:
+    *   Cloud HDM components should have access to the WAN network.
+    *   Cloud VCenter and ESXi should be accessible on-premises at port 443.
+    *   E1000E and VMXNet3 network adapter should be available in  the cloud vCenter.
+    *   Network on which HDM components are deployed should have access to the cloud vCenter at port 443 and the cloud ESXi at port 443 and 902.
+    *   Firewall rules for HDM cloud access:
         *   Port 22 - inbound and outbound
         *   Port 2379 - outbound 
         *   Port 6000-6010 - inbound and outbound
@@ -239,7 +235,7 @@ On-Premise
         *   Post 32820 - inbound and outbound
 
 
-#### OS Support (TBC/ Warm Migration)
+#### OS Support (TBC/Warm Migration)
 
 **Windows**
 
