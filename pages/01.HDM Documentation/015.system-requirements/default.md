@@ -11,7 +11,7 @@ title: 'System Requirements'
 #### On-Premises Requirements
 
 
-<table class="table">
+<table>
   <tr>
    <td><strong>Requirement</strong>
    </td>
