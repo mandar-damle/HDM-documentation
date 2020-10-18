@@ -1,3 +1,11 @@
+---
+title: ''
+media_order: ''
+body_classes: ''
+order_by: ''
+order_manual: ''
+---
+
 ## Deployment Requirements
 
 HDM provides a flexible deployment model to support a wide range of user needs regarding use case, performance, scalability, and security. This section will help you choose the correct deployment type and network topology to support your needs. 
@@ -13,9 +21,9 @@ HDM provides _ultra-lite_, _lite_, _standard_, and _performance_ deployment opti
 
 
 1. Ultra-lite is the least resource intensive of the options. However, it only supports cold migration, and only to vCD.
-2. The lite option requires the least number of resources to support all HDM migration use cases. However, it is limited in migration parallelism and number of concurrently migrated VMs, compared to standard and performance deployment options.
+2. The lite option requires the least number of resources to support all HDM migration use cases. However, it is limited in the number of parallel migrations and number of concurrently migrated VMs, compared to standard and performance deployment options.
 3. The standard option is more scalable but requires more resources than the lite option, but is less scalable and requires fewer resources than the performance option.
-4. The performance option requires the highest number of resources, but it provides the highest migration parallelism and number of concurrently migrated VMs.
+4. The performance option requires the highest number of resources, but it provides the highest number of parallel migrations and number of concurrently migrated VMs.
 
 More details on the resource requirements for these deployment options is available in the next section.**_ _**
 
