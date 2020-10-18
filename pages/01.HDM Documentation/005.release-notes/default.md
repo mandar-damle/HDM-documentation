@@ -71,24 +71,24 @@ CP-4906: During flex mode of migration, if HDM_ON_CLOUD_NETWORK and the virtual 
 ```
 
 
-CP-4917: Application dependency feature is not supported for Cold Migration. Each virtual machine migrated using cold migration use-case will be migrated separately.
+CP-4917: Application dependency feature is not supported for Cold Migration. Each virtual machine migrated using cold migration will be migrated separately.
 
-CP-5035 : When a VM on migration, TBC, WARM or COLD, is configured for DHCP to Static IP address conversion, the VM upon boot on the On-Cloud will still be configured with DHCP IP address it was configured previously, in addition to its new Static IP address. This is observed for all the distributions of Linux. The OS’s old DHCP lease files are not deleted as part of DHCP to Static IP address conversion, hence once the VM comes up online on the On-Cloud, OS “network startup” scripts brings back the old DHCP IP address, if the DHCP server from the lease files in reachable, in addition to its new Static IP address. There is no workaround for this issue. The DHCP configured IP address will not disturb the newly configured Static IP address.
+CP-5035 : Whether TBC, warm, or cold migration is employed, upon booting in the cloud, any VM configured for DHCP to Static IP address conversion will retain its previously-configured DHCP IP address, in addition to its new Static IP address. This is true for all Linux distributions. The OS’s old DHCP lease files are not deleted as part of DHCP to Static IP address conversion. Therefore, once the VM becomes available in the cloud, OS “network startup” scripts renew the old DHCP IP address, in addition to adding the new Static IP address. There is no workaround for this issue. The DHCP IP address will not disturb the newly-configured Static IP address.
 
-CP-5076: In TBC or WARM migration use cases, virtual machines migrated back will have the same IP address that was set to be configured On-Cloud post migration. To resolve the issue, users would have to reconfigure the virtual machine's network.
+CP-5076: In TBC and warm migration use cases, virtual machines migrated back will retain the post-migration cloud IP address. To resolve this issue, the virtual machine's network will need to be reconfigured.
 
-CP-5104: Re-installation of HDM is not supported if the license enforced migration limit is reached even though the license has not expired.
+CP-5104: Even in cases where the license has not yet expired, re-installation of HDM is not supported if the license-enforced migration limit has been reached.
 
-CP-5107: On HDM_Cloud_Cache reboot, cache service does not come up. In this case the user will have to perform HDM Reset to recover migrated virtual machines and clean HDM deployment.
+CP-5107: On HDM_Cloud_Cache reboot, the cache service does not come up. An HDM Reset will be required to recover migrated virtual machines and clean the HDM deployment.
 
-CP-5112: COLD or WARM migrated VM, once configured with static IP address as part of data sync process, will get IP address collision on power on if the original VM On-Premise is kept powered on simultaneously after the migration. Due to this IP address collision, the migrated VM will not be able to bring up the newly configured static IP address. This is mainly observed in SLES distribution of Linux where IP address collision will be detected as part of the “network startup” scripts, and IP address will not come up online. Although, in the network, if two VMs, be it any distribution of Linux or Windows, are having the same IP address assigned, only one VM will be reachable through that IP address. Keep either the migrated VM or the original VM On-Premise in the power on state, at any point in time.
+CP-5112: If the on-premises VM remains powered on following a cold or warm migration, any virtual machine configured to sync data via a static IP address will cause an IP address collision upon power-on. As a result, the migrated VM will be unable to employ the newly-configured static IP address. This is mainly seen in the SLES Linux distribution where IP address collisions are detected as part of the “network startup” scripts, and IP addresses fail to come online. However, regardless of the specific Linux or Windows distribution, any time two VMs are assigned the same IP address, only one will be reachable through that IP address. To avoid this issue, only keep one VM (either the migrated or the original on-premises) powered on at any given time.
 
 **Inconsistent data in HDM plugin UI:**
 
-CP-5003: In Migration pop-up, for cold migration data transferred and compression ratio are shown as zero even though both are happening in the background and progress can be seen in the HDM migration task.
+CP-5003: In the migration pop-up, the amount of data transferred and the compression ratio are shown as zero, even though both are running in the background and progress can be seen in the HDM migration task.
 
 CP-5064: Historical IO analysis data is shown for powered-off virtual machines. The viewed timelines are not consistent with the historical timelines.
 
-CP-5119: HDM supports 2 ARM sync in parallel per HDM cloud cache. If more requests for ARM sync is submitted, user would see the following error message on ARM sync popup:
+CP-5119: HDM supports two ARM parallel syncs per HDM cloud cache. If more ARM sync requests are submitted, the following error message will appear in the ARM sync pop-up:
 
 "Error: PM-523: Failed to post data for sync. Please try again after sometime. {'msg': 'Failed to submit Sync operation for VM.', 'status': -1, 'vm_uuid': '192.168.5.228_vm-1040', 'resp': &lt;Response [429]>}"
