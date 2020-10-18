@@ -10,8 +10,12 @@ title: 'System Requirements'
 
 #### On-Premises Requirements
 
-| Requirement | Available |
-| This | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non tellus orci ac auctor augue mauris. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Vivamus arcu felis bibendum ut tristique et. Eu lobortis elementum nibh tellus molestie nunc non blandit. Euismod quis viverra nibh cras pulvinar mattis. Mattis vulputate enim nulla aliquet porttitor lacus luctus. Imperdiet nulla malesuada pellentesque elit eget gravida. Ullamcorper malesuada proin libero nunc consequat interdum varius sit amet. Arcu ac tortor dignissim convallis aenean. Volutpat est velit egestas dui id. Arcu odio ut sem nulla pharetra diam. Nisl purus in mollis nunc sed id semper risus. Fermentum dui faucibus in ornare quam viverra orci. Donec enim diam vulputate ut pharetra sit amet aliquam. |
+| Tables   |      Are      |  Cool |
+|----------|:-------------:|------:|
+| col 1 is |  left-aligned | $1600 |
+| col 2 is |    centered   |   $12 |
+| col 3 is | right-aligned |    $1 |
+
 <table>
   <tr>
    <td><strong>Requirement</strong>
