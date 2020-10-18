@@ -188,7 +188,7 @@ On-Premises
    </td>
   </tr>
   <tr>
-   <td>On-Cloud
+   <td>In the Cloud
    </td>
    <td><strong>1 </strong>CloudMgr (4 vCPU, 6 GB RAM, 32 GB disk), \
 <strong>1</strong> CloudCache (6 vCPU, 20 GB RAM, 32 GB disk, 512 GB cache)
