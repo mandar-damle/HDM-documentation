@@ -1,5 +1,5 @@
 ---
-title: 'Introduction'
+title: Introduction
 ---
 
 ## Compute and Data De-Coupling
@@ -13,9 +13,7 @@ HDM consists of the following components that are dispersed between cloud and on
 
 HDM 2.1.3 consists of microservices that have been packaged as VMs that work together to provide the data and control path to support the aforementioned use cases and to provide a flexible deployment model and failure resilience. HDM comprises the following components, dispersed between cloud and on-premises data centers (figure 1): 
 
-The HDM product binaries can be used to on a VMware Cloud Director or
-a VMware Cloud Foundation. The components in play in each of these
-deployment is shown below.
+The HDM product binaries can be used in VMware Cloud Director or VMware Cloud Foundation. The components for each of these deployment is shown below.
 
 ## HDM Deployment for VMware Cloud Director
 
@@ -32,13 +30,13 @@ _Figure 1: Location of HDM 2.1.3 components_
 
 ## HDM Deployment for VMware Cloud Foundation
 
-1. **PIO Plugin:** PrimaryIO plug-in registered and installed on VMware vCenter for HDM management.
-2. **PIO Manager:** The main controlling appliance. This controls and orchestrates the entire system.
-3. **PIO Filter:** A **VMware VAIO filter framework** to gather I/O traces from each VM.
-4. **PIO Analyzer:** The I/O Analyzer (IOA) aggregates I/O traces from all VMs. It analyzes the I/O traces at a block level to make recommendations on the cloud cache requirements etc.
-5. **Storage Gateway:** Provides access across the WAN link to ensure traffic optimization and redundancy against failures. It also accesses and manage the On-Premise VMDKs for remote VMs that are in the On-Cloud.
-6. **Cloud Storage G/W:** The gateway for the VMs in the On-Cloud for reads and writes back to the On-Premise across the WAN link. It is possible to have multiple gateways across WAN link for redundancy.
-7. **Cloud Cache:** The cloud cache is a fast, reliable, persistent cache for the VMs in the On-Cloud. The cache maintains the working set of the VMs, so that VMs can run efficiently without moving entire data On-Cloud. When there is a cache miss, it is fetched from the On-Premise side by requesting the storage gateway to get blocks from the On-Premise VMDK.
+1. **PrimaryIO Plug-in: **Installed and registered on VMware vCenter for HDM management.
+2. **PrimaryIO Manager:** The main controlling appliance that controls and orchestrates the entire system.
+3. **PrimaryIO Filter:** A **VMware VAIO filter framework** to gather I/O traces from each VM.
+4. **PrimaryIO Analyzer:** The I/O Analyzer (IOA) aggregates I/O traces from all VMs and analyzes the I/O traces at a block level to make recommendations on the cloud cache requirements.
+5. **On-premises Storage Gateway:** Provides access across the WAN link to deliver traffic optimization and redundancy against failures. It also accesses and manages the on-premises VMDKs for cloud-based VMs.
+6. **Cloud Storage Gateway: **Provides access across the WAN link to enable cloud-based VMs read/write access back to the on-premises environment. It is possible to have multiple gateways for redundancy.
+7. **Cloud Cache:** The cloud cache is a fast, reliable, persistent cache for the VMs in the cloud. The cache maintains the working set of VMs, enabling them to run efficiently without moving entire data sets into the cloud. When there is a cache miss, the storage gateway obtains blocks from the on-premises VMDK.
 
 _Figure 2: HDM components_
 ![alt_text](images/image54.png "image_tooltip")
