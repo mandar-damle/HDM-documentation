@@ -11,8 +11,8 @@ title: 'System Requirements'
 #### On-Premises Requirements
 
 
-<table>
-  <tr style="font-weight:bold">
+<table class="table">
+  <tr>
    <td><strong>Requirement</strong>
    </td>
    <td><strong>Available (Yes / No)</strong>
