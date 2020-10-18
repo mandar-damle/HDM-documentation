@@ -1,3 +1,11 @@
+---
+title: ''
+media_order: ''
+body_classes: ''
+order_by: ''
+order_manual: ''
+---
+
 <!-- Copy and paste the converted output. -->
 
 **NOTE: In HDM 2.1.3, TBC is only supported for demo and test purposes.**
@@ -153,7 +161,7 @@ HDM keeps track of the health of its constituent components using periodic messa
 
 ## HDM in a Healthy State 
 
-Determine system and component health by selecting _Menu_ followed by _HDM_ in the appliance control panel, then selecting the _Administration _tab, followed by the _HDM Health_ tab, and then the _Component Health_ tab.
+Determine system and component health by selecting _Menu_ followed by _HDM_ in the appliance control panel, then selecting the _Administration_ tab, followed by the _HDM Health_ tab, and then the _Component Health_ tab.
 
 When there are no failures, the status of all HDM components are listed as _Good_ and will appear with a green checkmark icon in the Appliance control panel (figure 14). Red or yellow icons with corresponding negative messages in the status column indicate troubles (figure 15). This information is also available on vCenter on the HDM plug-in (figure 16).
 
