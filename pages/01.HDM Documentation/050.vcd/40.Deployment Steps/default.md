@@ -1,3 +1,11 @@
+---
+title: ''
+media_order: ''
+body_classes: ''
+order_by: ''
+order_manual: ''
+---
+
 <!-- Copy and paste the converted output. -->
 
 
@@ -52,7 +60,7 @@ _Figure 7: Configuring the Network_
 
 #### IP Address Details
 
-(_If DHCP is chosen, this section can be skipped)_
+_(If DHCP is chosen, this section can be skipped)_
 
 For each network type, choose the IP allocation protocol: static or DHCP. The following details are required if static IP is chosen (figure 8):
 
