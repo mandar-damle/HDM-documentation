@@ -1,9 +1,5 @@
 ---
-title: ''
-media_order: ''
-body_classes: ''
-order_by: ''
-order_manual: ''
+title: Copyright
 ---
 
 Version: 2.1.3.3
