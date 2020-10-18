@@ -1,16 +1,13 @@
 ---
 title: 'HDM 2.1.3 Release Notes'
-media_order: ''
-body_classes: ''
-order_by: ''
-order_manual: ''
 ---
+
 <!-- Copy and paste the converted output. -->
 
 
 The HDM 2.1.3 release has been qualified for production use for the _Cold Migration Use case_ in the Ultra Lite-Standalone and Ultra Lite-Cluster configurations. 
 
-What is new in HDM 2.1.3 Release ?
+What is new in HDM 2.1.3 Release?
 
 
 
@@ -21,12 +18,12 @@ Recoverable failure conditions
 
 
 
-*   Component failures are detected and repaired within 5 minutes.
-    *   Heartbeat will indicate the failed components and unavailability of the system.
-*   WAN disconnects less than 2 minutes will be recovered
-*   Behaviour on failure recovery
-    *   Running cold migration jobs will either succeed or fail with the appropriate response on UI.
-    *   Will accept future migration requests.
+*   Component failures are detected and repaired within 5 minutes
+    *   Heartbeat will indicate the failed components and unavailability of the system
+*   WAN disconnects lasting less than 2 minutes will be recovered
+*   Behavior on failure recovery
+    *   Running cold migration jobs will either succeed or fail with the appropriate response in the UI
+    *   Will accept future migration requests
 
 Cleanup required on failure conditions
 
@@ -39,32 +36,32 @@ Non-Recoverable failure conditions and recovery actions
 
 
 
-*   HDM may not recover from WAN disconnects greater than 2 minutes. An HDM reset (Please refer Admin Guide, HDM Reset section) will be required to recover from this condition.
-*   In pathological failure cases where we cannot recover and the heartbeat status does not recover to “Ready”. In these cases “HDM reset” followed by a redeployment will be required.
+*   HDM may not recover from WAN disconnects greater than 2 minutes. An HDM reset will be required to recover from this condition (please refer to the HDM Reset section of the Admin Guide).
+*   In pathological failure cases where we cannot recover and the heartbeat status does not recover to “Ready”. In these cases “HDM reset”, followed by a redeployment, will be required.
 *   Concurrent Infrastructure VM restarts and repeated Infrastructure VM restarts can get into unrecoverable states and require an “HDM reset” 
 
 ## Known Issues
 
-Do not delete the component VMs or the content library deployed as part of the HDM product deployment. Doing so will result in the incorrect operation of the product and a “HDM reset” followed by a redeployment will be required.
+Do not delete the component VMs or the content library deployed as part of the HDM product deployment. Doing so will result in the product to operate incorrectly, and will require an “HDM reset” followed by a redeployment.
 
 **The following issues are related to Cold Migration to VMware Cloud Director**
 
-CP-5262: During the deployment adding a VMware Cloud Director (VCD) target can take upto 5 mins. This is due the time taken by VCD APIs to return information regarding the target environment. 
+CP-5262: During deployment, adding a VMware Cloud Director (VCD) target can take up to 5 minutes. This is due the time required by VCD APIs to return information regarding the target environment. 
 
-**The following issues are related to Migration to VMware Cloud**
+**The following issues are related to the migration to VMware Cloud**
 
 
-**CP-5612**: VMC does not always honour the disable DRS settings on the components VMs deployed on cloud. This can result in the resources like Cloud_Cache getting seperated from the migrated VMs running of the cloud. This is generally not a cause for concern but can result in the VM becoming unresponsive if the ESXi host were to fail. The system will correctly rollback the VM to premise and start it from the last RTO/RPO checkpoint.
+**CP-5612**: VMC does not always honor the "Disable DRS" settings on the component VMs deployed in the cloud. This can result in resources such as Cloud_Cache becoming seperated from the migrated VMs running in the cloud. This is generally not a cause for concern, but can result in the VM becoming unresponsive if the ESXi host were to fail. The system will correctly roll back the VM to on-premises and start it from the last RTO/RPO checkpoint.
 
-DP-2738:  Occasionally in case of failure of the “On Prem I/O Manager” we are not able to recover from this failure and the component is marked as failed permanently in the Control panel in the appliance UI.To recover from this condition you need to do a “HDM reset” followed by a redeployment.
+DP-2738:  In the event the “On Prem I/O Manager” fails, recovery is impossible and the component will be marked as permanently failed in the control panel of the appliance UI. To recover from this condition, an “HDM reset”, followed by a redeployment, will be required.
 
-CP-3036: Tag inheritance fails for cloned virtual machines in case the API calls to On-Premise vCenter fails. To fix the issue, add tag manually to cloned virtual machines. (DCPN - 00055094)
+CP-3036: In the event the API calls to the on-premises vCenter fails, tag inheritance for cloned virtual machines will also fail. To correct the issue, manually add the tag to the cloned virtual machines. (DCPN - 00055094)
 
-CP-4217: PIO Manager service within PIO appliance gets restarted due to which functionalities like enable and disable monitoring can get affected along with screens not being rendered on vCenter HDM plugin UI. The service is usually up in seconds and the user should retry functionality or refresh screens.
+CP-4217: When the PrimaryIO Manager service within the PrimaryIO appliance gets restarted, functionality such as "Enable/Disable Monitoring" and the rendering of screens on the vCenter HDM plugin UI can be adversely affected. The service is usually back up in a few seconds, so the user should retry the functionality or refresh their screen.
 
-CP-4867: In case of non DRS or HA enabled clusters, when an ESXi on which PIO Appliance fails the vApp option properties set on the virtual machine gets reset. This is a VMware behaviour and can be seen even when virtual machines are migrated across vCenter. In such a condition when PIO Appliance is finally rebooted, services will not get deployed and all operations will fail.
+CP-4867: When an ESXi on the PrimaryIO Appliance fails in non DRS- or HA-enabled clusters, the vApp option properties on the virtual machine are reset. This is a normal VMware behavior that can even be seen when virtual machines are migrated across vCenter. When the PrimaryIO Appliance is rebooted, services will not be deployed, causing all operations to fail.
 
-CP-4906: In flex mode of migration, post migration not all IPs of linux virtual machines would be accessible in case HDM_ON_CLOUD_NETWORK and virtual machines application network are the same. To fix this run the following command within the migrated linux virtual machine:
+CP-4906: During flex mode of migration, if HDM_ON_CLOUD_NETWORK and the virtual machine application network are the same, not all Linux virtual machine IPs will be accessible post migration. To fix this, run the following command within the migrated Linux virtual machine:
 
 
 ```
