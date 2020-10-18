@@ -1,5 +1,5 @@
 ---
-title: Copyright
+title: 'Copyright Notice'
 ---
 
 Version: 2.1.3.3
