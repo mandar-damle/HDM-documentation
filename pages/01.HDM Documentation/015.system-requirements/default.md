@@ -12,7 +12,7 @@ title: 'System Requirements'
 
 
 <table>
-  <tr>
+  <tr style="font-weight:bold">
    <td><strong>Requirement</strong>
    </td>
    <td><strong>Available (Yes / No)</strong>
