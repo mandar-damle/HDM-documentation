@@ -1,6 +1,5 @@
-
 ---
-title:"Network Planning"
+- 'title:"Network Planning"'
 ---
 
 Your network topology choices determine how the HDM components will be configured within your network. It also dictates how VMs will be migrated to best support post-migration network security and VM isolation requirements. 
@@ -64,7 +63,7 @@ _Figure 5: Mapping Source and Destination Networks in a Single Network Test Envi
 
 HDM supports DHCP and static IP protocols. The protocol to be used must be selected during the HDM deployment process. When choosing static IP, an IP allocation range must be provided. The number of IPs required will depend on the number of nodes in the cluster and the deployment mode chosen. 
 
-**NOTE**: HDM does not support the change of IP of its components (Appliance as well as other component VMs). Redeployment is required if IP for HDM components needs to be changed. 
+**NOTE**: HDM does not support changing the IP address or associated details, once the system has been deployed with a given set of values (Appliance as well as other component VMs). Redeployment is required if IP for HDM components needs to be changed. 
 
 
 ### **OS Requirements**
