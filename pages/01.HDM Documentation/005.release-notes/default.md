@@ -90,5 +90,6 @@ CP-5003: In the migration pop-up, the amount of data transferred and the compres
 CP-5064: Historical IO analysis data is shown for powered-off virtual machines. The viewed timelines are not consistent with the historical timelines.
 
 CP-5119: HDM supports two ARM parallel syncs per HDM cloud cache. If more ARM sync requests are submitted, the following error message will appear in the ARM sync pop-up:
-
-"Error: PM-523: Failed to post data for sync. Please try again after sometime. {'msg': 'Failed to submit Sync operation for VM.', 'status': -1, 'vm_uuid': '192.168.5.228_vm-1040', 'resp': &lt;Response [429]>}"
+```
+"Error: PM-523: Failed to post data for sync. Please try again after sometime. {'msg': 'Failed to submit Sync operation for VM.', 'status': -1, 'vm_uuid': 	'192.168.5.228_vm-1040', 'resp': &lt;Response [429]>}"
+```
