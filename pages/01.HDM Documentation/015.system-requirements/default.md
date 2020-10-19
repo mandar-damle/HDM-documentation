@@ -4,20 +4,17 @@ title: 'System Requirements'
 
 #### On-Premises Requirements
 
-
-| Requirement | Available (Yes / No) |
-|----------|:-------------:|
-| On-premises Requirements | |
-|VMWare Environment | |
-Single version of ESX throughout the vCenter cluster
-ESX in connected state in the vCenter
-ESX able to communicate with vCenter
-Clusters have ESX 6.5U2+ and 6.7 
-vCenter Web Client: 6.5 or 6.7
-(Use of HTML client is recommended with Chrome v.75 +)
-Datastore should be VMFS, NFS, or NFSv3
-E1000E and VMXNet3 network adapters should be available in the on-premises vCenter
-DRS is enabled and HA should be enabled on the vCenter cluster 
+* On-premises Requirements 
+** VMWare Environment
+* Single version of ESX throughout the vCenter cluster
+* ESX in connected state in the vCenter
+* ESX able to communicate with vCenter
+* Clusters have ESX 6.5U2+ and 6.7 
+* vCenter Web Client: 6.5 or 6.7
+* (Use of HTML client is recommended with Chrome v.75 +)
+* Datastore should be VMFS, NFS, or NFSv3
+* E1000E and VMXNet3 network adapters should be available in the on-premises vCenter
+* DRS is enabled and HA should be enabled on the vCenter cluster 
 
 Network Environment
 Network speed: at least 1 Gbps (10 Gbps link is preferred)
