@@ -19,14 +19,14 @@ title: 'System Requirements'
 * VM Network has access to ESXi
 
 ##### Hardware Requirements
-**###### Total resources required for HDM:**
+** Total resources required for HDM:**
 11 vCPU, 16 GB RAM, 336 GB disk
 
 * 1 Appliance (4 vCPU, 8 GB RAM, 144 GB disk)
 * 1 PremMgr (3 vCPU, 4 GB RAM, 32 GB disk)
 * 1 ESXMgr (4 vCPU, 4GB RAM, 160 GB disk)
 
-**###### Total resources required for HDM equivalent to:**
+** Total resources required for HDM equivalent to:**
 10 vCPU, 26 GB RAM, 64 GB disk, 512 GB Cache
 
 * 1 CloudMgr (4 vCPU, 6 GB RAM, 32 GB disk)
