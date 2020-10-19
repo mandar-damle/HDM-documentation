@@ -34,15 +34,12 @@ title: 'System Requirements'
 
 Related document: For hardware and system requirements, refer to the [VMware Hardware Compatibility List (HCL).](https://www.vmware.com/resources/compatibility/search.php)
 
-Cloud Requirements
-Network connectivity between on-premises and cloud environments
+#### Cloud Requirements
+
+##### Network connectivity between on-premises and cloud environments
 *   Network Link: at least 1 Gbps
 *   Network Round Trip Time Latencies: less than 30 ms
 
- **NOTES**:
-
-1. Currently, HDM only supports migration of one cluster per vCenter at a time. If VMs need to be migrated from multiple clusters, the process of deploy, migrate, and undeploy must be repeated for each of the clusters.
-2. VM Network (Management Network), HDM_Internal_Network (HDM Internal Network), Uplink_WAN_Network (WAN Network) and ESXi_Network (ESXi Network) can map to a single network or multiple networks. In the event that a single network provides all of this functionality, details would still need to provided for each. In this case, the IP subnet can be divided into multiple ranges that can be mapped to each of the four networks.
 
 On-Premises
 1 Appliance (4 vCPU, 8 GB RAM, 144 GB disk)
@@ -53,7 +50,13 @@ In the Cloud
 CloudMgr (4 vCPU, 6 GB RAM, 32 GB disk)
 CloudCache (6 vCPU, 20 GB RAM, 32 GB disk, 512 GB cache)
 
-    Related document: For hardware requirements and system requirements refer to the [VMware Hardware Compatibility List (HCL).](https://www.vmware.com/resources/compatibility/search.php)
+ **NOTES**:
+
+1. Currently, HDM only supports migration of one cluster per vCenter at a time. If VMs need to be migrated from multiple clusters, the process of deploy, migrate, and undeploy must be repeated for each of the clusters.
+2. VM Network (Management Network), HDM_Internal_Network (HDM Internal Network), Uplink_WAN_Network (WAN Network) and ESXi_Network (ESXi Network) can map to a single network or multiple networks. In the event that a single network provides all of this functionality, details would still need to provided for each. In this case, the IP subnet can be divided into multiple ranges that can be mapped to each of the four networks.
+```
+Related document: For hardware requirements and system requirements refer to the [VMware Hardware Compatibility List (HCL).](https://www.vmware.com/resources/compatibility/search.php)
+```
 
 **Recommendations :**
 
