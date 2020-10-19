@@ -2,5 +2,5 @@
 title: 'HDM Documentation'
 ---
 
-# Hybrid Cloud Data Managemet
+# Hybrid Cloud Data Management
 
