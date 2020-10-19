@@ -36,13 +36,13 @@ Non-Recoverable failure conditions and recovery actions
 
 
 
-*   HDM may not recover from WAN disconnects greater than 2 minutes. An HDM reset will be required to recover from this condition (please refer to the HDM Reset section of the Admin Guide).
-*   In pathological failure cases where we cannot recover and the heartbeat status does not recover to “Ready”. In these cases “HDM reset”, followed by a redeployment, will be required.
-*   Concurrent Infrastructure VM restarts and repeated Infrastructure VM restarts can get into unrecoverable states and require an “HDM reset” 
+*   HDM may not recover from WAN disconnects greater than 2 minutes. An HDM reset will be required to recover from this condition (please refer to the [HDM Reset](../hdm%20reset) section of the Admin Guide).
+*   In pathological failure cases where we cannot recover and the heartbeat status does not recover to “Ready”. In these cases “[HDM Reset](../hdm%20reset)”, followed by a redeployment, will be required.
+*   Concurrent Infrastructure VM restarts and repeated Infrastructure VM restarts can get into unrecoverable states and require an “[HDM Reset](../hdm%20reset)” 
 
 ## Known Issues
 
-Do not delete the component VMs or the content library deployed as part of the HDM product deployment. Doing so will result in the product to operate incorrectly, and will require an “HDM reset” followed by a redeployment.
+Do not delete the component VMs or the content library deployed as part of the HDM product deployment. Doing so will result in the product to operate incorrectly, and will require an “[HDM Reset](../hdm%20reset)” followed by a redeployment.
 
 **The following issues are related to Cold Migration to VMware Cloud Director**
 
@@ -53,7 +53,7 @@ CP-5262: During deployment, adding a VMware Cloud Director (VCD) target can take
 
 **CP-5612**: VMC does not always honor the "Disable DRS" settings on the component VMs deployed in the cloud. This can result in resources such as Cloud_Cache becoming seperated from the migrated VMs running in the cloud. This is generally not a cause for concern, but can result in the VM becoming unresponsive if the ESXi host were to fail. The system will correctly roll back the VM to on-premises and start it from the last RTO/RPO checkpoint.
 
-DP-2738:  In the event the “On Prem I/O Manager” fails, recovery is impossible and the component will be marked as permanently failed in the control panel of the appliance UI. To recover from this condition, an “HDM reset”, followed by a redeployment, will be required.
+DP-2738:  In the event the “On Prem I/O Manager” fails, recovery is impossible and the component will be marked as permanently failed in the control panel of the appliance UI. To recover from this condition, an “[HDM Reset](../hdm%20reset)”, followed by a redeployment, will be required.
 
 CP-3036: In the event the API calls to the on-premises vCenter fails, tag inheritance for cloned virtual machines will also fail. To correct the issue, manually add the tag to the cloned virtual machines. (DCPN - 00055094)
 
@@ -79,7 +79,7 @@ CP-5076: In TBC and warm migration use cases, virtual machines migrated back wil
 
 CP-5104: Even in cases where the license has not yet expired, re-installation of HDM is not supported if the license-enforced migration limit has been reached.
 
-CP-5107: On HDM_Cloud_Cache reboot, the cache service does not come up. An HDM Reset will be required to recover migrated virtual machines and clean the HDM deployment.
+CP-5107: On HDM_Cloud_Cache reboot, the cache service does not come up. An [HDM Reset](../hdm%20reset) will be required to recover migrated virtual machines and clean the HDM deployment.
 
 CP-5112: If the on-premises VM remains powered on following a cold or warm migration, any virtual machine configured to sync data via a static IP address will cause an IP address collision upon power-on. As a result, the migrated VM will be unable to employ the newly-configured static IP address. This is mainly seen in the SLES Linux distribution where IP address collisions are detected as part of the “network startup” scripts, and IP addresses fail to come online. However, regardless of the specific Linux or Windows distribution, any time two VMs are assigned the same IP address, only one will be reachable through that IP address. To avoid this issue, only keep one VM (either the migrated or the original on-premises) powered on at any given time.
 
