@@ -116,6 +116,7 @@ Provision six IPs on _hdm_network_. complete the table below for reference throu
 The following cloud credentials are required to deploy to the cloud.
 
 |Configuration Name| Configuration Value|
+|:-|:-|
 |vCloud Director FQDN|xyzpqr25.vmware-solutions.cloud.ibm.com|
 |Organization name| |
 |Username| |
