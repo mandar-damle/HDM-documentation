@@ -3,9 +3,7 @@ title: 'System Requirements'
 ---
 
 #### On-Premises Requirements
-
-* On-premises Requirements 
-	* VMWare Environment
+##### VMWare Environment
         * Single version of ESX throughout the vCenter cluster
         * ESX in connected state in the vCenter
         * ESX able to communicate with vCenter
@@ -15,11 +13,10 @@ title: 'System Requirements'
         * Datastore should be VMFS, NFS, or NFSv3
         * E1000E and VMXNet3 network adapters should be available in the on-premises vCenter
         * DRS is enabled and HA should be enabled on the vCenter cluster 
-
-Network Environment
-Network speed: at least 1 Gbps (10 Gbps link is preferred)
-VM Network has connectivity to the cloud endpoint 
-VM Network has access to ESXi
+##### Network Environment
+        * Network speed: at least 1 Gbps (10 Gbps link is preferred)
+        * VM Network has connectivity to the cloud endpoint 
+        * VM Network has access to ESXi
 
 Hardware Requirements
 
