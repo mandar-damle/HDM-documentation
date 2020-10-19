@@ -51,13 +51,13 @@ Steps
 _Figure 43: vCenter HDM Reset Tab_
 
 
-![alt_text](images/image2.png "image_tooltip")
+![alt_text](images/image2.png?classes=content-img "image_tooltip")
 
 
 _Figure 44: Reset Task in the On-Premises vCenter_
 
 
-![alt_text](images/image3.png "image_tooltip")
+![alt_text](images/image3.png?classes=content-img "image_tooltip")
 
 
 
@@ -68,7 +68,7 @@ _Figure 44: Reset Task in the On-Premises vCenter_
 _Figure 45: Updated Task in On-Premises vCenter_
 
 
-![alt_text](images/image4.png "image_tooltip")
+![alt_text](images/image4.png?classes=content-img "image_tooltip")
 
 
 
