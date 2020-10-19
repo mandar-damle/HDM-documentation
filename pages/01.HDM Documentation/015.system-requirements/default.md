@@ -46,43 +46,26 @@ Network connectivity between on-premises and cloud environments
 
 1. Currently, HDM only supports migration of one cluster per vCenter at a time. If VMs need to be migrated from multiple clusters, the process of deploy, migrate, and undeploy must be repeated for each of the clusters.
 2. VM Network (Management Network), HDM_Internal_Network (HDM Internal Network), Uplink_WAN_Network (WAN Network) and ESXi_Network (ESXi Network) can map to a single network or multiple networks. In the event that a single network provides all of this functionality, details would still need to provided for each. In this case, the IP subnet can be divided into multiple ranges that can be mapped to each of the four networks.
- 
 
-<table>
-  <tr>
-   <td>
 On-Premises
-   </td>
-   <td><strong>1</strong> Appliance (4 vCPU, 8 GB RAM, 144 GB disk), \
-<strong>1</strong> PremMgr (3 vCPU, 4 GB RAM, 32 GB disk),
-<p>
-<strong>1</strong> ESXMgr (4 vCPU, 4GB RAM, 160 GB disk)
-   </td>
-  </tr>
-  <tr>
-   <td>In the Cloud
-   </td>
-   <td><strong>1 </strong>CloudMgr (4 vCPU, 6 GB RAM, 32 GB disk), \
-<strong>1</strong> CloudCache (6 vCPU, 20 GB RAM, 32 GB disk, 512 GB cache)
-   </td>
-  </tr>
-</table>
+1 Appliance (4 vCPU, 8 GB RAM, 144 GB disk)
+1 PremMgr (3 vCPU, 4 GB RAM, 32 GB disk),
+ESXMgr (4 vCPU, 4GB RAM, 160 GB disk)
 
+   <td>In the Cloud
+CloudMgr (4 vCPU, 6 GB RAM, 32 GB disk)
+CloudCache (6 vCPU, 20 GB RAM, 32 GB disk, 512 GB cache)
 
 
     Related document: For hardware requirements and system requirements refer to the [VMware Hardware Compatibility List (HCL).](https://www.vmware.com/resources/compatibility/search.php)
 
 **Recommendations :**
 
-
-
 *   The PrimaryIO Appliance should be deployed on the same vCenter and datacenter it will be managing. It is recommended to deploy on a cluster that will not be migrated.
 *   HDM components should be deployed on a shared datastore.
 
 
 #### Cloud Requirements
-
-
 
 *   Supported cloud endpoints:
     *   VMware Cloud on AWS
@@ -110,69 +93,22 @@ On-Premises
 #### OS Support (TBC/Warm Migration)
 
 **Windows**
-
-
-<table>
-  <tr>
-   <td><strong>Windows Version</strong>
-   </td>
-   <td><strong>Edition</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>Windows Server 2012 R2 (64 bit)
-   </td>
-   <td>Standard
-   </td>
-  </tr>
-  <tr>
-   <td>Windows Server 2016 (64 bit)
-   </td>
-   <td>Standard
-   </td>
-  </tr>
-  <tr>
-   <td>Windows Server 2019 (64 bit)
-   </td>
-   <td>Standard
-   </td>
-  </tr>
-</table>
-
+Windows Version
+EditionWindows Server 2012 R2 (64 bit)
+Standard
+Windows Server 2016 (64 bit)
+Standard
+Windows Server 2019 (64 bit)
+Standard
 
 **Linux**
-
-
-<table>
-  <tr>
-   <td><strong>Linux Distributions</strong>
-   </td>
-   <td><strong>Version</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>RHEL
-   </td>
-   <td>6.9, 6.10, 7.2, 7.3, 7.4, 7.5, 7.6
-   </td>
-  </tr>
-  <tr>
-   <td>SLES
-   </td>
-   <td>12-SP4
-   </td>
-  </tr>
-  <tr>
-   <td>CentOS
-   </td>
-   <td>7.6 (1810), 7.5 (1804), 7.4 (1708)
-   </td>
-  </tr>
-  <tr>
-   <td>Ubuntu Server	
-   </td>
-   <td>16.04, 18.04
-   </td>
-  </tr>
-</table>
+Linux DistributionsVersion
+RHEL
+6.9, 6.10, 7.2, 7.3, 7.4, 7.5, 7.6
+SLES
+12-SP4
+CentOS
+7.6 (1810), 7.5 (1804), 7.4 (1708)
+Ubuntu Server	
+16.04, 18.04
 
