@@ -6,7 +6,6 @@ order_by: ''
 order_manual: ''
 ---
 
-
 This section describes how to deploy, configure, and undeploy PrimaryIO Hybrid Data Management (HDM) 2.1.3 for enabling migrations of virtual machines to VMware Cloud Director (vCD).
 
 
@@ -41,7 +40,7 @@ The HDM appliance must be installed from the OVF in the HDM package. Be sure to 
 
 _Figure 6: Launching the “Deploy OVF” Template in vCenter_
 
-![alt_text](images/image29.png "image_tooltip")
+![alt_text](images/image29.png?classes=content-img "image_tooltip")
 
 
 
@@ -52,7 +51,7 @@ Appliance network configuration requires that the available networks be categori
 _Figure 7: Configuring the Network_
 
 
-![alt_text](images/image27.png "image_tooltip")
+![alt_text](images/image27.png?classes=content-img "image_tooltip")
 
 
 
@@ -81,7 +80,7 @@ For each network type, choose the IP allocation protocol: static or DHCP. The fo
 _Figure 8: Configuring the System for Static IP Protocol_
 
 
-![alt_text](images/image31.png "image_tooltip")
+![alt_text](images/image31.png?classes=content-img "image_tooltip")
 
 #### Gateway for static IP config
 
@@ -95,7 +94,7 @@ network choosen under **Default gateway network**.
 >> **Getting this wrong will cause deployment to fail eventually and you will have to perfrom an [HDM Reset](../../hdm%20reset)**
 
 _Figure 8b: Configuring gateway, NTP and default gateway_
-![alt_text](images/Gateway-OVF.png)
+![alt_text](images/Gateway-OVF.png?classes=content-img)
 
 #### Power on the Appliance
 
@@ -136,7 +135,7 @@ Steps
 _Figure 9: Adding vCenter to the HDM Appliance_
 
 
-![alt_text](images/image33.png "image_tooltip")
+![alt_text](images/image33.png?classes=content-img "image_tooltip")
 
 
 
@@ -146,7 +145,7 @@ _Figure 9: Adding vCenter to the HDM Appliance_
 _Figure 10: Viewing the On-Premises vCenter on the HDM Appliance_
 
 
-![alt_text](images/image32.png "image_tooltip")
+![alt_text](images/image32.png?classes=content-img "image_tooltip")
 
 
 
@@ -159,7 +158,7 @@ _Figure 10: Viewing the On-Premises vCenter on the HDM Appliance_
 
 _Figure 11: HDM Icon on the vCenter Home Page_
 
-![alt_text](images/image36.png "image_tooltip")
+![alt_text](images/image36.png?classes=content-img "image_tooltip")
 
 
 **NOTE:** The PrimaryIO vCenter plug-in will be automatically registered on all vCenter instances that are configured in enhanced linked mode.
@@ -184,19 +183,19 @@ Steps to add the HDM license:
 
 _Figure 12: Add or See HDM Licenses_
 
-![alt_text](images/image34.png "image_tooltip")
+![alt_text](images/image34.png?classes=content-img "image_tooltip")
 
 
 _Figure 13: "Add License" Pop-up_
 
 
-![alt_text](images/image35.png "image_tooltip")
+![alt_text](images/image35.png?classes=content-img "image_tooltip")
  
 
 _Figure 14: Verify the Addition of the Trial License_
 
 
-![alt_text](images/image37.png "image_tooltip")
+![alt_text](images/image37.png?classes=content-img "image_tooltip")
 
 
 
@@ -218,7 +217,7 @@ Deployment steps:
 _Figure 15: vCenter On-Premises Cluster Listing_
 
 
-![alt_text](images/image38.png "image_tooltip")
+![alt_text](images/image38.png?classes=content-img "image_tooltip")
 
 
 
@@ -231,7 +230,7 @@ _Figure 15: vCenter On-Premises Cluster Listing_
 _Figure 16: HDM Installation Wizard_
 
 
-![alt_text](images/image39.png "image_tooltip")
+![alt_text](images/image39.png?classes=content-img "image_tooltip")
 
 
 
@@ -244,7 +243,7 @@ _Figure 16: HDM Installation Wizard_
 _Figure 17: Resource Pool and Shared Datastore Selection_
 
 
-![alt_text](images/image40.png "image_tooltip")
+![alt_text](images/image40.png?classes=content-img "image_tooltip")
 
 
 
@@ -270,7 +269,7 @@ _Figure 17: Resource Pool and Shared Datastore Selection_
 
 _Figure 18: Network Configuration Settings_
 
-![alt_text](images/image41.png "image_tooltip")
+![alt_text](images/image41.png?classes=content-img "image_tooltip")
 
 
 
@@ -280,7 +279,7 @@ _Figure 18: Network Configuration Settings_
 _Figure 19: HDM Installation Summary_
 
 
-![alt_text](images/image42.png "image_tooltip")
+![alt_text](images/image42.png?classes=content-img "image_tooltip")
 
 
 
@@ -290,7 +289,7 @@ _Figure 19: HDM Installation Summary_
 _Figure 20: vCenter HDM Configuration View_
 
 
-![alt_text](images/image13.png "image_tooltip")
+![alt_text](images/image13.png?classes=content-img "image_tooltip")
 
 
 
@@ -322,7 +321,7 @@ Deployment steps:
 _Figure 21: vCenter Cloud Listing_
 
 
-![alt_text](images/image43.png "image_tooltip")
+![alt_text](images/image43.png?classes=content-img "image_tooltip")
 
 
 
@@ -334,7 +333,7 @@ _Figure 22: HDM Cloud Wizard_
 
 
 
-![alt_text](images/image17.png "image_tooltip")
+![alt_text](images/image17.png?classes=content-img "image_tooltip")
 
 
 
@@ -344,7 +343,7 @@ _Figure 22: HDM Cloud Wizard_
 _Figure 23: Select Cloud Cluster_
 
 
-![alt_text](images/image18.png "image_tooltip")
+![alt_text](images/image18.png?classes=content-img "image_tooltip")
 
 
 
@@ -355,7 +354,7 @@ _Figure 24: Network Configuration_
 
 
 
-![alt_text](images/image19.png "image_tooltip")
+![alt_text](images/image19.png?classes=content-img "image_tooltip")
 
 
 
@@ -364,7 +363,7 @@ _Figure 24: Network Configuration_
 
 _Figure 25: WAN Configuration_
 
-![alt_text](images/image20.png "image_tooltip")
+![alt_text](images/image20.png?classes=content-img "image_tooltip")
 
 
 
@@ -375,7 +374,7 @@ _Figure 26: WAN Route Configuration_
 
 
 
-![alt_text](images/image21.png "image_tooltip")
+![alt_text](images/image21.png?classes=content-img "image_tooltip")
 
 
 
@@ -386,7 +385,7 @@ _Figure 27: Network Mapping_
 
 
 
-![alt_text](images/image22.png "image_tooltip")
+![alt_text](images/image22.png?classes=content-img "image_tooltip")
 
 
 
@@ -396,14 +395,14 @@ _Figure 27: Network Mapping_
 _Figure 28: Summary and Request Submission_
 
 
-![alt_text](images/image23.png "image_tooltip")
+![alt_text](images/image23.png?classes=content-img "image_tooltip")
 
 
 _Figure 29: HDM Clouds View_
 
 
 
-![alt_text](images/image10.png "image_tooltip")
+![alt_text](images/image10.png?classes=content-img "image_tooltip")
 
 
 
@@ -420,13 +419,13 @@ _Figure 30: HDM Appliance Control Panel_
 
 
 
-![alt_text](images/image24.png "image_tooltip")
+![alt_text](images/image24.png?classes=content-img "image_tooltip")
 
 
 _Figure 31: vCenter HDM Plug-In_
 
 
-![alt_text](images/image25.png "image_tooltip")
+![alt_text](images/image25.png?classes=content-img "image_tooltip")
 
 
 
@@ -438,7 +437,7 @@ _Figure 32: Verify Installation of the Cloud State_
 
 
 
-![alt_text](images/image7.png "image_tooltip")
+![alt_text](images/image7.png?classes=content-img "image_tooltip")
 
 
 **NOTE:** Configuration information needs to be gathered and loaded from vCD, so it may take a few minutes to load the Cloud Dashboard for the first time. 
@@ -477,7 +476,7 @@ Steps
 _Figure 33: vCenter Cloud Listing_
 
 
-![alt_text](images/image8.png "image_tooltip")
+![alt_text](images/image8.png?classes=content-img "image_tooltip")
 
 
 
@@ -486,7 +485,7 @@ _Figure 33: vCenter Cloud Listing_
 
 _Figure 34: Delete Cloud Pop-Up_
 
-![alt_text](images/image9.png "image_tooltip")
+![alt_text](images/image9.png?classes=content-img "image_tooltip")
 
 
 
@@ -496,7 +495,7 @@ _Figure 34: Delete Cloud Pop-Up_
 _Figure 35: HDM Clouds View_
 
 
-![alt_text](images/image10.png "image_tooltip")
+![alt_text](images/image10.png?classes=content-img "image_tooltip")
 
 
 
@@ -519,7 +518,7 @@ Steps
 _Figure 36: vCenter On-Premises Cluster Listing_
 
 
-![alt_text](images/image11.png "image_tooltip")
+![alt_text](images/image11.png?classes=content-img "image_tooltip")
 
 
 
@@ -529,7 +528,7 @@ _Figure 36: vCenter On-Premises Cluster Listing_
 _Figure 37: Uninstall On-Premises Pop-up_
 
 
-![alt_text](images/image12.png "image_tooltip")
+![alt_text](images/image12.png?classes=content-img "image_tooltip")
 
 
 
@@ -540,7 +539,7 @@ _Figure 38: HDM Configuration View_
 
 
 
-![alt_text](images/image13.png "image_tooltip")
+![alt_text](images/image13.png?classes=content-img "image_tooltip")
 
 
 
@@ -561,7 +560,7 @@ Steps
 _Figure 39: HDM Plug-In in the PrimaryIO vCenter Listing_
 
 
-![alt_text](images/image14.png "image_tooltip")
+![alt_text](images/image14.png?classes=content-img "image_tooltip")
 
 
 
@@ -589,7 +588,7 @@ Steps
 _Figure 40: HDM Appliance in the PrimaryIO vCenter Listing_
 
 
-![alt_text](images/image15.png "image_tooltip")
+![alt_text](images/image15.png?classes=content-img "image_tooltip")
 
 
 
