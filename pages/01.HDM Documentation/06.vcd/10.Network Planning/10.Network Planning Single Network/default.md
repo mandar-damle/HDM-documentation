@@ -40,13 +40,10 @@ The remainder of this document will assume you have created a network topology l
 
 You will need to provision 
 
-
-
 *   20 static IPs on Premise network
 *   At least 50 static-pool IPs on Cloud network
 
 These will be required throughout the installation process.
-
 
 ```
 NOTE: 
@@ -55,115 +52,42 @@ The subnet range 172.17.0.0/16 is not available for the deployment; it is used i
 Please add the vCenter FQDN for the on-premises and cloud vCenters on the on-premises and cloud DNS servers.
 ```
 
-
 # Network Configuration forms for Single-Network
 
 Before continuing with the rest of this Quick Start Guide, be sure to print and complete these forms. This will help you identify the correct networks to configure and identify all networking details.
 
-
-
 ## Network requirements during OVF deployment
-
-
 
 *   Provision four IPs on _hdm_network_
 *   Use this during OVF deployment
 
 |Network|IP|Netmask|Gateway|
 |:-|:-|:-|:-|
-|VM Network (Management Network)|Single IP|||
+|VM Network (Management Network)|Single IP| | |
 |HDM_Internal_Network|Single IP|||
 |Uplink_WAN_Network|Single IP||
 |ESXi_Network|Single IP||
 
 Common settings for the OVF deployment
 
-|Network|IP|Netmask|Gateway|
-|:-|:-|:-|:-|
-
-<table>
-  <tr>
-   <td>Default gateway network
-   </td>
-   <td><em>This should be the single configured network on-premises which in this document is “hdm_network”</em>
-   </td>
-  </tr>
-  <tr>
-   <td>NTP Server
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>Network DNS
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>Default gateway
-   </td>
-   <td><em>Provide default gateway for the “hdm_network”</em>
-   </td>
-  </tr>
-  <tr>
-   <td>Network DNS Search Path
-   </td>
-   <td>
-   </td>
-  </tr>
-</table>
-
-
+|:-|:-|
+|Default gateway network|This should be the single configured network on-premises which in this document is “hdm_network” |
+|NTP Server| |
+|Network DNS| |
+|Default gateway |Provide default gateway for the “hdm_network”|
+|Network DNS Search Path| |
 
 ## Network requirements during on-premises deployment
 
 Common settings for the gateway, subnet, DNS etc., which will be common across the on-premises networks.
 
-
-<table>
-  <tr>
-   <td><strong>Subnet mask</strong>
-   </td>
-   <td><em>255.255.0.0</em>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Gateway</strong>
-   </td>
-   <td><em>192.168.10.1</em>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Domain</strong>
-   </td>
-   <td><em>domain.lan</em>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>DNS</strong>
-   </td>
-   <td><em>192.168.5.20, 192.168.5.21</em> 
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>NTP</strong>
-   </td>
-   <td><em>192.168.5.22</em>
-   </td>
-   <td>
-   </td>
-  </tr>
-</table>
-
+|Configuration|Value|
+|:-|:-|
+|Subnet mask|255.255.0.0|
+|Gateway|192.168.10.1|
+|Domain|domain.lan|
+|DNS|192.168.5.20, 192.168.5.21</em> 
+|NTP|92.168.5.22|
 
 **HDM_Internal_Network**
 
