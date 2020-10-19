@@ -38,7 +38,7 @@ _Figure 2: How HDM utilizes the various network types_
 _Figure 3: Selecting and Categorizing Networks_
 
 
-![alt_text](images/image27.png?classes=img-responsive "image_tooltip")
+![alt_text](images/image27.png?classes=content-img "image_tooltip")
 
 
 **NOTE: **While each traffic type should ideally employ its own network, configurations that allow one or multiple types of traffic to utilize the same network are also supported by HDM.
