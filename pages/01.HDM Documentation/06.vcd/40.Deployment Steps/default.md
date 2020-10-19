@@ -83,7 +83,19 @@ _Figure 8: Configuring the System for Static IP Protocol_
 
 ![alt_text](images/image31.png "image_tooltip")
 
+#### Gateway for static IP config
 
+These settings are only required for Static IP settings.
+The setting in **Default gateway network** should be choosen so
+that traffic for other subnets can be rounted through this interface. 
+
+In the field **Default Gateway** set the default gateway for the 
+network choosen under **Default gateway network**. 
+
+>> **Getting this wrong will cause deployment to fail eventually and you will have to perfrom an [HDM Reset](../../hdm%20reset)
+
+_Figure 8b: Configuring gateway, NTP and default gateway_
+![alt_text](images/Gateway-OVF.png)
 
 #### Power on the Appliance
 
