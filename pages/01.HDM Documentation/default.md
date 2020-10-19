@@ -1,5 +1,9 @@
 ---
-title: 'HDM Documentation'
+title: ''
+media_order: ''
+body_classes: ''
+order_by: ''
+order_manual: ''
 ---
 
 # Hybrid Cloud Data Management
