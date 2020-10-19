@@ -70,6 +70,8 @@ Before continuing with the rest of this Quick Start Guide, be sure to print and 
 
 Common settings for the OVF deployment:
 
+|Setting Name|Setting Value|
+|:-|:-|
 |Default gateway network|This should be the single configured network on-premises which in this document is “hdm_network”|
 |NTP Server                      |                                                                                                                                                                |
 |Network DNS                   |                                                                                                                                                                |
