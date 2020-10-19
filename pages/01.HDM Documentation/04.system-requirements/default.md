@@ -40,12 +40,6 @@ Related document: For hardware and system requirements, refer to the [VMware Har
 *   Network Link: at least 1 Gbps
 *   Network Round Trip Time Latencies: less than 30 ms
 
-
-On-Premises
-1 Appliance (4 vCPU, 8 GB RAM, 144 GB disk)
-1 PremMgr (3 vCPU, 4 GB RAM, 32 GB disk),
-ESXMgr (4 vCPU, 4GB RAM, 160 GB disk)
-
 In the Cloud
 CloudMgr (4 vCPU, 6 GB RAM, 32 GB disk)
 CloudCache (6 vCPU, 20 GB RAM, 32 GB disk, 512 GB cache)
