@@ -20,7 +20,7 @@ HDM consists of the following components that are dispersed between cloud and on
 
 HDM 2.1.3 consists of microservices that have been packaged as VMs that work together to provide the data and control path to support the aforementioned use cases and to provide a flexible deployment model and failure resilience. HDM comprises the following components, dispersed between cloud and on-premises data centers (figure 1): 
 
-The HDM product binaries can be used in VMware Cloud Director or VMware Cloud Foundation. The components for each of these deployment is shown below.
+The HDM product binaries can be used in VMware Cloud Director, VMware Cloud Service for IBM or VMware Cloud Foundation. The components for each of these deployment is shown below.
 
 ## HDM Deployment for VMware Cloud Director
 
