@@ -1,12 +1,8 @@
 ---
-title: ''
-media_order: ''
-body_classes: ''
-order_by: ''
-order_manual: ''
+title: 'Hybrid Cloud Data Management'
 ---
 
-# Hybrid Cloud Data Management
+
 
 Documentation - version 2.1.3
 
