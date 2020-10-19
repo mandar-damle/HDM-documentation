@@ -27,7 +27,7 @@ _Figure 2: How HDM utilizes the various network types_
 
 
 ![drawing](images/image6.png)
-<img src="images/image6.png" alt="HDM Network Types" class="content-img">
+<img src="![drawing](images/image6.png)" alt="HDM Network Types" class="content-img">
 
 **NOTES:**
 
