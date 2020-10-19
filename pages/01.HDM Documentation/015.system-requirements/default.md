@@ -3,6 +3,10 @@ title: 'System Requirements'
 ---
 
 #### On-Premises Requirements
+| VMWare Environment |
+|:-|
+| Single version of ESX throughout the vCenter cluster |
+
 ##### VMWare Environment
 * Single version of ESX throughout the vCenter cluster
 * ESX in connected state in the vCenter
@@ -18,16 +22,11 @@ title: 'System Requirements'
 * VM Network has connectivity to the cloud endpoint 
 * VM Network has access to ESXi
 
-#### Hardware Requirements
-On-premises
-   </td>
-   <td><strong>Total resources required for HDM</strong>
-<p>
+##### Hardware Requirements
+Total resources required for HDM
 11 vCPU, 16 GB RAM, 336 GB disk
-   </td>
-Appliance (4 vCPU, 8 GB RAM, 144 GB disk), \
-PremMgr (3 vCPU, 4 GB RAM, 32 GB disk),
-<p>
+Appliance (4 vCPU, 8 GB RAM, 144 GB disk)
+PremMgr (3 vCPU, 4 GB RAM, 32 GB disk)
 ESXMgr (4 vCPU, 4GB RAM, 160 GB disk)
 
 Total resources required for HDM equivalent to
