@@ -26,7 +26,7 @@ An ideal network configuration isolates various types of network traffic for max
 _Figure 2: How HDM utilizes the various network types_
 
 
-![drawing](images/image6.png?classes=content-img)
+![drawing](images/image6.png?classes=img-responsive)
 
 **NOTES:**
 
