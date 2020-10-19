@@ -90,6 +90,7 @@ Related document: For hardware requirements and system requirements refer to the
 #### OS Support (TBC/Warm Migration)
 
 **Windows**
+
 | Windows Version | Edition |
 |:--------------------|:---------|
 | Windows Server 2012 R2 (64 bit) | Standard |
@@ -97,6 +98,7 @@ Related document: For hardware requirements and system requirements refer to the
 | Windows Server 2019 (64 bit) | Standard |
 
 **Linux**
+
 |Linux Distributions | Version |
 |:----------------------|:--------|
 | RHEL | 6.9, 6.10, 7.2, 7.3, 7.4, 7.5, 7.6 |
