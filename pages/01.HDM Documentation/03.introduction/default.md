@@ -49,7 +49,7 @@ _Figure 2: HDM components_
  
 # HDM Deployment
 
-HDM provides a flexible deployment model to support a wide range of user needs regarding use case, performance, scalability, and security. The detailed steps and options for each deployment method are covered in the **HDM 2.1.3 Install Guide.** This document focuses on the usage of HDM to migrate VMs to the cloud.
+HDM provides a flexible deployment model to support a wide range of user needs regarding use case, performance, scalability, and security. The detailed steps and options for each deployment method are covered in the **Deployment planning** and subsequent sections. 
 
 # HDM Migrations
 
@@ -69,7 +69,6 @@ This use case permanently moves the VM and all of its data to the cloud. Two typ
 
 The choice of which migration type to employ depends on the amount of data in the VM and if the VM needs to be instantly available during the migration, or if prolonged downtime can be tolerated.
 
-**NOTE: In HDM 2.1.3, only cold migration is supported. **
 
 ### Try Before Commit (TBC)
 
