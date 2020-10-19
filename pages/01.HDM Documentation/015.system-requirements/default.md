@@ -12,40 +12,28 @@ title: 'System Requirements'
 * Datastore should be VMFS, NFS, or NFSv3
 * E1000E and VMXNet3 network adapters should be available in the on-premises vCenter
 * DRS is enabled and HA should be enabled on the vCenter cluster 
+
 ##### Network Environment
-        * Network speed: at least 1 Gbps (10 Gbps link is preferred)
-        * VM Network has connectivity to the cloud endpoint 
-        * VM Network has access to ESXi
+* Network speed: at least 1 Gbps (10 Gbps link is preferred)
+* VM Network has connectivity to the cloud endpoint 
+* VM Network has access to ESXi
 
-Hardware Requirements
-
-<table>
-  <tr>
-   <td>On-premises
+#### Hardware Requirements
+On-premises
    </td>
    <td><strong>Total resources required for HDM</strong>
 <p>
 11 vCPU, 16 GB RAM, 336 GB disk
    </td>
-   <td><strong>1</strong> Appliance (4 vCPU, 8 GB RAM, 144 GB disk), \
-<strong>1</strong> PremMgr (3 vCPU, 4 GB RAM, 32 GB disk),
+Appliance (4 vCPU, 8 GB RAM, 144 GB disk), \
+PremMgr (3 vCPU, 4 GB RAM, 32 GB disk),
 <p>
-<strong>1</strong> ESXMgr (4 vCPU, 4GB RAM, 160 GB disk)
-   </td>
-  </tr>
-  <tr>
-   <td>Cloud
-   </td>
-   <td><strong>Total resources required for HDM equivalent to</strong>
-<p>
-10 vCPU, 26 GB RAM, 64 GB disk, 512 GB Cache
-   </td>
-   <td><strong>1 </strong>CloudMgr (4 vCPU, 6 GB RAM, 32 GB disk), \
-<strong>1</strong> CloudCache (6 vCPU, 20 GB RAM, 32 GB disk, 512 GB cache)
-   </td>
-  </tr>
-</table>
+ESXMgr (4 vCPU, 4GB RAM, 160 GB disk)
 
+Total resources required for HDM equivalent to
+10 vCPU, 26 GB RAM, 64 GB disk, 512 GB Cache
+CloudMgr (4 vCPU, 6 GB RAM, 32 GB disk), \
+<strong>1</strong> CloudCache (6 vCPU, 20 GB RAM, 32 GB disk, 512 GB cache)
 
 Related document: For hardware and system requirements, refer to the [VMware Hardware Compatibility List (HCL).](https://www.vmware.com/resources/compatibility/search.php)
 
