@@ -82,6 +82,8 @@ Common settings for the OVF deployment:
 
 Common settings for the gateway, subnet, DNS etc., which will be common across the on-premises networks.
 
+|Setting Name|Setting Value|
+|:-|:-|
 |Subnet mask|255.255.0.0|
 |Gateway|192.168.10.1|
 |Domain|domain.lan|
@@ -93,16 +95,19 @@ Common settings for the gateway, subnet, DNS etc., which will be common across t
 Provision six IPs on _hdm_network_. complete the table below for reference throughout deployment.
 
 | |Example|Fill value here|
+|:-|:-|:-|
 | |IP range|192.168.10.100-192.168.10.120, 192.168.10.130 (2 IPs required from “hdm_network” )|
 
 **Uplink_WAN_Network**
 | |Example|Fill value here|
+|:-|:-|:-|
 | |IP range|192.168.10.100-192.168.10.120, 192.168.10.130(2 IPs required from “hdm_network”)|
 
 
 **ESXi_Network**
 
 | |Example|Fill value here|
+|:-|:-|:-|
 | |IP range|192.168.10.100-192.168.10.120, 192.168.10.130 (2 IPs required from “hdm_network”)|
 
 ## Network requirements during cloud deployment
@@ -115,6 +120,7 @@ The following cloud credentials are required to deploy to the cloud.
 Similar to the previous two deployment stages, provision IPs and identify the correct networks to satisfy the chosen connectivity requirements. The networks to be configured are _HDM Internal network_ and _WAN network configuration** **_from the cloud _hdm_wan_network**. **_Only the IP Range is different between the two networks; all other parameters remain the same.
 
 **HDM Internal network** 
+|:-|:-|:-|
 | |Example|Fill value here|
 | |IP range|192.168.10.100-192.168.10.120, 192.168.10.130|(20 IPs from HDM “hdm_internal)|
 | |Subnet mask||255.255.0.0|
@@ -125,6 +131,7 @@ Similar to the previous two deployment stages, provision IPs and identify the co
       
 **WAN network configuration**
 
+|:-|:-|:-|
 | |Example|Fill value here|
 | |IP range|192.168.10.100-192.168.10.120, 192.168.10.130 (30 IPs from “hdm_wan_network”)|
 | |Subnet mask|255.255.0.0|
