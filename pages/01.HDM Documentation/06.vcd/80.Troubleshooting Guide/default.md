@@ -68,7 +68,7 @@ The PIO Appliance password was changed and the user has forgotten the new passwo
 	
 
 
-![alt_text](images/image3.png "image_tooltip")
+![alt_text](images/image3.png?classes=content-img "image_tooltip")
 
 
 
@@ -97,7 +97,7 @@ A vCenter entry in the PIO Appliance can show an _‘ERROR’_ state if its cred
 
 
 
-![alt_text](images/image2.png "image_tooltip")
+![alt_text](images/image2.png?classes=content-img "image_tooltip")
 
 
 
@@ -107,7 +107,7 @@ A vCenter entry in the PIO Appliance can show an _‘ERROR’_ state if its cred
 
 
 
-![alt_text](images/image4.png "image_tooltip")
+![alt_text](images/image4.png?classes=content-img "image_tooltip")
 
 
 
