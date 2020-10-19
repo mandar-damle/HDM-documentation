@@ -5,7 +5,7 @@ title: 'HDM Documentation'
 ## Hybrid Cloud Data Management Solution
 Version 2.1.3
 
-This guide describes how to deploy, configure, and undeploy PrimaryIO Hybrid Data Management (HDM) 2.1 for enabling migrations of virtual machines to VMware Cloud Director (vCD).
+This guide describes how to deploy, configure, and undeploy PrimaryIO Hybrid Data Management (HDM) 2.1 for enabling migrations of virtual machines to VMware Cloud Director (vCD), VMware Cloud Services for IBM, or VMware Cloud Foundation.
 
 ### Intended Audience
 
