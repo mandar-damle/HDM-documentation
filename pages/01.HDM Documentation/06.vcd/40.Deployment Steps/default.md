@@ -92,7 +92,7 @@ that traffic for other subnets can be rounted through this interface.
 In the field **Default Gateway** set the default gateway for the 
 network choosen under **Default gateway network**. 
 
->> **Getting this wrong will cause deployment to fail eventually and you will have to perfrom an [HDM Reset](../../hdm%20reset)
+>> **Getting this wrong will cause deployment to fail eventually and you will have to perfrom an [HDM Reset](../../hdm%20reset)**
 
 _Figure 8b: Configuring gateway, NTP and default gateway_
 ![alt_text](images/Gateway-OVF.png)
