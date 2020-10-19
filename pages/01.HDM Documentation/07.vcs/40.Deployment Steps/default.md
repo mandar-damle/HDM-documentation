@@ -889,63 +889,6 @@ Steps
 
 # TroubleShooting
 
-
-## HDM Support Logs
-
-In case of an issue with HDM and to get support from the HDM team, it is necessary for the user to provide the following logs from the deployed system. 
-
-
-
-1. HDM support logs
-2. VMware support logs 
-
-The logs collected should be provided to the HDM support along with the issue description. 
-
-
-### Download HDM Logs
-
-Pre-requisites
-
-
-
-1. HDM Appliance should be in powered on state.
-
-Steps for download
-
-
-
-1. Log into the HDM Appliance by accessing **_https://&lt;appliance ip>_** in a supported web browser. 
-2. In the top right corner, click on the user profile icon and choose Download Debug Logs option.
-
-
-![alt_text](images/image26.png "image_tooltip")
-
-
-
-
-3. A zip file named **_pio_logs.zip_** having the HDM logs will be downloaded. This file can be sent as an attachment for further analysis of the issue.
-
-
-### Download _VMware support_ logs
-
-.
-
-Steps:
-
-
-
-1. Log into On-Premise vCenter from the vSphere web client. Right click on the vCenter IP and select the **Export System Logs** option  
-
-
-
-![alt_text](images/image27.png "image_tooltip")
-
-
-
-
-2. In the **Select Hosts** page, select the hosts that are part of the cluster where HDM is installed. Also check the **Include vCenter and vSphere Web Client Logs** option.
-3. Go through the rest of the wizard to generate a zip file containing the _VMware support_ logs from both vCenter and ESXi hosts.
-
 ## Troubleshooting Common Failure Scenarios
 
 Common failure scenarios and possible reasons are provided below. If the failure is not one of the above reasons and the error message is not clear enough, please contact PrimaryIO Support.
