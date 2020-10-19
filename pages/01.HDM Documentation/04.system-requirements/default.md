@@ -41,7 +41,8 @@ Related document: For hardware and system requirements, refer to the [VMware Har
 
 ##### Network connectivity between on-premises and cloud environments
 
-* Network Link: at least 1 Gbps,Network Round Trip Time Latencies: less than 30 ms
+* Network Link: at least 1 Gbps
+* Network Round Trip Time Latencies: less than 30 ms
 
  **NOTES**
 1. Currently, HDM only supports migration of one cluster per vCenter at a time. If VMs need to be migrated from multiple clusters, the process of deploy, migrate, and undeploy must be repeated for each of the clusters.
