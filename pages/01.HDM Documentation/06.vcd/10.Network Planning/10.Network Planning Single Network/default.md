@@ -69,63 +69,17 @@ Before continuing with the rest of this Quick Start Guide, be sure to print and 
 *   Provision four IPs on _hdm_network_
 *   Use this during OVF deployment
 
-<table>
-  <tr>
-   <td>
-<strong>Network</strong>
-   </td>
-   <td>IP 
-   </td>
-   <td>Netmask
-   </td>
-   <td>Gateway
-   </td>
-  </tr>
-  <tr>
-   <td>VM Network (Management Network)
-   </td>
-   <td><em>Single IP</em>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>HDM_Internal_Network
-   </td>
-   <td><em>Single IP</em>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>Uplink_WAN_Network
-   </td>
-   <td><em>Single IP</em>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>ESXi_Network
-   </td>
-   <td><em>Single IP</em>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-  </tr>
-</table>
-
+|Network|IP|Netmask|Gateway|
+|:-|:-|:-|:-|
+|VM Network (Management Network)|Single IP|||
+|HDM_Internal_Network|Single IP|||
+|Uplink_WAN_Network|Single IP||
+|ESXi_Network|Single IP||
 
 Common settings for the OVF deployment
 
+|Network|IP|Netmask|Gateway|
+|:-|:-|:-|:-|
 
 <table>
   <tr>
