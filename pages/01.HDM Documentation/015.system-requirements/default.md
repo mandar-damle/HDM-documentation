@@ -5,7 +5,7 @@ title: 'System Requirements'
 #### On-Premises Requirements
 
 * On-premises Requirements 
-** VMWare Environment
+	* VMWare Environment
 * Single version of ESX throughout the vCenter cluster
 * ESX in connected state in the vCenter
 * ESX able to communicate with vCenter
