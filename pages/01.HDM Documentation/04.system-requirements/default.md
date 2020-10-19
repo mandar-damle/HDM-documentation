@@ -40,11 +40,10 @@ Related document: For hardware and system requirements, refer to the [VMware Har
 * VM Network has access to ESXi
 
 ##### Network connectivity between on-premises and cloud environments
-
 * Network Link: at least 1 Gbps
 * Network Round Trip Time Latencies: less than 30 ms
 
- **NOTES**
+**NOTES**
 1. Currently, HDM only supports migration of one cluster per vCenter at a time. If VMs need to be migrated from multiple clusters, the process of deploy, migrate, and undeploy must be repeated for each of the clusters.
 2. VM Network (Management Network), HDM_Internal_Network (HDM Internal Network), Uplink_WAN_Network (WAN Network) and ESXi_Network (ESXi Network) can map to a single network or multiple networks. In the event that a single network provides all of this functionality, details would still need to provided for each. In this case, the IP subnet can be divided into multiple ranges that can be mapped to each of the four networks.
 ```
