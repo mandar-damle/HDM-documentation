@@ -32,7 +32,7 @@ The HDM product binaries can be used in VMware Cloud Director or VMware Cloud Fo
 
 _Figure 1: Location of HDM 2.1.3 components_
 
-![alt_text](images/image8.png "image_tooltip")
+![alt_text](images/image8.png?sizes=%28max "image_tooltip")
 
 ## HDM Deployment for VMware Cloud Foundation
 
