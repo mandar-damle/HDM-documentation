@@ -2,7 +2,6 @@
 title: Troubleshooting
 ---
 
-
 This section covers troubleshooting for issues known in the HDM 2.1.3 product. In case there are issues that are not covered in this document or are not resolved easily, users should contact PrimaryIO support for further help. 
 
 
@@ -63,7 +62,7 @@ The PIO Appliance password was changed and the user has forgotten the new passwo
 2. Under **Users** tab, click on **Add User** button as shown in the image below.
 
 
-![alt_text](images/image4.png "image_tooltip")
+![alt_text](images/image4.png?classes=content-img "image_tooltip")
 
 
 3. Once the new user is created, click on **Administrator** > **Global Permissions** from the **Navigation** bar.
@@ -88,14 +87,14 @@ A vCenter entry in the PIO Appliance can show an _‘ERROR’_ state if its cred
 1. Click on the **Edit** action as shown below.
 
 
-![alt_text](images/image2.png "image_tooltip")
+![alt_text](images/image2.png?classes=content-img "image_tooltip")
 
 
 
 
 2. Enter and save the correct (or most recent) vCenter credentials.
 
-![alt_text](images/image1.png "image_tooltip")
+![alt_text](images/image1.png?classes=content-img "image_tooltip")
 
 
 
@@ -129,12 +128,12 @@ This can happen if the previous version of HDM product has not been uninstalled 
 
 **Resolution:** Log into “https://&lt;vcenter_ip>/eam/mob” using vCenter admin credentials to access ESX Agent Manager. In front of the agency there will be an array of Managed Object Reference. 
 
-![alt_text](images/image5.png "image_tooltip")
+![alt_text](images/image5.png?classes=content-img "image_tooltip")
 
 
 Select the agency to get the list of agents and check the AgencyConfigInfo to verify if this belongs to PrimaryIO. 
 
-![alt_text](images/image6.png "image_tooltip")
+![alt_text](images/image6.png?classes=content-img "image_tooltip")
 
 
 Click on uninstall if the agent was not cleanly un-installed earlier. Wait for the uninstallation task to succeed on vCenter. Once the task succeeds, click on destroy to clean the agent. 
