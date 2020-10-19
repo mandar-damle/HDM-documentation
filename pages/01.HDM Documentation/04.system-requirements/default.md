@@ -2,7 +2,6 @@
 title: 'System Requirements'
 ---
 
-
 ##### Hardware Requirements
 ###### On-Premise
 
@@ -23,7 +22,6 @@ title: 'System Requirements'
 
 Related document: For hardware and system requirements, refer to the [VMware Hardware Compatibility List (HCL).](https://www.vmware.com/resources/compatibility/search.php)
 
-
 #### On-Premises Requirements
 ##### VMWare Environment
 * Single version of ESX throughout the vCenter cluster
@@ -36,16 +34,17 @@ Related document: For hardware and system requirements, refer to the [VMware Har
 * DRS is enabled and HA should be enabled on the vCenter cluster
 
 ##### Network Environment
+
 * Network speed: at least 1 Gbps (10 Gbps link is preferred)
 * VM Network has connectivity to the cloud endpoint 
 * VM Network has access to ESXi
 
 ##### Network connectivity between on-premises and cloud environments
-*   Network Link: at least 1 Gbps
-*   Network Round Trip Time Latencies: less than 30 ms
 
- **NOTES**:
+* Network Link: at least 1 Gbps
+* Network Round Trip Time Latencies: less than 30 ms
 
+ **NOTES**
 1. Currently, HDM only supports migration of one cluster per vCenter at a time. If VMs need to be migrated from multiple clusters, the process of deploy, migrate, and undeploy must be repeated for each of the clusters.
 2. VM Network (Management Network), HDM_Internal_Network (HDM Internal Network), Uplink_WAN_Network (WAN Network) and ESXi_Network (ESXi Network) can map to a single network or multiple networks. In the event that a single network provides all of this functionality, details would still need to provided for each. In this case, the IP subnet can be divided into multiple ranges that can be mapped to each of the four networks.
 ```
