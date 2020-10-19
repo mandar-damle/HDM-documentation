@@ -15,14 +15,3 @@ This document is intended for administrators looking for a virtual machine migra
 
 HDM is delivered as a virtual/software solution; when HDM software is installed, it consists of a single virtual appliance. Further deployment of HDM 2.1.3 components then occur on-premises in VMware vCenter and in the cloud on vCD.
 
-The package includes the following components:
-
-    HDM_2.1 zip (contains the HDM appliance as an Open Virtual Format (OVF) file)
-    vCD (contains documents for deploying and managing HDM 2.1 on vCD)
-        HDM 2.1 Install Guide – vCD.pdf
-        HDM 2.1 Admin Guide – vCD.pdf
-        HDM 2.1 Troubleshooting Guide – vCD.pdf
-        HDM 2.1 Release Notes – vCD.pdf
-        HDM 2.1 Quick Start Guide – vCD.pdf
-        HDM 2.1 Deployment Checklist – vCD.pdf
-
