@@ -19,14 +19,14 @@ title: 'System Requirements'
 * VM Network has access to ESXi
 
 ##### Hardware Requirements
-###### Total resources required for HDM:
+**###### Total resources required for HDM:**
 11 vCPU, 16 GB RAM, 336 GB disk
 
 * 1 Appliance (4 vCPU, 8 GB RAM, 144 GB disk)
 * 1 PremMgr (3 vCPU, 4 GB RAM, 32 GB disk)
 * 1 ESXMgr (4 vCPU, 4GB RAM, 160 GB disk)
 
-###### Total resources required for HDM equivalent to:
+**###### Total resources required for HDM equivalent to:**
 10 vCPU, 26 GB RAM, 64 GB disk, 512 GB Cache
 
 * 1 CloudMgr (4 vCPU, 6 GB RAM, 32 GB disk)
@@ -49,10 +49,9 @@ On-Premises
 1 PremMgr (3 vCPU, 4 GB RAM, 32 GB disk),
 ESXMgr (4 vCPU, 4GB RAM, 160 GB disk)
 
-   <td>In the Cloud
+In the Cloud
 CloudMgr (4 vCPU, 6 GB RAM, 32 GB disk)
 CloudCache (6 vCPU, 20 GB RAM, 32 GB disk, 512 GB cache)
-
 
     Related document: For hardware requirements and system requirements refer to the [VMware Hardware Compatibility List (HCL).](https://www.vmware.com/resources/compatibility/search.php)
 
@@ -60,7 +59,6 @@ CloudCache (6 vCPU, 20 GB RAM, 32 GB disk, 512 GB cache)
 
 *   The PrimaryIO Appliance should be deployed on the same vCenter and datacenter it will be managing. It is recommended to deploy on a cluster that will not be migrated.
 *   HDM components should be deployed on a shared datastore.
-
 
 #### Cloud Requirements
 
@@ -86,26 +84,19 @@ CloudCache (6 vCPU, 20 GB RAM, 32 GB disk, 512 GB cache)
         *   Port 8000-8010 - inbound and outbound
         *   Post 32820 - inbound and outbound
 
-
 #### OS Support (TBC/Warm Migration)
 
 **Windows**
-Windows Version
-EditionWindows Server 2012 R2 (64 bit)
-Standard
-Windows Server 2016 (64 bit)
-Standard
-Windows Server 2019 (64 bit)
-Standard
+| Windows Version | Edition |
+|:--------------------|:---------|
+| Windows Server 2012 R2 (64 bit) | Standard |
+| Windows Server 2016 (64 bit) | Standard |
+| Windows Server 2019 (64 bit) | Standard |
 
 **Linux**
-Linux DistributionsVersion
-RHEL
-6.9, 6.10, 7.2, 7.3, 7.4, 7.5, 7.6
-SLES
-12-SP4
-CentOS
-7.6 (1810), 7.5 (1804), 7.4 (1708)
-Ubuntu Server	
-16.04, 18.04
-
+|Linux Distributions | Version |
+|:----------------------|:--------|
+| RHEL | 6.9, 6.10, 7.2, 7.3, 7.4, 7.5, 7.6 |
+| SLES | 12-SP4 |
+| CentOS | 7.6 (1810), 7.5 (1804), 7.4 (1708) |
+| Ubuntu Server	| 16.04, 18.04 |
