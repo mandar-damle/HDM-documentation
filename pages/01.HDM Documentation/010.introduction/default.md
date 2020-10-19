@@ -4,13 +4,9 @@ title: Introduction
 
 ## What is Hybrid Cloud Data Management (HDM)
 
-PrimaryIO’s Hybrid Cloud Data Management technology decouples compute and storage to seamlessly move workloads to and from the cloud rapidly and lets you fully control data.
+PrimaryIO’s Hybrid Cloud Data Management technology decouples compute and storage to seamlessly move workloads to and from the cloud rapidly and lets you fully control data. HDM provides workload mobility and data control with a combination of innovative technologies: cloud cache, cloud storage gateway, and an integrated smart IO analyzer.
 
-HDM provides workload mobility and data control with a combination of innovative technologies: cloud cache, cloud storage gateway, and an integrated smart IO analyzer.
-
-HDM decouples compute and data to move workloads to public clouds faster and more efficiently. Existing solutions from other vendors require the full replication of data to the cloud, and the loss of enterprise data control is a major concern. 
-
-By contrast, HDM identifies the frequently used data (hot dataset) and moves only the minimal hot data to the cloud to bring up workloads in the shortest possible time.
+HDM decouples compute and data to move workloads to public clouds faster and more efficiently. Existing solutions from other vendors require the full replication of data to the cloud, and the loss of enterprise data control is a major concern. By contrast, HDM identifies the frequently used data (hot dataset) and moves only the minimal hot data to the cloud to bring up workloads in the shortest possible time.
 
 HDM provides a very flexible deployment model providing options to be able to cater to different user needs in terms of use case, performance, scalability and security
 
