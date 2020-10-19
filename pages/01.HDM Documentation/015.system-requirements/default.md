@@ -3,16 +3,15 @@ title: 'System Requirements'
 ---
 
 #### On-Premises Requirements
-| VMWare Environment |
-|:-|
-| Single version of ESX throughout the vCenter cluster |
-| ESX in connected state in the vCenter |
-| ESX able to communicate with vCenter |
-| Clusters have ESX 6.5U2+ and 6.7 |
-| vCenter Web Client: 6.5 or 6.7 (Use of HTML client is recommended with Chrome v.75 +) |
-| Datastore should be VMFS, NFS, or NFSv3 |
-| E1000E and VMXNet3 network adapters should be available in the on-premises vCenter |
-| DRS is enabled and HA should be enabled on the vCenter cluster |
+##### VMWare Environment
+* Single version of ESX throughout the vCenter cluster
+* ESX in connected state in the vCenter
+* ESX able to communicate with vCenter
+* Clusters have ESX 6.5U2+ and 6.7
+* vCenter Web Client: 6.5 or 6.7 (Use of HTML client is recommended with Chrome v.75 +)
+* Datastore should be VMFS, NFS, or NFSv3
+* E1000E and VMXNet3 network adapters should be available in the on-premises vCenter
+* DRS is enabled and HA should be enabled on the vCenter cluster
 
 ##### Network Environment
 * Network speed: at least 1 Gbps (10 Gbps link is preferred)
@@ -20,16 +19,18 @@ title: 'System Requirements'
 * VM Network has access to ESXi
 
 ##### Hardware Requirements
-Total resources required for HDM
+Total resources required for HDM:
 11 vCPU, 16 GB RAM, 336 GB disk
-Appliance (4 vCPU, 8 GB RAM, 144 GB disk)
-PremMgr (3 vCPU, 4 GB RAM, 32 GB disk)
-ESXMgr (4 vCPU, 4GB RAM, 160 GB disk)
 
-Total resources required for HDM equivalent to
+* Appliance (4 vCPU, 8 GB RAM, 144 GB disk)
+* PremMgr (3 vCPU, 4 GB RAM, 32 GB disk)
+* ESXMgr (4 vCPU, 4GB RAM, 160 GB disk)
+
+Total resources required for HDM equivalent to:
 10 vCPU, 26 GB RAM, 64 GB disk, 512 GB Cache
-CloudMgr (4 vCPU, 6 GB RAM, 32 GB disk), \
-<strong>1</strong> CloudCache (6 vCPU, 20 GB RAM, 32 GB disk, 512 GB cache)
+
+* 1 CloudMgr (4 vCPU, 6 GB RAM, 32 GB disk)
+* 1 CloudCache (6 vCPU, 20 GB RAM, 32 GB disk, 512 GB cache)
 
 Related document: For hardware and system requirements, refer to the [VMware Hardware Compatibility List (HCL).](https://www.vmware.com/resources/compatibility/search.php)
 
