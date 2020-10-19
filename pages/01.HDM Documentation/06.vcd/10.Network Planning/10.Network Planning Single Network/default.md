@@ -68,13 +68,13 @@ Before continuing with the rest of this Quick Start Guide, be sure to print and 
 |Uplink_WAN_Network|Single IP| | |
 |ESXi_Network|Single IP| | |
 
-Common settings for the OVF deployment
+Common settings for the OVF deployment:
 
 |Default gateway network|This should be the single configured network on-premises which in this document is “hdm_network”|
-|NTP Server| |
-|Network DNS| |
-|Default gateway|Provide default gateway for the “hdm_network”|
-|Network DNS Search Path| |
+|NTP Server                      |                                                                                                                                                                |
+|Network DNS                   |                                                                                                                                                                |
+|Default gateway               |Provide default gateway for the “hdm_network”                                                                                    |
+|Network DNS Search Path|                                                                                                                                                                |
 
 ## Network requirements during on-premises deployment
 
