@@ -1,3 +1,11 @@
+---
+title: ''
+media_order: ''
+body_classes: ''
+order_by: ''
+order_manual: ''
+---
+
 --- 
 title: 'Support Logs'
 ---
@@ -26,7 +34,7 @@ _Figure 41: Downloading Debug Logs from HDM_
 
 
 
-![alt_text](images/image16.png "image_tooltip")
+![alt_text](images/image16.png?classes=content-img "image_tooltip")
 
 
 
@@ -43,7 +51,7 @@ Steps:
 _Figure 42: Downloading System Logs from vCenter_
 
 
-![alt_text](images/image1.png "image_tooltip")
+![alt_text](images/image1.png?classes=content-img "image_tooltip")
 
 
 
