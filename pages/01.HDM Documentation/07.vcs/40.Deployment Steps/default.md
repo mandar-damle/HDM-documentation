@@ -1,11 +1,13 @@
 ---
-title:"HDM Deployment Steps"
+title:"Deployment Steps"
 ---
-<!-- Copy and paste the converted output. -->
 
-HDM deployment involves the following steps:
+This section describes how to deploy, configure, and undeploy PrimaryIO Hybrid Data Management (HDM) 2.1.3 for enabling migrations of virtual machines to VMware Cloud Director (vCD).
 
 
+## HDM Deployment Steps
+
+HDM deployment involves the following six steps, each of which is discussed in detail in the sections below:
 
 1. Deploy HDM Appliance on On-Premise
 2. Add On-Premise vCenter to the Appliance
@@ -13,7 +15,6 @@ HDM deployment involves the following steps:
 4. Add HDM License
 5. Deploy HDM On-Premise
 6. Deploy HDM On-Cloud
-
 
 ### Step 1/6  : Deploy HDM Appliance 
 
