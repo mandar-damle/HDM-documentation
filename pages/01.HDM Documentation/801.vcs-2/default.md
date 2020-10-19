@@ -1,4 +1,4 @@
 ---
-title: 'VMware Cloud Solutions for IBM'
+title: 'VMware Cloud Services for IBM'
 ---
 
