@@ -8,7 +8,7 @@ In this section, we will show you how to configure the VDC required for HDM depl
 
 # Network Configuration
 
-### <a name="create-routed-network"> Step 1: Create Routed Network UPLINK_WAN_NETWORK
+#### <a name="create-routed-network"> Step 1: Create Routed Network UPLINK_WAN_NETWORK
 
 This network will be connected to the edge gateway. Cross-WAN communications between on-premises and cloud will be routed through this network for the HDM Appliance. IPsec tunnels [step 3](#step-3) will be configured to this network to complete the network configuration.
 
@@ -56,7 +56,7 @@ This network will be created for HDM Appliance communications and for migrating 
 
 ![alt_text](images/image9.png "image_tooltip")
 
-### <a name="step-3"> Step 3: Configure VPN tunnel with Edge Gateway </a>
+#### <a name="step-3"> Step 3: Configure VPN tunnel with Edge Gateway </a>
 
 Create an IPSec tunnel between the organization's edge gateway and the on-premises datacenter. To complete the VPN setting the following information will be required:
 
@@ -77,7 +77,7 @@ Add recommended firewall rule by specifying source and destination subnet
 
 ![alt_text](images/image2.png "image_tooltip")
 
-### Service/Port level requirement for HDM(Advanced firewall rules)
+#### Service/Port level requirement for HDM(Advanced firewall rules)
 
 1. On-premises WAN network - Cloud WAN network ports(Inbound/Outbound):** **22, 2379, 32820, 2376, 6000-6050, 7000-7050, 8000-8050.
 
