@@ -36,8 +36,8 @@ This network will be connected to the edge gateway. Cross-WAN communications bet
 
 ![alt_text](images/image14.png "image_tooltip")
 
-## Step 2: Create Isolated Network HDM_INTERNAL_NETWORK
-
+##### Step 2: Create Isolated Network HDM_INTERNAL_NETWORK
+    
 This network will be created for HDM Appliance communications and for migrating virtual machines across vApps for the same VDC.
 
 1. Create a new network and select "Isolated Network Type"
