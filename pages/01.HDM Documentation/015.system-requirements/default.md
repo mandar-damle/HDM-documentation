@@ -7,109 +7,24 @@ title: 'System Requirements'
 
 | Requirement | Available (Yes / No) |
 |----------|:-------------:|
-
-<table>
-  <tr>
-   <td><strong>Requirement</strong>
-   </td>
-   <td><strong>Available (Yes / No)</strong>
-   </td>
-  </tr>
-    
-  <tr>
-   <td>On-premises Requirements
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>VMWare Environment
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>Single version of ESX throughout the vCenter cluster
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>ESX in connected state in the vCenter
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>ESX able to communicate with vCenter
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>Clusters have ESX 6.5U2+ and 6.7 
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>vCenter Web Client: 6.5 or 6.7 
-<p>
+| On-premises Requirements | |
+|VMWare Environment | |
+Single version of ESX throughout the vCenter cluster
+ESX in connected state in the vCenter
+ESX able to communicate with vCenter
+Clusters have ESX 6.5U2+ and 6.7 
+vCenter Web Client: 6.5 or 6.7
 (Use of HTML client is recommended with Chrome v.75 +)
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>Datastore should be VMFS, NFS, or NFSv3
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>E1000E and VMXNet3 network adapters should be available in the on-premises vCenter
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>DRS is enabled and HA should be enabled on the vCenter cluster 
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>Network Environment
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>Network speed: at least 1 Gbps (10 Gbps link is preferred)
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>VM Network has connectivity to the cloud endpoint 
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>VM Network has access to ESXi
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>Hardware Requirements
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>
+Datastore should be VMFS, NFS, or NFSv3
+E1000E and VMXNet3 network adapters should be available in the on-premises vCenter
+DRS is enabled and HA should be enabled on the vCenter cluster 
+
+Network Environment
+Network speed: at least 1 Gbps (10 Gbps link is preferred)
+VM Network has connectivity to the cloud endpoint 
+VM Network has access to ESXi
+
+Hardware Requirements
 
 <table>
   <tr>
