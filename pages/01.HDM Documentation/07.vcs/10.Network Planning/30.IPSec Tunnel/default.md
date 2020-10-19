@@ -173,9 +173,7 @@ Here are the Firewall configuration on premise and at the cloud side.
 
 ![alt_text](images/image6.png "image_tooltip")
 
-
-
- if you want to allow specific traffic from source to destination, please refer (&lt;HDM 2.1.3 for VMware Admin Guide - VCS>)
+ if you want to allow specific traffic from source to destination, please refer to the firewall rules section below.
 
 
 ## Firewall Rules
