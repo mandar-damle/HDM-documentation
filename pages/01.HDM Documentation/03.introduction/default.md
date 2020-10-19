@@ -34,7 +34,7 @@ _Figure 1: Location of HDM 2.1.3 components_
 
 ![alt_text](images/image8.png "image_tooltip")
 
-## HDM Deployment for VMware Cloud Foundation
+## HDM Deployment for VMware Cloud Service for IBM and VMware Cloud Foundation
 
 1. **PrimaryIO Plug-in: **Installed and registered on VMware vCenter for HDM management.
 2. **PrimaryIO Manager:** The main controlling appliance that controls and orchestrates the entire system.
