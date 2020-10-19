@@ -50,12 +50,12 @@ HDM can be deployed in test environments where there may not be separation betwe
 
 _Figure 4: Test Environment Configuration_
 
-![drawing](images/image5.png)
+![drawing](images/image5.png?classes=content-img)
 
 _Figure 5: Mapping Source and Destination Networks in a Single Network Test Environment_
 
 
-![alt_text](images/image30.png "image_tooltip")
+![alt_text](images/image30.png?classes=content-img "image_tooltip")
 
 
 
