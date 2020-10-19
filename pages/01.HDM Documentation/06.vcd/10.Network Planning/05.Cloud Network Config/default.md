@@ -56,7 +56,7 @@ This network will be created for HDM Appliance communications and for migrating 
 
 ![alt_text](images/image9.png "image_tooltip")
 
-## <a name="step-3"> Step 3: Configure VPN tunnel with Edge Gateway </a>
+##### <a name="step-3"> Step 3: Configure VPN tunnel with Edge Gateway </a>
 
 Create an IPSec tunnel between the organization's edge gateway and the on-premises datacenter. To complete the VPN setting the following information will be required:
 
@@ -67,13 +67,9 @@ Create an IPSec tunnel between the organization's edge gateway and the on-premis
 *   Peer Endpoint - Public IP for the on-premises WAN network
 *   Peer Subnets - Subnet of the on-premises WAN network where HDM appliances will be deployed.
 
-
 ### Edge gateway VPN config 
 
-
 ![alt_text](images/image15.png "image_tooltip")
-
-
 
 ### Recommended firewall rules
 
@@ -93,9 +89,7 @@ You can test the IPsec connectivity using ping command from on prem to cloud sid
 
 Ping test from on-premises to the cloud gateway
 
-
 ![alt_text](images/image7.png "image_tooltip")
-
 
 To ping test from the cloud to the on-premises IP, a test machine will need to be created on the routed network in the cloud.
 
