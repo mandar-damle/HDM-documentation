@@ -32,7 +32,7 @@ The HDM product binaries can be used in VMware Cloud Director, VMware Cloud Serv
 
 _Figure 1: Location of HDM 2.1.3 components_
 
-![alt_text](images/image8.png "image_tooltip")
+![alt_text](images/image8.png?classes=content-img "image_tooltip")
 
 ## HDM Deployment for VMware Cloud Service for IBM and VMware Cloud Foundation
 
@@ -45,7 +45,7 @@ _Figure 1: Location of HDM 2.1.3 components_
 7. **Cloud Cache:** The cloud cache is a fast, reliable, persistent cache for the VMs in the cloud. The cache maintains the working set of VMs, enabling them to run efficiently without moving entire data sets into the cloud. When there is a cache miss, the storage gateway obtains blocks from the on-premises VMDK.
 
 _Figure 2: HDM components_
-![alt_text](images/image54.png "image_tooltip")
+![alt_text](images/image54.png?classes=content-img "image_tooltip")
  
 # HDM Deployment
 
