@@ -64,13 +64,12 @@ Before continuing with the rest of this Quick Start Guide, be sure to print and 
 |Network|IP|Netmask|Gateway|
 |:-|:-|:-|:-|
 |VM Network (Management Network)|Single IP| | |
-|HDM_Internal_Network|Single IP|||
-|Uplink_WAN_Network|Single IP||
-|ESXi_Network|Single IP||
+|HDM_Internal_Network|Single IP| | |
+|Uplink_WAN_Network|Single IP| | |
+|ESXi_Network|Single IP| | |
 
 Common settings for the OVF deployment
 
-|:-|:-|
 |Default gateway network|This should be the single configured network on-premises which in this document is “hdm_network” |
 |NTP Server| |
 |Network DNS| |
@@ -93,46 +92,12 @@ Common settings for the gateway, subnet, DNS etc., which will be common across t
 
 Provision six IPs on _hdm_network_. complete the table below for reference throughout deployment.
 
+| |Example|Fill value here
+| |IP range|192.168.10.100-192.168.10.120, 192.168.10.130 (2 IPs required from “hdm_network” )
 
-<table>
-  <tr>
-   <td>
-   </td>
-   <td><strong>Example</strong>
-   </td>
-   <td><strong>Fill value here</strong>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>IP range</strong>
-   </td>
-   <td><em>192.168.10.100-192.168.10.120, 192.168.10.130 </em>
-   </td>
-   <td><strong>(2 IPs required from “hdm_network” )</strong>
-   </td>
-  </tr>
-</table>
-
-
-** \
-Uplink_WAN_Network**
-
-
-<table>
-  <tr>
-   <td>
-   </td>
-   <td><strong>Example</strong>
-   </td>
-   <td><strong>Fill value here</strong>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>IP range</strong>
-   </td>
-   <td><em>192.168.10.100-192.168.10.120, 192.168.10.130 </em>
-   </td>
-   <td><strong>(2 IPs required from “hdm_network”)</strong>
+**Uplink_WAN_Network**
+| |Example|Fill value here|
+| |IP range|192.168.10.100-192.168.10.120, 192.168.10.130(2 IPs required from “hdm_network”)</strong>
    </td>
   </tr>
 </table>
@@ -140,184 +105,31 @@ Uplink_WAN_Network**
 
 **ESXi_Network**
 
-
-<table>
-  <tr>
-   <td>
-   </td>
-   <td><strong>Example</strong>
-   </td>
-   <td><strong>Fill value here</strong>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>IP range</strong>
-   </td>
-   <td><em>192.168.10.100-192.168.10.120, 192.168.10.130 </em>
-   </td>
-   <td><strong>(2 IPs required from “hdm_network”)</strong>
-   </td>
-  </tr>
-</table>
-
-
+| |Example|Fill value here|
+| |IP range|192.168.10.100-192.168.10.120, 192.168.10.130 (2 IPs required from “hdm_network”)|
 
 ## Network requirements during cloud deployment
 
 The following cloud credentials are required to deploy to the cloud.
 
-
-<table>
-  <tr>
-   <td><strong>vCloud Director FQDN</strong>
-   </td>
-   <td><em>xyzpqr25.vmware-solutions.cloud.ibm.com</em>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Organization name</strong>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Username</strong>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Password</strong>
-   </td>
-   <td>
-   </td>
-  </tr>
-</table>
-
+vCloud Director FQDN|xyzpqr25.vmware-solutions.cloud.ibm.com|Organization name|Username|Password|
+| | | | |
 
 Similar to the previous two deployment stages, provision IPs and identify the correct networks to satisfy the chosen connectivity requirements. The networks to be configured are _HDM Internal network_ and _WAN network configuration** **_from the cloud _hdm_wan_network**. **_Only the IP Range is different between the two networks; all other parameters remain the same.
 
 **HDM Internal network** 
-
-
-<table>
-  <tr>
-   <td>
-   </td>
-   <td><strong>Example</strong>
-   </td>
-   <td><strong>Fill value here</strong>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>IP range</strong>
-   </td>
-   <td><em>192.168.10.100-192.168.10.120, 192.168.10.130 </em>
-   </td>
-   <td><strong>(20 IPs from HDM “hdm_internal)</strong>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Subnet mask</strong>
-   </td>
-   <td><em>255.255.0.0</em>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Gateway</strong>
-   </td>
-   <td><em>192.168.10.1</em>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Domain</strong>
-   </td>
-   <td><em>domain.lan</em>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>DNS</strong>
-   </td>
-   <td><em>192.168.5.20, 192.168.5.21</em> 
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>NTP</strong>
-   </td>
-   <td><em>192.168.5.22</em>
-   </td>
-   <td>
-   </td>
-  </tr>
-</table>
-
-
+| |Example|Fill value here|
+| |IP range|192.168.10.100-192.168.10.120, 192.168.10.130|(20 IPs from HDM “hdm_internal)|
+| |Subnet mask||255.255.0.0|
+| |Gateway|192.168.10.1|
+| |Domain|domain.lan|
+| |DNS|192.168.5.20, 192.168.5.21|
+| |NTP|192.168.5.22|
+      
 **WAN network configuration**
 
 
-<table>
-  <tr>
-   <td>
-   </td>
-   <td><strong>Example</strong>
-   </td>
-   <td><strong>Fill value here</strong>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>IP range</strong>
-   </td>
-   <td><em>192.168.10.100-192.168.10.120, 192.168.10.130 </em>
-   </td>
-   <td><strong>(30 IPs from “hdm_wan_network”)</strong>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Subnet mask</strong>
-   </td>
-   <td><em>255.255.0.0</em>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Gateway</strong>
-   </td>
-   <td><em>192.168.10.1</em>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Domain</strong>
-   </td>
-   <td><em>domain.lan</em>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>DNS</strong>
-   </td>
-   <td><em>192.168.5.20, 192.168.5.21</em> 
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>NTP</strong>
-   </td>
-   <td><em>192.168.5.22</em>
-   </td>
-   <td>
-   </td>
-  </tr>
-</table>
+| |Example|Fill value here|IP range|192.168.10.100-192.168.10.120, 192.168.10.130 |(30 IPs from “hdm_wan_network”)|Subnet mask|255.255.0.0|Gateway|192.168.10.1|Domain|domain.lan|
+
+|DNS|192.168.5.20, 192.168.5.21
+|NTP|192.168.5.22|
