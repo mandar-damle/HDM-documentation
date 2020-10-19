@@ -1,9 +1,17 @@
+---
+title: ''
+media_order: ''
+body_classes: ''
+order_by: ''
+order_manual: ''
+---
+
 ### HDM Deployment
 
 HDM provides a very flexible deployment model providing options to be able to cater to different user needs in terms of use case, performance, scalability and security. This needs to be selected as part of installation of on-premise components. 
 
 
-![alt_text](images/image42.png "image_tooltip")
+![alt_text](images/image42.png?classes=content-img "image_tooltip")
 
 
 
