@@ -13,6 +13,6 @@ You will receive an email with the following:
 *   A license key for the software
 
 Before proceeding with the installation, watch the training videos and use this guide.
-[https://www.primaryio.com/training/]
+[https://www.primaryio.com/training/](https://www.primaryio.com/training/)
 
 
