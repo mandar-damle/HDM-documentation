@@ -8,7 +8,7 @@ In this section, we will show you how to configure the VDC required for HDM depl
 
 # Network Configuration
 
-##### <a name="create-routed-network"> Step 1: Create Routed Network UPLINK_WAN_NETWORK
+## <a name="create-routed-network"> Step 1: Create Routed Network UPLINK_WAN_NETWORK
 
 This network will be connected to the edge gateway. Cross-WAN communications between on-premises and cloud will be routed through this network for the HDM Appliance. IPsec tunnels [step 3](#step-3) will be configured to this network to complete the network configuration.
 
@@ -36,7 +36,7 @@ This network will be connected to the edge gateway. Cross-WAN communications bet
 
 ![alt_text](images/image14.png "image_tooltip")
 
-##### Step 2: Create Isolated Network HDM_INTERNAL_NETWORK
+## Step 2: Create Isolated Network HDM_INTERNAL_NETWORK
     
 This network will be created for HDM Appliance communications and for migrating virtual machines across vApps for the same VDC.
 
@@ -56,7 +56,7 @@ This network will be created for HDM Appliance communications and for migrating 
 
 ![alt_text](images/image9.png "image_tooltip")
 
-##### <a name="step-3"> Step 3: Configure VPN tunnel with Edge Gateway </a>
+## <a name="step-3"> Step 3: Configure VPN tunnel with Edge Gateway </a>
 
 Create an IPSec tunnel between the organization's edge gateway and the on-premises datacenter. To complete the VPN setting the following information will be required:
 
