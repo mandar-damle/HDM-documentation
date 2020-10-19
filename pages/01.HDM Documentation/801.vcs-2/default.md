@@ -1,4 +1,4 @@
 ---
-title: 'VMware vCloud Foundation 2'
+title: 'VMware Cloud Solutions for IBM'
 ---
 
