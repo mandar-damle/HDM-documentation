@@ -99,6 +99,7 @@ Provision six IPs on _hdm_network_. complete the table below for reference throu
 |IP range|192.168.10.100-192.168.10.120, 192.168.10.130 (2 IPs required from “hdm_network” )|
 
 **Uplink_WAN_Network**
+
 |Example|Fill value here|
 |:-|:-|
 |IP range|192.168.10.100-192.168.10.120, 192.168.10.130(2 IPs required from “hdm_network”)|
@@ -106,9 +107,9 @@ Provision six IPs on _hdm_network_. complete the table below for reference throu
 
 **ESXi_Network**
 
-| |Example|Fill value here|
-|:-|:-|:-|
-| |IP range|192.168.10.100-192.168.10.120, 192.168.10.130 (2 IPs required from “hdm_network”)|
+|Example|Fill value here|
+|:-|:-|
+|IP range|192.168.10.100-192.168.10.120, 192.168.10.130 (2 IPs required from “hdm_network”)|
 
 ## Network requirements during cloud deployment
 
@@ -134,7 +135,6 @@ Similar to the previous two deployment stages, provision IPs and identify the co
 |NTP|192.168.5.22|
       
 **WAN network configuration**
-
 
 |Example|Fill value here|
 |:-|:-|
