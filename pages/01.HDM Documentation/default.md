@@ -2,7 +2,7 @@
 title: 'HDM Documentation'
 ---
 
-# Hybrid Cloud Data Management
+<h1 align="center">Hybrid Cloud Data Management</h1>
 
-## Documentation - version 2.1.3
+Documentation - version 2.1.3
 
