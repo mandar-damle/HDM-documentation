@@ -29,17 +29,7 @@ title: 'System Requirements'
 * 1 PremMgr (3 vCPU, 4 GB RAM, 32 GB disk)
 * 1 ESXMgr (4 vCPU, 4GB RAM, 160 GB disk)
 
-##### Cloud
-
-** Total resources required for HDM equivalent to:**
-10 vCPU, 26 GB RAM, 64 GB disk, 512 GB Cache
-
-* 1 CloudMgr (4 vCPU, 6 GB RAM, 32 GB disk)
-* 1 CloudCache (6 vCPU, 20 GB RAM, 32 GB disk, 512 GB cache)
-
 Related document: For hardware and system requirements, refer to the [VMware Hardware Compatibility List (HCL).](https://www.vmware.com/resources/compatibility/search.php)
-
-#### Cloud Requirements
 
 ##### Network connectivity between on-premises and cloud environments
 *   Network Link: at least 1 Gbps
@@ -81,6 +71,14 @@ Related document: For hardware requirements and system requirements refer to the
         *   Port 7000-7010 - inbound and outbound
         *   Port 8000-8010 - inbound and outbound
         *   Post 32820 - inbound and outbound
+
+##### Cloud Resources
+
+** Total resources required for HDM equivalent to:**
+10 vCPU, 26 GB RAM, 64 GB disk, 512 GB Cache
+
+* 1 CloudMgr (4 vCPU, 6 GB RAM, 32 GB disk)
+* 1 CloudCache (6 vCPU, 20 GB RAM, 32 GB disk, 512 GB cache)
 
 #### OS Support (TBC/Warm Migration)
 
