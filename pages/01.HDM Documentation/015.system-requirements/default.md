@@ -2,13 +2,11 @@
 title: 'System Requirements'
 ---
 
-<!-- Copy and paste the converted output. -->
-
-
-
-
-
 #### On-Premises Requirements
+
+
+| Requirement | Available (Yes / No) |
+|----------|:-------------:|
 
 <table>
   <tr>
@@ -17,6 +15,7 @@ title: 'System Requirements'
    <td><strong>Available (Yes / No)</strong>
    </td>
   </tr>
+    
   <tr>
    <td>On-premises Requirements
    </td>
