@@ -1,5 +1,5 @@
 ---
-title:"Deployment Steps"
+- 'title:"Deployment Steps"'
 ---
 
 This section describes how to deploy, configure, and undeploy PrimaryIO Hybrid Data Management (HDM) 2.1.3 for enabling migrations of virtual machines to VMware Cloud Director (vCD).
@@ -45,7 +45,7 @@ HDM Appliance is deployed from the OVF shipped as part of the HDM package. Pleas
 Use the **Deploy OVF Template **option in vCenter to deploy the Appliance as shown below:
 
 
-![alt_text](images/image55.png "image_tooltip")
+![alt_text](images/image55.png?classes=content-img "image_tooltip")
 
 
 
@@ -59,7 +59,7 @@ Also, it should be specified whether the Appliance should have static IP or DHCP
 
 
 
-![alt_text](images/image2.png "image_tooltip")
+![alt_text](images/image2.png?classes=content-img "image_tooltip")
 
 
 
@@ -88,7 +88,7 @@ Networks with DHCP, can skip this configuration.
 2. In case of static IP, gateway IP and the IP range specified should be in the same subnet.
 
 
-![alt_text](images/image57.png "image_tooltip")
+![alt_text](images/image57.png?classes=content-img "image_tooltip")
 
 
 
@@ -129,7 +129,7 @@ Steps
 3. Click on **Add vCenter** at the top right.
 
 
-![alt_text](images/image56.png "image_tooltip")
+![alt_text](images/image56.png?classes=content-img "image_tooltip")
 
 
 4. Specify the On-Premise vCenter IP or FQDN by which the vCenter is configured while its installation along with administrator credentials and click **Add vCenter**.
@@ -137,7 +137,7 @@ Steps
 
 
 
-![alt_text](images/image58.png "image_tooltip")
+![alt_text](images/image58.png?classes=content-img "image_tooltip")
 
 
 
@@ -150,7 +150,7 @@ Steps
 7. Logout and login twice(and sometimes more) from the vCenter for the plug-in installation to complete. Successful installation should add a HDM icon in the vCenter home page.
 
 
-![alt_text](images/image59.png "image_tooltip")
+![alt_text](images/image59.png?classes=content-img "image_tooltip")
 
 
 
@@ -175,7 +175,7 @@ Steps to add license:
 
 
 
-![alt_text](images/image31.png "image_tooltip")
+![alt_text](images/image31.png?classes=content-img "image_tooltip")
 
 
 
@@ -184,7 +184,7 @@ Steps to add license:
 
 
 
-![alt_text](images/image60.png "image_tooltip")
+![alt_text](images/image60.png?classes=content-img "image_tooltip")
 
 
 
@@ -192,7 +192,7 @@ Steps to add license:
 6. Once the license has been added, it will be listed on the licence page.
 7. The same interface can then be used to add **Product License**.
 
-![alt_text](images/image44.png "image_tooltip")
+![alt_text](images/image44.png?classes=content-img "image_tooltip")
 
 
 
@@ -222,7 +222,7 @@ Steps for deployment
 2. Select **Administration** from the tab
 3. Click on **Configuration** to access the On-Premise cluster listing. 
 
-![alt_text](images/image61.png "image_tooltip")
+![alt_text](images/image61.png?classes=content-img "image_tooltip")
 
 
 
@@ -234,7 +234,7 @@ Steps for deployment
 7. Select resource allocation based on size and resource requirements. See section Deployment Requirements for details on different allocation types.
 
 
-![alt_text](images/image42.png "image_tooltip")
+![alt_text](images/image42.png?classes=content-img "image_tooltip")
 
 
 
@@ -243,7 +243,7 @@ Steps for deployment
 
 
 
-![alt_text](images/image46.png "image_tooltip")
+![alt_text](images/image46.png?classes=content-img "image_tooltip")
 
 
 PS: Make sure enough resources are available on On-Premise and on On-Cloud  when selecting deployment modes. 
@@ -265,18 +265,18 @@ PS: Make sure enough resources are available on On-Premise and on On-Cloud  when
 
 
 
-![alt_text](images/image47.png "image_tooltip")
+![alt_text](images/image47.png?classes=content-img "image_tooltip")
 
 
 
 
 10. Confirm the selection and submit the Installation request by clicking on FINISH button.
-![alt_text](images/image48.png "image_tooltip")
+![alt_text](images/image48.png?classes=content-img "image_tooltip")
 
 11. This will create a deployment task which can be monitored from vcenter tasks. Also, the deployment progress can be seen in the HDM configuration view:
 
 
-![alt_text](images/image43.png "image_tooltip")
+![alt_text](images/image43.png?classes=content-img "image_tooltip")
 
 
 
@@ -286,7 +286,7 @@ PS: Make sure enough resources are available on On-Premise and on On-Cloud  when
 
 ## 
 
-![alt_text](images/image50.png "image_tooltip")
+![alt_text](images/image50.png?classes=content-img "image_tooltip")
 
 
 
@@ -328,7 +328,7 @@ Steps for deployment
 3. Click on **Clouds** to access the On-Cloud listing
 
 
-![alt_text](images/image52.png "image_tooltip")
+![alt_text](images/image52.png?classes=content-img "image_tooltip")
 
 
 
@@ -342,11 +342,11 @@ Steps for deployment
 
 
 
-![alt_text](images/image1.png "image_tooltip")
+![alt_text](images/image1.png?classes=content-img "image_tooltip")
 
 
 
-![alt_text](images/image21.png "image_tooltip")
+![alt_text](images/image21.png?classes=content-img "image_tooltip")
 
 
 
@@ -356,7 +356,7 @@ Steps for deployment
     **Note**: Select shared datastore On-Cloud when deploying HDM component.
 
 
-![alt_text](images/image15.png "image_tooltip")
+![alt_text](images/image15.png?classes=content-img "image_tooltip")
 
 
 
@@ -367,7 +367,7 @@ Steps for deployment
 
 
 
-![alt_text](images/image16.png "image_tooltip")
+![alt_text](images/image16.png?classes=content-img "image_tooltip")
 
 
 
@@ -378,7 +378,7 @@ Steps for deployment
 
 
 
-![alt_text](images/image17.png "image_tooltip")
+![alt_text](images/image17.png?classes=content-img "image_tooltip")
 
 
 
@@ -387,7 +387,7 @@ Steps for deployment
 
 
 
-![alt_text](images/image18.png "image_tooltip")
+![alt_text](images/image18.png?classes=content-img "image_tooltip")
 
 
 
@@ -396,7 +396,7 @@ Steps for deployment
 
 
 
-![alt_text](images/image37.png "image_tooltip")
+![alt_text](images/image37.png?classes=content-img "image_tooltip")
 
 
 
@@ -405,7 +405,7 @@ Steps for deployment
 
 
 
-![alt_text](images/image19.png "image_tooltip")
+![alt_text](images/image19.png?classes=content-img "image_tooltip")
 
 
 
@@ -413,7 +413,7 @@ Steps for deployment
 12. Confirm the selection and click on **Finish** to submit the request.
 
 
-![alt_text](images/image13.png "image_tooltip")
+![alt_text](images/image13.png?classes=content-img "image_tooltip")
 
 
 
@@ -422,7 +422,7 @@ Steps for deployment
 
 
 
-![alt_text](images/image24.png "image_tooltip")
+![alt_text](images/image24.png?classes=content-img "image_tooltip")
 
 
 
@@ -430,7 +430,7 @@ Steps for deployment
 14. Wait for the deployment task to finish.
 
 
-![alt_text](images/image20.png "image_tooltip")
+![alt_text](images/image20.png?classes=content-img "image_tooltip")
 
 
 
@@ -458,7 +458,7 @@ Once the deployment On-Premise and On-Cloud is complete, we have few ways to vie
 After successful installation of HDM On-Cloud, the Appliance control panel shows the list of components and their health. 
 
 
-![alt_text](images/image22.png "image_tooltip")
+![alt_text](images/image22.png?classes=content-img "image_tooltip")
 
 
 Figure: HDM components after the deployment
@@ -469,7 +469,7 @@ Menu > HDM > Administration > HDM Health > Component Health
 
 
 
-![alt_text](images/image45.png "image_tooltip")
+![alt_text](images/image45.png?classes=content-img "image_tooltip")
 
 
 
@@ -479,7 +479,7 @@ After successful On-Cloud deployment, the On-Premise vCenter should show the On-
 
 
 
-![alt_text](images/image40.png "image_tooltip")
+![alt_text](images/image40.png?classes=content-img "image_tooltip")
 
 
 
@@ -519,7 +519,7 @@ Steps
 3. Click on **Configuration** to access the cluster listing.
 4. Against the cluster on which HDM is installed, click on **Enable** under monitoring. This will open a popup.
 
-![alt_text](images/image49.png "image_tooltip")
+![alt_text](images/image49.png?classes=content-img "image_tooltip")
 
 
 
@@ -531,7 +531,7 @@ This will create a _‘SPBM _policy of cache type for HDM. The default name for 
 Home -> Policies and Profiles -> VM Storage Policies
 
 
-![alt_text](images/image4.png "image_tooltip")
+![alt_text](images/image4.png?classes=content-img "image_tooltip")
 
 
 This newly created HDM  policy is applied to all the virtual machines under the cluster and monitoring for IO activity gets enabled.  For each virtual machine a reconfiguration task will be generated when applying HDM SPBM policy. If VMs have been successfully reconfigured, VM policies for these virtual machine would have **‘HDM Analyzer Profile’** applied against each of their VMDKs.
@@ -561,7 +561,7 @@ Steps
 3. In the popup, if the VM storage policy is HDM Analyzer Profile, then select VM storage policy as **Datastore Default** and click on **Apply to all**
 
 
-![alt_text](images/image5.png "image_tooltip")
+![alt_text](images/image5.png?classes=content-img "image_tooltip")
 
 
 
@@ -582,7 +582,7 @@ HDM is integrated with SQS (Simple Queue Service from AWS) message bus.  HDM **_
 **HDM** : HDM acts as the server of the commands and sends responses. In addition there is also a periodic heartbeat that happens between HDM and client, so that client is aware of the system state of the server.
 
 
-![drawing](images/image12.png)
+![drawing](images/image12.png?classes=content-img)
 
 For third party integration to work, the HDM appliance after the deployment must be configured with the message bus. After this step, HDM will listen and execute operations posted on this bus and send back the status of these operations to the caller. 
 
@@ -603,7 +603,7 @@ Steps
 3. Go to the vCenters page. Then click on the user profile icon
 
 
-![alt_text](images/image6.png "image_tooltip")
+![alt_text](images/image6.png?classes=content-img "image_tooltip")
 
 
 
@@ -612,7 +612,7 @@ Steps
 5. Provide the SQS message bus token of the third party in the pop-up and click on **Configure.** 
 
 
-![alt_text](images/image8.png "image_tooltip")
+![alt_text](images/image8.png?classes=content-img "image_tooltip")
 
 
 
@@ -620,7 +620,7 @@ Steps
 6. The configured message bus details can be seen. Once configured, to change the message bus configuration, click on **Reconfigure**.
 
 
-![alt_text](images/image9.jpg "image_tooltip")
+![alt_text](images/image9.jpg?classes=content-img "image_tooltip")
 
 
 **Note: PIO Appliance should have access to the Internet for warm or cold migration through SQS.**
@@ -669,7 +669,7 @@ Steps
 3. Click on **Clouds** to access the On-Cloud listing.
 4. Select the On-Cloud from the listing and click on **DELETE CLOUD**
 
-![alt_text](images/image28.png "image_tooltip")
+![alt_text](images/image28.png?classes=content-img "image_tooltip")
 
 
 
@@ -677,7 +677,7 @@ Steps
 5. Click **OK** on the Delete OnCloud popup to start the undeployment.
 
 
-![alt_text](images/image10.png "image_tooltip")
+![alt_text](images/image10.png?classes=content-img "image_tooltip")
 
 
 
@@ -685,7 +685,7 @@ Steps
 6. This will create undeployment tasks for On-Cloud components. The task can be monitored in vCenter Tasks. Also, the progress can be seen in HDM clouds view.
 
 
-![alt_text](images/image24.png "image_tooltip")
+![alt_text](images/image24.png?classes=content-img "image_tooltip")
 
 
 
@@ -696,7 +696,7 @@ Steps
 
 
 
-![alt_text](images/image32.png "image_tooltip")
+![alt_text](images/image32.png?classes=content-img "image_tooltip")
 
 
 
@@ -719,7 +719,7 @@ Steps
 
 
 
-![alt_text](images/image14.png "image_tooltip")
+![alt_text](images/image14.png?classes=content-img "image_tooltip")
 
 
 
@@ -728,7 +728,7 @@ Steps
 
 
 
-![alt_text](images/image33.png "image_tooltip")
+![alt_text](images/image33.png?classes=content-img "image_tooltip")
 
 
 
@@ -756,14 +756,14 @@ Steps
 
 
 
-![alt_text](images/image11.png "image_tooltip")
+![alt_text](images/image11.png?classes=content-img "image_tooltip")
 
 
 
 
 5. Click on OK in the Uninstall OnPrem pop-up
 
-![alt_text](images/image3.png "image_tooltip")
+![alt_text](images/image3.png?classes=content-img "image_tooltip")
 
 
 
@@ -771,14 +771,14 @@ Steps
 6. This will create undeployment tasks for On-Premise components. The task can be monitored in vCenter Tasks. Also, the progress can be seen in HDM configuration view.
 
 
-![alt_text](images/image50.png "image_tooltip")
+![alt_text](images/image50.png?classes=content-img "image_tooltip")
 
 
 
 7. Wait for the undeployment task to finish.
 
 
-![alt_text](images/image34.png "image_tooltip")
+![alt_text](images/image34.png?classes=content-img "image_tooltip")
 
 
 
@@ -802,7 +802,7 @@ Steps
 4. Against the vCenter, click on **Uninstall**.
 
 
-![alt_text](images/image7.png "image_tooltip")
+![alt_text](images/image7.png?classes=content-img "image_tooltip")
 
 
 
@@ -810,7 +810,7 @@ Steps
 5. A pop up will open which will guide the admin through uninstallation. Select the correct cluster on which the HDM was installed
 
 
-![alt_text](images/image35.png "image_tooltip")
+![alt_text](images/image35.png?classes=content-img "image_tooltip")
 
 
 
@@ -824,7 +824,7 @@ Steps
 8. Wait for the uninstall task to finish, that can be seen on pop up.
 
 
-![alt_text](images/image36.png "image_tooltip")
+![alt_text](images/image36.png?classes=content-img "image_tooltip")
 
 
 
@@ -848,7 +848,7 @@ Steps
 4. Against the vCenter, click on **Unregister**
 
 
-![alt_text](images/image38.png "image_tooltip")
+![alt_text](images/image38.png?classes=content-img "image_tooltip")
 
 
 
@@ -876,7 +876,7 @@ Steps
 
 
 
-![alt_text](images/image25.png "image_tooltip")
+![alt_text](images/image25.png?classes=content-img "image_tooltip")
 
 
 
