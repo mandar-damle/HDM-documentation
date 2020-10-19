@@ -1,173 +1,9 @@
-<!-- Copy and paste the converted output. -->
+---
+title: Troubleshooting
+---
 
 
-<p style="color: red; font-weight: bold">>>>>>  gd2md-html alert:  ERRORs: 0; WARNINGs: 1; ALERTS: 6.</p>
-<ul style="color: red; font-weight: bold"><li>See top comment block for details on ERRORs and WARNINGs. <li>In the converted Markdown or HTML, search for inline alerts that start with >>>>>  gd2md-html alert:  for specific instances that need correction.</ul>
-
-<p style="color: red; font-weight: bold">Links to alert messages:</p><a href="#gdcalert1">alert1</a>
-<a href="#gdcalert2">alert2</a>
-<a href="#gdcalert3">alert3</a>
-<a href="#gdcalert4">alert4</a>
-<a href="#gdcalert5">alert5</a>
-<a href="#gdcalert6">alert6</a>
-
-<p style="color: red; font-weight: bold">>>>>> PLEASE check and correct alert issues and delete this message and the inline alerts.<hr></p>
-
-
-
-# 
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image1.png "image_tooltip")
-
-
-
-# **HDM 2.1.3 for VMware**
-
-
-# **Troubleshooting Guide**
-
- 	                        
-
-Version: 2.1.3
-
-Publish Date: August, 2020
-
-Copyright © 2020 PrimaryIO, Inc.
-
-PrimaryIO, Inc.
-
-300 3rd St, Los Altos
-
-CA 94022
-
-[http://www.primaryio.com](http://www.primaryio.com)
-
-**Tel:** +1-877-817-7790
-
-Copyright Notice
-
-Copyright © 2020 PrimaryIO, Inc. 
-
-This document is provided for informational purposes only and PrimaryIO makes no warranties, either expressed or implied in this document. 
-
-Information in this document, including URL and other Internet references, is subject to change without notice. The entire risk of the use or the results from the use of this document remains with the user. 
-
-Unless otherwise noted, the companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted in examples herein are fictitious. 
-
-No association with any real company, organization, product, domain name, e-mail address, logo, person, place, or event is intended or should be inferred. 
-
-Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the written permission of PrimaryIO. 
-
-PrimaryIO may have patents, patent applications, trademarks, copyrights, or other intellectual property rights covering subject matter in this document. Except as explicitly provided in any written license agreement from PrimaryIO, the furnishing of this document does not guarantee any license to these patents, trademarks, copyrights, or other intellectual property. 
-
-© 2012 - 2020 PrimaryIO. 
-
-All rights reserved. 
-
-Trademarks
-
-PrimaryIO HDM™ is a registered trademark of PrimaryIO, Inc in the United States and/or other jurisdiction. 
-
-VMware is a registered trademark of VMware, Inc. in the United States and/or other jurisdiction.
-
-All other trademarks referred to in this guide are owned by their respective companies.
-
-
-
-Contents
-
-
-[TOC]
-
-
-
-# 
-
-
-# About the HDM Troubleshooting Guide
-
-This document covers troubleshooting for issues known in the HDM 2.1.3 product. In case there are issues that are not covered in this document or are not resolved easily, users should contact PrimaryIO support for further help. 
-
-
-# HDM Terminology
-
-This document uses the below terms and terminologies at multiple places.
-
-
-
-*   **PrimaryIO or PIO** 
-
-    PIO is often used for PrimaryIO in this document.
-
-*   **HDM**
-
-    Hybrid data management solution from PrimaryIO
-
-*   **Onprem or On-Prem or On-Premise or source**
-
-    Refers to On-Premise datacenter.
-
-*   **Oncloud or On-Cloud or target**
-
-Refers to the On-Cloud infrastructure created in connection with the migration of an On-Premise VM.
-
-
-
-*   **Appliance or PIO Appliance or HDM Appliance**
-
-    The HDM Appliance VM deployed on the On-Premise vCenter
-
-*   **Agile Rapid Migration or ARM**
-
-    A VM migration type supported by HDM in which a VM and its data is completely moved to On-Cloud.
-
-*   **Cold migration**
-
-    An agile migration type, where the VM being migrated is powered off and its data is moved to On-Cloud either online through HDM or offline through external sources.
-
-*   **Warm migration**
-
-    An agile migration type where the VM’s compute is migrated to On-Cloud early on and its data set is moved online through HDM or offline through external software in the background.
-
-*   **Compute migration**
-
-    This refers to the VM migrated to the On-Cloud while it continues to access its data on prem.
-
-*   **Migrate time snapshot**
-
-    HDM creates snapshots of the VMs just before migrating them to the On-Cloud. This is useful in restoring the VM in case of failures as well as in managing data consistency issues with migrated VM.
-
-*   **Cloud Burst**
-
-    A VM migration use case supported by HDM in which a VM is migrated to the On-Cloud temporarily due to high resource usage On-Premise.
-
-*   **Try Before Commit**
-
-    A VM migration use case to test whether VMs in On-Cloud perform good enough, before deciding whether to migrate VM’s entire data set. 
-
-*   **SPBM or Storage Policy Based Management**
-
-    Vmware provided mechanisms to define storage policies that can be applied to individual VMs.
-
-*   **Bulk migration**
-
-    Background** **movement of the VM data in case of ARM use case. It is said to be **online **if the transfer is done by HDM and is **offline **if a third party mechanism like AWS snowball is used.
-
-*   **Lite, Standard or Performance Deployment**
-
-    Modes of deployment based on the resource requirement. Lite having least requirements and performance having maximum. 
-
-*   **Standalone or cluster Deployment**
-
-    Mode of deployment based on the scale requirement. Standalone has a fixed scale while cluster deployment scales with number of nodes in cluster.
-
-*   **Appliance only Deployment**
-
-    A deployment mode where only the appliance gets deployed. Only cold migration is supported in this mode.
-
+This section covers troubleshooting for issues known in the HDM 2.1.3 product. In case there are issues that are not covered in this document or are not resolved easily, users should contact PrimaryIO support for further help. 
 
 
 # HDM Deployment
@@ -226,14 +62,8 @@ The PIO Appliance password was changed and the user has forgotten the new passwo
 1. Go to **Administration > Users and Groups** from the **Navigation** bar in vCenter.
 2. Under **Users** tab, click on **Add User** button as shown in the image below.
 
-	
 
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image2.png "image_tooltip")
-
-
+![alt_text](images/image4.png "image_tooltip")
 
 
 3. Once the new user is created, click on **Administrator** > **Global Permissions** from the **Navigation** bar.
@@ -258,23 +88,14 @@ A vCenter entry in the PIO Appliance can show an _‘ERROR’_ state if its cred
 1. Click on the **Edit** action as shown below.
 
 
-
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image3.png "image_tooltip")
+![alt_text](images/image2.png "image_tooltip")
 
 
 
 
 2. Enter and save the correct (or most recent) vCenter credentials.
 
-
-
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image4.png "image_tooltip")
+![alt_text](images/image1.png "image_tooltip")
 
 
 
@@ -308,18 +129,10 @@ This can happen if the previous version of HDM product has not been uninstalled 
 
 **Resolution:** Log into “https://&lt;vcenter_ip>/eam/mob” using vCenter admin credentials to access ESX Agent Manager. In front of the agency there will be an array of Managed Object Reference. 
 
-
-
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image5.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/image5.png "image_tooltip")
 
 
 Select the agency to get the list of agents and check the AgencyConfigInfo to verify if this belongs to PrimaryIO. 
-
-<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image6.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
 
 ![alt_text](images/image6.png "image_tooltip")
 

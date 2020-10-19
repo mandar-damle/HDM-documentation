@@ -2,63 +2,7 @@
 title: Troubleshooting
 ---
 
-<!-- Copy and paste the converted output. -->
-
 This section covers troubleshooting for issues known in the HDM product. In case there are issues that are not covered in this document or are not resolved easily, users should contact PrimaryIO support for further help. 
-
-
-# HDM Terminology
-
-This document uses the below terms and terminologies at multiple places.
-
-
-
-*   **PrimaryIO or PIO** 
-
-    PIO is often used for PrimaryIO in this document.
-
-*   **HDM**
-
-    Hybrid data management solution from PrimaryIO
-
-*   **Onprem or On-Prem or On-Premise or source**
-
-    Refers to On-Premise datacenter.
-
-*   **Oncloud or On-Cloud or target**
-
-Refers to the On-Cloud infrastructure created in connection with the migration of an On-Premise VM.
-
-
-
-*   **Appliance or PIO Appliance or HDM Appliance**
-
-    The HDM Appliance VM deployed on the On-Premise vCenter
-
-*   **Cold migration**
-
-    An agile migration type, where the VM being migrated is powered off and its data is moved to On-Cloud either online through HDM or offline through external sources.
-
-*   **Migrate time snapshot**
-
-    HDM creates snapshots of the VMs just before migrating them to the On-Cloud. This is useful in restoring the VM in case of failures as well as in managing data consistency issues with migrated VM.
-
-*   **Bulk migration**
-
-    Background** **movement of the VM data in case of ARM use case. It is said to be **online **if the transfer is done by HDM and is **offline **if a third party mechanism like AWS snowball is used.
-
-*   **Ultra Lite, Standard or Performance Deployment**
-
-    Modes of deployment based on the resource requirement. Lite having least requirements and performance having maximum. 
-
-
-    For migration to VCD, only Ultra Lite mode is supported
-
-*   **Standalone or cluster Deployment**
-
-    Mode of deployment based on the scale requirement. Standalone has a fixed scale while cluster deployment scales with number of nodes in cluster.
-
-
 
 # HDM Deployment
 
@@ -124,7 +68,7 @@ The PIO Appliance password was changed and the user has forgotten the new passwo
 	
 
 
-![alt_text](images/image2.png "image_tooltip")
+![alt_text](images/image3.png "image_tooltip")
 
 
 
@@ -153,7 +97,7 @@ A vCenter entry in the PIO Appliance can show an _‘ERROR’_ state if its cred
 
 
 
-![alt_text](images/image3.png "image_tooltip")
+![alt_text](images/image2.png "image_tooltip")
 
 
 
