@@ -6,15 +6,15 @@ title: 'System Requirements'
 
 * On-premises Requirements 
 	* VMWare Environment
-* Single version of ESX throughout the vCenter cluster
-* ESX in connected state in the vCenter
-* ESX able to communicate with vCenter
-* Clusters have ESX 6.5U2+ and 6.7 
-* vCenter Web Client: 6.5 or 6.7
-* (Use of HTML client is recommended with Chrome v.75 +)
-* Datastore should be VMFS, NFS, or NFSv3
-* E1000E and VMXNet3 network adapters should be available in the on-premises vCenter
-* DRS is enabled and HA should be enabled on the vCenter cluster 
+        * Single version of ESX throughout the vCenter cluster
+        * ESX in connected state in the vCenter
+        * ESX able to communicate with vCenter
+        * Clusters have ESX 6.5U2+ and 6.7 
+        * vCenter Web Client: 6.5 or 6.7
+        * (Use of HTML client is recommended with Chrome v.75 +)
+        * Datastore should be VMFS, NFS, or NFSv3
+        * E1000E and VMXNet3 network adapters should be available in the on-premises vCenter
+        * DRS is enabled and HA should be enabled on the vCenter cluster 
 
 Network Environment
 Network speed: at least 1 Gbps (10 Gbps link is preferred)
@@ -53,34 +53,12 @@ Hardware Requirements
 
 Related document: For hardware and system requirements, refer to the [VMware Hardware Compatibility List (HCL).](https://www.vmware.com/resources/compatibility/search.php)
 
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>Cloud Requirements
-
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>Network connectivity between on-premises and cloud environments
-
-
-
+Cloud Requirements
+Network connectivity between on-premises and cloud environments
 *   Network Link: at least 1 Gbps
 *   Network Round Trip Time Latencies: less than 30 ms
-   </td>
-   <td>
-   </td>
-  </tr>
-</table>
-
 
  **NOTES**:
-
-
 
 1. Currently, HDM only supports migration of one cluster per vCenter at a time. If VMs need to be migrated from multiple clusters, the process of deploy, migrate, and undeploy must be repeated for each of the clusters.
 2. VM Network (Management Network), HDM_Internal_Network (HDM Internal Network), Uplink_WAN_Network (WAN Network) and ESXi_Network (ESXi Network) can map to a single network or multiple networks. In the event that a single network provides all of this functionality, details would still need to provided for each. In this case, the IP subnet can be divided into multiple ranges that can be mapped to each of the four networks.
