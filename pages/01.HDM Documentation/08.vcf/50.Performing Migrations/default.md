@@ -1,3 +1,10 @@
+---
+title: ''
+media_order: ''
+body_classes: ''
+order_by: ''
+order_manual: ''
+---
 
 
 # HDM Migrations
@@ -82,7 +89,7 @@ Steps
 
 
 
-![alt_text](images/image30.png "image_tooltip")
+![alt_text](images/image30.png?classes=content-img "image_tooltip")
 
 
 
@@ -91,7 +98,7 @@ Steps
 
 
 
-![alt_text](images/image33.png "image_tooltip")
+![alt_text](images/image33.png?classes=content-img "image_tooltip")
 
 
 **Note:  A full clone or linked clone of a VM needs “prepare to migrate” operation, even if its base VM has already been prepared for migration. For example, HDM migrate wizard in vCenter, such clones are not shown in available list of VMs for migration unless they have been explicitly prepared for migration.**
@@ -118,7 +125,7 @@ Steps
 
 
 
-![alt_text](images/image32.png "image_tooltip")
+![alt_text](images/image32.png?classes=content-img "image_tooltip")
 
 
 3. In the popup, if the VM storage policy is already HDM Analyzer Profile, then no need to do anything. But if it is **Datastore Default**, select VM storage policy as **HDM Analyzer Profile **and click on **Apply to all.**
@@ -127,7 +134,7 @@ Steps
 
 
 
-![alt_text](images/image35.png "image_tooltip")
+![alt_text](images/image35.png?classes=content-img "image_tooltip")
 
 
 
@@ -149,7 +156,7 @@ Steps
 
 
 
-![alt_text](images/image34.png "image_tooltip")
+![alt_text](images/image34.png?classes=content-img "image_tooltip")
 
 
 
@@ -158,7 +165,7 @@ Steps
 
 
 
-![alt_text](images/image37.png "image_tooltip")
+![alt_text](images/image37.png?classes=content-img "image_tooltip")
 
 
 
@@ -166,7 +173,7 @@ Steps
 4. In the **Select Cloud** page, review the On-Cloud to which the VM is being migrated and resources available
 
 
-![alt_text](images/image36.png "image_tooltip")
+![alt_text](images/image36.png?classes=content-img "image_tooltip")
 
 
 
@@ -177,7 +184,7 @@ Steps
 
 
 
-![alt_text](images/image40.png "image_tooltip")
+![alt_text](images/image40.png?classes=content-img "image_tooltip")
 
 
 
@@ -185,7 +192,7 @@ Steps
 6. If Warm and Cold migration type has been selected, users can select the target resources on On-Cloud on which the virtual machine should be migrated
 
 
-![alt_text](images/image38.png "image_tooltip")
+![alt_text](images/image38.png?classes=content-img "image_tooltip")
 
 
 
@@ -194,7 +201,7 @@ Steps
 
 
 
-![alt_text](images/image39.png "image_tooltip")
+![alt_text](images/image39.png?classes=content-img "image_tooltip")
 
 
 
@@ -202,7 +209,7 @@ Steps
 8. Confirm your selections and click on MIGRATE
 
 
-![alt_text](images/image41.png "image_tooltip")
+![alt_text](images/image41.png?classes=content-img "image_tooltip")
 
 
 
@@ -210,7 +217,7 @@ Steps
 9. Migration status page will display the status of migration as it progresses.
 
 
-![alt_text](images/image42.png "image_tooltip")
+![alt_text](images/image42.png?classes=content-img "image_tooltip")
 
 
 
@@ -219,7 +226,7 @@ Steps
 
 
 
-![alt_text](images/image43.png "image_tooltip")
+![alt_text](images/image43.png?classes=content-img "image_tooltip")
 
 
 
@@ -227,7 +234,7 @@ Steps
 11. The migrated VM can be seen in a new resource pool HDM_MIGRATE_POOL in the On-Premise vCenter and would be in a powered off state, while the same VM would be in a powered on state in the On-Cloud vCenter.
 
 
-![alt_text](images/image44.png "image_tooltip")
+![alt_text](images/image44.png?classes=content-img "image_tooltip")
 
 
 
@@ -235,7 +242,7 @@ Steps
 12. All migrations can be monitored through Cluster->Monitor->HDM>Migration->In Progress tab.
 
 
-![alt_text](images/image28.png "image_tooltip")
+![alt_text](images/image28.png?classes=content-img "image_tooltip")
 
 
 
@@ -245,7 +252,7 @@ Steps
 
 
 
-![alt_text](images/image45.png "image_tooltip")
+![alt_text](images/image45.png?classes=content-img "image_tooltip")
 
 
 
@@ -254,7 +261,7 @@ Steps
 
 
 
-![alt_text](images/image46.png "image_tooltip")
+![alt_text](images/image46.png?classes=content-img "image_tooltip")
 
 
 
@@ -262,7 +269,7 @@ Steps
     *   COMMIT :  Once the data has been synced, commit all the changes to the migrated virtual machine on On-Cloud and cleanup HDM configuration.
 
 
-![alt_text](images/image47.png "image_tooltip")
+![alt_text](images/image47.png?classes=content-img "image_tooltip")
 
 
 
@@ -270,7 +277,7 @@ Steps
 14. Virtual machines that have been migrated onto the cloud will be shown in Cluster->Monitor->HDM->Migration->Summary tab
 
 
-![alt_text](images/image11.png "image_tooltip")
+![alt_text](images/image11.png?classes=content-img "image_tooltip")
 
 
 
@@ -290,7 +297,7 @@ To view the snapshot
     The Manage Snapshots popup should display a snapshot named hdm_xx, for example hdm_1 shown below
 
 
-![alt_text](images/image21.png "image_tooltip")
+![alt_text](images/image21.png?classes=content-img "image_tooltip")
 
 
 
@@ -410,7 +417,7 @@ Steps
 1. In the On-Premise vCenter, right click on the VM that is to be migrated back. Click on the HDM -> Migrate Back option.
 
 
-![alt_text](images/image30.png "image_tooltip")
+![alt_text](images/image30.png?classes=content-img "image_tooltip")
 
 
 
@@ -418,7 +425,7 @@ Steps
 2. Select the VMs that are to be migrated back. The dependent VMs will be migrated back together.
 
 
-![alt_text](images/image23.png "image_tooltip")
+![alt_text](images/image23.png?classes=content-img "image_tooltip")
 
 
 
@@ -427,7 +434,7 @@ Steps
 
 
 
-![alt_text](images/image24.png "image_tooltip")
+![alt_text](images/image24.png?classes=content-img "image_tooltip")
 
 
 
@@ -436,7 +443,7 @@ Steps
 
 
 
-![alt_text](images/image25.png "image_tooltip")
+![alt_text](images/image25.png?classes=content-img "image_tooltip")
 
 
 
@@ -444,7 +451,7 @@ Steps
 5. Also, the migrate back task in vCenter can be tracked
 
 
-![alt_text](images/image26.png "image_tooltip")
+![alt_text](images/image26.png?classes=content-img "image_tooltip")
 
 
 
@@ -481,13 +488,13 @@ To view monitored data for such VMs
 
 
 
-![alt_text](images/image27.png "image_tooltip")
+![alt_text](images/image27.png?classes=content-img "image_tooltip")
 
 
 **Note**: In Lite mode of deployment(both standalone and cluster), this view is not present. Instead the following message should be there
 
 
-![alt_text](images/image10.png "image_tooltip")
+![alt_text](images/image10.png?classes=content-img "image_tooltip")
 
 
 
@@ -520,7 +527,7 @@ Such data is accessible through the steps
 2. On the right hand panel, go to Monitor -> HDM -> Migration -> In Progress
 
 
-![alt_text](images/image28.png "image_tooltip")
+![alt_text](images/image28.png?classes=content-img "image_tooltip")
 
 
 
@@ -533,14 +540,14 @@ The VMs which have been migrated to the On-Cloud are also monitored for resource
 1. In the On-Premise vCenter, select the cluster
 2. On the right hand panel, go to Monitor -> HDM -> Monitoring
 
-![alt_text](images/image9.png "image_tooltip")
+![alt_text](images/image9.png?classes=content-img "image_tooltip")
 
 
 
 **Note**: In Lite mode of deployment(both standalone and cluster), this view is not present. Instead the following message will be displayed
 
 
-![alt_text](images/image10.png "image_tooltip")
+![alt_text](images/image10.png?classes=content-img "image_tooltip")
 
 
 
@@ -564,7 +571,7 @@ To view the dashboard data for such VMs
 3. The migration summary gives the migration statistics and resource usage
 
 
-![alt_text](images/image11.png "image_tooltip")
+![alt_text](images/image11.png?classes=content-img "image_tooltip")
 
 
 
@@ -608,7 +615,7 @@ Following are the steps to configure RTO/RPO policy
 
 
 
-![alt_text](images/image12.png "image_tooltip")
+![alt_text](images/image12.png?classes=content-img "image_tooltip")
 
 
 	
@@ -627,17 +634,17 @@ Menu > HDM > Administration > HDM Health > Component Health
 
 
 
-![alt_text](images/image19.png "image_tooltip")
+![alt_text](images/image19.png?classes=content-img "image_tooltip")
 
 
 Incase of a failure the affected components will be shown here.
 
 
-![alt_text](images/image4.png "image_tooltip")
+![alt_text](images/image4.png?classes=content-img "image_tooltip")
 
 
 
-![alt_text](images/image13.png "image_tooltip")
+![alt_text](images/image13.png?classes=content-img "image_tooltip")
 
 
 
@@ -660,7 +667,7 @@ When the system is in a degraded state due to a failure this will be visible in;
 *   On the vCenter HDM -> Dashboard ,  we will see a notification mentioning **Services not ready or down...**
 
 
-![alt_text](images/image14.png "image_tooltip")
+![alt_text](images/image14.png?classes=content-img "image_tooltip")
 
 
 
@@ -669,7 +676,7 @@ When the system is in a degraded state due to a failure this will be visible in;
 In case a failure occurs, some components would get affected. The state of those components would be updated in the Appliance Control Panel as **Poor** and the HDM overall state is set to be ‘Not Ready’. The component color would change from blue to red. 
 
 
-![alt_text](images/image15.png "image_tooltip")
+![alt_text](images/image15.png?classes=content-img "image_tooltip")
 
 
 
@@ -677,7 +684,7 @@ In case a failure occurs, some components would get affected. The state of those
 *   A hover over the faulted component will give detail about the error.
 
 
-![alt_text](images/image16.png "image_tooltip")
+![alt_text](images/image16.png?classes=content-img "image_tooltip")
 
 
 
@@ -689,7 +696,7 @@ Menu > HDM > Administration > Event Logs
 
   
 
-![alt_text](images/image8.png "image_tooltip")
+![alt_text](images/image8.png?classes=content-img "image_tooltip")
 
 
 Failure and repair events generated will be shown in this events logs. A example of a failure seen in the log is below. There are events capturing failure of components and their successful recovery. The last failure on top of the log is an unrecoverable failure for which we need to do an HDM reset to recover from this error.
@@ -697,7 +704,7 @@ Failure and repair events generated will be shown in this events logs. A example
 
 
 
-![alt_text](images/image20.png "image_tooltip")
+![alt_text](images/image20.png?classes=content-img "image_tooltip")
 
 
 Additionally there are messages generated in the vCenter events log which indicate these failures. To narrow down on these messages. Select the “VCenter” and then “Monitor > Events”
@@ -708,7 +715,7 @@ Additionally there are messages generated in the vCenter events log which indica
 After selection the view will look like below.
 
 
-![alt_text](images/image17.png "image_tooltip")
+![alt_text](images/image17.png?classes=content-img "image_tooltip")
 
 
 
@@ -717,7 +724,7 @@ After selection the view will look like below.
 
 
 
-![alt_text](images/image18.png "image_tooltip")
+![alt_text](images/image18.png?classes=content-img "image_tooltip")
 
 
 
@@ -727,7 +734,7 @@ After selection the view will look like below.
 
 
 
-![alt_text](images/image1.png "image_tooltip")
+![alt_text](images/image1.png?classes=content-img "image_tooltip")
 
 ### Health State in the SQS Heartbeat
 
@@ -840,7 +847,7 @@ HDM would attempt to recover from the failure and bring the system back to a “
 <p id="gdcalert46" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert47">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![drawing](https://docs.google.com/drawings/d/12345/export/png)
+![drawing](https://docs.google.com/drawings/d/12345/export/png?classes=content-img)
 
 
 After recovery, a message is logged in vCenter Events:
@@ -850,7 +857,7 @@ After recovery, a message is logged in vCenter Events:
 <p id="gdcalert47" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image46.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert48">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/image46.png "image_tooltip")
+![alt_text](images/image46.png?classes=content-img "image_tooltip")
 
 
 
@@ -864,7 +871,7 @@ If a failure occurs while the migration operation is going on. HDM will go in de
 <p id="gdcalert48" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert49">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![drawing](https://docs.google.com/drawings/d/12345/export/png)
+![drawing](https://docs.google.com/drawings/d/12345/export/png?classes=content-img)
 
 For redundant components like HDM message gateway, recovery is complete only when the required level of redundancy is restored. If a migration operation is attempted, before the recovery is complete, it will fail.
 
@@ -881,7 +888,7 @@ Here is a depiction of the recovery process :
 <p id="gdcalert49" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert50">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![drawing](https://docs.google.com/drawings/d/12345/export/png)
+![drawing](https://docs.google.com/drawings/d/12345/export/png?classes=content-img)
 
 **Note: **
 
@@ -906,7 +913,7 @@ This resource pool hosts the VMs which have been migrated back as part of failur
 <p id="gdcalert50" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image47.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert51">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/image47.png "image_tooltip")
+![alt_text](images/image47.png?classes=content-img "image_tooltip")
 
 
 
