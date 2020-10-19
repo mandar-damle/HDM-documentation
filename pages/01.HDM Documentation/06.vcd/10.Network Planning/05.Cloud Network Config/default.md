@@ -8,7 +8,7 @@ In this section, we will show you how to configure the VDC required for HDM depl
 
 # Network Configuration
 
-#### <a name="create-routed-network"> Step 1: Create Routed Network UPLINK_WAN_NETWORK
+#### <a name="create-routed-network"> Step 1: Create Routed Network UPLINK_WAN_NETWORK</a>
 
 This network will be connected to the edge gateway. Cross-WAN communications between on-premises and cloud will be routed through this network for the HDM Appliance. IPsec tunnels [step 3](#step-3) will be configured to this network to complete the network configuration.
 
