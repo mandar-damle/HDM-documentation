@@ -23,8 +23,6 @@ Recoverable failure conditions
 
 Cleanup required on failure conditions
 
-
-
 *   Jobs that were running at the time of failure might leave stale files on the datastore which need to be cleaned. The files can be found on the datastore with [VM Name]/ folder.
 *   Failed jobs can be retried. New jobs will be accepted and executed.
 
