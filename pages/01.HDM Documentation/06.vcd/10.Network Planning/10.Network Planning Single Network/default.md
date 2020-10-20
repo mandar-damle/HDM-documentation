@@ -1,5 +1,6 @@
 ---
 title: 'Network Planning'
+published: false
 ---
 
 This single network config is intended to help you rapidly deploy PrimaryIO HDM to a test environment. The steps are intended for a single on-premises network environment, with cloud access via a WAN link and no separation of the management and VM network. All IP assignments in this guide are static/static-pool and connectivity between the on-premises and cloud environments is via IPSec. 
