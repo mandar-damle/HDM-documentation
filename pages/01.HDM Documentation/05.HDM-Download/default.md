@@ -15,4 +15,4 @@ You will receive an email with the following:
 Before proceeding with the installation, watch the training videos and use this guide.
 [https://www.primaryio.com/training/](https://www.primaryio.com/training/)
 
-[plugin:youtube](https://youtu.be/7sF1QGkCBJo)
+[plugin:youtube](https://youtu.be/7sF1QGkCBJo?size=400,600)
