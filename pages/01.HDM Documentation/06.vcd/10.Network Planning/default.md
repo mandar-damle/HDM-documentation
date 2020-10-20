@@ -65,9 +65,3 @@ HDM supports DHCP and static IP protocols. The protocol to be used must be selec
 
 **NOTE**: HDM does not support changing the IP address or associated details, once the system has been deployed with a given set of values (Appliance as well as other component VMs). Redeployment is required if IP for HDM components needs to be changed. 
 
-
-### **OS Requirements**
-
-There are no OS limitations for cold migration. 
-
-
