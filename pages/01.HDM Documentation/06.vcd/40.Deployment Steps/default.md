@@ -443,12 +443,6 @@ _Figure 32: Verify Installation of the Cloud State_
 
 **NOTE:** Configuration information needs to be gathered and loaded from vCD, so it may take a few minutes to load the Cloud Dashboard for the first time. 
 
-
-# HDM Migrations
-
-HDM is used to perform VM migrations from on-premises environments to the cloud. Detailed use cases and procedure for using HDM for migrate operations are explained in **HDM 2.1.3 Admin Guide.pdf.**
-
-
 # HDM Undeployment
 
 
