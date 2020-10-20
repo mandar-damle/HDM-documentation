@@ -51,6 +51,10 @@ _Figure 2: HDM components_
 
 HDM provides a flexible deployment model to support a wide range of user needs regarding use case, performance, scalability, and security. The detailed steps and options for each deployment method are covered in the **Deployment planning** and subsequent sections. 
 
+### Deployment Overview of HDM
+[plugin:youtube](https://youtu.be/BtpGR64wLGQ)
+
+
 # HDM Migrations
 
 HDM 2.1.3 is used to migrate VMs from on-premises environments to the cloud. There are two main use cases for HDM migrations:
@@ -74,5 +78,3 @@ The choice of which migration type to employ depends on the amount of data in th
 
 This use case provides a quick way to migrate VMs to the cloud while retaining the data on-premises. This helps users validate how the applications would run in the cloud, to help them decide whether or not to fully migrate them. The user can choose to migrate the applications back to the on-premises environment at any time.
 
-### Deployment Overview of HDM
-[plugin:youtube](https://youtu.be/BtpGR64wLGQ)
