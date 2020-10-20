@@ -8,7 +8,7 @@ order_manual: ''
 
 ## Deployment Requirements
 
-HDM provides a flexible deployment model to support a wide range of user needs regarding use case, performance, scalability, and security. This section will help you choose the correct deployment type and network topology to support your needs. 
+HDM provides a flexible deployment model to support a wide range of user needs with respect to use cases, performance, scalability, and security. This section will help you choose the correct deployment type and network topology to support your needs. 
 
 
 ### Deployment Types 
@@ -20,14 +20,14 @@ HDM provides _ultra-lite_, _lite_, _standard_, and _performance_ deployment opti
 
 
 
-1. Ultra-lite is the least resource intensive of the options. However, it only supports cold migration, and only to vCD.
+1. Ultra-lite is the least resource intensive of the options. However, it only supports cold migration, and only to VCD.
 2. The lite option requires the least number of resources to support all HDM migration use cases. However, it is limited in the number of parallel migrations and number of concurrently migrated VMs, compared to standard and performance deployment options.
 3. The standard option is more scalable but requires more resources than the lite option, but is less scalable and requires fewer resources than the performance option.
 4. The performance option requires the highest number of resources, but it provides the highest number of parallel migrations and number of concurrently migrated VMs.
 
 More details on the resource requirements for these deployment options is available in the next section.**_ _**
 
-**NOTE:_ _**Ultra-lite is the only Resource Allocation that supports migration to vCD.
+**NOTE:_ _**Ultra-lite is the only mode that supports migration to vCD.
 
 
 #### Standalone or Cluster
@@ -49,7 +49,7 @@ HDM queues all migrations requests and is capable of processing eight VMDKs per 
 
 ### HDM Resource Requirements
 
-Table 1 lists the resource requirements for each deployment type.
+Table 1 lists the resource requirements for each ultra-lite deployment type.
 
 _Table 1: Resource Requirements_
 
