@@ -3,7 +3,7 @@ title: 'System Requirements'
 ---
 
 ##### Hardware Requirements
-###### On-Premise
+###### On-Premises
 
 ** Total resources required for HDM:**
 11 vCPU, 16 GB RAM, 336 GB disk
@@ -12,7 +12,7 @@ title: 'System Requirements'
 * 1 PremMgr (3 vCPU, 4 GB RAM, 32 GB disk)
 * 1 ESXMgr (4 vCPU, 4GB RAM, 160 GB disk)
 
-###### Cloud 
+###### On-Cloud 
 
 ** Total resources required for HDM equivalent to:**
 10 vCPU, 26 GB RAM, 64 GB disk, 512 GB Cache
@@ -93,7 +93,7 @@ Related document: For hardware and system requirements, refer to the [VMware Har
 
 |Linux Distributions | Version |
 |:----------------------|:--------|
-| RHEL | 6.9, 6.10, 7.2, 7.3, 7.4, 7.5, 7.6 |
-| SLES | 12-SP4 |
-| CentOS | 7.6 (1810), 7.5 (1804), 7.4 (1708) |
-| Ubuntu Server	| 16.04, 18.04 |
+| RHEL | 6.9, 6.10, 7.2, 7.3, 7.4, 7.5, 7.6, 8.2 |
+| SLES | 12-SP5, 15-SP2 |
+| CentOS | 7.6 (1810), 7.5 (1804), 7.4 (1708), 8.2 |
+| Ubuntu Server	| 16.04, 18.04, 20.04 |
