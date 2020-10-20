@@ -74,4 +74,5 @@ The choice of which migration type to employ depends on the amount of data in th
 
 This use case provides a quick way to migrate VMs to the cloud while retaining the data on-premises. This helps users validate how the applications would run in the cloud, to help them decide whether or not to fully migrate them. The user can choose to migrate the applications back to the on-premises environment at any time.
 
+### Deployment Overview of HDM
 [plugin:youtube](https://youtu.be/BtpGR64wLGQ)
