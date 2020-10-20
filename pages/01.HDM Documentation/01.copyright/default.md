@@ -1,14 +1,12 @@
+---
+title: 'Copyright Notice'
+---
 
-Version: 2.1
-
+Version: 2.1.3
 Publish Date: August, 2020
-
 Copyright © 2020 PrimaryIO, Inc.
-
 PrimaryIO, Inc.
-
 300 3rd St, Los Altos
-
 CA 94022
 
 [http://www.primaryio.com](http://www.primaryio.com)
