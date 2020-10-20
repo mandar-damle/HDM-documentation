@@ -14,10 +14,19 @@ HDM provides a flexible deployment model to support a wide range of user needs w
 ![alt_text](images/image42.png?classes=content-img "image_tooltip")
 
 
-### Deployment Types 
+### HDM Deployment Types 
+While deploying HDM users need to select a combination of Deployment Mode and Resource Allocation type. The features of the available options are provided below to guide the user to choose the deployment type that is best suited for his / requirements. HDM deployed components.
+
+#### Deployment Mode : Standalone or Cluster
+
+You can choose either a standalone or cluster deployment mode, based on your scale and fault tolerance requirements. Here are a few points to keep in mind:
 
 
-#### Ultra-Lite, Lite, Standard, or Performance
+1. In standalone mode, a fixed number of HDM components are installed, regardless of the size of the on-premises cluster. Also, there is no HDM component redundancy in this mode, so fault tolerance is low.
+2. In cluster mode, some HDM components are installed in proportion to the scale of the on-premises cluster to deliver higher redundancy and better fault tolerance. This requires higher resource consumption, but allows a higher number of concurrent migrations, than the standalone option.
+
+
+#### Resource Allocation : Ultra-Lite, Lite, Standard, or Performance
 
 HDM provides _ultra-lite_, _lite_, _standard_, and _performance_ deployment options. The trade-off between them is CPU and memory resource utilization, versus the concurrent migration capacity. Here are a few points to keep in mind when choosing the option that best fits your needs:
 
@@ -32,15 +41,6 @@ More details on the resource requirements for these deployment options is availa
 
 **NOTE:_ _**Ultra-lite is the only mode that supports migration to vCD.
 
-
-#### Standalone or Cluster
-
-You can choose either a standalone or cluster deployment mode, based on your scale and fault tolerance requirements. Here are a few points to keep in mind:
-
-
-
-1. In standalone mode, a fixed number of HDM components are installed, regardless of the size of the on-premises cluster. Also, there is no HDM component redundancy in this mode, so fault tolerance is low.
-2. In cluster mode, some HDM components are installed in proportion to the scale of the on-premises cluster to deliver higher redundancy and better fault tolerance. This requires higher resource consumption, but allows a higher number of concurrent migrations, than the standalone option.
 
 
 ### Concurrency and Scale Support 
