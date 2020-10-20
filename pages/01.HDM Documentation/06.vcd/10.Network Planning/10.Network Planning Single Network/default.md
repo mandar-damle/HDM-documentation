@@ -54,7 +54,7 @@ Please add the vCenter FQDN for the on-premises and cloud vCenters on the on-pre
 
 ### Network planning sheet
 
-Please download this [spread sheet](../../../Planning%20Template.xls) and use along with
+Please download this [spread sheet](../../../Planning%20Template.xlsx) and use along with
 your deployment process.
 
 1. Choose the "Cloud Type"
