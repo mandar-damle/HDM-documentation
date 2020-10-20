@@ -33,24 +33,24 @@ Here is the process to create the  network for HDM which will act as a WAN and I
 
 *   On cloud Vcenter Click on Networking -> SDDC-DSwitch-Private (Right Click)-> Distributed Port Group -> New Distributed Port Group. In this wizard, enter the network name and click on next. 
 
-![alt_text](images/image8.png "image_tooltip")
+![alt_text](images/image8.png?classes=content-img "image_tooltip")
 
 *   Follow the next section of setting port group properties. In this section, configure the setting as per your requirements
 
-![alt_text](images/image17.png "image_tooltip")
+![alt_text](images/image17.png?classes=content-img "image_tooltip")
 
 *   Click on Finish.
 *    Define static and DHCP IP ranges on Edge Gateway -> Manage -> DHCP -> click on “+” -> Enter the start IP, End IP, DNS and Default Gateway and save it.
 
-![alt_text](images/image5.png "image_tooltip")
+![alt_text](images/image5.png?classes=content-img "image_tooltip")
 
 *   Please make sure Interface is in connected state
 
-![alt_text](images/image12.png "image_tooltip")
+![alt_text](images/image12.png?classes=content-img "image_tooltip")
 
 *   Please make sure the interface is connected to all required edges.
 
-![alt_text](images/image4.png "image_tooltip")
+![alt_text](images/image4.png?classes=content-img "image_tooltip")
 
 *   
 
@@ -77,7 +77,7 @@ Here are the Firewall configuration on premise and at the cloud side.
 *   At the Destination - Destination subnet
 *   Service - **Any**
 
-![alt_text](images/image6.png "image_tooltip")
+![alt_text](images/image6.png?classes=content-img "image_tooltip")
 
 
 
@@ -96,13 +96,13 @@ Here are the Firewall configuration on premise and at the cloud side.
     4. On edge - Click on “Manage” -> “VPN” -> “IPsec”
 
 
-![alt_text](images/image9.png "image_tooltip")
+![alt_text](images/image9.png?classes=content-img "image_tooltip")
 
 
     5. Click on the “+” sign to add IPsec tunnel and fill up the required information.
 
 
-![alt_text](images/image3.png "image_tooltip")
+![alt_text](images/image3.png?classes=content-img "image_tooltip")
 
 
     6.  Click on the Ok and start IPsec service.
@@ -121,12 +121,12 @@ Note: Instructions below are specific to SonicWall and users are requested to do
 
 
 
-![alt_text](images/image15.png "image_tooltip")
+![alt_text](images/image15.png?classes=content-img "image_tooltip")
 
 
 3. Proposal settings should be similar to the cloud side. 
 
-![alt_text](images/image14.png "image_tooltip")
+![alt_text](images/image14.png?classes=content-img "image_tooltip")
 
 
 4. Now start the IPsec tunnel services  and check the newly configured IPSec tunnel is up.
@@ -134,7 +134,7 @@ Note: Instructions below are specific to SonicWall and users are requested to do
 Once the configuration is done, to test the connectivity, try to ping/access cloud side VMs from the premise. If the test is not successful, it may be required to correctly add DNS to resolve FQDN.
 
 
-![alt_text](images/image2.png "image_tooltip")
+![alt_text](images/image2.png?classes=content-img "image_tooltip")
 
 
 Here are additional considerations, 
@@ -171,7 +171,7 @@ Here are the Firewall configuration on premise and at the cloud side.
 *   At the Destination - Destination subnet
 *   Service - **Any**
 
-![alt_text](images/image6.png "image_tooltip")
+![alt_text](images/image6.png?classes=content-img "image_tooltip")
 
 
 
@@ -207,13 +207,13 @@ Below section covers setting in details to allow traffic going from source to de
 
   Compute Edge or Customer Edge
 
-![alt_text](images/image11.png "image_tooltip")
+![alt_text](images/image11.png?classes=content-img "image_tooltip")
 
 
   Management Edge
 
 
-![alt_text](images/image16.png "image_tooltip")
+![alt_text](images/image16.png?classes=content-img "image_tooltip")
 
 
 
@@ -237,7 +237,7 @@ Below section covers setting in details to allow traffic going from source to de
     Compute Edge rules:
 
 
-![alt_text](images/image1.png "image_tooltip")
+![alt_text](images/image1.png?classes=content-img "image_tooltip")
 
 
 
@@ -248,5 +248,5 @@ Below section covers setting in details to allow traffic going from source to de
 <p id="gdcalert19" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image19.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert20">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/image7.png "image_tooltip")
+![alt_text](images/image7.png?classes=content-img "image_tooltip")
 
