@@ -16,7 +16,7 @@ HDM decouples compute (Virtual Machines - VM) and storage (Virtual Disks - VMDK)
 
 ## Components
 
-HDM consists of the following components that are dispersed between cloud and on-premises data centers (figure 1). These components are microservices packaged as VMs that work together to provide the data and control path necessary for its use cases. They also provide a flexible deployment model and failure resilience.
+HDM consists of the following components that are dispersed between on-premises and cloud data centers (figure 1). These components are microservices packaged as VMs that work together to provide the data and control path necessary for its use cases. They also provide a flexible deployment model and failure resilience.
 
 HDM 2.1.3 consists of microservices that have been packaged as VMs that work together to provide the data and control path to support the aforementioned use cases and to provide a flexible deployment model and failure resilience. HDM comprises the following components, dispersed between cloud and on-premises data centers (figure 1): 
 
