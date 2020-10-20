@@ -3,6 +3,7 @@ title: 'HDM 2.1.3 Release Notes'
 ---
 
 The HDM 2.1.3 release has been qualified for production use for the _Cold Migration Use case_ in the Ultra Lite-Standalone and Ultra Lite-Cluster configurations for migration to VMware Cloud Director. 
+
 For migrations to VMware Cloud Services or VMware Cloud Foundation HDM 2.1.3 release has been qualified for production use for the _Cold Migration, TBC and Warm Migration Use case_ in the Lite-Standalone,  Lite-Cluster, Standard-Standalone and Standard-Cluster configurations. 
 
 What is new in HDM 2.1.3 Release?
