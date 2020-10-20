@@ -8,7 +8,7 @@ PrimaryIO’s Hybrid Cloud Data Management technology decouples compute and stor
 
 HDM decouples compute and data to move workloads to public clouds faster and more efficiently. Existing solutions from other vendors require the full replication of data to the cloud, and the loss of enterprise data control is a major concern. By contrast, HDM identifies the frequently used data (hot dataset) and moves only the minimal hot data to the cloud to bring up workloads in the shortest possible time.
 
-HDM provides a very flexible deployment model providing options to be able to cater to different user needs in terms of use case, performance, scalability and security
+HDM provides a very flexible deployment model providing options to be able to cater to different user needs in terms of use case, performance, scalability and security.
 
 ## Compute and Data De-Coupling
 
