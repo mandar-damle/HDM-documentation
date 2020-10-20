@@ -317,7 +317,7 @@ Deployment steps:
 
 
 1. To access the HDM dashboard from the on-premises vCenter, select _HDM_ from _Shortcuts_ or the Menu.
-2. Select the _Administration** **_tab, then _Clouds_ to access the cloud listing (figure 21).
+2. Select the _Administration_ tab, then _Clouds_ to access the cloud listing (figure 21).
 
 _Figure 21: vCenter Cloud Listing_
 
@@ -327,7 +327,7 @@ _Figure 21: vCenter Cloud Listing_
 
 
 
-3. Select _Add Cloud.** **_This will open the HDM Cloud Wizard (figure 22).
+3. Select _Add Cloud_. This will open the HDM Cloud Wizard (figure 22).
 4. Select the Cloud type and enter your vCD credentials and the Cloud DNS. 
 
 _Figure 22: HDM Cloud Wizard_
