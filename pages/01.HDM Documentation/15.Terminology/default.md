@@ -1,3 +1,11 @@
+---
+title: ''
+media_order: ''
+body_classes: ''
+order_by: ''
+order_manual: ''
+---
+
 # Terminology
 
 This document uses the below terms and terminologies at multiple places.
@@ -68,3 +76,4 @@ This document uses the below terms and terminologies at multiple places.
 
     Mode of deployment based on the scale and fault tolerance requirements. Standalone has a fixed scale while cluster deployment scales with the number of nodes in the cluster.
 
+[plugin:youtube](https://youtu.be/BtpGR64wLGQ)
