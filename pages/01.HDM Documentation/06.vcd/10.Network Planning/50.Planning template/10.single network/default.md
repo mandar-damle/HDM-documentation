@@ -4,7 +4,7 @@ title: Non-segregated network
 
 The non-segregated network is represented would look like
 
-![alt_text](images/image5.jpg "image_tooltip")
+![alt_text](images/image5.png "image_tooltip")
 
 
 In this case, all of the 4 networks would map to **_VM Network / Management Network. _**Users would still need to provide details for each of the networks separately. Users can divide the IP subnet into multiple ranges which can be mapped to these four networks. 
