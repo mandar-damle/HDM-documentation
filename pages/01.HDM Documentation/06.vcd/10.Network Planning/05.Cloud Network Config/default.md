@@ -2,9 +2,7 @@
 title: 'Org VDC System and Network Configuration'
 ---
 
-By now you understand the use cases for HDM, the resources required, and the tradeoffs associated with each of the configurations in which HDM may be deployed.
-
-In this section, we will show you how to configure the VDC required for HDM deployment.
+This section, describes how to configure the VDC required for HDM deployment.
 
 # Network Configuration
 
