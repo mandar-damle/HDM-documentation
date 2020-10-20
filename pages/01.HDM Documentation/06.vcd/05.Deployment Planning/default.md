@@ -10,6 +10,8 @@ order_manual: ''
 
 HDM provides a flexible deployment model to support a wide range of user needs with respect to use cases, performance, scalability, and security. This section will help you choose the correct deployment type and network topology to support your needs. 
 
+![alt_text](images/image42.png?classes=content-img "image_tooltip")
+
 
 ### HDM Deployment Types 
 While deploying HDM users need to select a combination of Deployment Mode and Resource Allocation type. The features of the available options are provided below to guide the user to choose the deployment type that is best suited for his / requirements. HDM deployed components.
