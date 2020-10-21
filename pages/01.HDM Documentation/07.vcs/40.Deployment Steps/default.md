@@ -397,8 +397,7 @@ Steps for deployment
 
 
 
-9. Set WAN route configuration so that data traffic from On-Cloud to On-Premise is possible. See Deployment Requirements section for details.
-
+9. <a name="wan-cfg">Set WAN route</a> configuration so that data traffic from On-Cloud to On-Premise is possible. See the network planning section [WAN Routing Configuration](../network%20planning/planning%20template/single%20network#wan-routing-configuration).
 
 
 ![alt_text](images/image18.png?classes=content-img "image_tooltip")
