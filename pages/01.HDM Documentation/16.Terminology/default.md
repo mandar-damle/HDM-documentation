@@ -70,7 +70,7 @@ This document uses the below terms and terminologies at multiple places.
 
     Type of deployment based on the resource allocation. Lite has least requirements and performance has maximum. 
 
-*   **[Standalone or Cluster Deployment](./#id-1)**
+*   **[Standalone or Cluster Deployment](?#id-1)**
 
     Mode of deployment based on the scale and fault tolerance requirements. Standalone has a fixed scale while cluster deployment scales with the number of nodes in the cluster.
 
