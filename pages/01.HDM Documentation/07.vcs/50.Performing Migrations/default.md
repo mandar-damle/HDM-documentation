@@ -20,7 +20,7 @@ three types of migration these are.
 
 ## Migrate a VM using vCenter 
 
-**Note:** Migration operation is performed using the Primary IO GUI interface in vCenter as well as through SQS interface library.  Following sections describe the steps for executing the migration operation through vCenter. 
+**Note:** Migration operation is performed using the PrimaryIO GUI interface in vCenter as well as through SQS interface library.  Following sections describe the steps for executing the migration operation through vCenter. 
 
 **Note**: Currently, HDM supports deployment for migration for only one cluster per vCenter at a time. If the VMs are to be migrated from multiple clusters, the process of deploy, migrate, undeploy would have to repeat for multiple clusters.
 
@@ -1040,4 +1040,4 @@ If a snapshot of a VM has been bulk transferred to On-Cloud and a failure occurs
 
 **Refer to the Troubleshooting Guide in case the failure issues are not resolved. The failure might have been caused due to one of the known product issues. **
 
-**Finally, seeking help from Primary IO support may be required, refer to the Install Guide for the details. **
+**Finally, seeking help from PrimaryIO support may be required, refer to the Install Guide for the details. **
