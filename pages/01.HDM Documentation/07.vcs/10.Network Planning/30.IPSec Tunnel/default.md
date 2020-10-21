@@ -150,7 +150,7 @@ Steps for this section are the same as **Premise WAN network to SDDC Compute Edg
 
  **IPsec tunnel between  Compute and Management Edge gateways**
 
-**	**In this section, users are supposed to configure IPsec tunnel between cloud  Compute amd Management gateway so that HDM components attached to hdm_internal network can communicate to ESXi hosts. For more details please refer to [this^](https://cloud.vmware.com/community/2019/05/06/can-vm-vmc-compute-network-access-sddc-management-network/) link.
+**	**In this section, users are supposed to configure IPsec tunnel between cloud  Compute and Management gateway so that HDM components attached to hdm_internal network can communicate to ESXi hosts. For more details please refer to [this^](https://cloud.vmware.com/community/2019/05/06/can-vm-vmc-compute-network-access-sddc-management-network/) link.
 
 
 ## Setting up Multiple Network IPSec tunnel

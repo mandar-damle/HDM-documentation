@@ -85,7 +85,7 @@ _Figure 8: Configuring the System for Static IP Protocol_
 #### Gateway settings
 
 The setting in **Default gateway network** should be chosen so
-that traffic for other subnets can be rounted through this interface. This would 
+that traffic for other subnets can be routed through this interface. This would 
 generally be the WAN network but please verify the specifics for
 your network.
 
@@ -93,7 +93,7 @@ In the field **Default Gateway** set the default gateway for the
 network chosen under **Default gateway network**. 
 
 
-> **Getting this wrong will cause deployment to fail eventually and you will have to perfrom an [HDM Reset](../../hdm%20reset)**
+> **Getting this wrong will cause deployment to fail eventually and you will have to perform an [HDM Reset](../../hdm%20reset)**
 
 _Figure 8b: Configuring gateway, NTP and default gateway_
 ![alt_text](images/Gateway-OVF.png?classes=content-img)
