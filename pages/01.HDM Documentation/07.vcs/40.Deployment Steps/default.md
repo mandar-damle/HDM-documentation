@@ -90,6 +90,20 @@ Networks with DHCP, can skip this configuration.
 
 ![alt_text](images/image57.png?classes=content-img "image_tooltip")
 
+#### Gateway settings
+
+The setting in **Default gateway network** should be chosen so
+that traffic for other subnets can be rounted through this interface. This would 
+generally be the WAN network but please verify the specifics for
+your network.
+
+In the field **Default Gateway** set the default gateway for the 
+network choosen under **Default gateway network**. 
+
+> **Getting this wrong will cause deployment to fail eventually and you will have to perfrom an [HDM Reset](../../hdm%20reset)**
+
+_Figure 8b: Configuring gateway, NTP and default gateway_
+![alt_text](images/Gateway-OVF.png?classes=content-img)
 
 
 #### Power on the Appliance
@@ -124,7 +138,7 @@ Steps
 
 
 
-1. Log into the _PIO Appliance_ by accessing _https://&lt;appliance ip>_ in a supported web browser and entering the administrator credentials. The default administrator username and password are _‘administrator’_ and _‘admin@123’_ respectively. Users are recommended to change the default password after the first login.
+1. Log into the _PIO Appliance_ by accessing _https://&lt;appliance ip>_ in a supported web browser and entering the administrator credentials. The default administrator username and password are _‘administrator’_ and _‘2Hdm$aK!N@h!’_ respectively. Users are recommended to change the default password after the first login.
 2. Click on **vCenters** in the top pane.
 3. Click on **Add vCenter** at the top right.
 
