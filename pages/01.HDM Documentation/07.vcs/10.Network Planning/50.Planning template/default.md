@@ -1,5 +1,5 @@
 ---
-title: Planning Templates
+title: 'Planning Templates'
 ---
 
 To make the task of plannig your network easier we have created two simple templates

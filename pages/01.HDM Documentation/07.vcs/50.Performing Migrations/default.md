@@ -1,5 +1,5 @@
 ---
-title: ''
+title: 'Performing Migrations'
 media_order: ''
 body_classes: ''
 order_by: ''
@@ -9,11 +9,10 @@ order_manual: ''
 
 # HDM Migrations
 
-HDM is used to perform migration of VMs from On-Premise to the cloud. There are different use cases where 
-
-HDM migrations are used:
 
 
+HDM is used to perform migration of VMs from On-Premise to the cloud. HDM support the
+three types of migration these are.
 
 1. Agile Rapid Migration (ARM)
 2. Try Before Commit (TBC)

@@ -1,5 +1,5 @@
 ---
-title: "Undeploy steps"
+title: "Undeploy Steps"
 ---
 
 ## Steps for HDM Undeployment

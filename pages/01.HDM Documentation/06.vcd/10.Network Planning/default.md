@@ -1,5 +1,5 @@
 ---
-- 'title:"Network Planning"'
+title: 'Network Planning'
 ---
 
 Your network topology choices determine how the HDM components will be configured within your network. It also dictates how VMs will be migrated to best support post-migration network security and VM isolation requirements. 
