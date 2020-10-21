@@ -487,8 +487,7 @@ Please fill the table below for reference during the installation process.
 
 #### WAN Routing Configuration
 
-The following WAN routes are required to access on-cloud from on-premise and vice-versa.
-
+The following WAN routes are required to access on-cloud from on-premise and vice-versa. This is required in during the [Set WAN route](../../deployment%20steps#wan-cfg) part of cloud configuration.
 
 
 *   **On-Prem WAN route**
