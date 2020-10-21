@@ -1,6 +1,5 @@
 ---
 title: 'Segregated Network'
-titile: 'Segregated network'
 ---
 
 A segregated network would look like below
@@ -486,7 +485,7 @@ Please fill the table below for reference during the installation process.
 #### WAN Routing Configuration
 
 The following WAN routes are required to access on-cloud from on-premise and vice-versa.
-
+This information will be required at []
 
 
 *   **On-Prem WAN route**
