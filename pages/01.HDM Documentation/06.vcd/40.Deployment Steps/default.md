@@ -371,7 +371,7 @@ _Figure 25: WAN Configuration_
 
 
 
-8. Set WAN route configuration to enable data traffic to travel from the cloud to the on-premises environment (figure 26). See the network planning section [WAN Routing Configuration](../network%20planning/planning%20template/single%20network#wan-routing-configuration#wanconfig).
+8. Set WAN route configuration to enable data traffic to travel from the cloud to the on-premises environment (figure 26). See the network planning section [WAN Routing Configuration](../network%20planning/planning%20template/single%20network#wan-routing-configuration).
 
 _Figure 26: WAN Route Configuration_
 
