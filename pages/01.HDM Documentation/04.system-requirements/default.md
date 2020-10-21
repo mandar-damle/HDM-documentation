@@ -43,6 +43,7 @@ title: 'System Requirements'
 *   The PrimaryIO Appliance should be deployed on the same vCenter and datacenter it will be managing. It is recommended to deploy on a cluster that will not be migrated.
 *   HDM components should be deployed on a shared datastore.
 
+
 #### Cloud Requirements
 
 ##### Cloud Environment
