@@ -72,7 +72,7 @@ title: 'System Requirements'
 *   Network Round Trip Time Latencies: &lt; 30 ms
  
 ##### Hardware Requirements
-*   For HDM component requirements, check the deployment planning section in cloud sections as per your cloud end-point.
+*   For HDM component requirements, check the deployment planning section as per your cloud end-point.
  
  
 #### OS Support (TBC/Warm Migration)
