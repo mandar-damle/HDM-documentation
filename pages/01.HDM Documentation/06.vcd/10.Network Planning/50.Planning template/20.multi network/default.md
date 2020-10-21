@@ -1,4 +1,5 @@
 ---
+title: 'Segregated Network'
 titile: 'Segregated network'
 ---
 
