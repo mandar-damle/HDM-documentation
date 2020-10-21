@@ -46,14 +46,14 @@ title: 'System Requirements'
 
 ##### Cloud Environment
 
-*   Supported cloud endpoints:
-    *   VMware Cloud on AWS
-    *   IBM Cloud for VMware Solution
-    *   VMware Cloud Foundation SDDC
-    *   VMware Cloud Director
-*   HDM components should be deployed on Shared Datastore
+    *   Supported cloud endpoints:
+        *   VMware Cloud on AWS
+        *   IBM Cloud for VMware Solution
+        *   VMware Cloud Foundation SDDC
+        *   VMware Cloud Director
+    *   HDM components should be deployed on Shared Datastore
 
- ##### Network Environment
+##### Network Environment
     *   Cloud HDM components should have access to the WAN network.
     *   Cloud VCenter and ESXi should be accessible on-premises at port 443.
     *   E1000E and VMXNet3 network adapter should be available in  the cloud vCenter.
@@ -66,7 +66,7 @@ title: 'System Requirements'
         *   Port 8000-8010 - inbound and outbound
         *   Post 32820 - inbound and outbound
  
-##### Network connectivity between on-premises and the cloud
+ ##### Network connectivity between on-premises and the cloud
     *   Network Link >= 1 Gbps
     *   Network Round Trip Time Latencies: &lt; 30 ms
  
