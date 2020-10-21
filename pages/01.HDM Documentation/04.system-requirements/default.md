@@ -74,6 +74,7 @@ title: 'System Requirements'
 ##### Hardware Requirements
 *   For HDM component requirements, check the deployment planning section in cloud sections as per your cloud end-point.
  
+ 
 #### OS Support (TBC/Warm Migration)
 
 **Windows**
