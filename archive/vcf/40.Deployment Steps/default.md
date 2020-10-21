@@ -2,7 +2,7 @@
 - 'title:"Deployment Steps"'
 ---
 
-This section describes how to deploy, configure, and undeploy PrimaryIO Hybrid Data Management (HDM) 2.1.3 for enabling migrations of virtual machines to VMware Cloud Director (vCD).
+This section describes how to deploy, configure, and undeploy PrimaryIO Hybrid Cloud Data Management (HDM) 2.1.3 for enabling migrations of virtual machines to VMware Cloud Director (vCD).
 
 
 ## HDM Deployment Steps
