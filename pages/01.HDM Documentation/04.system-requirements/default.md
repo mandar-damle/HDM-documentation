@@ -27,7 +27,7 @@ title: 'System Requirements'
 
 ##### Hardware Requirements
 
-* 1 Appliance (4 vCPU, 8 GB RAM, 144 GB disk)
+*  PrimaryIO  Appliance (4 vCPU, 8 GB RAM, 144 GB disk)
 *  During HDM components deployment, more resources are required. Please check deployment planning section as per you cloud end-point.
 
 
