@@ -4,16 +4,6 @@ title: 'System Requirements'
 
 #### On-Premises Requirements
 
-##### Hardware Requirements
-
-** Total resources required for HDM:**
-11 vCPU, 16 GB RAM, 336 GB disk
-
-* 1 Appliance (4 vCPU, 8 GB RAM, 144 GB disk)
-* 1 PremMgr (3 vCPU, 4 GB RAM, 32 GB disk)
-* 1 ESXMgr (4 vCPU, 4GB RAM, 160 GB disk)
-
-
 ##### VMWare Environment
 * Single version of ESXi throughout the vCenter cluster
 * ESXi in connected state in the vCenter
@@ -34,6 +24,12 @@ title: 'System Requirements'
 * Network Link: at least 1 Gbps
 * Network Round Trip Time Latencies: less than 30 ms
 
+
+##### Hardware Requirements
+
+* 1 Appliance (4 vCPU, 8 GB RAM, 144 GB disk)
+
+
 **NOTES**
 1. Currently, HDM only supports migration of one cluster per vCenter at a time. If VMs need to be migrated from multiple clusters, the process of deploy, migrate, and undeploy must be repeated for each of the clusters.
 2. VM Network (Management Network), HDM_Internal_Network (HDM Internal Network), Uplink_WAN_Network (WAN Network) and ESXi_Network (ESXi Network) can map to a single network or multiple networks. In the event that a single network provides all of this functionality, details would still need to provided for each. In this case, the IP subnet can be divided into multiple ranges that can be mapped to each of the four networks.
@@ -47,13 +43,6 @@ title: 'System Requirements'
 *   HDM components should be deployed on a shared datastore.
 
 #### Cloud Requirements
-##### Hardware Requirements
-
-** Total resources required for HDM equivalent to:**
-10 vCPU, 26 GB RAM, 64 GB disk, 512 GB Cache
-
-* 1 CloudMgr (4 vCPU, 6 GB RAM, 32 GB disk)
-* 1 CloudCache (6 vCPU, 20 GB RAM, 32 GB disk, 512 GB cache)
 
 ##### VMWare Environment
 
@@ -79,6 +68,9 @@ title: 'System Requirements'
         *   Port 8000-8010 - inbound and outbound
         *   Post 32820 - inbound and outbound
 
+##### Hardware Requirements
+Check the deployment planning section in different cloud sections as per your cloud endpoint.
+ 
 #### OS Support (TBC/Warm Migration)
 
 **Windows**
