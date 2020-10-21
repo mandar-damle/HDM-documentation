@@ -15,7 +15,7 @@ HDM provides a flexible deployment model to support a wide range of user needs w
 
 
 ### HDM Deployment Types 
-While deploying HDM users need to select a combination of Deployment Mode and Resource Allocation type. The features of the available options are provided below to guide the user to choose the deployment type that is best suited for his / requirements. HDM deployed components.
+While deploying HDM users need to select a combination of Deployment Mode and Resource Allocation type. The features of the available options are provided below to guide the user to choose the deployment type that is best suited for their requirements. HDM deployed components.
 
 #### Deployment Mode : Standalone or Cluster
 

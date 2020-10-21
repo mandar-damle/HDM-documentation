@@ -279,7 +279,7 @@ After complete deployment, users may not find any action available to migrate VM
 **Resolution**: The solution will be do logout-login of vCenter and try again migrating, if it still not giving any option then please restart vsphere-ui (`service-control --stop vsphere-ui;service-control --start vsphere-ui;`)  service from the vcenter ssh console.
 
 
-###### **Power off during migrate back is taking long time for some flavours of Linux guest VMs**
+###### **Power off during migrate back is taking long time for some flavor of Linux guest VMs**
 
 VMs that are migrated back are first powered off on the On-Cloud. For Ubuntu 16.04 and RHEL 7.4, this operation can take longer time. IO errors can also be seen in the guest VMs during this process. 
 

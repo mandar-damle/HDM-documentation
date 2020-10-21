@@ -35,7 +35,7 @@ The different network selection and their usage by HDM components is depicted be
 
 During deployment, HDM components are configured such that the requirements for network access to necessary data stores, networks and communication with other components are met. For example, HDM doesn’t require access to application networks and so HDM components are not configured to access them. 
 
-During HDM deployment, users are required to categorise and map and the networks discovered in the vCenter as per the types mentioned above. 
+During HDM deployment, users are required to categorize and map and the networks discovered in the vCenter as per the types mentioned above. 
 
 
 

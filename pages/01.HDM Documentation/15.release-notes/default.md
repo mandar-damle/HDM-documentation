@@ -45,7 +45,7 @@ CP-5262: During deployment, adding a VMware Cloud Director (VCD) target can take
 **The following issues are related to the migration to VMware Cloud**
 
 
-**CP-5612**: VMC does not always honor the "Disable DRS" settings on the component VMs deployed in the cloud. This can result in resources such as Cloud_Cache becoming seperated from the migrated VMs running in the cloud. This is generally not a cause for concern, but can result in the VM becoming unresponsive if the ESXi host were to fail. The system will correctly roll back the VM to on-premises and start it from the last RTO/RPO checkpoint.
+**CP-5612**: VMC does not always honor the "Disable DRS" settings on the component VMs deployed in the cloud. This can result in resources such as Cloud_Cache becoming separated from the migrated VMs running in the cloud. This is generally not a cause for concern, but can result in the VM becoming unresponsive if the ESXi host were to fail. The system will correctly roll back the VM to on-premises and start it from the last RTO/RPO checkpoint.
 
 DP-2738:  In the event the “On Prem I/O Manager” fails, recovery is impossible and the component will be marked as permanently failed in the control panel of the appliance UI. To recover from this condition, an “[HDM Reset](../hdm%20reset)”, followed by a redeployment, will be required.
 
@@ -85,5 +85,7 @@ CP-5064: Historical IO analysis data is shown for powered-off virtual machines. 
 
 CP-5119: HDM supports two ARM parallel syncs per HDM cloud cache. If more ARM sync requests are submitted, the following error message will appear in the ARM sync pop-up:
 ```
-"Error: PM-523: Failed to post data for sync. Please try again after sometime. {'msg': 'Failed to submit Sync operation for VM.', 'status': -1, 'vm_uuid': 	'192.168.5.228_vm-1040', 'resp': &lt;Response [429]>}"
+"Error: PM-523: Failed to post data for sync. Please try again after sometime. 
+{'msg': 'Failed to submit Sync operation for VM.', 'status': -1, 
+  'vm_uuid': 	'192.168.5.228_vm-1040', 'resp': &lt;Response [429]>}"
 ```

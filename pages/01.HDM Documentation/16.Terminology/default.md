@@ -1,12 +1,10 @@
 ---
-title: ''
+title: 'Terminology'
 media_order: ''
 body_classes: ''
 order_by: ''
 order_manual: ''
 ---
-
-# Terminology
 
 This document uses the below terms and terminologies at multiple places.
 
