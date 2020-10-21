@@ -3,7 +3,8 @@ title: 'Segregated Network'
 titile: 'Segregated network'
 ---
 
-A segregated network would look like below
+A segregated network would 
+look like below
 
 ![drawing](images/image6.png)
 
