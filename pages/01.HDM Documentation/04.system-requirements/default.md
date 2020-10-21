@@ -2,8 +2,9 @@
 title: 'System Requirements'
 ---
 
+#### On-Premises Requirements
+
 ##### Hardware Requirements
-###### On-Premises
 
 ** Total resources required for HDM:**
 11 vCPU, 16 GB RAM, 336 GB disk
@@ -12,17 +13,8 @@ title: 'System Requirements'
 * 1 PremMgr (3 vCPU, 4 GB RAM, 32 GB disk)
 * 1 ESXMgr (4 vCPU, 4GB RAM, 160 GB disk)
 
-###### On-Cloud 
-
-** Total resources required for HDM equivalent to:**
-10 vCPU, 26 GB RAM, 64 GB disk, 512 GB Cache
-
-* 1 CloudMgr (4 vCPU, 6 GB RAM, 32 GB disk)
-* 1 CloudCache (6 vCPU, 20 GB RAM, 32 GB disk, 512 GB cache)
-
 Related document: For hardware and system requirements, refer to the [VMware Hardware Compatibility List (HCL).](https://www.vmware.com/resources/compatibility/search.php)
 
-#### On-Premises Requirements
 ##### VMWare Environment
 * Single version of ESXi throughout the vCenter cluster
 * ESXi in connected state in the vCenter
@@ -56,6 +48,15 @@ Related document: For hardware and system requirements, refer to the [VMware Har
 *   HDM components should be deployed on a shared datastore.
 
 #### Cloud Requirements
+##### Hardware Requirements
+
+** Total resources required for HDM equivalent to:**
+10 vCPU, 26 GB RAM, 64 GB disk, 512 GB Cache
+
+* 1 CloudMgr (4 vCPU, 6 GB RAM, 32 GB disk)
+* 1 CloudCache (6 vCPU, 20 GB RAM, 32 GB disk, 512 GB cache)
+
+##### Hardware Requirements
 
 *   Supported cloud endpoints:
     *   VMware Cloud on AWS
