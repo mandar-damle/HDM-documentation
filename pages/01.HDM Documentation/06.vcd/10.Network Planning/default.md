@@ -19,7 +19,7 @@ An ideal network configuration isolates various types of network traffic for max
 
 1. Management Network (VM Network): This network usually maps to the VM network and provides access to vCenter. All management API communications with vCenter take place over this network.
 2. ESXi Network (ESXi_Network): This network usually maps to the VM network and provides access to ESXi.
-3. HDM Internal Network (HDM_Internal_Network): This network is used by HDM for communication among its components. It is recommended to configure a dedicated low latency network for this purpose. This network is illustrated in figure 2 as _PrimaryIO On-Premises_ and _PrimaryIO Cloud_.
+3. HDM Internal Network (HDM_Internal_Network): This network is used by HDM for communication among its components. It is recommended to configure a dedicated low latency network for this purpose.
 4. WAN Network (Uplink_WAN_Network): This network provides access to the cloud. All data transfers between the on-premises and cloud environments take place over this network, via either a public link or a direct connection.
 5. Application Network: This network facilitates application VM data transfers; each application can employ its own network.
 
@@ -64,10 +64,4 @@ _Figure 5: Mapping Source and Destination Networks in a Single Network Test Envi
 HDM supports DHCP and static IP protocols. The protocol to be used must be selected during the HDM deployment process. When choosing static IP, an IP allocation range must be provided. The number of IPs required will depend on the number of nodes in the cluster and the deployment mode chosen. 
 
 **NOTE**: HDM does not support changing the IP address or associated details, once the system has been deployed with a given set of values (Appliance as well as other component VMs). Redeployment is required if IP for HDM components needs to be changed. 
-
-
-### **OS Requirements**
-
-There are no OS limitations for cold migration. 
-
 

@@ -1,31 +1,27 @@
 ---
-title: Non-segregated network
+titile: 'Segregated network'
 ---
 
-The non-segregated network is represented would look like
+A segregated network would look like below
 
-![alt_text](images/image10.jpg "image_tooltip")
+![drawing](images/image6.png)
 
+In this case, these networks would map to different networks.  
 
-In this case, all of the 4 networks would map to **_VM Network / Management Network. _**Users would still need to provide details for each of the networks separately. Users can divide the IP subnet into multiple ranges which can be mapped to these four networks. 
-
-For example, for a network 10.102.0.0/16, we can have following IP ranges and can be used accordingly:
-
-
+For example,
 
 *   10.102.1.2 - 10.102.1.20 (VM Network)
-*   10.102.1.21 - 10.102.1.40 (ESXi_Network)
-*   10.102.1.41 - 10.102.1.60 (Uplink_WAN_Network)
-*   10.102.1.61 - 10.102.1.80 (HDM_Internal_Networking)
-
-During HDM deployment, users are required to categorise and map the networks discovered in the vCenter as per the types mentioned above. 
+*   10.102.2.2 - 10.102.2.20 (ESXi_Network)
+*   10.102.3.2 - 10.102.3.20 (Uplink_WAN_Network)
+*   10.102.4.2 - 10.102.4.20 (HDM_Internal_Networking)
 
 
 
 ![alt_text](images/image13.png "image_tooltip")
 
-
-In this case all of the “Source Networks” would map to **_VM Network / Management Network_** during the deployment process as shown below. 
+Identify and map each of the network to the correct
+network in your environment. Each of the network will have a 
+seperate subnet range and gateway. 
 
 ### Network planning spread sheet
 
@@ -151,13 +147,14 @@ A pool of IP addresses need to be allocated. The number of IPs for each category
 **ESXi_Network: **2 IPs required
 
 
-    **Note:  **
-
-
+```
+**Note:  **
 
 1. **The subnet range 172.17.0.0/16 is not available for the deployment; it is internally used by HDM microservices.**
+```
 
 Please fill the table below for reference during the installation process.
+
 
 **HDM_Internal_Network**
 
@@ -174,7 +171,7 @@ Please fill the table below for reference during the installation process.
   <tr>
    <td><strong>IP range</strong>
    </td>
-   <td><em>10.102.10.100-10.102.10.120,  10.102.10.130</em>
+   <td><em>10.102.4.2-10.102.4.4,  10.102.4.7</em>
    </td>
    <td>
    </td>
@@ -190,7 +187,7 @@ Please fill the table below for reference during the installation process.
   <tr>
    <td><strong>Gateway</strong>
    </td>
-   <td><em>10.102.10.1</em>
+   <td><em>10.102.4.1</em>
    </td>
    <td>
    </td>
@@ -237,7 +234,7 @@ Please fill the table below for reference during the installation process.
   <tr>
    <td><strong>IP range</strong>
    </td>
-   <td><em>10.102.10.131-10.102.10.151</em>
+   <td><em>10.102.3.2-10.102.3.4</em>
    </td>
    <td>
    </td>
@@ -253,7 +250,7 @@ Please fill the table below for reference during the installation process.
   <tr>
    <td><strong>Gateway</strong>
    </td>
-   <td><em>10.102.10.1</em>
+   <td><em>10.102.3.1</em>
    </td>
    <td>
    </td>
@@ -300,7 +297,7 @@ Please fill the table below for reference during the installation process.
   <tr>
    <td><strong>IP range</strong>
    </td>
-   <td><em>10.102.10.152-10.102.10.172</em>
+   <td><em>10.102.2.2-10.102.2.4</em>
    </td>
    <td>
    </td>
@@ -316,7 +313,7 @@ Please fill the table below for reference during the installation process.
   <tr>
    <td><strong>Gateway</strong>
    </td>
-   <td><em>10.102.10.1</em>
+   <td><em>10.102.2.1</em>
    </td>
    <td>
    </td>

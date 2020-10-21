@@ -8,7 +8,7 @@ PrimaryIO’s Hybrid Cloud Data Management technology decouples compute and stor
 
 HDM decouples compute and data to move workloads to public clouds faster and more efficiently. Existing solutions from other vendors require the full replication of data to the cloud, and the loss of enterprise data control is a major concern. By contrast, HDM identifies the frequently used data (hot dataset) and moves only the minimal hot data to the cloud to bring up workloads in the shortest possible time.
 
-HDM provides a very flexible deployment model providing options to be able to cater to different user needs in terms of use case, performance, scalability and security
+HDM provides a very flexible deployment model providing options to be able to cater to different user needs in terms of use case, performance, scalability and security.
 
 ## Compute and Data De-Coupling
 
@@ -16,7 +16,7 @@ HDM decouples compute (Virtual Machines - VM) and storage (Virtual Disks - VMDK)
 
 ## Components
 
-HDM consists of the following components that are dispersed between cloud and on-premises data centers (figure 1). These components are microservices packaged as VMs that work together to provide the data and control path necessary for its use cases. They also provide a flexible deployment model and failure resilience.
+HDM consists of the following components that are dispersed between on-premises and cloud data centers (figure 1). These components are microservices packaged as VMs that work together to provide the data and control path necessary for its use cases. They also provide a flexible deployment model and failure resilience.
 
 HDM 2.1.3 consists of microservices that have been packaged as VMs that work together to provide the data and control path to support the aforementioned use cases and to provide a flexible deployment model and failure resilience. HDM comprises the following components, dispersed between cloud and on-premises data centers (figure 1): 
 
@@ -51,6 +51,10 @@ _Figure 2: HDM components_
 
 HDM provides a flexible deployment model to support a wide range of user needs regarding use case, performance, scalability, and security. The detailed steps and options for each deployment method are covered in the **Deployment planning** and subsequent sections. 
 
+### Deployment Overview of HDM
+[plugin:youtube](https://youtu.be/BtpGR64wLGQ)
+
+
 # HDM Migrations
 
 HDM 2.1.3 is used to migrate VMs from on-premises environments to the cloud. There are two main use cases for HDM migrations:
@@ -74,5 +78,3 @@ The choice of which migration type to employ depends on the amount of data in th
 
 This use case provides a quick way to migrate VMs to the cloud while retaining the data on-premises. This helps users validate how the applications would run in the cloud, to help them decide whether or not to fully migrate them. The user can choose to migrate the applications back to the on-premises environment at any time.
 
-### Deployment Overview of HDM
-[plugin:youtube](https://youtu.be/BtpGR64wLGQ)

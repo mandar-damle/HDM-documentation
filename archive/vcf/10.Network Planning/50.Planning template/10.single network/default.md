@@ -1,27 +1,56 @@
 ---
-titile: 'Segregated network'
+title: Non-segregated network
 ---
 
-A segregated network would look like below
+The non-segregated network is represented would look like
 
-![drawing](images/image23.png)
+![alt_text](images/image10.jpg "image_tooltip")
 
-In this case, these networks would map to different networks.  
 
-For example,
+In this case, all of the 4 networks would map to **_VM Network / Management Network. _**Users would still need to provide details for each of the networks separately. Users can divide the IP subnet into multiple ranges which can be mapped to these four networks. 
+
+For example, for a network 10.102.0.0/16, we can have following IP ranges and can be used accordingly:
+
+
 
 *   10.102.1.2 - 10.102.1.20 (VM Network)
-*   10.102.2.2 - 10.102.2.20 (ESXi_Network)
-*   10.102.3.2 - 10.102.3.20 (Uplink_WAN_Network)
-*   10.102.4.2 - 10.102.4.20 (HDM_Internal_Networking)
+*   10.102.1.21 - 10.102.1.40 (ESXi_Network)
+*   10.102.1.41 - 10.102.1.60 (Uplink_WAN_Network)
+*   10.102.1.61 - 10.102.1.80 (HDM_Internal_Networking)
+
+During HDM deployment, users are required to categorise and map the networks discovered in the vCenter as per the types mentioned above. 
 
 
 
 ![alt_text](images/image13.png "image_tooltip")
 
-Identify and map each of the network to the correct
-network in your environment. Each of the network will have a 
-seperate subnet range and gateway. 
+
+In this case all of the “Source Networks” would map to **_VM Network / Management Network_** during the deployment process as shown below. 
+
+### Network planning spread sheet
+
+Please download the spread sheet [Planning Template](../../../../Planning%20Template.xlsx) and use along with
+your deployment process. 
+
+The **Planning Template** is an active spread sheet which will allow you 
+to specify the deployment mode you have choosen. You need to select the 
+correct mode using the drop down.
+
+1. Choose the "Cloud Type"
+1. Choose the "Deployment Mode"
+1. Choose the "Resource Allocation" 
+
+After this you need to fill in the nuber of ESXi on premises and on the cloud. For vCD
+the number of nodes on the cloud is irrelevant and please fill in 1 here.
+
+The rest of the form requires you to fill in network configuration details like
+IP address, ranges. The dynamic part of the form gives you information on the 
+number of the resources you need to provision. 
+
+The information in the **Planning Template** is almost identical to the 
+sections below and should serve to identify the size of the IP pool required 
+and capture information for easy entry during the deployment steps.
+
 
 
 ### HDM Network Configuration - Planning
@@ -122,14 +151,13 @@ A pool of IP addresses need to be allocated. The number of IPs for each category
 **ESXi_Network: **2 IPs required
 
 
-```
-**Note:  **
+    **Note:  **
+
+
 
 1. **The subnet range 172.17.0.0/16 is not available for the deployment; it is internally used by HDM microservices.**
-```
 
 Please fill the table below for reference during the installation process.
-
 
 **HDM_Internal_Network**
 
@@ -146,7 +174,7 @@ Please fill the table below for reference during the installation process.
   <tr>
    <td><strong>IP range</strong>
    </td>
-   <td><em>10.102.4.2-10.102.4.4,  10.102.4.7</em>
+   <td><em>10.102.10.100-10.102.10.120,  10.102.10.130</em>
    </td>
    <td>
    </td>
@@ -162,7 +190,7 @@ Please fill the table below for reference during the installation process.
   <tr>
    <td><strong>Gateway</strong>
    </td>
-   <td><em>10.102.4.1</em>
+   <td><em>10.102.10.1</em>
    </td>
    <td>
    </td>
@@ -209,7 +237,7 @@ Please fill the table below for reference during the installation process.
   <tr>
    <td><strong>IP range</strong>
    </td>
-   <td><em>10.102.3.2-10.102.3.4</em>
+   <td><em>10.102.10.131-10.102.10.151</em>
    </td>
    <td>
    </td>
@@ -225,7 +253,7 @@ Please fill the table below for reference during the installation process.
   <tr>
    <td><strong>Gateway</strong>
    </td>
-   <td><em>10.102.3.1</em>
+   <td><em>10.102.10.1</em>
    </td>
    <td>
    </td>
@@ -272,7 +300,7 @@ Please fill the table below for reference during the installation process.
   <tr>
    <td><strong>IP range</strong>
    </td>
-   <td><em>10.102.2.2-10.102.2.4</em>
+   <td><em>10.102.10.152-10.102.10.172</em>
    </td>
    <td>
    </td>
@@ -288,7 +316,7 @@ Please fill the table below for reference during the installation process.
   <tr>
    <td><strong>Gateway</strong>
    </td>
-   <td><em>10.102.2.1</em>
+   <td><em>10.102.10.1</em>
    </td>
    <td>
    </td>

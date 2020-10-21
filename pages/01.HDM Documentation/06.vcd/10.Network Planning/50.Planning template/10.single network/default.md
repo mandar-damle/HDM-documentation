@@ -4,7 +4,7 @@ title: Non-segregated network
 
 The non-segregated network is represented would look like
 
-![alt_text](images/image10.jpg "image_tooltip")
+![alt_text](images/image5.png "image_tooltip")
 
 
 In this case, all of the 4 networks would map to **_VM Network / Management Network. _**Users would still need to provide details for each of the networks separately. Users can divide the IP subnet into multiple ranges which can be mapped to these four networks. 
@@ -26,6 +26,30 @@ During HDM deployment, users are required to categorise and map the networks dis
 
 
 In this case all of the “Source Networks” would map to **_VM Network / Management Network_** during the deployment process as shown below. 
+
+### Network planning spread sheet
+
+Please download the spread sheet [Planning Template](../../../../Planning%20Template.xlsx) and use along with
+your deployment process. 
+
+The **Planning Template** is an active spread sheet which will allow you 
+to specify the deployment mode you have choosen. You need to select the 
+correct mode using the drop down.
+
+1. Choose the "Cloud Type"
+1. Choose the "Deployment Mode"
+1. Choose the "Resource Allocation" 
+
+After this you need to fill in the nuber of ESXi on premises and on the cloud. For vCD
+the number of nodes on the cloud is irrelevant and please fill in 1 here.
+
+The rest of the form requires you to fill in network configuration details like
+IP address, ranges. The dynamic part of the form gives you information on the 
+number of the resources you need to provision. 
+
+The information in the **Planning Template** is almost identical to the 
+sections below and should serve to identify the size of the IP pool required 
+and capture information for easy entry during the deployment steps.
 
 
 ### HDM Network Configuration - Planning

@@ -626,15 +626,6 @@ Steps
 **Note: PIO Appliance should have access to the Internet for warm or cold migration through SQS.**
 
 
-# HDM Migrations
-
-HDM is used to perform migration of VMs from On-Premise to On-Cloud. There are different use cases where 
-
-HDM migrations are used. Detailed use cases and procedure for using HDM for migrate operations is explained in **HDM 2.1.3 Admin Guide.pdf.**
-
-This document focuses on the deployment and undeployment aspects of the HDM.
-
-
 # HDM Undeployment
 
 
