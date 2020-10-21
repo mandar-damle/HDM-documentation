@@ -1,5 +1,5 @@
 ---
-title: Non-segregated network
+title: Non-Segregated Network
 ---
 
 The non-segregated network is represented would look like
