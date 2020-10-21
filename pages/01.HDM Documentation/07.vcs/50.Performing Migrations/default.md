@@ -1,5 +1,5 @@
 ---
-title: ''
+title: 'Performing Migrations'
 media_order: ''
 body_classes: ''
 order_by: ''
@@ -9,11 +9,10 @@ order_manual: ''
 
 # HDM Migrations
 
-HDM is used to perform migration of VMs from On-Premise to the cloud. There are different use cases where 
-
-HDM migrations are used:
 
 
+HDM is used to perform migration of VMs from On-Premise to the cloud. HDM support the
+three types of migration these are.
 
 1. Agile Rapid Migration (ARM)
 2. Try Before Commit (TBC)
@@ -21,7 +20,7 @@ HDM migrations are used:
 
 ## Migrate a VM using vCenter 
 
-**Note:** Migration operation is performed using the Primary IO GUI interface in vCenter as well as through SQS interface library.  Following sections describe the steps for executing the migration operation through vCenter. 
+**Note:** Migration operation is performed using the PrimaryIO GUI interface in vCenter as well as through SQS interface library.  Following sections describe the steps for executing the migration operation through vCenter. 
 
 **Note**: Currently, HDM supports deployment for migration for only one cluster per vCenter at a time. If the VMs are to be migrated from multiple clusters, the process of deploy, migrate, undeploy would have to repeat for multiple clusters.
 
@@ -1011,9 +1010,9 @@ HDM can recover from short network outages by retrying ongoing operations. Outag
 If the network outage is for extended periods of time(greater than 5 minutes), the HDM recovery may not succeed and HDM Reset may be required.
 
 
-### ESX Host Restart
+### ESXii Host Restart
 
-If On-Premise ESX host is restarted or the PRAAPA iofilter daemon service is restarted, the ongoing migrations will fail, VMs already migrated to On-Cloud, will be migrated back. Also, new VM migration will fail. HDM reset and re-deployment of HDM On-Premise and On-Cloud components is required before retrying the migration operation.
+If On-Premise ESXi host is restarted or the PRAAPA iofilter daemon service is restarted, the ongoing migrations will fail, VMs already migrated to On-Cloud, will be migrated back. Also, new VM migration will fail. HDM reset and re-deployment of HDM On-Premise and On-Cloud components is required before retrying the migration operation.
 
 
 ### System Failures
@@ -1041,4 +1040,4 @@ If a snapshot of a VM has been bulk transferred to On-Cloud and a failure occurs
 
 **Refer to the Troubleshooting Guide in case the failure issues are not resolved. The failure might have been caused due to one of the known product issues. **
 
-**Finally, seeking help from Primary IO support may be required, refer to the Install Guide for the details. **
+**Finally, seeking help from PrimaryIO support may be required, refer to the Install Guide for the details. **

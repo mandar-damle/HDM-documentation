@@ -1,13 +1,9 @@
 ---
-title: ''
+title: 'Support Logs'
 media_order: ''
 body_classes: ''
 order_by: ''
 order_manual: ''
----
-
---- 
-title: 'Support Logs'
 ---
 
 If you require technical support for HDM, you will need to provide the HDM support logs and VMware support logs from the deployed system. The collected logs must be provided to HDM support, along with a description of the issue.

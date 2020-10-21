@@ -1,8 +1,8 @@
 ---
-title: Planning Templates
+title: 'Planning Templates'
 ---
 
-To make the task of plannig your network easier we have created two simple templates
+To make the task of planning your network easier we have created two simple templates
 which will make it easier to allocate and select the network resources that will be 
 required during the various phases of the deployment.
 

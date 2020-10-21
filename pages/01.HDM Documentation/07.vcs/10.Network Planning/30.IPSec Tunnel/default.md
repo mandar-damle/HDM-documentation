@@ -13,7 +13,7 @@ Please ensure that following prerequisites are met before proceeding for deploym
 
 
 1. Cloud ESXi hosts, Cloud Vcenter and Cloud WAN network should be reachable from the appliance through VPN and FQDN is resolved. 
-2. Virtual machines created on the Cloud side WAN network should be able to reach Cloud vCenter and Cloud ESXi and FQDN is resolved. 
+2. Virtual machines created on the Cloud  should be able to reach Cloud vCenter and Cloud ESXi and FQDN is resolved through either cloud HDM_WAN network or HDM_INTERNAL_NETWORK 
 3. The cloud DNS is also reachable from the on-premise through the IPsec tunnel. (Please make note that the Cloud side DNS details are required at the time of deployment of HDM product).
 
 In order to meet above requirements, following route based IPsec VPN  tunnels need to be configure. For additional information please refer to VMware document [Configure a VPN Connection Between Your SDDC and On-Premises Data Center](https://docs.vmware.com/en/VMware-Cloud-on-AWS/services/com.vmware.vmc-aws.networking-security/GUID-92F6C09E-8E74-430E-8F79-C2E5B2150ADA.html)
@@ -150,7 +150,7 @@ Steps for this section are the same as **Premise WAN network to SDDC Compute Edg
 
  **IPsec tunnel between  Compute and Management Edge gateways**
 
-**	**In this section, users are supposed to configure IPsec tunnel between cloud  Compute amd Management gateway so that HDM components attached to hdm_internal network can communicate to ESXi hosts. For more details please refer to [this^](https://cloud.vmware.com/community/2019/05/06/can-vm-vmc-compute-network-access-sddc-management-network/) link.
+**	**In this section, users are supposed to configure IPsec tunnel between cloud  Compute and Management gateway so that HDM components attached to hdm_internal network can communicate to ESXi hosts. For more details please refer to [this^](https://cloud.vmware.com/community/2019/05/06/can-vm-vmc-compute-network-access-sddc-management-network/) link.
 
 
 ## Setting up Multiple Network IPSec tunnel

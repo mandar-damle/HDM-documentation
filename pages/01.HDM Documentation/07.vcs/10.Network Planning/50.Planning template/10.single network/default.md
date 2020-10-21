@@ -18,7 +18,7 @@ For example, for a network 10.102.0.0/16, we can have following IP ranges and ca
 *   10.102.1.41 - 10.102.1.60 (Uplink_WAN_Network)
 *   10.102.1.61 - 10.102.1.80 (HDM_Internal_Networking)
 
-During HDM deployment, users are required to categorise and map the networks discovered in the vCenter as per the types mentioned above. 
+During HDM deployment, users are required to categorize and map the networks discovered in the vCenter as per the types mentioned above. 
 
 
 
@@ -33,14 +33,14 @@ Please download the spread sheet [Planning Template](../../../../Planning%20Temp
 your deployment process. 
 
 The **Planning Template** is an active spread sheet which will allow you 
-to specify the deployment mode you have choosen. You need to select the 
+to specify the deployment mode you have chosen You need to select the 
 correct mode using the drop down.
 
 1. Choose the "Cloud Type"
 1. Choose the "Deployment Mode"
 1. Choose the "Resource Allocation" 
 
-After this you need to fill in the nuber of ESXi on premises and on the cloud. For vCD
+After this you need to fill in the number of ESXi on premises and on the cloud. For vCD
 the number of nodes on the cloud is irrelevant and please fill in 1 here.
 
 The rest of the form requires you to fill in network configuration details like

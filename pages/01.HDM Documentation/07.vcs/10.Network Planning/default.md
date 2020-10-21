@@ -1,5 +1,5 @@
 ---
-- 'title:"Network Planning"'
+title: 'Network Planning'
 ---
 
 This needs to be planned well because the HDM components are configured in a certain way within the network. Choice of network topology also matters for VMs to be migrated. It is based on the network security and isolation requirements for the VM once it migrates to the On-Cloud. 
@@ -35,7 +35,7 @@ The different network selection and their usage by HDM components is depicted be
 
 During deployment, HDM components are configured such that the requirements for network access to necessary data stores, networks and communication with other components are met. For example, HDM doesn’t require access to application networks and so HDM components are not configured to access them. 
 
-During HDM deployment, users are required to categorise and map and the networks discovered in the vCenter as per the types mentioned above. 
+During HDM deployment, users are required to categorize and map and the networks discovered in the vCenter as per the types mentioned above. 
 
 
 

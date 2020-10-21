@@ -124,7 +124,7 @@ Steps
 
 
 
-1. Log into the _PIO Appliance_ by accessing _https://&lt;appliance ip>_ in a supported web browser and entering the administrator credentials. The default administrator username and password are _‘administrator’_ and _‘admin@123’_ respectively. Users are recommended to change the default password after the first login.
+1. Log into the _PIO Appliance_ by accessing _https://&lt;appliance ip>_ in a supported web browser and entering the administrator credentials. The default administrator username and password are _‘administrator’_ and _‘2Hdm$aK!N@h!’_ respectively. Users are recommended to change the default password after the first login.
 2. Click on **vCenters** in the top pane.
 3. Click on **Add vCenter** at the top right.
 
@@ -162,7 +162,7 @@ Steps
 
 For HDM deployment a license key is required to activate the product.  A trial license will be shared with the product which can be used to activate HDM. 
 
-**Note**: Loading the HDM configuration page may take a few mins to load as product settings need to be initialised. 
+**Note**: Loading the HDM configuration page may take a few mins to load as product settings need to be initialized. 
 
 Steps to add license:
 
@@ -189,7 +189,7 @@ Steps to add license:
 
 
 
-6. Once the license has been added, it will be listed on the licence page.
+6. You might have to refresh the page for the license to be listed on the licence page.
 7. The same interface can then be used to add **Product License**.
 
 ![alt_text](images/image44.png?classes=content-img "image_tooltip")
@@ -437,7 +437,7 @@ Steps for deployment
 
 ## DNS Entry to resolve FQDN
 
-In case On-Cloud vCenter or ESX has been added with FQDN, the user should add the DNS nameserver in HDM cloud cache component explicitly, using the following procedure:
+In case On-Cloud vCenter or ESXi has been added with FQDN, the user should add the DNS nameserver in HDM cloud cache component explicitly, using the following procedure:
 
 
 
