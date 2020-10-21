@@ -90,7 +90,7 @@ generally be the WAN network but please verify the specifics for
 your network.
 
 In the field **Default Gateway** set the default gateway for the 
-network choosen under **Default gateway network**. 
+network chosen under **Default gateway network**. 
 
 
 > **Getting this wrong will cause deployment to fail eventually and you will have to perfrom an [HDM Reset](../../hdm%20reset)**
