@@ -71,7 +71,7 @@ Create an IPSec tunnel between the organization's edge gateway and the on-premis
 
 ### Recommended firewall rules
 
-Add recommended firewall rule by specifying source and destination subnet
+Add recommended firewall rule by specifying source and destination subnet with service any
 
 ![alt_text](images/image2.png "image_tooltip")
 
