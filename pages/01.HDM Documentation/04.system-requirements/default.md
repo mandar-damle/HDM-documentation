@@ -28,6 +28,7 @@ title: 'System Requirements'
 ##### Hardware Requirements
 
 * 1 Appliance (4 vCPU, 8 GB RAM, 144 GB disk)
+*  During HDM components deployment, more resources are required. Please check deployment planning section as per you cloud end-point.
 
 
 **NOTES**
@@ -70,7 +71,7 @@ title: 'System Requirements'
 *   Network Round Trip Time Latencies: &lt; 30 ms
  
 ##### Hardware Requirements
-*   For HDM component requirements, check the deployment planning section in cloud sections as per your cloud endpoint.
+*   For HDM component requirements, check the deployment planning section in cloud sections as per your cloud end-point.
  
 #### OS Support (TBC/Warm Migration)
 
