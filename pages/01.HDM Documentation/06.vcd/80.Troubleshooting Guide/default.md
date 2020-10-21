@@ -280,11 +280,11 @@ HDM operations are designed for retries and resilience for somewhat jittery Netw
 # HDM Undeployment
 
 
-###### **HDM On-Cloud uninstall fails when one of the ESX hosts in the cluster on which it was installed is inaccessible**
+###### **HDM On-Cloud uninstall fails when one of the ESXi hosts in the cluster on which it was installed is inaccessible**
 
 Uninstallation happens at the cluster level and it will fail if any host in the cluster is unavailable.
 
-**Resolution**: System administrators will have to first resolve the connection issue with the unreachable ESX host and then retry the uninstallation process.
+**Resolution**: System administrators will have to first resolve the connection issue with the unreachable ESXi host and then retry the uninstallation process.
 
 
 ###### **HDM plugin entry is not removed from the vCenter after  HDMplugin is unregistered from the appliance.**
@@ -329,9 +329,9 @@ As part of HDM reset, PIO Appliance VM restart is required. In some cases, this 
 **Resolution**: This could be a transient error situation and the user should attempt restart of the PIO Appliance so that the HDM reset can complete successfully. (Ref: **CP-4610)**
 
 
-###### **Cleanup issues due to ESX host reboot during HDM Reset**
+###### **Cleanup issues due to ESXi host reboot during HDM Reset**
 
-During HDM reset, if any of the ESX hosts in the On-Premise cluster is rebooted for some reason, the cleanup for that host may not happen. The HDM reset may still succeed, however a future attempt for On-Premise deployment may fail. 
+During HDM reset, if any of the ESXi hosts in the On-Premise cluster is rebooted for some reason, the cleanup for that host may not happen. The HDM reset may still succeed, however a future attempt for On-Premise deployment may fail. 
 
 **Resolution**: In such a situation, users should do HDM reset again and perform redeployment. 
 

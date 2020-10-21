@@ -24,10 +24,10 @@ Related document: For hardware and system requirements, refer to the [VMware Har
 
 #### On-Premises Requirements
 ##### VMWare Environment
-* Single version of ESX throughout the vCenter cluster
-* ESX in connected state in the vCenter
-* ESX able to communicate with vCenter
-* Clusters have ESX 6.5U2+ and 6.7
+* Single version of ESXi throughout the vCenter cluster
+* ESXi in connected state in the vCenter
+* ESXi able to communicate with vCenter
+* Clusters have ESXi 6.5U2+ and 6.7
 * vCenter Web Client: 6.5 or 6.7 (Use of HTML client is recommended with Chrome v.75 +)
 * Datastore should be VMFS, NFS, or NFSv3
 * E1000E and VMXNet3 network adapters should be available in the on-premises vCenter

@@ -1011,9 +1011,9 @@ HDM can recover from short network outages by retrying ongoing operations. Outag
 If the network outage is for extended periods of time(greater than 5 minutes), the HDM recovery may not succeed and HDM Reset may be required.
 
 
-### ESX Host Restart
+### ESXii Host Restart
 
-If On-Premise ESX host is restarted or the PRAAPA iofilter daemon service is restarted, the ongoing migrations will fail, VMs already migrated to On-Cloud, will be migrated back. Also, new VM migration will fail. HDM reset and re-deployment of HDM On-Premise and On-Cloud components is required before retrying the migration operation.
+If On-Premise ESXi host is restarted or the PRAAPA iofilter daemon service is restarted, the ongoing migrations will fail, VMs already migrated to On-Cloud, will be migrated back. Also, new VM migration will fail. HDM reset and re-deployment of HDM On-Premise and On-Cloud components is required before retrying the migration operation.
 
 
 ### System Failures

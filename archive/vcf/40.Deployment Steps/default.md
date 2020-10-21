@@ -437,7 +437,7 @@ Steps for deployment
 
 ## DNS Entry to resolve FQDN
 
-In case On-Cloud vCenter or ESX has been added with FQDN, the user should add the DNS nameserver in HDM cloud cache component explicitly, using the following procedure:
+In case On-Cloud vCenter or ESXi has been added with FQDN, the user should add the DNS nameserver in HDM cloud cache component explicitly, using the following procedure:
 
 
 

@@ -439,9 +439,9 @@ HDM can recover from short network outages (those lasting less than 2 minutes) b
 If the network outage lasts for an extended period of time (greater than 2 minutes), the HDM recovery may not succeed and an HDM reset may be required.
 
 
-### ESX Host Restart
+### ESXi Host Restart
 
-If the on-premises ESX host is restarted, the ongoing migrations will be paused and will resume once the host is back up. 
+If the on-premises ESXi host is restarted, the ongoing migrations will be paused and will resume once the host is back up. 
 
 
 ### System Failures

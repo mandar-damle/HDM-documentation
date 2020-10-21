@@ -17,7 +17,7 @@ Following are the system requirements for HDM deployment
 
 
 *   VMware Environment 
-    *   PrimaryIO HDM only supports a single version of ESX throughout the vCenter cluster. Currently, clusters with ESX 6.5 and 6.7 are supported.
+    *   PrimaryIO HDM only supports a single version of ESXi throughout the vCenter cluster. Currently, clusters with ESXi 6.5 and 6.7 are supported.
 *   vCenter Web Client: 6.5 or 6.7. 
     *   Please note that deployment of ovf from vCenter web client is the only supported Installation method.
     *   Using HTML client is recommended. 
@@ -26,7 +26,7 @@ Following are the system requirements for HDM deployment
 *   Datastore should be one of: VMFS, NFS, NFSv3.
 *   HDM components should be deployed on Shared Datastore.
 *   DRS and HA should be enabled on the cluster.
-    *   HA should be enabled only if there are more than 1 ESX in the vCenter cluster.
+    *   HA should be enabled only if there are more than 1 ESXi in the vCenter cluster.
 *   Hardware Environment
     *   Network: >= 1 Gbps.
 *   Browser: Chrome v.75 +.

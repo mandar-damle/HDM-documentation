@@ -697,25 +697,25 @@ Before migration is triggered, ensure that the health of the HDM components is g
    </td>
   </tr>
   <tr>
-   <td>Single version of ESX throughout the vCenter cluster
+   <td>Single version of ESXi throughout the vCenter cluster
    </td>
    <td>
    </td>
   </tr>
   <tr>
-   <td>ESX in connected state in the vCenter
+   <td>ESXi in connected state in the vCenter
    </td>
    <td>
    </td>
   </tr>
   <tr>
-   <td>ESX able to communicate with vCenter
+   <td>ESXi able to communicate with vCenter
    </td>
    <td>
    </td>
   </tr>
   <tr>
-   <td>Clusters have ESX 6.5U2+ and 6.7 
+   <td>Clusters have ESXi 6.5U2+ and 6.7 
    </td>
    <td>
    </td>

@@ -126,7 +126,7 @@ The deployment of HDM filter on a cluster is unsuccessful and the ‘_Install Fi
 
 This can happen if the previous version of HDM product has not been uninstalled cleanly or the PIO Appliance's IP which was used for the installation is not reachable. In this case please check the EAM logs within the vCenter and look for an error message stating `"https://&lt;IP>/bundle/primaryio_6.x.zip is not reachable". P`lease make sure PIO Appliance's IP is the same as shown in the error and the URL is reachable.
 
-**Resolution:** Log into “https://&lt;vcenter_ip>/eam/mob” using vCenter admin credentials to access ESX Agent Manager. In front of the agency there will be an array of Managed Object Reference. 
+**Resolution:** Log into “https://&lt;vcenter_ip>/eam/mob” using vCenter admin credentials to access ESXi Agent Manager. In front of the agency there will be an array of Managed Object Reference. 
 
 ![alt_text](images/image5.png?classes=content-img "image_tooltip")
 
@@ -242,9 +242,9 @@ User should explicitly make sure that the target has enough free space before at
 To warm migrate linked clones, the user needs to attach the SPBM policy “HDM Analyzer Profile” on the base VM of the linked clone.
 
 
-###### **Warm migration fails due to On-Cloud vCenter or ESX not accessible in an FQDN based On-Cloud environment **
+###### **Warm migration fails due to On-Cloud vCenter or ESXi not accessible in an FQDN based On-Cloud environment **
 
-In an FQDN based deployment, HDM may not be able to resolve On-Cloud vCenter or ESX, which can cause the warm migration to fail. In HDM install steps the DNS entry should be configured to resolve the FQDN. In case this is missed out, the user should add the DNS nameserver in HDM cloud cache component explicitly, using the following procedure:
+In an FQDN based deployment, HDM may not be able to resolve On-Cloud vCenter or ESXi, which can cause the warm migration to fail. In HDM install steps the DNS entry should be configured to resolve the FQDN. In case this is missed out, the user should add the DNS nameserver in HDM cloud cache component explicitly, using the following procedure:
 
 
 
@@ -392,25 +392,25 @@ HDM operations are designed for retries and resilience for somewhat jittery Netw
 # HDM Undeployment
 
 
-###### **HDM On-Cloud **u**ninstall **f**ails when one of the ESX hosts in the cluster on which it was installed is inaccessible**
+###### **HDM On-Cloud **u**ninstall **f**ails when one of the ESXi hosts in the cluster on which it was installed is inaccessible**
 
 Uninstallation happens at the cluster level and it will fail if any host in the cluster is unavailable.
 
-**Resolution**: System administrators will have to first resolve the connection issue with the unreachable ESX host and then retry the uninstallation process.
+**Resolution**: System administrators will have to first resolve the connection issue with the unreachable ESXi host and then retry the uninstallation process.
 
 
-###### **HDM On-Premise uninstall fails when one of the ESX hosts in the cluster on which it was installed is inaccessible**
+###### **HDM On-Premise uninstall fails when one of the ESXi hosts in the cluster on which it was installed is inaccessible**
 
 Uninstallation happens at the cluster level and will fail if a VIB or HDM component removal cannot be done on any host in the cluster.
 
-**Resolution:** System administrators will first have to resolve the connection issue with the unreachable ESX host and retry the uninstallation process.
+**Resolution:** System administrators will first have to resolve the connection issue with the unreachable ESXi host and retry the uninstallation process.
 
 
 ###### **‘praapa’ vib uninstall failure during undeployment**
 
-During HDM undeployment the ‘praapa’ vib can fail to uninstall on some ESX in the cluster.
+During HDM undeployment the ‘praapa’ vib can fail to uninstall on some ESXi in the cluster.
 
-**Resolution**: User should restart the iofilter daemon on ESX (ssh login to the ESX and run command /etc/init.d/iofilterd-prapaa restart) and then uninstall the product. (Ref: **DP-2578)**
+**Resolution**: User should restart the iofilter daemon on ESXi (ssh login to the ESXi and run command /etc/init.d/iofilterd-prapaa restart) and then uninstall the product. (Ref: **DP-2578)**
 
 
 ###### **'HDM_DRS_*' tags still present in On-Cloud vCenter after uninstallation of HDM**
@@ -442,18 +442,18 @@ HDM filter uninstall requires the cluster hosts to be put in the maintenance mod
 **Resolution**: User should put the host in maintenance mode manually and retry the uninstall operation. This may require the user to perform a vMotion on the active VMs to another host in the cluster. If the cluster has just one host, the User may be required to power off the active VMs. Please note that the PIO Appliance host should not be powered off before initiating the uninstall.
 
 
-###### **‘praapa’ service is still present on ESX Configure tab in vCenter even after PrimaryIO HDM filter has been uninstalled from the On-Premise cluster**
+###### **‘praapa’ service is still present on ESXi Configure tab in vCenter even after PrimaryIO HDM filter has been uninstalled from the On-Premise cluster**
 
-Uninstall of HDM filter from PIO Appliance creates an uninstall task that executes successfully. However, the HDM icon on vCenter still shows the HDM version and the service  ‘praapa’ is also found on the ESX host. 
+Uninstall of HDM filter from PIO Appliance creates an uninstall task that executes successfully. However, the HDM icon on vCenter still shows the HDM version and the service  ‘praapa’ is also found on the ESXi host. 
 
-**Resolution**: This issue is seen when the uninstall is attempted on a cluster where the ESX hosts cannot be put into Maintenance Mode either due to DRS not configured or insufficient number of ESX for vMotion. In such a situation the ‘uninstall’ request is registered but not executed. To complete the uninstallation, follow the steps:
+**Resolution**: This issue is seen when the uninstall is attempted on a cluster where the ESXi hosts cannot be put into Maintenance Mode either due to DRS not configured or insufficient number of ESXi for vMotion. In such a situation the ‘uninstall’ request is registered but not executed. To complete the uninstallation, follow the steps:
 
 
 
 1. The host under the cluster on which the HDM uninstall is pending, needs to be put into Maintenance Mode manually through the vCenter.
-2. This will start the uninstallation task on the ESX and will cleanly remove the ‘praapa’ IOFilter.
+2. This will start the uninstallation task on the ESXi and will cleanly remove the ‘praapa’ IOFilter.
 3. Exit the Maintenance Mode once the installation is complete.
-4. Steps 1-3 may have to be repeated on all the ESX hosts that could not be put into Maintenance Mode, to completely remove PrimaryIO HDM from the cluster.
+4. Steps 1-3 may have to be repeated on all the ESXi hosts that could not be put into Maintenance Mode, to completely remove PrimaryIO HDM from the cluster.
 
 
 ###### **HDM plugin entry is not removed from the vCenter after HDM plugin is unregistered from the appliance.**
@@ -517,9 +517,9 @@ As part of HDM reset, PIO Appliance VM restart is required. In some cases, this 
 **Resolution**: This could be a transient error situation and the user should attempt restart of the PIO Appliance so that the HDM reset can complete successfully. (Ref: **CP-4610)**
 
 
-###### **Cleanup issues due to ESX host reboot during HDM Reset **
+###### **Cleanup issues due to ESXi host reboot during HDM Reset **
 
-During HDM reset, if any of the ESX hosts in the On-Premise cluster is rebooted for some reason, the cleanup for that host may not happen. The HDM reset may still succeed, however a future attempt for On-Premise deployment may fail. 
+During HDM reset, if any of the ESXi hosts in the On-Premise cluster is rebooted for some reason, the cleanup for that host may not happen. The HDM reset may still succeed, however a future attempt for On-Premise deployment may fail. 
 
 **Resolution**: In such a situation, users should do HDM reset again and perform redeployment. 
 
