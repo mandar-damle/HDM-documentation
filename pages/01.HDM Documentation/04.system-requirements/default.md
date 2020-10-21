@@ -13,7 +13,6 @@ title: 'System Requirements'
 * 1 PremMgr (3 vCPU, 4 GB RAM, 32 GB disk)
 * 1 ESXMgr (4 vCPU, 4GB RAM, 160 GB disk)
 
-Related document: For hardware and system requirements, refer to the [VMware Hardware Compatibility List (HCL).](https://www.vmware.com/resources/compatibility/search.php)
 
 ##### VMWare Environment
 * Single version of ESXi throughout the vCenter cluster
@@ -56,7 +55,7 @@ Related document: For hardware and system requirements, refer to the [VMware Har
 * 1 CloudMgr (4 vCPU, 6 GB RAM, 32 GB disk)
 * 1 CloudCache (6 vCPU, 20 GB RAM, 32 GB disk, 512 GB cache)
 
-##### Hardware Requirements
+##### VMWare Environment
 
 *   Supported cloud endpoints:
     *   VMware Cloud on AWS
