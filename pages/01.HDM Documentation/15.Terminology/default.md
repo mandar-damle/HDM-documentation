@@ -18,7 +18,7 @@ This document uses the below terms and terminologies at multiple places.
 
 *   **HDM**
 
-    Hybrid data management solution from PrimaryIO
+    Hybrid Cloud Data Management solution from PrimaryIO
 
 *   **Onprem or On-Prem  or On-Premise or source**
 

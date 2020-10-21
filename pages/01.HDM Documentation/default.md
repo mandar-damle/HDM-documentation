@@ -5,7 +5,7 @@ title: 'HDM Documentation'
 ## Hybrid Cloud Data Management Solution
 Version 2.1.3
 
-This guide provides an introduction to HDM and describes how to deploy, configure, and undeploy PrimaryIO Hybrid Data Management (HDM) 2.1.3 for migrations of virtual machines to VMware Cloud Director (VCD), VMware Cloud Services for IBM, VMware Cloud Foundation on AWS and Azure (AVS).
+This guide provides an introduction to HDM and describes how to deploy, configure, and undeploy PrimaryIO Hybrid Cloud Data Management (HDM) 2.1.3 for migrations of virtual machines to VMware Cloud Director (VCD), VMware Cloud Services for IBM, VMware Cloud Foundation on AWS and Azure (AVS).
 
 #### HDM 2.1.3 Software
 
