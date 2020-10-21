@@ -124,7 +124,7 @@ Steps
 
 
 
-1. Log into the _PIO Appliance_ by accessing _https://&lt;appliance ip>_ in a supported web browser and entering the administrator credentials. The default administrator username and password are _‘administrator’_ and _‘admin@123’_ respectively. Users are recommended to change the default password after the first login.
+1. Log into the _PIO Appliance_ by accessing _https://&lt;appliance ip>_ in a supported web browser and entering the administrator credentials. The default administrator username and password are _‘administrator’_ and _‘2Hdm$aK!N@h!’_ respectively. Users are recommended to change the default password after the first login.
 2. Click on **vCenters** in the top pane.
 3. Click on **Add vCenter** at the top right.
 
