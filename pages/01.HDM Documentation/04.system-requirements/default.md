@@ -51,7 +51,7 @@ title: 'System Requirements'
    *   IBM Cloud for VMware Solution
    *   VMware Cloud Foundation SDDC
    *   VMware Cloud Director
-*   HDM components should be deployed on Shared Datastore
+*   Shared Datastore for HDM components.
 
 ##### Network Environment
 *   Cloud HDM components should have access to the WAN network.
