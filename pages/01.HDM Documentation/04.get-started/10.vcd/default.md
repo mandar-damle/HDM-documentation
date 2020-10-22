@@ -79,7 +79,7 @@ Deploy the appliance using the vCenter UI
 
 <li>Perform the step as directed by the UI.
 
-<li>Select <em>Single Network</em> created [during lab setup](#single).
+<li>Select <em>Single Network</em> created <a href="#single">during lab setup</a>.
 
 <li>Please refer to the “Network Configuration for the Appliance” section in the HDM Installation Guide for details on the network configuration.
     .
