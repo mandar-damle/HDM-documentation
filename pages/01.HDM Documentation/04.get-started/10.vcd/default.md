@@ -71,7 +71,7 @@ Deploy the appliance using the vCenter UI
 <table>
   <tr>
    <td>
-<img src="images/image12.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM%20Documentation/04.get-started/10.vcd/images/image12.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
