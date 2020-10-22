@@ -23,12 +23,12 @@ Identify and map each of the network to the correct
 network in your environment. Each of the network will have a 
 seperate subnet range and gateway. 
 
-### Network planning spread sheet
+### Network planning spreadsheet
 
-Please download the spread sheet [Planning Template](../../../../Planning%20Template.xlsx) and use along with
+Please download the spreadsheet [Planning Template](../../../../Planning%20Template.xlsx) and use along with
 your deployment process. 
 
-The **Planning Template** is an active spread sheet which will allow you 
+The **Planning Template** is an active spreadsheet which will allow you 
 to specify the deployment mode you have chosen You need to select the 
 correct mode using the drop down.
 

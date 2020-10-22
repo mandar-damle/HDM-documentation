@@ -50,9 +50,9 @@ The subnet range 172.17.0.0/16 is not available for the deployment; it is used i
 Please add the vCenter FQDN for the on-premises and cloud vCenters on the on-premises and cloud DNS servers.
 ```
 
-### Network planning spread sheet
+### Network planning spreadsheet
 
-Please download this [spread sheet](../../../Planning%20Template.xlsx) and use along with
+Please download this [spreadsheet](../../../Planning%20Template.xlsx) and use along with
 your deployment process.
 
 1. Choose the "Cloud Type"

@@ -27,12 +27,12 @@ During HDM deployment, users are required to categorize and map the networks dis
 
 In this case all of the “Source Networks” would map to **_VM Network / Management Network_** during the deployment process as shown below. 
 
-### Network planning spread sheet
+### Network planning spreadsheet
 
-Please download the spread sheet [Planning Template](../../../../Planning%20Template.xlsx) and use along with
+Please download the spreadsheet [Planning Template](../../../../Planning%20Template.xlsx) and use along with
 your deployment process. 
 
-The **Planning Template** is an active spread sheet which will allow you 
+The **Planning Template** is an active spreadsheet which will allow you 
 to specify the deployment mode you have chosen. You need to select the 
 correct mode using the drop down.
 
