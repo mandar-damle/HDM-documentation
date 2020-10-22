@@ -18,7 +18,7 @@ _Figure 1: Lab Connectivity_
 ![Lab layout](images/single-network.png)
 
 1. Setup the source environment.
-   1. Setup a Single Network with DHCP service with IPs in 192.168.x.x
+   1. Setup a <a name="single">Single Network</a> with DHCP service with IPs in 192.168.x.x
    1. Provision 2 servers with at least 96 GB RAM.
    1. Deploy and configure these 2 ESXi Server with Management on the Single Network
    1. Deploy vCenter Server and configure it over the Single Network
@@ -54,7 +54,7 @@ You will receive an email with the following:
 *   A link to training videos.
 *   A license key for the software
 
-Before proceeding with the installation, watch the training videos ([https://www.primaryio.com/training/](https://www.primaryio.com/training/) and use this guide. 
+Before proceeding with the installation, watch the training videos ([https://www.primaryio.com/training/](https://www.primaryio.com/training/)) and use this guide. 
 
 
 # Step 4: Deploy the HDM Appliance
@@ -79,7 +79,7 @@ Deploy the appliance using the vCenter UI
 
 <li>Perform the step as directed by the UI.
 
-<li>Select <em>hdm_network</em> as the destination for all networks.
+<li>Select <em>Single Network</em> created [during lab setup](#single).
 
 <li>Please refer to the “Network Configuration for the Appliance” section in the HDM Installation Guide for details on the network configuration.
     .
