@@ -3,11 +3,10 @@ title: 'VMware Cloud Director Hands on Lab'
 ---
 
 This Hands on Lab is designed to quickly enable you to setup 
-a sandbox evironment based on DHCP which will allow you 
-deploy the product and exercise the functionality. 
-We will guide you through the steps of deploying a single network
-for Management, application and WAN access.
-
+a sandbox environment with no network segregation and DHCP. This 
+will allow you deploy the product and exercise the functionality. 
+The intention is to effectively understand the value HDM
+has to offer for migration.
 
 # Lab Setup
 
@@ -51,13 +50,11 @@ To obtain your license and download link for HDM, visit [https://www.primaryio.c
 
 You will receive an email with the following:
 
-
-
 *   A link to download the PrimaryIO HDM software
-*   A link to training videos
+*   A link to training videos.
 *   A license key for the software
 
-Before proceeding with the installation, watch the training videos and use this guide. 
+Before proceeding with the installation, watch the training videos ([https://www.primaryio.com/training/](https://www.primaryio.com/training/) and use this guide. 
 
 
 # Step 4: Deploy the HDM Appliance
