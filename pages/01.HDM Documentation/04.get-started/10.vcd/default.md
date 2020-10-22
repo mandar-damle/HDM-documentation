@@ -97,7 +97,7 @@ Deploy the appliance using the vCenter UI
   <tr>
    <td>
 
-<img src="images/image13.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.vcd/images/image13.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -124,7 +124,7 @@ Deploy the appliance using the vCenter UI
 <table>
   <tr>
    <td>
-<img src="images/image23.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.vcd/images/image23.png" width="" alt="alt_text" title="image_tooltip">
    </td>
    <td>
 <ul>
@@ -141,7 +141,7 @@ Deploy the appliance using the vCenter UI
 <table>
   <tr>
    <td>
-<img src="images/image10.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.vcd/images/image10.png" width="" alt="alt_text" title="image_tooltip">
    </td>
    <td>
 <ul>
@@ -176,7 +176,7 @@ Deploy the appliance using the vCenter UI
   <tr>
    <td>
 
-<img src="images/image16.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.vcd/images/image16.png" width="" alt="alt_text" title="image_tooltip">
    </td>
    <td>
 <ul>
@@ -194,7 +194,7 @@ Deploy the appliance using the vCenter UI
   <tr>
    <td>
 
-<img src="images/image15.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.vcd/images/image15.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -216,6 +216,7 @@ Deploy the appliance using the vCenter UI
    <td>
 
 <img src="images/image19.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.vcd/images/image19.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>Register the vCenter plugin by selecting <em>Register</em>
@@ -243,7 +244,7 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
   <tr>
    <td>
 
-<img src="images/image17.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.vcd/images/image17.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -271,7 +272,7 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
   <tr>
    <td>
 
-<img src="images/image18.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.vcd/images/image18.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -295,7 +296,7 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
    <td>
 
 
-<img src="images/image20.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.vcd/images/image20.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -323,7 +324,7 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
   <tr>
    <td>
 
-<img src="images/image21.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.vcd/images/image21.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -356,7 +357,7 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
   <tr>
    <td>
 
-<img src="images/image22.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.vcd/images/image22.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -387,7 +388,7 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
    <td>
 
 
-<img src="images/image24.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.vcd/images/image24.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -409,7 +410,7 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
    <td>
 
 
-<img src="images/image25.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.vcd/images/image25.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -434,7 +435,7 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
   <tr>
    <td>
 
-<img src="images/image26.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.vcd/images/image26.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -456,7 +457,7 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
    <td>
 
 
-<img src="images/image27.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.vcd/images/image27.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -488,7 +489,7 @@ The following WAN routes are required to gain access between the cloud and on-pr
   <tr>
    <td>
 
-<img src="images/image2.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.vcd/images/image2.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -506,7 +507,7 @@ The following WAN routes are required to gain access between the cloud and on-pr
 <table>
   <tr>
    <td>
-<img src="images/image3.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.vcd/images/image3.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -531,7 +532,7 @@ The following WAN routes are required to gain access between the cloud and on-pr
   <tr>
    <td>
 
-<img src="images/image4.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.vcd/images/image4.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -567,7 +568,7 @@ Before migration is triggered, ensure that the health of the HDM components is g
   <tr>
    <td>
 
-<img src="images/image5.jpg" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.vcd/images/image5.jpg" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -590,7 +591,7 @@ Before migration is triggered, ensure that the health of the HDM components is g
   <tr>
    <td>
 
-<img src="images/image6.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.vcd/images/image6.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -609,7 +610,7 @@ Before migration is triggered, ensure that the health of the HDM components is g
   <tr>
    <td>
 
-<img src="images/image7.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.vcd/images/image7.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
