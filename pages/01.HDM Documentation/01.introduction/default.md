@@ -6,7 +6,7 @@ title: Introduction
 
 PrimaryIO’s Hybrid Cloud Data Management technology decouples compute and storage to seamlessly move workloads to and from the cloud rapidly and lets you fully control data. HDM provides workload mobility and data control with a combination of innovative technologies: cloud cache, cloud storage gateway, and an integrated smart IO analyzer.
 
-HDM decouples compute and data to move workloads to public clouds faster and more efficiently. Existing solutions from other vendors require the full replication of data to the cloud, and the loss of enterprise data control is a major concern. By contrast, HDM identifies the frequently used data (hot dataset) and moves only the minimal hot data to the cloud to bring up workloads in the shortest possible time.
+HDM enables rapid migration to the cloud by maximizing data transfer over the entire transfer pipeline from the VMDK to the network to the final write on the cloud. These optimizations ensure the effective utilization of available WAN bandwidth and quick migration of VM. HDM's ability to decouple compute and data to move workloads to public clouds faster and more efficiently.  By combining the fast startup on the cloud and our optimized transfer, we can ensure you can start using the cloud immediately. While in the background, the data transfer makes the best use of available bandwidth.
 
 HDM provides a very flexible deployment model providing options to be able to cater to different user needs in terms of use case, performance, scalability and security.
 
