@@ -20,10 +20,10 @@ _Figure 1: Lab Connectivity_
 1. Setup the source environment.
    1. Setup a <a name="single">Single Network</a> with DHCP service with IPs in 192.168.x.x
    1. Provision 2 servers with at least 96 GB RAM.
-   1. Deploy and configure these 2 ESXi Server with Management on the Single Network
-   1. Deploy vCenter Server and configure it over the Single Network
+   1. Deploy and configure these 2 ESXi (6.5U2+ or 6.7) with Management on the Single Network
+   1. Deploy vCenter Server (6.5 or 6.7) and configure it over the Single Network.
    1. Add the ESXi to the vCenter.
-   1. Provision Shared datastore with atleast 1 TB storage.
+   1. Provision <a name="shared-ds">Shared datastore</a> with atleast 1 TB storage.
    1. Configure the two ESXi into a cluster 
    1. Add the shared storage to the 2 ESXi within the cluster.
 
@@ -31,7 +31,7 @@ Your on premises configuraiton is over now we will configure the target cloud.
 
 1. Setup Networking on target VCD
    1. In the next step you will create required networks on the cloud target and setup IPSec tunnel. If your VCD is within the Lab you can skip the IPSec tunnel configuration in the step below.
-   1. Please follow the step in [ORG VDC System and Network Configuration](../vcd/network%20planning/cloud%20network%20config#network-configuration)
+   1. Please follow the step in [ORG VDC System and Network Configuration](http://docs.primaryio.com/hdm%20documentation/vcd/network%20planning/cloud%20network%20config)
    1. After the ORG VDC setup is complete you will have Networks configured 
    on the target cloud and a IPSec tunnel to connect to it.
    1. Setup a DHCP service on both the UPLINK_WAN_NETWORK and HDM_INTERNAL_NETWORK which was setup in step 1 with IPs in 192.168.x.x
@@ -80,10 +80,7 @@ Deploy the appliance using the vCenter UI
 <li>Perform the step as directed by the UI.
 
 <li>Select <em>Single Network</em> created <a href="#single">during lab setup</a>.
-
-<li>Please refer to the “Network Configuration for the Appliance” section in the HDM Installation Guide for details on the network configuration.
-    .
-</li>
+<li> Select IP Allocation as DHCP.
 </ul>
    </td>
   </tr>
@@ -103,11 +100,9 @@ Deploy the appliance using the vCenter UI
    <td>
 <ul>
 
-<li>Complete the network properties as captured in [Appendix B]
-
-<li>Be sure to enter “Default Gateway” the IP address of the default gateway of the network.
-
-<li>Power the appliance on after deploying it
+<li>Skip the Customize template.
+<li>Complete OVF deployment.
+<li>Power on the appliance.
 </li>
 </ul>
    </td>
@@ -331,13 +326,8 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
 <ul>
 
 <li>Complete all steps to begin the deployment
-
-<li>Complete the configuration details using the information you recorded in 
-[Appendix B - Network Settings]
-<li>If there are any errors in the network configuration, please resolve
-
-<li>For additional details, refer to the “Deploy HDM On-premises” section in the HDM 2.1.3 Installation Guide
-
+<li>Choose shared storage <a href="#shared-ds">created during lab setup</a> 
+<li>Choose DHCP in all network configurations.
 <li>This step will take a few minutes to complete. Progress will be shown on the vCenter task bar.
 </li>
 </ul>
@@ -348,36 +338,6 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
 
 
 # Step 7: Cloud Deployment
-
-
-##      Cloud Static-Pool allocation
-
-
-<table>
-  <tr>
-   <td>
-
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.vcd/images/image22.png" width="" alt="alt_text" title="image_tooltip">
-
-   </td>
-   <td>
-<ul>
-
-<li>Allocate static-pool IPs for <em>hdm_internal</em> and <em>hdm_routed_network</em>
-
-<li>The procedure is detailed in document “Org VDC System and Network Configuration”
-
-<li>Allocated 20 IPs on <em>hdm_internal</em>
-
-<li>Allocate 30 IPs on <em>hdm_routed_network</em>
-
-<li>Data in is used to assign these static ranges
-</li>
-</ul>
-   </td>
-  </tr>
-</table>
-
 
 
 ## Configure Cloud vCenter
@@ -463,7 +423,7 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
    <td>
 <ul>
 
-<li>For Parts 1 and 2, choose <em>Static Pool</em>
+<li>For Parts 1 and 2, choose <em>DHCP</em>
 </li>
 </ul>
    </td>
@@ -474,16 +434,6 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
 
 ### WAN Routing Configuration
 
-The following WAN routes are required to gain access between the cloud and on-premises environments:
-
-
-
-*   **Onprem WAN network details:** The route that is set on the on-premises HDM appliance. The routes enable communication from on-premises to cloud HDM appliances.
-    *   **Onprem WAN subnet(s):** Location of the deployed HDM appliances
-    *   **Onprem WAN gateway:** Enables access to the cloud WAN subnet
-*   **Oncloud WAN network details:** The route that is set on the HDM appliance in the cloud. The routes enable communication from the cloud to on-premises HDM appliances.
-    *   **Oncloud WAN subnet(s):** Location of the deployed HDM appliances
-    *   **Oncloud WAN gateway:** Enables access to on-premises WAN subnet
 
 <table>
   <tr>
@@ -495,7 +445,7 @@ The following WAN routes are required to gain access between the cloud and on-pr
    <td>
 <ul>
 
-<li>Complete with the correct routes for the chosen configuration
+<li>Leave this blank.
 </li>
 </ul>
    </td>
@@ -513,12 +463,7 @@ The following WAN routes are required to gain access between the cloud and on-pr
    <td>
 <ul>
 
-<li>Use the configuration information recorded in [Appendix B]
-
-<li>Map on-premises to the cloud network to enable application connectivity
-
-<li>If there are any errors in the network configuration, please resolve
-
+<li>Map on-premises single network to UPLINK_WAN_NETWORK.
 <li>Depending on the chosen configuration and uplink speed, this step may require up to an hour to complete
 </li>
 </ul>
