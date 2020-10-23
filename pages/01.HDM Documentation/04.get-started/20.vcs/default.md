@@ -94,7 +94,7 @@ Estimated time 5 minutes
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/20.vcs/images/image4.jpg" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/20.vcs/images/image14.jpg" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
