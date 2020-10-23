@@ -119,7 +119,7 @@ HDM plugin fails to appear in vCenter’s UI even though it has been registered 
 
 
 
-1. [Unregister the HDM plugin from vCenter](https://docs.google.com/document/d/18amfu5ZjgqTv-qsmg2pdA__MILma4K1mQlgIxF8p3N0/edit#heading=h.3fwokq0).
+1. Unregister the HDM plugin from vCenter.
 2. Search and delete _‘PrimaryIO’_ or _‘praapa’_ files from vCenter. To find the files execute the following command:
 
 	
@@ -130,7 +130,7 @@ HDM plugin fails to appear in vCenter’s UI even though it has been registered 
 
 
 3. Restart vCenter.
-4. [Register HDM plugin](https://docs.google.com/document/d/18amfu5ZjgqTv-qsmg2pdA__MILma4K1mQlgIxF8p3N0/edit#heading=h.1v1yuxt) again with the same vCenter from where it was deleted.
+4. Register HDM plugin again with the same vCenter from where it was deleted.
 
 
 ###### **Network configuration issues for On-Cloud deployment **
