@@ -1,9 +1,5 @@
 ---
 title: 'Deployment Steps'
-media_order: ''
-body_classes: ''
-order_by: ''
-order_manual: ''
 ---
 
 This section describes how to deploy, configure, and undeploy PrimaryIO Hybrid Cloud Data Management (HDM) 2.1.3 for enabling migrations of virtual machines to VMware Cloud Director (vCD).
@@ -371,7 +367,7 @@ _Figure 25: WAN Configuration_
 
 
 
-8. <a name="wan-cfg">Set WAN route</a> configuration to enable data traffic to travel from the cloud to the on-premises environment (figure 26). See the network planning section [WAN Routing Configuration](../network%20planning/planning%20template/single%20network#wan-routing-configuration).
+8. Set WAN route configuration to enable data traffic to travel from the cloud to the on-premises environment (figure 26). See the network planning section <a name="wan-cfg">[WAN Routing Configuration](../network%20planning/planning%20template/single%20network#wan-routing-configuration)</a>.
 
 _Figure 26: WAN Route Configuration_
 
