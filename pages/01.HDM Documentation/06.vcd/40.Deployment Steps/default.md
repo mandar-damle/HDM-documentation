@@ -490,7 +490,7 @@ The email should contain the following:
 
 *   **Email subject:** Clearly highlight the issue.
 *   **Email body**: Clearly describe the problem. It can contain the deployment type, the operation being performed, any relevant screenshots, etc.
-*   **Email attachment**: Attach the relevant logs (see the [HDM Support Logs](#heading=h.46et8132q0kj) section for instructions):
+*   **Email attachment**: Attach the relevant logs (see the [HDM Support Logs](http://docs.primaryio.com/hdm%20documentation/support%20logs) section for instructions):
     *   HDM logs
     *   vm-support logs
 
