@@ -494,13 +494,13 @@ The following WAN routes are required to access on-cloud from on-premise and vic
 
     The route which would be set on HDM appliance on premise. The routes will enable communication from on-premise to HDM appliances on-cloud.
 
-    *   **On-Cloud WAN subnet : **Subnet of cloud WAN network on which HDM appliances are deployed
+    *   **On-Premise WAN subnet : **Subnet of premise WAN network on which HDM appliances are deployed
     *   **On-Premise WAN gateway : **On premise WAN gateway which allows access to on-cloud WAN subnet
 *   **On-Prem WAN route**
 
     The route which would be set on HDM appliance on cloud. The routes will enable communication from on-cloud to HDM appliances on-premise.
 
-    *   **On-Premise WAN subnet : **Subnet of premise WAN network on which HDM appliances are deployed
+    *   **On-Cloud WAN subnet : **Subnet of cloud WAN network on which HDM appliances are deployed
     *   **On-Cloud WAN gateway : **On cloud WAN gateway which allows access to on-premise WAN subnet
 
 <table>
