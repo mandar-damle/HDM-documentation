@@ -445,7 +445,9 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
    <td>
 <ul>
 
-<li>Leave this blank.
+<li> Set the WAN subnet for both prem & cloud.
+<li> Set the gateway for WAN both sides.
+<li> DON'T Skip this step.
 </li>
 </ul>
    </td>
