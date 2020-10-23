@@ -8,7 +8,7 @@ This network configuration section is for configuring a virtual private network 
 
 ### Prerequisites checks
 
-Please ensure that following prerequisites are met before proceeding for deployment,
+Please ensure that the following prerequisites are met before proceeding for deployment,
 
 
 
@@ -187,10 +187,7 @@ Below section covers setting in details to allow traffic going from source to de
 
 1. **Premise wan network - Cloud wan network ports(Inbound/Outbound): **22, 2379, 32820, 2376, 6000-6050, 7000-7050, 8000-8050,  443
 2. **Premise  wan network - tenant portal ( Inbound/Outbound): 443**
-3. **~~Premise wan network to cloud management network(Cloud ESXi,~~ Cloud DNS Inbound/Outbound)): **902, 443, 53(UDP, UDP-DNS)
-4. ~~Cloud compute edge gateway - cloud management **(Inbound/Outbound)**:~~ 
-    1. **~~INTENRAL_NW - Cloud VC: 443. 902 ~~**
-    2. **I~~NTENRAL_NW - Cloud ESXi: 443, 902, 53(UDP, UDP-DNS)~~**
+3. **Cloud** (Inbound/Outbound): **902, 443, 53(UDP, UDP-DNS)
 
 ### 
      Single Network firewall rules example

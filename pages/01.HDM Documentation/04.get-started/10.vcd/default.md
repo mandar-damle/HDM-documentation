@@ -1,8 +1,8 @@
 ---
-title: 'VMware Cloud Director Hands on Lab'
+title: 'VMware Cloud Director Hands-on Lab'
 ---
 
-This Hands on Lab is designed to quickly enable you to setup 
+This Hands-on Lab is designed to quickly enable you to setup 
 a sandbox environment with no network segregation and DHCP. This 
 will allow you deploy the product and exercise the functionality. 
 The intention is to effectively understand the value HDM
@@ -23,14 +23,14 @@ _Figure 1: Lab Connectivity_
    1. Deploy and configure these 2 ESXi (6.5U2+ or 6.7) with Management on the Single Network
    1. Deploy vCenter Server (6.5 or 6.7) and configure it over the Single Network.
    1. Add the ESXi to the vCenter.
-   1. Provision <a name="shared-ds">Shared datastore</a> with atleast 1 TB storage.
+   1. Provision <a name="shared-ds">Shared datastore</a> with at least 1 TB storage.
    1. Configure the two ESXi into a cluster 
    1. Add the shared storage to the 2 ESXi within the cluster.
 
-Your on premises configuraiton is over now we will configure the target cloud. 
+Your on-premises configuration is over now we will configure the target cloud. 
 
 1. Setup Networking on target VCD
-   1. In the next step you will create required networks on the cloud target and setup IPSec tunnel. If your VCD is within the Lab you can skip the IPSec tunnel configuration in the step below.
+   1. In the next step you will create the required networks on the cloud target and setup IPSec tunnel. If your VCD is within the Lab you can skip the IPSec tunnel configuration in the step below.
    1. Please follow the step in [ORG VDC System and Network Configuration](http://docs.primaryio.com/hdm%20documentation/vcd/network%20planning/cloud%20network%20config)
    1. After the ORG VDC setup is complete you will have Networks configured 
    on the target cloud and a IPSec tunnel to connect to it.
@@ -41,7 +41,7 @@ Test connectivity.
 1. Test that the VCD tenant portal can be accessed from source environment.
 1. Deploy a TestVM on the source with Network connected to the Single Network.
 1. Make a remote desktop connection to TestVM.
-1. Over the RDP try and connect to the tennat portal.
+1. Over the RDP try and connect to the tenant portal.
 1. If you are able to connect successfully you setup is operational. 
 
 # Download PrimaryIO HDM
