@@ -416,12 +416,31 @@ Navigate to the Licensing page on the HDM vCenter Plugin
    </td>
    <td>
 <ul>
+<li>For Parts 1 and 2, choose <em>DHCP</em>
+</li>
+</ul>
+   </td>
+  </tr>
+</table>
 
-<li>Use the Network configuration captured in [Appendix B]
 
 
+### WAN Routing Configuration
 
-<li>Leave the Oncloud WAN route in <strong>Network Configuration - Part 3</strong> empty.
+
+<table>
+  <tr>
+   <td>
+
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.vcd/images/image30.png" width="" alt="alt_text" title="image_tooltip">
+
+   </td>
+   <td>
+<ul>
+
+<li> Set the WAN subnet for both prem & cloud.
+<li> Set the gateway for WAN both sides.
+<li> DON'T Skip this step.
 </li>
 </ul>
    </td>
