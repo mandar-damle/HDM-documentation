@@ -490,18 +490,18 @@ Please fill the table below for reference during the installation process.
 The following WAN routes are required to access on-cloud from on-premise and vice-versa. This is required in during the [Set WAN route](../../../deployment%20steps#wan-cfg) part of cloud configuration.
 
 
-*   **On-Prem WAN route**
+*   **On Premises WAN network details**
 
     The route which would be set on HDM appliance on premise. The routes will enable communication from on-premise to HDM appliances on-cloud.
 
-    *   **On-Premise WAN subnet : **Subnet of premise WAN network on which HDM appliances are deployed
-    *   **On-Premise WAN gateway : **On premise WAN gateway which allows access to on-cloud WAN subnet
-*   **On-Prem WAN route**
+    *   **On-Premise WAN subnet :** Subnet of premise WAN network on which HDM appliances are deployed
+    *   **On-Premise WAN gateway :** On premise WAN gateway which allows access to on-cloud WAN subnet
+*   **On Cloud WAN network details**
 
     The route which would be set on HDM appliance on cloud. The routes will enable communication from on-cloud to HDM appliances on-premise.
 
-    *   **On-Cloud WAN subnet : **Subnet of cloud WAN network on which HDM appliances are deployed
-    *   **On-Cloud WAN gateway : **On cloud WAN gateway which allows access to on-premise WAN subnet
+    *   **On-Cloud WAN subnet :** Subnet of cloud WAN network on which HDM appliances are deployed
+    *   **On-Cloud WAN gateway :** On cloud WAN gateway which allows access to on-premise WAN subnet
 
 <table>
   <tr>
