@@ -1,14 +1,10 @@
 ---
 title: 'Deployment Planning'
-media_order: ''
-body_classes: ''
-order_by: ''
-order_manual: ''
 ---
 
 ### HDM Deployment
 
-HDM provides a very flexible deployment model providing options to be able to cater to different user needs in terms of use case, performance, scalability and security. This needs to be selected as part of installation of on-premise components. 
+HDM provides a very flexible deployment model providing options to cater to different user needs in terms of use case, performance, scalability and security. This needs to be selected as part of the installation of on-premises components. 
 
 
 ![alt_text](images/image42.png?classes=content-img "image_tooltip")
@@ -17,24 +13,22 @@ HDM provides a very flexible deployment model providing options to be able to ca
 
 #### HDM Deployment Types
 
-While deploying HDM users need to select a combination of **Deployment Mode** and **Resource Allocation** type. The features of the available options are provided below to guide the user to  choose the deployment type that is best suited for their requirements. HDM deployed components. 
+While deploying HDM, users need to select a combination of **Deployment Mode** and **Resource Allocation** type. The features of the available options are provided below to guide the user to choose the deployment type that is best suited for their requirements. HDM deployed components. 
 
 
 #### Deployment Mode : Standalone or Cluster
 
-Based on the scale and failure tolerance requirements,  users can choose the standalone or cluster modes of deployment. Please note the following points:
+Based on scale and failure tolerance requirements, users can choose to deploy either in standalone mode or as a cluster. Please note the following:
 
-
-
-1. In the standalone mode, a fixed number of HDM components are installed irrespective of the size of the cluster. Also, in this mode, there is no redundancy in the HDM components, which means less fault tolerance.
-2. In the cluster mode, some of the HDM components are installed according to the scale of the cluster for a higher redundancy and better failure tolerance. This means more resource consumption as compared to the standalone option. Number of concurrent migrations is also higher than the standalone option. 
+1. In standalone mode, a fixed number of HDM components are installed, regardless of cluster size. In addition, this mode does not include any redundancy in the HDM components, so it will be less fault tolerant.
+2. In cluster mode, some HDM components will be installed based on the scale of the cluster. The delivers greater redundancy, superior fault tolerance, and more concurrent migrations than the standalone option, but it will consume more resources. 
 
 
 #### Concurrency and Scale Support 
 
-Below table depicts the concurrency and scale support in various HDM deployment types
+The following table highlights the amount of concurrency and scalability supported by each HDM deployment type:
 
-**Note: **Here, the N in Cluster (N) refers to the number of nodes in the On-Cloud cluster where HDM is deployed.
+**Note: **Here, the N in Cluster (N) refers to the number of nodes in the cloud cluster where HDM is deployed.
 
 
 <table>
@@ -149,31 +143,28 @@ Below table depicts the concurrency and scale support in various HDM deployment 
 </table>
 
 
-Note : In Ultra Lite mode HDM can process multiple requests for migration at a time. The requests will be queued by the system. The system will analyse the virtual machines and process 8 VMDKs at a time per node of the cluster. 
+Note : In Ultra Lite mode, HDM can process multiple simultaneous migration requests. The requests will be analyzed and queued by the system. Eight VMDKs per node can be processed simultaneously. 
 
 
 #### Resource Allocation : Ultra Lite, Lite, Standard or Performance
 
-HDM provides the Ultra LIte, Lite, Standard or Performance resource allocation options of deployment. Trade off is mainly in terms of CPU and memory resource utilization vs the capacity for the number of concurrent migrations. Few points to remember:
+HDM provides Ultra LIte, Lite, Standard and Performance deployment options. Each option involves a trade-off between CPU and memory resource utilization, and the supported number of concurrent migrations. Consider the following when making your choice:
 
-
-
-1. Ultra Lite is less resource intensive and supports cold migration using PIO’s proprietary data transport. 
-2. Lite mode is least resource intensive among other options. The parallelism of migration as well as the number of concurrently migrated VMs is limited here.
-3. Standard mode is more scalable as compared to Lite mode and less than the Performance mode, resource requirement is higher in a similar proportion.. 
-4. Performance mode has the highest resource requirement,  it provides the highest performance in terms of maximum parallelism during migration as well as number of migrated VMs On-Cloud.
+1. Ultra Lite is less resource intensive than many of the options and supports cold migration using the PrimaryIO proprietary data transport.
+2. Lite mode requires the fewest number of resources among the options, but the number of parallel migrations and the number of concurrently migrated VMs will be limited.
+3. Standard mode is more scalable than Lite mode, yet less scalable than Performance mode. However, resource requirements will be proportionally higher or lower. 
+4. Performance mode requires the highest number of resources among the options, but it also offers the greatest performance by delivering the highest number of parallel migrations and supporting the highest number of concurrently migrated VMs.
 
 
 #### HDM Resource Requirements
 
-Below table depicts the resources required for different deployment types.
+The following table highlights the number of resources required for each HDM deployment type:
+
 
 **Note**: 
 
-
-
-1. Here the names ESXMgr, CloudCache, PremMgr and CloudMgr are abbreviated names of the VMs containing HDM components. These get created as part of the HDM deployment
-2. The N in Cluster (N) refers to the number of nodes in the On-Cloud cluster.
+1. Here the names ESXMgr, CloudCache, PremMgr and CloudMgr are abbreviated names of the VMs containing HDM components. These get created as part of the HDM deployment.
+2. The N in Cluster (N) refers to the number of nodes in the cloud cluster.
 
 <table>
   <tr>
