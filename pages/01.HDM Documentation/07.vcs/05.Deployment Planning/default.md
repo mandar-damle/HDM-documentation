@@ -298,5 +298,5 @@ The following table highlights the number of resources required for each HDM dep
 </table>
 
 
-**Recommendation**: While any of the cluster modes can be used during production, the Standard-Standalone mode is recommended for test purposes. 
+**Recommendation**: While any of the cluster modes can be used in the production environment, the Standard-Standalone mode is recommended for the test environment. 
 
