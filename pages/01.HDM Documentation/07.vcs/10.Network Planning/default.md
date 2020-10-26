@@ -23,21 +23,15 @@ An ideal network configuration provides isolation between various types of netwo
 
 #### HDM Networking for Production : Multiple Network Topology
 
-The different network selection and their usage by HDM components is depicted below:
-
-
+The various network selections and their usage by HDM components are illustrated below:
 
 ![drawing](images/image23.png?classes=content-img)
 
-During deployment, HDM components are configured such that the requirements for network access to necessary data stores, networks and communication with other components are met. For example, HDM doesn’t require access to application networks and so HDM components are not configured to access them. 
+During deployment, HDM components are configured to meet network access requirements necessary data stores, networks, and other components. 
 
 During HDM deployment, users are required to categorize and map and the networks discovered in the vCenter as per the types mentioned above. 
 
-
-
-
 ![alt_text](images/image2.png?classes=content-img "image_tooltip")
-
 
 **Note:** In an ideal case, different traffic should use different network type. However, a user may have one or multiple types of traffic using the same network. This is deemed as a valid configuration and supported by HDM.
 
