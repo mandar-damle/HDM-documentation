@@ -1,5 +1,5 @@
 ---
-title: 'Deployment Steps' 
+title: 'Deployment Steps'
 ---
 
 This section describes how to deploy, configure, and undeploy PrimaryIO Hybrid Cloud Data Management (HDM) 2.1.3 for enabling migrations of virtual machines to VMware Cloud Director (VCD).
@@ -7,76 +7,57 @@ This section describes how to deploy, configure, and undeploy PrimaryIO Hybrid C
 
 ## HDM Deployment Steps
 
-HDM deployment involves the following six steps, each of which is discussed in detail in the sections below:
+HDM deployment involves the following six steps, each of which are discussed in detail in the sections below:
 
-1. Deploy HDM Appliance on On-Premise
-2. Add On-Premise vCenter to the Appliance
-3. Register HDM Plugin to On-Premise vCenter
-4. Add HDM License
-5. Deploy HDM On-Premise
-6. Deploy HDM On-Cloud
+1. Deploy the HDM Appliance On-Premises
+2. Add an On-Premises vCenter to the Appliance
+3. Register the HDM plugin to the On-Premises vCenter
+4. Add the HDM License
+5. Deploy HDM On-Premises
+6. Deploy HDM in the Cloud
 
-### Step 1/6  : Deploy HDM Appliance 
+### Step 1: Deploy the HDM Appliance On-Premises
 
-HDM Appliance manages both On-Premise and On-Cloud HDM operations. This section covers the following topics for deployment and configuration of HDM Appliance, please follow the instructions carefully:
+The HDM Appliance manages on-premises and cloud HDM operations. This section covers the following topics for deployment and configuration of the HDM Appliance:
 
-
-
-1. Placement of the HDM Appliance on On-Premise
+1. Placement of the HDM Appliance on-Premises
 2. System Requirements for the Appliance 
 3. Network Requirements
-4. Deployment and configuration
+4. Deployment and Configuration
 5. Network Configuration for the Appliance
-6. Adding the vCentre
+6. Adding vCenter
 
 
 #### Placement of HDM Appliance
 
-
-
-1. It must be deployed on the same On-Premise vCenter which it needs to manage.
-2. It should ideally be kept in a separate cluster than the one it is supposed to manage.
+1. The HDM Appliance must be deployed on the same on-premises vCenter it will manage.
+2. It should ideally be kept in a separate cluster than the one it will manage.
 
 
 #### Deployment and Configuration
 
-HDM Appliance is deployed from the OVF shipped as part of the HDM package. Please ensure that the placement and sizing of the deployment conforms to the requirements mentioned above.
+The HDM Appliance is deployed from the OVF shipped as part of the HDM package. Ensure that the placement and sizing of the deployment conforms to the requirements mentioned above.
 
-Use the **Deploy OVF Template **option in vCenter to deploy the Appliance as shown below:
-
+Use the **Deploy OVF Template **option in vCenter to deploy the Appliance as illustrated below:
 
 ![alt_text](images/image55.png?classes=content-img "image_tooltip")
 
-
-
 #### Network Configuration
 
-Appliance network configuration requires the user to specify the available networks into 4 categories as described in the network requirements section and HDM Resource Requirements sections above.
-
-In the simplest case, these networks can point to the same network. But best practice is to have them separate.
-
-Also, it should be specified whether the Appliance should have static IP or DHCP.
-
-
+Network configuration of the HDM Appliance requires the user to specify the available networks into four categories, as described in the _Network Requirements_ and _HDM Resource Requirements_ sections above. While these networks can point to the same network, the best practice is to leave them separate. In addition, it should be specified whether the Appliance will have a static IP or employ DHCP.
 
 ![alt_text](images/image2.png?classes=content-img "image_tooltip")
 
-
-
 #### IP Address Details
 
-For all the 4 categories of network, choose the IP allocation mechanism : static or DHCP.
+For all four network categories, choose whether static or DHCP will be utilized as the IP allocation mechanism. If static is chosen, the following details will also be required:
 
-For static IP, following details are also required 
-
-
-
-*   IP range : IP list that are free to be allocated for 
-*   Subnet mask : subnet of the IP range
-*   Gateway : gateway IP of the network
-*   Domain : domain name of the network
-*   DNS : to translate the domain name to IP
-*   NTP : for time sync
+*   IP range: IP list that are free to be allocated for 
+*   Subnet mask: subnet of the IP range
+*   Gateway: gateway IP of the network
+*   Domain: domain name of the network
+*   DNS: to translate the domain name to IP
+*   NTP: for time sync
 
 Networks with DHCP, can skip this configuration.
 
