@@ -17,9 +17,9 @@ target VCD cloud as shown in the _figure 1_.
 _Figure 1: Lab Connectivity_
 ![Lab layout](images/single-network.png)
 
-1. Setup the source environment.
-   1. Setup a <a name="single">Single Network</a> with DHCP service with IPs in 192.168.x.x
-   1. Provision 2 servers with at least 96 GB RAM.
+1. Setup the om-premises environment.
+   1. Setup a <a name="single">Single Network</a> with DHCP service with IPs in 192.168.1.0/24
+   1. Provision 2 servers with at least 96 GB RAM each.
    1. Deploy and configure these 2 ESXi (6.5U2+ or 6.7) with Management on the Single Network
    1. Deploy vCenter Server (6.5 or 6.7) and configure it over the Single Network.
    1. Add the ESXi to the vCenter.
@@ -30,19 +30,18 @@ _Figure 1: Lab Connectivity_
 Your on-premises configuration is over now we will configure the target cloud. 
 
 1. Setup Networking on target VCD
-   1. In the next step you will create the required networks on the cloud target and setup IPSec tunnel. If your VCD is within the Lab you can skip the IPSec tunnel configuration in the step below.
+   1. In the next step you will create the required networks on the cloud target and setup IPSec tunnel. If your VCD is within the Lab you can skip the IPSec tunnel configuration in the step below. Please make sure subnets on cloud side are not same as on-premises WAN subnet, use different network. 
    1. Please follow the step in [ORG VDC System and Network Configuration](http://docs.primaryio.com/hdm%20documentation/vcd/network%20planning/cloud%20network%20config)
-   1. After the ORG VDC setup is complete you will have Networks configured 
+   1. After the ORG VDC setup is complete, you will have Networks configured 
    on the target cloud and a IPSec tunnel to connect to it.
-   1. Setup a DHCP service on both the UPLINK_WAN_NETWORK and HDM_INTERNAL_NETWORK which was setup in step 1 with IPs in 192.168.x.x
+   1. Setup a DHCP service on both the UPLINK_WAN_NETWORK and HDM_INTERNAL_NETWORK which was setup in step#1. 
 
 Test connectivity.
 
 1. Test that the VCD tenant portal can be accessed from source environment.
-1. Deploy a TestVM on the source with Network connected to the Single Network.
-1. Make a remote desktop connection to TestVM.
-1. Over the RDP try and connect to the tenant portal.
-1. If you are able to connect successfully you setup is operational. 
+1. Deploy a TestVM(linux or windows) on the premises and cloud side, attach the respective WAN network.
+1. Try to ping from premises VM to Cloud VM and reverse.
+1. If you are able to ping successfully you setup is operational. 
 
 # Download PrimaryIO HDM
 
@@ -445,9 +444,7 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
    <td>
 <ul>
 
-<li> Set the WAN subnet for both prem & cloud.
-<li> Set the gateway for WAN both sides.
-<li> DON'T Skip this step.
+<li> since we are using single network, this steps can be skipped.
 </li>
 </ul>
    </td>
