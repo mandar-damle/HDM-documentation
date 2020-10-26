@@ -17,7 +17,7 @@ target VCD cloud as shown in the _figure 1_.
 _Figure 1: Lab Connectivity_
 ![Lab layout](images/single-network.png)
 
-1. Setup the om-premises environment.
+1. Setup the on-premises environment.
    1. Setup a <a name="single">Single Network</a> with DHCP service with IPs in 192.168.1.0/24
    1. Provision 2 servers with at least 96 GB RAM each.
    1. Deploy and configure these 2 ESXi (6.5U2+ or 6.7) with Management on the Single Network
