@@ -2,25 +2,23 @@
 title: 'Network Planning'
 ---
 
-The network plan must be developed first, becuase the specific network topology chosen will affect how HDM components are configured. The way in which VMs are migrated is based on the network security and isolation requirements for the VM once it migrates to the cloud. 
+The network plan must be developed first, becuase the chosen network topology will affect how HDM components are configured. It also affects the way in which VMs are migrated, since this is based on the VMs network security and isolation requirements once it migrates to the cloud.
 
-HDM provides the following flexibility for the network configuration:
+HDM enables the following network configuration flexibility:
 
-1. Choice of the networks that HDM components should use
+1. Choice of networks that HDM components can use
 2. Choice of IP type for HDM components
 
 
 #### **Network Types**
 
-An ideal network configuration provides for isolation between types of network traffic, for maximum security, performance and access control. HDM assumes there could be following types of networks in the environment:
+An ideal network configuration provides isolation between various types of network traffic to deliver maximum security, performance, and access control. HDM supports the following types of networks:
 
-
-
-1. Management Network (VM Network) : This usually maps to the VM network and provides access to vCenter. All management API communication with vCenter happens over this network.
+1. Management Network (VM Network): This usually maps to the VM network and provides access to vCenter. All management API communications with vCenter occur over this network.
 2. ESXi Network (ESXi_Network): This usually maps to the VM network and provides access to ESXi.
-3. HDM Internal Network (HDM_Internal_Network) : This network is used by HDM for communication among its components. It is recommended to have a dedicated low latency network be configured for this purpose. 
-4. WAN Network (Uplink_WAN_Network) - This network provides access to the cloud. All data transfer to and from premise to cloud happens over this network. This could be a public link or direct connection between On-Premise and On-Cloud.
-5. Application Network : This network is used for data transfer by the Application VMs and each application can be accessed on its own network. So, a large number of application networks are possible. 
+3. HDM Internal Network (HDM_Internal_Network): This network is used by HDM for communications among its components. A dedicated low latency network should be configured for this purpose. 
+4. WAN Network (Uplink_WAN_Network): This network provides access to the cloud. All data transfers between the on-premises environment and the cloud occur over this network. A public link or a direct connection can be used.
+5. Application Network: This network is used for data transfers by the application VMs and each application. A large number of application networks are supported to enable each application to utilize its own network. 
 
 
 #### HDM Networking for Production : Multiple Network Topology
