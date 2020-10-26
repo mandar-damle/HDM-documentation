@@ -47,6 +47,6 @@ In this case all “Source Networks” would map to the VM Network/Management Ne
 
 #### IP Allocation
 
-HDM supports DHCP and static IPs for its components. At deployment time, the user will need to choose .For static IPs, IP allocation range also has to be provided. Minimum IPs required can vary with the number of nodes in the cluster and the deployment mode chosen. 
+HDM supports DHCP and static IPs for its components. This choice will need to be made at deployment time. If static IPs are chosen, the IP allocation range must also be provided. The minimum number of required IPs will vary, based on the number of nodes in the cluster and the chosen deployment mode. 
 
-**Note**: HDM does not support the change of IP of its components (Appliance as well as other component VMs). If you wish to change the IP of any HDM component, you need to redeploy the HDM.
+**Note**: HDM does not support changing the IP address of any of its components (the appliance, as well as other component VMs). To change the IP of any HDM component, HDM will need to be redeployed.
