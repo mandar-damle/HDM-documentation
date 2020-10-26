@@ -27,20 +27,16 @@ The various network selections and their usage by HDM components are illustrated
 
 ![drawing](images/image23.png?classes=content-img)
 
-During deployment, HDM components are configured to meet network access requirements necessary data stores, networks, and other components. 
-
-During HDM deployment, users are required to categorize and map and the networks discovered in the vCenter as per the types mentioned above. 
+During deployment, HDM components are configured to meet network access requirements necessary data stores, networks, and other components. During the deployment process, users must categorize and map all of these discovered networks in vCenter. 
 
 ![alt_text](images/image2.png?classes=content-img "image_tooltip")
 
-**Note:** In an ideal case, different traffic should use different network type. However, a user may have one or multiple types of traffic using the same network. This is deemed as a valid configuration and supported by HDM.
+**Note:** Ideally, each traffic type should use a different network. However, a user may have one or multiple types of traffic using the same network. This is deemed as a valid configuration and supported by HDM.
 
 
 #### HDM Networking for Test : Single Network Topology
 
-While HDM deployment has the flexibility of supporting separation of network traffic as mentioned in the previous section, for test purposes, HDM can also be deployed in test environments where there may not be separation between all the types of networks mentioned above. In such situations, the network configuration would be simplified as shown below : 
-
-
+While HDM deployment has the flexibility to support network traffic separation as mentioned in the previous section, for test purposes HDM can also be deployed in test environments where there may not be separation between the various types of networks mentioned above. In this situation, the network configuration would be simplified as follows: 
 
 ![drawing](images/image41.png?classes=content-img)
 
