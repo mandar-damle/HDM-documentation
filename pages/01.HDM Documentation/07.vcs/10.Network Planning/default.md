@@ -36,20 +36,17 @@ During deployment, HDM components are configured to meet network access requirem
 
 #### HDM Networking for Test : Single Network Topology
 
-While HDM deployment has the flexibility to support network traffic separation as mentioned in the previous section, for test purposes HDM can also be deployed in test environments where there may not be separation between the various types of networks mentioned above. In this situation, the network configuration would be simplified as follows: 
+While HDM deployment has the flexibility to support network traffic separation as mentioned in the previous section, for test purposes HDM can also be deployed in test environments where there may not be separation between the various types of networks mentioned above. In this situation, the network configuration would be simplified as illustrated below: 
 
 ![drawing](images/image41.png?classes=content-img)
 
-In this case all of the “Source Networks” would map to VM Network / Management Network during the deployment process as shown below. 
-
-
+In this case all “Source Networks” would map to the VM Network/Management Network during the deployment process as illustrated below:
 
 ![alt_text](images/image39.png?classes=content-img "image_tooltip")
 
 
-
 #### IP Allocation
 
-HDM supports both DHCP or static IP for its components. At deployment time, the user is asked with this choice.For static IPs, IP allocation range also has to be provided. Minimum IPs required can vary with the number of nodes in the cluster and the deployment mode chosen. 
+HDM supports DHCP and static IP for its components. At deployment time, the user is asked with this choice.For static IPs, IP allocation range also has to be provided. Minimum IPs required can vary with the number of nodes in the cluster and the deployment mode chosen. 
 
 **Note**: HDM does not support the change of IP of its components (Appliance as well as other component VMs). If you wish to change the IP of any HDM component, you need to redeploy the HDM.
