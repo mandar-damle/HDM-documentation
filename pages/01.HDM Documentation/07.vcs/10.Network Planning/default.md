@@ -2,11 +2,9 @@
 title: 'Network Planning'
 ---
 
-This needs to be planned well because the HDM components are configured in a certain way within the network. Choice of network topology also matters for VMs to be migrated. It is based on the network security and isolation requirements for the VM once it migrates to the On-Cloud. 
+The network plan must be developed first, becuase it affects how HDM components are configured. Choice of network topology also matters for VMs to be migrated. It is based on the network security and isolation requirements for the VM once it migrates to the On-Cloud. 
 
 HDM provides the following flexibility for the network configuration:
-
-
 
 1. Choice of the networks that HDM components should use
 2. Choice of IP type for HDM components
