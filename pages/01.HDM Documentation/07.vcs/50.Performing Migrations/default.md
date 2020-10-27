@@ -249,7 +249,7 @@ Steps
 13.  For virtual machines that have been migrated using WARM migration, to complete the migration workflow the following steps would need to be performed.
     *   START TRANSFER : This is an optional step where the virtual machine data can be transferred using **HDM Bulktransfer**. Select the virtual machine and click on **Start Transfer **to transfer virtual machine data.
 
-
+![alt_text](images/image-start-transfer.png?classes=content-img "image_tooltip")
 
 ![alt_text](images/image45.png?classes=content-img "image_tooltip")
 
