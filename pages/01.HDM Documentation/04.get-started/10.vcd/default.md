@@ -4,54 +4,54 @@ title: 'VMware Cloud Director Hands-on Lab'
 
 This Hands-on Lab is designed to quickly enable you to setup 
 a sandbox environment with no network segregation and DHCP. This 
-will allow you deploy the product and exercise the functionality. 
+will allow you to deploy the product and exercise the functionality. 
 The intention is to effectively understand the value HDM
 has to offer for migration.
 
 # Lab Setup
 
-Setup the Lab without any network segregation with DHCP and connectivity to the
-target VCD cloud as shown in the _figure 1_.
+Set up the Lab without any network segregation, with DHCP and connectivity to the
+target VCD cloud, as shown in _figure 1_.
 
 
 _Figure 1: Lab Connectivity_
 ![Lab layout](images/single-network.png)
 
-1. Setup the on-premises environment.
-   1. Setup a <a name="single">Single Network</a> with DHCP service with IPs in 192.168.1.0/24
-   1. Provision 2 servers with at least 96 GB RAM each.
-   1. Deploy and configure these 2 ESXi (6.5U2+ or 6.7) with Management on the Single Network
-   1. Deploy vCenter Server (6.5 or 6.7) and configure it over the Single Network.
-   1. Add the ESXi to the vCenter.
-   1. Provision <a name="shared-ds">Shared datastore</a> with at least 1 TB storage.
+1. Set up the source environment.
+   1. Set up a <a name="single">Single Network</a> with DHCP service with IPs in 192.168.1.0/24
+   1. Provision two servers with at least 96 GB RAM each.
+   1. Deploy and configure the two ESXi (6.5U2+ or 6.7) with Management on the single network
+   1. Deploy vCenter Server (6.5 or 6.7) and configure it over the single network.
+   1. Add ESXi to vCenter.
+   1. Provision <a name="shared-ds">shared datastore</a> with at least 1 TB storage.
    1. Configure the two ESXi into a cluster 
-   1. Add the shared storage to the 2 ESXi within the cluster.
+   1. Add the shared storage to the two ESXi within the cluster.
 
-Your on-premises configuration is over now we will configure the target cloud. 
+The on-premises configuration is now complete. To configure the target cloud:
 
-1. Setup Networking on target VCD
-   1. In the next step you will create the required networks on the cloud target and setup IPSec tunnel. If your VCD is within the Lab you can skip the IPSec tunnel configuration in the step below. Please make sure subnets on cloud side are not same as on-premises WAN subnet, use different network. 
+
+1. Set up networking on the target VCD
+   1. In the next step you will create the required networks on the cloud target and set up an IPSec tunnel. If your VCD is within the Lab you can skip the IPSec tunnel configuration in the step below. Please make sure subnets on cloud side are not same as on-premises WAN subnet, use different network.
    1. Please follow the step in [ORG VDC System and Network Configuration](http://docs.primaryio.com/hdm%20documentation/vcd/network%20planning/cloud%20network%20config)
-   1. After the ORG VDC setup is complete, you will have Networks configured 
-   on the target cloud and a IPSec tunnel to connect to it.
-   1. Setup a DHCP service on both the UPLINK_WAN_NETWORK and HDM_INTERNAL_NETWORK which was setup in step#1. 
+   1. After the ORG VDC setup is complete, the networks will be configured 
+   on the target cloud and an IPSec tunnel will be connected to it.
+   1. Set up a DHCP service on the UPLINK_WAN_NETWORK and the HDM_INTERNAL_NETWORK which was setup in step 1 with IPs in step#1. 
 
-Test connectivity.
+Test the connectivity.
 
-1. Test that the VCD tenant portal can be accessed from source environment.
+1. Test to ensure that the VCD tenant portal can be accessed from the source environment.
 1. Deploy a TestVM(linux or windows) on the premises and cloud side, attach the respective WAN Network configured earlier.
 1. Test connection to the tenant portal from the TestVM.
-1. Try to ping from premises VM to Cloud VM and reverse.
-1. If you are able to ping successfully you setup is operational. 
+1. Try connection from premises VM to Cloud VM and reverse.
+1. If you are able to successfully connect, the setup is operational. 
 
 # Download PrimaryIO HDM
 
 To obtain your license and download link for HDM, visit [https://www.primaryio.com/ibm/](https://www.primaryio.com/ibm/)
 
 You will receive an email with the following:
-
 *   A link to download the PrimaryIO HDM software
-*   A link to training videos.
+*   A link to training videos
 *   A license key for the software
 
 Before proceeding with the installation, watch the training videos ([https://www.primaryio.com/training/](https://www.primaryio.com/training/)) and use this guide. 
@@ -59,13 +59,9 @@ Before proceeding with the installation, watch the training videos ([https://www
 
 # Step 4: Deploy the HDM Appliance
 
-
-
-*   Make sure you have at least 10GB free space to download the appliance
+*   Make sure you have at least 10GB of free space to download the appliance
 *   Unzip the file _HDM_2.1.zip_ from the download link
-
-Deploy the appliance using the vCenter UI 
-
+*   Deploy the appliance using the vCenter UI 
 
 
 <table>
@@ -159,11 +155,9 @@ Deploy the appliance using the vCenter UI
 
 ## Add on-premise vCenter
 
-
-
 *   Locate the IP address of the appliance
 *   Enter _https://&lt;appliance-ip>_ in the appliance web interface
-*   Login to the appliance web UI using default password: 2Hdm$aK!N@h!
+*   Log into the appliance web UI using default password: 2Hdm$aK!N@h!
 *   After login, select ![alt_text](images/image14.png "image_tooltip")
 
 
@@ -225,7 +219,8 @@ vCenter configuration is now complete. Log into the newly-configured vCenter.
 
 ```
 Note:
-For the plugin to be visible within vCenter, you will need to logout/login to the vCenter at least twice.
+For the plugin to be visible within vCenter, you will need to logout and log back into vCenter at least twice.
+
 ```
 
 
@@ -245,13 +240,13 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
    <td>
 <ul>
 
-<li>HDM plugin can be accessed directly via the Menu
+<li>The HDM plugin can be accessed directly via the Menu
 
 <li>It can take approximately five minutes to load HDM the first time it is accessed
 
 <li>On the <em>Licensing</em> tab, select <em>Add License</em>
 
-<li>Add the license key received by mail
+<li>Add the license key you received by mail
 </li>
 </ul>
    </td>
@@ -382,7 +377,7 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
 
 <li>Select <em>Add</em>
 
-<li>Please note, it will take approximately 5 minutes to configure vCD and move to the next screen
+<li>Please note, it will take approximately five minutes to configure vCD and move to the next screen
 </li>
 </ul>
    </td>
@@ -444,8 +439,8 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
    </td>
    <td>
 <ul>
-<li> Set the WAN subnet for both prem & cloud.
-<li> Set the gateway for WAN both sides.
+<li> Set the WAN subnet for the on-premises and cloud environments.
+<li> Set the gateway for both sides of the WAN.
 <li> DON'T Skip this step.
 </li>
 </ul>
@@ -464,7 +459,7 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
    <td>
 <ul>
 
-<li>Map on-premises single network to UPLINK_WAN_NETWORK.
+<li>Map the on-premises single network to UPLINK_WAN_NETWORK.
 <li>Depending on the chosen configuration and uplink speed, this step may require up to an hour to complete
 </li>
 </ul>
@@ -486,7 +481,7 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
 
 <li>To ensure the deployment has been successful, select <em>HDM</em> from the Menu, followed by the <em>Administration</em>, <em>HDM Health</em>, and <em>Component Health</em> tabs
 
-<li>Check the status. If it is green, it is ready to begin migration 
+<li>Check the status. If it is green, it is ready to begin migration.
 </li>
 </ul>
    </td>
@@ -505,10 +500,8 @@ NOTES:
 Migrations will be successful for VMs where network and disk interfaces are accessible to HDM via VMware APIs.
 If network or disk interfaces are added dynamically, the virtual machine will need to be powered down to allow 
 the newly added network and disk interface information to become available to HDM via VMware APIs.
-Before migration is triggered, ensure that the health of the HDM components is green. 
+Before migration is triggered, ensure that the health of all HDM components is green. 
 ```
-
-
 
 <table>
   <tr>
@@ -562,7 +555,7 @@ Before migration is triggered, ensure that the health of the HDM components is g
    <td>
 <ul>
 
-<li>The migration status will be displayed in the wizard, as well as in vCenter tasks
+<li>The migration status will be displayed in the wizard, as well as in vCenter Tasks
 
 <li>Following successful migration, the VM will be ready for use in the cloud
 
@@ -604,7 +597,7 @@ Before migration is triggered, ensure that the health of the HDM components is g
    </td>
   </tr>
   <tr>
-   <td>ESXi in connected state in the vCenter
+   <td>ESXi in connected state in vCenter
    </td>
    <td>
    </td>

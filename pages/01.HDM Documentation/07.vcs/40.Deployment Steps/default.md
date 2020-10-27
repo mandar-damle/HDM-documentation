@@ -52,22 +52,18 @@ Network configuration of the HDM Appliance requires the user to specify the avai
 
 For all four network categories, choose whether static or DHCP will be utilized as the IP allocation mechanism. If static is chosen, the following details will also be required:
 
-*   IP range: IP list that are free to be allocated for 
+*   IP range: the list of IP addresses that are free to be allocated 
 *   Subnet mask: subnet of the IP range
 *   Gateway: gateway IP of the network
 *   Domain: domain name of the network
 *   DNS: to translate the domain name to IP
 *   NTP: for time sync
 
-Networks with DHCP, can skip this configuration.
+Skip this configuration if DHCP is chosen.
 
 **Note**: 
-
-
-
-1. NTP server must be specified for static IP configuration. Not providing this input may cause a lot of further HDM operations to fail.
-2. In case of static IP, gateway IP and the IP range specified should be in the same subnet.
-
+1. The NTP server must be specified for static IP configuration. Failure to provide this input may cause further HDM operations to fail.
+2. When static IP is used, the gateway IP and the specified IP range should reside in the same subnet.
 
 ![alt_text](images/image57.png?classes=content-img "image_tooltip")
 
