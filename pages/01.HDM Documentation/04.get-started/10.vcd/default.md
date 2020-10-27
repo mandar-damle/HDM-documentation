@@ -39,7 +39,8 @@ Your on-premises configuration is over now we will configure the target cloud.
 Test connectivity.
 
 1. Test that the VCD tenant portal can be accessed from source environment.
-1. Deploy a TestVM(linux or windows) on the premises and cloud side, attach the respective WAN network.
+1. Deploy a TestVM(linux or windows) on the premises and cloud side, attach the respective WAN Network configured earlier.
+1. Test connection to the tenant portal from the TestVM.
 1. Try to ping from premises VM to Cloud VM and reverse.
 1. If you are able to ping successfully you setup is operational. 
 
@@ -443,8 +444,9 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
    </td>
    <td>
 <ul>
-
-<li> since we are using single network, this steps can be skipped.
+<li> Set the WAN subnet for both prem & cloud.
+<li> Set the gateway for WAN both sides.
+<li> DON'T Skip this step.
 </li>
 </ul>
    </td>
