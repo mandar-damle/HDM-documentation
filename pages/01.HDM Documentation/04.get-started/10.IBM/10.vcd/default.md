@@ -1,5 +1,5 @@
 ---
-title: 'VCD'
+title: 'VCD Hands-on Lab'
 ---
 
 This Hands-on Lab is designed to quickly enable you to setup 
