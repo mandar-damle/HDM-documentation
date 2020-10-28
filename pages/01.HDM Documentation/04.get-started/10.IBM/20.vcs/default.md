@@ -1,5 +1,5 @@
 ---
-title: 'IBM Service for VMware Cloud Hands-on Lab'
+title: 'VCS'
 ---
 
 This Hands-on Lab is designed to quickly enable you to set up 
@@ -86,7 +86,7 @@ Estimated time 5 minutes
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/20.vcs/images/image14.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image14.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -108,7 +108,7 @@ Estimated time 5 minutes
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/20.vcs/images/image2.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image2.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -135,7 +135,7 @@ Estimated time 10 minutes
 <table>
   <tr>
    <td>
-<img src="/user/pages/01.HDM Documentation/04.get-started/20.vcs/images/image1.png" width="" alt="alt_text" title="image_tooltip">   
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image1.png" width="" alt="alt_text" title="image_tooltip">   
    </td>
    <td>
 <ul>
@@ -187,7 +187,7 @@ Estimated time 10 minutes
 
 
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/20.vcs/images/image16.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image16.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -207,7 +207,7 @@ Estimated time 10 minutes
    <td>
 
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/20.vcs/images/image15.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image15.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -228,7 +228,7 @@ Estimated time 10 minutes
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/20.vcs/images/image18.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image18.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>Register the vCenter plugin by selecting the _Register_ button.
@@ -256,7 +256,7 @@ Navigate to the Licensing page on the HDM vCenter Plugin
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/20.vcs/images/image17.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image17.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -284,7 +284,7 @@ Navigate to the Licensing page on the HDM vCenter Plugin
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/20.vcs/images/image19.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image19.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -307,7 +307,7 @@ Navigate to the Licensing page on the HDM vCenter Plugin
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/20.vcs/images/image23.jpg" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image23.jpg" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -331,7 +331,7 @@ Navigate to the Licensing page on the HDM vCenter Plugin
    <td>
 
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/20.vcs/images/image7.jpg" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image7.jpg" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -359,7 +359,7 @@ Navigate to the Licensing page on the HDM vCenter Plugin
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/20.vcs/images/image20.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image20.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -380,7 +380,7 @@ Navigate to the Licensing page on the HDM vCenter Plugin
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/20.vcs/images/image10.jpg" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image10.jpg" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -401,7 +401,7 @@ Navigate to the Licensing page on the HDM vCenter Plugin
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/20.vcs/images/image21.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image21.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -422,7 +422,7 @@ Navigate to the Licensing page on the HDM vCenter Plugin
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.vcd/images/image30.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/10.vcd/images/image30.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -443,7 +443,7 @@ Navigate to the Licensing page on the HDM vCenter Plugin
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/20.vcs/images/image22.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image22.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -466,7 +466,7 @@ Navigate to the Licensing page on the HDM vCenter Plugin
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/20.vcs/images/image11.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image11.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -504,7 +504,7 @@ Before migration is triggered, ensure that the health of HDM componentes is gree
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/20.vcs/images/image9.jpg" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image9.jpg" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -527,7 +527,7 @@ Before migration is triggered, ensure that the health of HDM componentes is gree
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/20.vcs/images/image5.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image5.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -548,7 +548,7 @@ Before migration is triggered, ensure that the health of HDM componentes is gree
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/20.vcs/images/image8.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image8.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
