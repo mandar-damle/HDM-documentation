@@ -1,5 +1,5 @@
 ---
-title: 'VCS'
+title: 'VCS Hands-on Lab'
 ---
 
 This Hands-on Lab is designed to quickly enable you to set up 
