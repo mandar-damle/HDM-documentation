@@ -44,7 +44,7 @@ Test for connectivity.
 1. ssh into TestVM1 and try to connect to TestVM2.
 1. If you are able to connect successfully, the setup is operational. 
 
-# Step 2: Downloading PrimaryIO HDM
+# Downloading PrimaryIO HDM
 
 
 ```
@@ -66,7 +66,7 @@ To proceed with the installation, you should first watch the training videos and
 
 
 
-# Step 4: Deploy the PrimaryIO Appliance
+# Deploy the PrimaryIO Appliance
 
 
 ```
@@ -123,7 +123,7 @@ Estimated time 5 minutes
 
 
 
-# Step 5: Validate Network Configuration
+# Validate Network Configuration
 
 
 ```
@@ -167,7 +167,7 @@ Estimated time 10 minutes
 
 
 
-# Step 6: On-Premises Deployment
+# On-Premises Deployment
 
 
 ## Add On-Prem vCenter
@@ -348,7 +348,7 @@ Navigate to the Licensing page on the HDM vCenter Plugin
 
 
 
-# Step 7: Cloud Deployment
+# Cloud Deployment
 
 
 
@@ -483,7 +483,7 @@ Navigate to the Licensing page on the HDM vCenter Plugin
 
 
 
-# Step 8: Perform Cold Migration
+# Perform Cold Migration
 
 During the cold migration, the VM that is being migrated is powered off. After the migration is complete on the cloud, the VM can be powered on.
 

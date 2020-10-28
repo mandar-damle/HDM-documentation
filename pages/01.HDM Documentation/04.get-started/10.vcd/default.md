@@ -57,7 +57,7 @@ You will receive an email with the following:
 Before proceeding with the installation, watch the training videos ([https://www.primaryio.com/training/](https://www.primaryio.com/training/)) and use this guide. 
 
 
-# Step 4: Deploy the HDM Appliance
+# Deploy the HDM Appliance
 
 *   Make sure you have at least 10GB of free space to download the appliance
 *   Unzip the file _HDM_2.1.zip_ from the download link
@@ -109,7 +109,7 @@ Before proceeding with the installation, watch the training videos ([https://www
 
 
 
-# Step 5: Validate the Network Configuration
+# Validate the Network Configuration
 
 
 <table>
@@ -150,7 +150,7 @@ Before proceeding with the installation, watch the training videos ([https://www
 
 
 
-# Step 6: On-premises Deployment
+# On-premises Deployment
 
 
 ## Add on-premise vCenter
@@ -332,7 +332,7 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
 
 
 
-# Step 7: Cloud Deployment
+# Cloud Deployment
 
 
 ## Configure Cloud vCenter
@@ -490,7 +490,7 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
 
 
 
-# Step 8: Perform a Cold Migration
+# Perform a Cold Migration
 
 During cold migration, the VM being migrated is powered off. After the migration has been completed on the cloud, the VM can be powered back on.
 
