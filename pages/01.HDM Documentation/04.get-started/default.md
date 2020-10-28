@@ -1,6 +1,6 @@
 ---
 title: 'Getting Started'
-published: false
+published: true
 ---
 
 The collection of resources in this section will enable you to quickly setup a
