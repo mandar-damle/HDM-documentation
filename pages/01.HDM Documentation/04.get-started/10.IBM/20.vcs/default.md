@@ -422,7 +422,7 @@ Navigate to the Licensing page on the HDM vCenter Plugin
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/10.vcd/images/image30.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image30.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
