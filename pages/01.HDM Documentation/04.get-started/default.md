@@ -12,5 +12,5 @@ IBM Cloud for VMware Solutions:
 * VMware Cloud Services VCS)
 
 If you are ready to deploy HDM into your environment, use one of the deployment guides listed below that matches your environment:
-* [VMWare Cloud Director Deployment](/hdm%20documentation/vcd#vmware-cloud-director)
-* [VMware Cloud Services Deployment](/hdm%20documentation/vcd#vmware-cloud-director)
+* [VMware Cloud Director (VCD) Deployment](/hdm%20documentation/vcd#vmware-cloud-director)
+* [VMware Cloud Services VCS) Deployment](/hdm%20documentation/vcd#vmware-cloud-director)
