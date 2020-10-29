@@ -4,10 +4,7 @@ title: 'Performing Migrations'
 
 # HDM Migrations
 
-
-
-HDM is used to perform migration of VMs from On-Premise to the cloud. HDM support the
-three types of migration these are.
+HDM is used to migrate VMs from on-premises to cloud environments. HDM supports the following migration types:
 
 1. Agile Rapid Migration (ARM)
 2. Try Before Commit (TBC)
@@ -15,20 +12,16 @@ three types of migration these are.
 
 ## Migrate a VM using vCenter 
 
-**Note:** Migration operation is performed using the PrimaryIO GUI interface in vCenter as well as through SQS interface library.  Following sections describe the steps for executing the migration operation through vCenter. 
+**Note:** The migration operation can be performed using the PrimaryIO GUI interface in vCenter, or through the SQS interface library. The following sections describe the steps for executing the migration operation using vCenter. 
 
-**Note**: Currently, HDM supports deployment for migration for only one cluster per vCenter at a time. If the VMs are to be migrated from multiple clusters, the process of deploy, migrate, undeploy would have to repeat for multiple clusters.
+**Note**: Currently, HDM migration support is limited to one simultaneous cluster per vCenter. If the VMs to be migrated are from multiple clusters, the process will need to be repeated for each of them.
 
 Pre-requisites
 
-
-
-1. HDM deployment must be complete on both On-Premise and On-Cloud.
-2. HDM SPBM policy must be configured. 
+1. HDM deployment must be complete in the on-premises and cloud environments.
+2. The HDM SPBM policy must be configured. 
 
 Steps
-
-
 
 1. Prepare the VM to migrate
 2. Migrate the VM
@@ -36,66 +29,53 @@ Steps
 
 ### Prepare to Migrate
 
-VMs that are to be migrated need to go through the prepare to migrate step. It does the following:
+The VMs to be migrated will first need to be prepared:
 
-
-
-1. Perform various checks to see if VM OS type and configuration is supported for migration.
-2. If required make necessary configuration updates so that the migration is successful.
+1. Perform various checks to ensure that the VM's OS type and configuration are supported for migration.
+2. If required, make the necessary configuration updates.
 
 Pre-requisites
 
-
-
-1. VM must be “powered on” for “prepare to migrate” to succeed.
-2. VM OS type should be one of the supported OS for migration.
-3. Latest version of vmware tools must be installed on the VM. Also ensure that vmware tools service is running and functional.
-4. Administrator/root credentials of the VM should be available.
-5. OS should be present on the first VMDK of the VM
-6. All OS related partitions should be present on the same disk/device only. Example
-    *   'System Reserved' partition and 'System' partition should be on the same disk
-    *   /boot or /home should be present on the same disk
-    *   LVM should be created from partitions which are on the same disk
-7. E1000E and VMXNet3 network adapter should be available in both On-Premise and On-Cloud vCenters
-8. The VM must have access to the Internet to download the required packages.
-9. Minimum 50 MB of disk size should be available in the system partition
-10. The OS or repository is configured to download the required install packages from the Internet.
+1. The VM must be powered on.
+2. The VM's OS type must be supported for migration.
+3. The latest version of VMware tools must be installed on the VM, and the tools service must be running and functional.
+4. Administrator/root credentials of the VM must be available.
+5. The OS must be present on the first VMDK of the VM
+6. All OS related partitions must be present on the same disk/device. For example:
+    *   The 'System Reserved' and 'System' partitions must be on the same disk
+    *   /boot or /home must be present on the same disk
+    *   LVM must be created from partitions on the same disk
+7. The E1000E and VMXNet3 network adapters must be available in the on-premises and cloud vCenters
+8. The VM must have access to the Internet.
+9. A minimum of 50 MB must be available in the system partition
+10. The OS or repository must configured to download the required install packages from the Internet.
 11. For Ubuntu 16.04, LVM is not supported.
-12. For all versions of Ubuntu, users should ensure that either the static IP is configured for internal network or in case of DHCP, increase the lease to 30 days or more.
-13. If the OS is linux, the sudo user’s home directory must be <code><em>/home</em></code>.
-14. Users should wait for the boot process to get completed. For example, on linux
-    *   Use command <code>systemctl is-system-running </code>to ensure that system is fully operational
-15. The VM should not have UEFI BIOS. Only IBM PC BIOS is supported.
-16. For Windows VM, firewalls should be disabled for the duration of prepare to migrate operation.
-17. For Windows Domain user, the local security policy should be modified for the duration of prepare to migrate operation. This can be done using the following steps
-    *   Go to Local Security Policy -> Local Policies -> Security Options
+12. For all versions of Ubuntu, ensure that either the static IP is configured for internal network, or the DHCP lease is set to 30 days or greater.
+13. If the OS is Linux, the sudo user’s home directory must be <code><em>/home</em></code>.
+14. Wait for the boot process to complete. For example, on Linux:
+    *   Use command <code>systemctl is-system-running </code>to ensure the system is fully operational
+15. The VM cannot have UEFI BIOS. Only IBM PC BIOS is supported.
+16. For a Windows VM, firewalls must be disabled for the duration of the _prepare to migrate_ operation.
+17. For the Windows Domain user, the local security policy must be modified for the duration of the _prepare to migrate_ operation:
+    *   Select _Local Security Policy_, followed by _Local Policies_, then _Security Options_
     *   On the policy <code>User Account Control: Behavior of the elevation prompt for administrators in Admin Approval Mode, </code>choose the <code>Elevate without prompting </code>option
-    *   Disable the policy User Account Control: Turn on Admin Approval Mode
+    *   Disable the policy _User Account Control: Turn on Admin Approval Mode_
     *   Reboot the VM
+
 
 Steps
 
-
-
-1. In the On-Premise vCenter, right click on the VM you want to migrate.
+1. In the on-premises vCenter, right click on the VM to be migrated.
 2. Select the **HDM -> Prepare to Migrate** option
-
-
-
 
 ![alt_text](images/image30.png?classes=content-img "image_tooltip")
 
-
-
-
-3. Specify the administrator/root user credentials to the pop-up wizard 
-
-
+3. Specify the administrator/root user credentials in the pop-up wizard 
 
 ![alt_text](images/image33.png?classes=content-img "image_tooltip")
 
 
-**Note:  A full clone or linked clone of a VM needs “prepare to migrate” operation, even if its base VM has already been prepared for migration. For example, HDM migrate wizard in vCenter, such clones are not shown in available list of VMs for migration unless they have been explicitly prepared for migration.**
+**Note:  A full clone or linked clone of a VM must go through the “prepare to migrate” operation, even if its base VM has already has. For example, in the HDM migrate wizard in vCenter, clones are not shown in the list of available VMs for migration unless they have been explicitly prepared for migration.**
 
 
 ### Apply SPBM Policy
