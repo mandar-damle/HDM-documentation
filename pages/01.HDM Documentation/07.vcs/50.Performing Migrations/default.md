@@ -226,28 +226,24 @@ Details for how these are used for warm and cold migration are provided below.
 
 ### Cold Migration
 
-Cold migration using SQS interface involves the following steps
+Follow these steps to perform a cold migration using the SQS interface:
 
-
-
-1. Wait until system status is ‘Ready’. This is indicated by the heartbeat between HDM and SQS client. 
+1. Wait until system status is ‘Ready’. This is indicated by the heartbeat between HDM and the SQS client. 
 2. Send a ‘SourceInventoryRequest’ message to get the list of VMs that can be migrated using HDM.
-3. Choose a VM from the list of VMs returned in the response message.
+3. Choose a VM from the list in the response message.
 4. Set the mode of migration to ‘cold’
-5. Submit request for migration using ‘SourceCloneRequest’.
-6. After submission periodic responses will be sent with the status of the submitted request.
+5. Submit a request for migration using ‘SourceCloneRequest’.
+6. After submission, periodic responses will be sent with the status of the submitted request.
 
-Cold migration of a VM will go through the following steps.
-
-
+Cold migration of a VM will entail the following steps:
 
 1. A bulk transfer of the VM will be initiated.
     1. Progress and updates will be sent via message bus responses
-    2. vCenter Tasks will show the progress of the export and import of ovf on the source vCenter and the target vCenter respective.
-    3. This operation might get queued depending on resource profile and number of migrations in progress and total number of VMs migrated. There can be at most 8 concurrent migrations running concurrently. 
-2. Necessary network changes will be done on the migrated VM.
+    2. vCenter Tasks will show the progress of the export and import of ovf on the source and target vCenters, respectively.
+    3. This operation may get queued, depending on the resource profile, the number of migrations in progress, and total number of VMs migrated. A maximum of eight migrations can run concurrently. 
+2. Necessary network changes will be performed on the migrated VM.
 
-In case of failure of bulk transfer, few retries would be done. Failure is reported in the response message on the final failure only. In the vCenter, however, the retries and their status can also be seen.
+If the bulk transfer fails, it will be automatically retried a few times. The failure will be reported in the response message on the final failure only. In the vCenter, however, the retries and their statuses can also be seen.
 
 
 ### Warm Migration
