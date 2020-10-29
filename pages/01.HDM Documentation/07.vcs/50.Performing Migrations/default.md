@@ -178,19 +178,16 @@ Steps
 
 ### Migrate Time Snapshot
 
-As part of the VM migration, HDM creates a “migrate time snapshot”  for the VM. This snapshot is useful to restore the data in certain cases of failures.
+As part of the VM migration, HDM creates a “migrate time snapshot”  for the VM. This snapshot is useful to restore data in the event of certain failures.
 
-**Note**: Restoring the VM from the migrate time snapshot will result in loss of data for the time the VM was on On-Cloud.
+**Note**: Restoring the VM from the migrate time snapshot will result in loss of data for the time the VM was in the Cloud.
 
-To view the snapshot
+To view the snapshot:
 
+1. In the on-premises vCenter, right click on the VM in the resource pool _HDM_MIGRATE_POOL_
+2. Select _Snapshots_, followed by _Manage Snapshots_
 
-
-1. In the On-Premise vCenter, in the resource pool HDM_MIGRATE_POOL, right click on the VM
-2. Select Snapshots -> Manage Snapshots
-
-    The Manage Snapshots popup should display a snapshot named hdm_xx, for example hdm_1 shown below
-
+The Manage Snapshots popup should display a snapshot named _hdm_xx_. For example, _hdm_1_ shown below:
 
 ![alt_text](images/image21.png?classes=content-img "image_tooltip")
 
@@ -198,24 +195,20 @@ To view the snapshot
 
 ### Cache Size For Migrated VMs
 
-HDM allocates a cache quota on the On-Cloud, for all the migrated VMs for optimal performance of the applications running on On-Cloud. The cache size allocation follows the below rules
+HDM allocates a cache quota in the cloud for all migrated VMs to ensure optimal performance of the applications running in the cloud. The cache size allocation follows these rules:
 
-
-
-*   If the VM has been monitored for IOs on the On-Premise for sufficient time, the working set is derived by the IO analysis and the cache size is based on the working set size. Note that, this is valid only for standard and performance mode of deployment.
-*   If the VM is not monitored, the cache size is based on the size of the VMDKs. It is
-    *   15% for standard and performance mode of deployment
-    *   25% for lite mode of deployment 
-*   There is also a minimum cache size per deployment mode. It is
-    *   5 GB for lite and performance mode of deployment
-    *   3 GB for standard mode of deployment
+*   If the on-premises VM has been monitored for I/Os for a sufficient amount of time, the working set is derived by the I/O analysis and the cache size is based on the working set size. Note that this is only valid for _Standard_ and _Performance_ modes of deployment.
+*   If the VM is not monitored, the cache size is based on the size of the VMDKs:
+    *   15% for _Standard_ and _Performance_ modes of deployment
+    *   25% for the _Lite_ mode of deployment 
+*   There is also a minimum cache size per deployment mode:
+    *   5 GB for _Lite_ and _Performance_ modes of deployment
+    *   3 GB for the _Standard_ mode of deployment
 
 
 ## Migrate a VM using the SQS Interface 
 
 HDM migration for ARM use case is supported through SQS interface. The prerequisites for using SQS interface for migration are
-
-
 
 1. HDM Appliance must have access to Internet
 2. The SQS queues for command and response queues must be created in the Amazon SQS service
