@@ -4,11 +4,13 @@ title: Introduction
 
 ## What is Hybrid Cloud Data Management (HDM)
 
-PrimaryIO’s Hybrid Cloud Data Management technology decouples compute and storage to seamlessly move workloads to and from the cloud rapidly and lets you fully control data. HDM provides workload mobility and data control with a combination of innovative technologies: cloud cache, cloud storage gateway, and an integrated smart IO analyzer.
+PrimaryIO’s HDM provides solutions to perform migrations of Vmware based virtual machines from on-premises to VMware based Cloud environments. HDM supports two types of migrations - Cold and Warm. PrimaryIO’s warm migration is a unique technology that decouples compute and storage to seamlessly move workloads to and from the cloud rapidly and lets you fully control the data. HDM provides workload mobility and data control with a combination of innovative technologies: cloud cache, cloud storage gateway, and an integrated smart IO analyzer. HDM’s cold migrations require virtual machines to be powered down prior to the start of and during the duration of migration. 
 
-HDM enables rapid migration to the cloud by maximizing data transfer over the entire transfer pipeline from the VMDK to the network to the final write on the cloud. These optimizations ensure the effective utilization of available WAN bandwidth and quick migration of VM. HDM's ability to decouple compute and data to move workloads to public clouds faster and more efficiently.  By combining the fast startup on the cloud and our optimized transfer, we can ensure you can start using the cloud immediately. While in the background, the data transfer makes the best use of available bandwidth.
+HDM enables rapid migration to the cloud by maximizing data transfer over the entire transfer pipeline from the VMDK to the network to the final write on the cloud. These optimizations ensure the effective utilization of available WAN bandwidth and quick migration of VM. HDM's ability to decouple compute and data to move workloads to public clouds faster and more efficiently. By combining the fast startup on the cloud and our optimized transfer, we can ensure you can start using the cloud immediately. While in the background, the data transfer makes the best use of available bandwidth. 
 
-HDM provides a very flexible deployment model providing options to be able to cater to different user needs in terms of use case, performance, scalability and security.
+HDM is delivered as a virtual / software solution; when HDM software is installed, it consists of a single virtual appliance. Further deployment of HDM components then occurs on-premises in VMware vCenter and in the cloud. HDM provides a very flexible deployment model providing options to be able to cater to different user needs in terms of use case, performance, scalability and security.
+
+
 
 ## Compute and Data De-Coupling
 
@@ -20,7 +22,7 @@ HDM consists of the following components that are dispersed between on-premises 
 
 HDM 2.1.3 consists of microservices that have been packaged as VMs that work together to provide the data and control path to support the aforementioned use cases and to provide a flexible deployment model and failure resilience. HDM comprises the following components, dispersed between cloud and on-premises data centers (figure 1): 
 
-The HDM product binaries can be used in VMware Cloud Director, VMware Cloud Service for IBM or VMware Cloud Foundation. The components for each of these deployment is shown below.
+The HDM product binaries can be used in VMware Cloud Director or VMware Cloud Service for IBM (VCD and VCS). The components for each of these deployment is shown below.
 
 ## HDM Deployment for VMware Cloud Director
 
@@ -34,7 +36,7 @@ _Figure 1: Location of HDM 2.1.3 components_
 
 ![alt_text](images/image8.png?classes=content-img "image_tooltip")
 
-## HDM Deployment for VMware Cloud Service for IBM and VMware Cloud Foundation
+## HDM Deployment for VMware Cloud Service for IBM, VCD and VCS
 
 1. **PrimaryIO Plug-in: **Installed and registered on VMware vCenter for HDM management.
 2. **PrimaryIO Manager:** The main controlling appliance that controls and orchestrates the entire system.
