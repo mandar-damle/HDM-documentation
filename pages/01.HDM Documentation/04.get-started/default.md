@@ -1,6 +1,6 @@
 ---
 title: 'Getting Started'
-published: false
+published: true
 ---
 
 If you are evaluating the HDM technology, the collection of resources in this section will enable you to quickly setup a sandbox environment where you can deploy the HDM product play with it to understand the functionality and features. The "Hands on Labs" will detail the environment you need to setup and a simple flow of a cold migration.
