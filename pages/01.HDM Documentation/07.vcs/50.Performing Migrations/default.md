@@ -80,176 +80,97 @@ Steps
 
 ### Apply SPBM Policy
 
-Migrate operation requires the VM to have HDM SPBM policy applied to its disks. This may have already been attached when the enable IO monitoring was done (see section Enable IO Monitoring for more details). But in cases where the attempt to attach VM policy at that time failed or the VM was created at a later point of time, the following steps can be taken to verify and if required apply SPBM policy.
+The migrate operation requires the VM to have the HDM SPBM policy applied to its disks. This may have already been attached when the _Enable I/O Monitoring_ was performed (see the Enable I/O Monitoring section for more details). But in cases where either the attempt to attach the VM policy failed at that time, or the VM was created at a later point in time, the following steps can be taken to verify - and, if required, apply - SPBM policy:
 
 Pre-requisites
 
+1. Enable I/O Monitoring has already been executed.
 
-
-1. Enable IO monitoring has already been executed.
 
 Steps
 
-
-
-1. In the On-Premise vCenter, right click on the VM you want to migrate.
-2. Select VM Policies -> Edit VM Storage Policies
-
-    
-
-
+1. In the on-premises vCenter, right click on the VM to be migrated.
+2. Select _VM Policies_, followed by _Edit VM Storage Policies_
 
 ![alt_text](images/image32.png?classes=content-img "image_tooltip")
 
-
-3. In the popup, if the VM storage policy is already HDM Analyzer Profile, then no need to do anything. But if it is **Datastore Default**, select VM storage policy as **HDM Analyzer Profile **and click on **Apply to all.**
-
-
-
-
+3. In the popup window, there is no need to do anything if the VM storage policy has already been set to the HDM Analyzer Profile. However, if it is set to **Datastore Default**, change it to _HDM Analyzer Profile_ and select _Apply to all_.
 
 ![alt_text](images/image35.png?classes=content-img "image_tooltip")
-
-
 
 ### Migrate the VM
 
 Pre-requisites
 
+1. _Prepare to Migrate_ has been successful on the VM
+2. The HDM SPBM policy has been applied to all disks within the VM
 
-
-1. Prepare to migrate has been successful on the VM
-2. HDM SPBM policy has been applied to all the disks of the VM
 
 Steps
 
-
-
-1. In the On-Premise vCenter, right click on the VM you want to migrate.
+1. In the on-premises vCenter, right click on the VM to be migrated.
 2. Select the **HDM -> Migrate** option
-
-
 
 ![alt_text](images/image34.png?classes=content-img "image_tooltip")
 
-
-
-
-3. The Migrate wizard will open.  **Select a migration type **by which virtual machine should be migrated on On-Cloud.
-
-
+3. The Migrate wizard will open. Select the migration type to be used to migrate the VM to the cloud.
 
 ![alt_text](images/image37.png?classes=content-img "image_tooltip")
 
-
-
-
-4. In the **Select Cloud** page, review the On-Cloud to which the VM is being migrated and resources available
-
+4. On the **Select Cloud** page, review the cloud where the VM is to be migrated and ensure that adequate resources are available
 
 ![alt_text](images/image36.png?classes=content-img "image_tooltip")
 
-
-
-5. Choose the list of VMs to migrate. 
-    *   The option “Application Dependency” should be kept as checked. 
-    *   You should review the cache size, CPU and memory required on the On-Cloud side
-
-
-
+5. Choose the list of VMs to migrate:
+    *   Keep the option “Application Dependency” checked. 
+    *   Review the cache size, CPU, and memory required in the cloud
 
 ![alt_text](images/image40.png?classes=content-img "image_tooltip")
 
-
-
-
-6. If Warm and Cold migration type has been selected, users can select the target resources on On-Cloud on which the virtual machine should be migrated
-
+6. If the Warm and Cold Migration type has been chosen, select the target resources on the cloud where the virtual machine will be migrated
 
 ![alt_text](images/image38.png?classes=content-img "image_tooltip")
 
-
-
-
-7. If Warm and Cold migration type has been selected, users can map the network for the virtual machine
-
-
+7. If the Warm and Cold Migration type has been selected, map the network for the VM
 
 ![alt_text](images/image39.png?classes=content-img "image_tooltip")
 
-
-
-
-8. Confirm your selections and click on MIGRATE
-
+8. Confirm all selections and select _MIGRATE_
 
 ![alt_text](images/image41.png?classes=content-img "image_tooltip")
 
-
-
-
-9. Migration status page will display the status of migration as it progresses.
-
+9. The migration status page will display the status of the migration as it progresses.
 
 ![alt_text](images/image42.png?classes=content-img "image_tooltip")
 
-
-
-
-10. You can also track the migration status in vCenter task.
-
-
+10. The migration status can also be tracked in vCenter tasks.
 
 ![alt_text](images/image43.png?classes=content-img "image_tooltip")
 
-
-
-
-11. The migrated VM can be seen in a new resource pool HDM_MIGRATE_POOL in the On-Premise vCenter and would be in a powered off state, while the same VM would be in a powered on state in the On-Cloud vCenter.
-
+11. The migrated VM can be seen in a new resource pool _HDM_MIGRATE_POOL_ in the on-premises vCenter in a powered off state, while the same VM will be in a powered on state in the cloud vCenter.
 
 ![alt_text](images/image44.png?classes=content-img "image_tooltip")
 
-
-
-
-12. All migrations can be monitored through Cluster->Monitor->HDM>Migration->In Progress tab.
-
+12. All migrations can be monitored by selected _Cluster_, followed by _Monitor_, _HDM_, _Migration_, then the _In Progress_ tab.
 
 ![alt_text](images/image28.png?classes=content-img "image_tooltip")
 
-
-
-
-13.  For virtual machines that have been migrated using WARM migration, to complete the migration workflow the following steps would need to be performed.
-    *   START TRANSFER : This is an optional step where the virtual machine data can be transferred using **HDM Bulktransfer**. Select the virtual machine and click on **Start Transfer **to transfer virtual machine data.
+13.  For virtual machines that have been migrated using Warm Migration, the following steps are required to complete the migration workflow:
+    *   START TRANSFER : This is an optional step where the virtual machine data can be transferred using **HDM Bulktransfer**. Select the virtual machine, then select **Start Transfer **.
 
 ![alt_text](images/image-start-transfer.png?classes=content-img "image_tooltip")
 
 ![alt_text](images/image45.png?classes=content-img "image_tooltip")
 
-
-
-
-    *   CONFIGURE & SYNC : Once the virtual machine data has been moved onto On-Cloud, user should select the virtual machine that has been moved to the On-Cloud to sync the latest changes.
-
-
+    *   CONFIGURE & SYNC : Once the virtual machine data has been moved to the cloud, select the newly-moved virtual machine to sync the latest changes.
 
 ![alt_text](images/image46.png?classes=content-img "image_tooltip")
 
-
-
-
-    *   COMMIT :  Once the data has been synced, commit all the changes to the migrated virtual machine on On-Cloud and cleanup HDM configuration.
-
+    *   COMMIT :  Once the data has been synced, commit all changes to the migrated virtual machine on the cloud and clean up the HDM configuration.
 
 ![alt_text](images/image47.png?classes=content-img "image_tooltip")
 
-
-
-
-14. Virtual machines that have been migrated onto the cloud will be shown in Cluster->Monitor->HDM->Migration->Summary tab
-
+14. VMs that have been migrated to the cloud will be shown in _Cluster_, followed by _Monitor_, _HDM_, _Migration_, then _Summary_ 
 
 ![alt_text](images/image11.png?classes=content-img "image_tooltip")
 
