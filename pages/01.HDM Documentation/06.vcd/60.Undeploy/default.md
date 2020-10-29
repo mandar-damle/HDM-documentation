@@ -131,7 +131,7 @@ Steps
 2. Log into the HDM appliance using the administrator credentials.
 3. Select _vCenters_ tab to view the PrimaryIO vCenter listing (figure 40).
 4. Choose the vCenter, then select _Delete_.
-5. In the pop-up, select _Yes_to delete vCenter from the HDM appliance.
+5. In the pop-up, select _Yes_ to delete vCenter from the HDM appliance.
 6. Log into vCenter.
 7. Select _Host_ and _Clusters_, then power off the HDM Appliance.
 8. Right-click on the HDM appliance and select _Delete From Disk_ to delete the HDM appliance.
