@@ -183,7 +183,7 @@ Before proceeding with the installation, watch the training videos ([https://www
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.vcd/images/image15.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/10.vcd/images/image15.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
