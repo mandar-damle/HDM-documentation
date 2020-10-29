@@ -465,31 +465,26 @@ Usually when the deployment UI wizard or vCenter tasks fail, one of the above er
 
 ### Undeployment Failures
 
-Common reasons for undeployment failures are listed below:
+Common reasons for undeployment failures are:
 
+1. VMs are still migrated to the cloud when undeployment is attempted.
+2. The on-premises cluster host is not able to go to maintenance mode. This can be due to:
+    *   DRS not enabled on the cluster, causing powered-on VMs to block the maintenance mode
+    *   In the case where the HDM applicance is part of a single host in the cluster, the maintenance mode will be blocked if the HDM appliance is powered on. In this case, uninstall the HDM filter and immediately power off the appliance.
 
-
-1. VMs are still migrated to On-Cloud when undeployment is tried out.
-2. On-Premise cluster host is not able to go to maintenance mode, due to 
-    *   DRS not enabled on the cluster causing powered on VMs blocking the maintenance mode
-    *   If it is a single host in the cluster and the HDM Appliance is part of it, then the HDM Appliance being powered on causing the maintenance mode to block. In this case, the user should initiate the uninstall of HDM filter and immediately power off the Appliance VM.
-
-Monitoring the vCenter tasks would give the reasons for undeployment failures. If it is one of the above, rectify the failure reason and retry the operation.
+vCenter tasks will provide the reasons for undeployment failures. If it is one of the above, rectify the problem and retry the operation.
 
 
 # Support and Contact 
 
+HDM support can be reached via **email: [support@primaryio.com](mailto:support@primaryio.com)**
 
-    In case of any issue, HDM support can be contacted through **email: [support@primaryio.com](mailto:support@primaryio.com)**
+The email should include the following information:
 
-The email should have the following:
-
-
-
-*   **Email subject **: Clearly mention the issue that is observed.
-*   **Email body**: Clearly describe the problem. It can contain the deployment type, the operation being performed, any relevant screenshots etc.
+*   **Email subject **: Clearly specify the issue.
+*   **Email body**: Clearly describe the problem. Include information on the deployment type, the operation being performed, any relevant screenshots, etc.
 *   **Email attachment** : Attach the relevant logs (as described in [HDM Support Logs](http://docs.primaryio.com/hdm%20documentation/support%20logs) section)
     *   HDM logs
     *   vm-support logs
 
-    If the attachment size is large, an alternate shared location may be provided by the HDM support to help uploading the logs.
+    If the attachment size is too large, an alternate shared location may be provided by HDM support to enable the logs to be uploaded.
