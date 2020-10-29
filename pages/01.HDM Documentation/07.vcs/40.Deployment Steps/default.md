@@ -351,133 +351,97 @@ HDM requires the on-premises VMs to be monitored for I/O by HDM. Monitoring help
 1. Estimate the cloud cache size requirement for a given VM 
 2. Determine whether the VM is a suitable candidate for migration
 
-This is done by creating HDM SPBM policy of cache type and applying that policy to the existing VMs. Detailed steps are given below:
+This is done by creating an HDM SPBM cache type policy and applying that policy to the existing VMs. Detailed steps are provided below.
 
 Prerequisites 
 
+1. Ensure the on-premises installation has successfully completed.
+2. Ensure there are no HDM SPBM policies named ‘HDM Analyzer Profile’ already existing from previous HDM installation attempts. This can be checked using the following steps:
+    1. In the on-premises vCenter, select _Home_, followed by _Policies and Profiles_, then _VM Storage Policies_
+    2. Delete any instances of ‘HDM Analyzer Profile’
 
-
-1. Ensure On-Premise installation is done successfully.
-2. Ensure that there is no HDM SPBM policy named ‘HDM Analyzer Profile’ already existing from previous attempts of HDM installations. This can be done using below steps
-    1. In the On-Premise vCenter, go to Home -> Policies and Profiles -> VM Storage Policies
-    2. If you see ‘HDM Analyzer Profile’, delete it
 
 Steps
 
-
-
-1. In the On-Premise vCenter, click on PrimaryIO from Shortcuts or from Menu to access the PrimaryIO dashboard
-2. Select **Administration** from the tab
-3. Click on **Configuration** to access the cluster listing.
-4. Against the cluster on which HDM is installed, click on **Enable** under monitoring. This will open a popup.
+1. In the on-premises vCenter, select _PrimaryIO_ from _Shortcuts_ or from _Menu_ to access the PrimaryIO dashboard
+2. Select **Administration** from the tab.
+3. Select **Configuration** to access the cluster listing.
+4. On the cluster where HDM is installed, select **Enable** under monitoring. This will open a popup.
 
 ![alt_text](images/image49.png?classes=content-img "image_tooltip")
 
+5. Select **OK** to enable monitoring.
 
-
-
-5. Click on **OK** to enable monitoring.
-
-This will create a _‘SPBM _policy of cache type for HDM. The default name for the policy is **HDM Analyzer Profile.** You can view this profile in the On-Premise vCenter at:
-
-Home -> Policies and Profiles -> VM Storage Policies
-
+This will create an SPBM cache type policy for HDM. The default name for the policy is **HDM Analyzer Profile.** This profile can be viewed in the on-premises vCenter by selecting _Home_, followed by _Policies and Profiles_, then _VM Storage Policies_.
 
 ![alt_text](images/image4.png?classes=content-img "image_tooltip")
 
-
-This newly created HDM  policy is applied to all the virtual machines under the cluster and monitoring for IO activity gets enabled.  For each virtual machine a reconfiguration task will be generated when applying HDM SPBM policy. If VMs have been successfully reconfigured, VM policies for these virtual machine would have **‘HDM Analyzer Profile’** applied against each of their VMDKs.
+This newly created HDM policy will be applied to all virtual machines under the cluster, and will enable monitoring for I/O activity. A reconfiguration task will be generated for each virtual machine when applying the HDM SPBM policy. If VMs have been successfully reconfigured, VM policies for these virtual machine will have **‘HDM Analyzer Profile’** applied against each of their VMDKs.
 
 Once the policy has been applied, the user can check  analyzer summaries by selecting **VM->Monitoring->PrimaryIO** from **Host and Clusters** view.
 
 **Note**: 
 
-
-
-1. You can execute Enable IO Monitoring step any number of times to enable monitoring for new VMs, since last execution.
-2. Applying SPBM policy can fail for some VMs. For example, when the VM already has a snapshot. This doesn’t fail the entire operation.
+1.The _Enable IO Monitoring_ step can be executed any number of times to enable monitoring for new VMs since the last execution.
+2. Applying the SPBM policy can fail for some VMs. For example, when the VM already has a snapshot. However, this doesn’t fail the entire operation.
 
 
 ### Disabling Monitoring on a VM
 
-**Note**: this step must not be executed for a VM if you expect the VM to be migrated to On-Cloud.
+**Note**: This step must not be executed for a VM that will be migrated to the cloud.
 
-The monitoring of a VM is a low overhead activity and is done transparently without affecting the ongoing IOs or operation. Still, if in case the user doesn’t want HDM to monitor certain VMs, the following are the steps to be executed. 
+Monitoring a VM is a low overhead activity and is done transparently without affecting the ongoing I/Os or operations. However, if you don’t want HDM to monitor certain VMs, take the following steps: 
 
-Steps
-
-
-
-1. In the On-Premise vCenter, right click on the VM you do not want to be monitored.
-2. Select VM Policies -> Edit VM Storage Policies
-3. In the popup, if the VM storage policy is HDM Analyzer Profile, then select VM storage policy as **Datastore Default** and click on **Apply to all**
-
+1. In the on-premises vCenter, right click on the VM you do not want to be monitored.
+2. Select _VM Policies_, followed by _Edit VM Storage Policies_.
+3. In the popup, if the VM storage policy is the HDM Analyzer Profile, set the VM storage policy to **Datastore Default**, then select **Apply to all**
 
 ![alt_text](images/image5.png?classes=content-img "image_tooltip")
 
-
-
-
 4. The vCenter task will display the operation progress and status.
 
-**Note**: HDM can’t migrate a VM, if it doesn’t have HDM SPBM policy. You can at any time apply the SPBM policy to a VM for making it available for migration.
+**Note**: HDM cannot migrate a VM that does not have an HDM SPBM policy. However, the SPBM policy can be applied to a VM at any time, thereby making it available for migration.
 
 
 # HDM SQS Configuration
 
-HDM is integrated with SQS (Simple Queue Service from AWS) message bus.  HDM **_sqs-python_** is a python based library that provides an interface to manage and operate the HDM product. 
+HDM is integrated with an SQS (Simple Queue Service from AWS) message bus. HDM **_sqs-python_** is a python-based library that provides an interface to manage and operate  HDM. 
 
 **Client Application** : Clients will be written by a third party and will use the sqs-python library to send HDM command messages and receive responses.
 
-**SQS Messaging Service** :  Its role is to receive command requests from the client and pass on to the HDM. The responses are received from HDM and passed on to the client.
+**SQS Messaging Service** :  This service receives command requests from the client and passes them to HDM. The responses are then received from HDM and passed back to the client.
 
-**HDM** : HDM acts as the server of the commands and sends responses. In addition there is also a periodic heartbeat that happens between HDM and client, so that client is aware of the system state of the server.
-
+**HDM** : HDM acts as the server for the commands and sends responses. There is also a periodic heartbeat between HDM and the client, for the client to be aware of the server's system state.
 
 ![drawing](images/image12.png?classes=content-img)
 
-For third party integration to work, the HDM appliance after the deployment must be configured with the message bus. After this step, HDM will listen and execute operations posted on this bus and send back the status of these operations to the caller. 
+For third-party integration to work, after deployment the HDM appliance must be configured with the message bus. HDM will then listen and execute operations posted on this bus and send back the status of these operations to the caller. 
 
 Pre-requisites
-
-
 
 1. HDM Appliance must be installed before the configuration of HDM SQS.
 2. No other step in the HDM deployment should have been performed at this point.
 3. User should be ready with the SQS message bus token to be used for the configuration
 
+
 Steps
 
-
-
-1. Access PrimaryIO Appliance on browser.
-2. Log into the Appliance using the Administrator credentials.
-3. Go to the vCenters page. Then click on the user profile icon
-
+1. Access the PrimaryIO appliance via a browser.
+2. Log into the appliance using administrator credentials.
+3. Visit the vCenter page and select the user profile icon
 
 ![alt_text](images/image6.png?classes=content-img "image_tooltip")
 
-
-
-
-4. Click on **Configure Message Bus.**
-5. Provide the SQS message bus token of the third party in the pop-up and click on **Configure.** 
-
+4. Select **Configure Message Bus**.
+5. Provide the third party's SQS message bus token in the pop-up, then select **Configure.** 
 
 ![alt_text](images/image8.png?classes=content-img "image_tooltip")
 
-
-
-
-6. The configured message bus details can be seen. Once configured, to change the message bus configuration, click on **Reconfigure**.
-
+6. The configured message bus details can be seen. To change the message bus configuration, select **Reconfigure**.
 
 ![alt_text](images/image9.jpg?classes=content-img "image_tooltip")
 
-
-**Note: PIO Appliance should have access to the Internet for warm or cold migration through SQS.**
-
-
+**Note: The PrimaryIO Appliance should have access to the Internet for warm or cold migration through SQS.**
 
 
 # TroubleShooting
@@ -489,16 +453,14 @@ Common failure scenarios and possible reasons are provided below. If the failure
 
 ### Deployment Failures
 
-Some common reasons for deployment failures are listed below.
+Here are some common reasons for deployment failures:
 
+1. **Resources not sufficient**: On-premises or cloud resources are insufficient for meeting the deployment mode requirements.
+2. **Unresolved input values**: Inputs such as vCenter FQDN/IP are not resolvable or are unreachable.
+3. **IP range issues**: For static IP allocation, the IP range specified is insufficient for assigning to all HDM components.
+4. **HDM component failed during or after the deployment**: HDM component failed during deployment.
 
-
-1. **Resources not sufficient** On-Premise or On-Cloud resources not sufficient enough to meet the deployment mode requirements.
-2. **Unresolved input values**  inputs like vCenter FQDN/IP is not resolvable or not reachable.
-3. **IP range issues** For static IP allocation, the IP range specified is not sufficient enough to assign to all HDM components.
-4. **HDM component failed during or after the deployment**  HDM component failed during deployment.
-
-Usually, the deployment UI wizard or vCenter tasks fail with error message pointing to one of the above reasons. The errors can be rectified and either the re-deployment can be initiated or an HDM reset followed by re-deployment should be tried.
+Usually when the deployment UI wizard or vCenter tasks fail, one of the above error messages will appear. After the error has been rectified, a re-deployment can be initiated, or an HDM reset followed by re-deployment can be attempted.
 
 
 ### Undeployment Failures
