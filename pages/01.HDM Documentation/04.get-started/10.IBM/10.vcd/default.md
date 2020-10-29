@@ -255,7 +255,7 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
 
 
 
-## Configure the On-premises vCenter
+## Deploy HDM on-premises
 
 
 <table>
