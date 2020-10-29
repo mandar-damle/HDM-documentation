@@ -208,22 +208,20 @@ HDM allocates a cache quota in the cloud for all migrated VMs to ensure optimal 
 
 ## Migrate a VM using the SQS Interface 
 
-HDM migration for ARM use case is supported through SQS interface. The prerequisites for using SQS interface for migration are
+HDM migration for the ARM use case is supported through the SQS interface. The prerequisites for using the SQS interface for migration are:
 
-1. HDM Appliance must have access to Internet
-2. The SQS queues for command and response queues must be created in the Amazon SQS service
-3. The HDM Appliance should be configured for SQS message bus with correct message bus token
+1. The HDM appliance must have access to Internet.
+2. The SQS queues for command and response must be created in the Amazon SQS service.
+3. The HDM appliance should be configured for the SQS message bus with the correct message bus token
 
-Few important command messages exchanged between client and HDM are
+Some important command messages exchanged between the client and HDM are:
 
+1. **Heartbeat**: This message is from HDM to the client, to communicatethe state of HDM. Clients usually look for a ‘Ready’ state before sending the next migration request to HDM. 
+2. **SourceInventoryRequest**: This message provides the list of on-premises VMs and their details. Clients select what to migrate from this list.
+3. **SourceCloneRequest**: This is essentially the migration request to HDM. It has parameters to specify the migration type and associated details.
+4. **BulkMigrationDoneRequest**: This message is important for migrations initiated using the offline bulk transfer option, because it tells HDM whether or not the offline bulk transfer is complete. 
 
-
-1. **Heartbeat **: This message is from HDM to the client. This tells the state of HDM. Usually clients would look for ‘Ready’ state before sending a next migration request to HDM. 
-2. **SourceInventoryRequest **: This message gives the list of VMs On-Premise and their details. Clients can choose what to migrate by looking at this list.
-3. **SourceCloneRequest **: This is essentially the migration request to HDM. It has parameters to specify the warm or cold migration and details related to those.
-4. **BulkMigrationDoneRequest **: For migrations initiated with offline bulk transfer option, this message is important. This tells HDM whether the offline bulk transfer is complete or not. 
-
-Details for how these are used for warm and cold migration are given below.
+Details for how these are used for warm and cold migration are provided below.
 
 
 ### Cold Migration
