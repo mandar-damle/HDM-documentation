@@ -44,93 +44,73 @@ Use the **Deploy OVF Template **option in vCenter to deploy the Appliance as ill
 
 #### Network Configuration
 
-Network configuration of the HDM Appliance requires the user to specify the available networks into four categories, as described in the _Network Requirements_ and _HDM Resource Requirements_ sections above. While these networks can point to the same network, the best practice is to leave them separate. In addition, it should be specified whether the Appliance will have a static IP or employ DHCP.
+Network configuration of the HDM Appliance requires the user to specify the available networks into four categories, as described in the _Network Requirements_ and _HDM Resource Requirements_ sections, above. While they can point to the same network, the best practice is to leave them separate. In addition, it should be specified whether the appliance will have a static IP or employ DHCP.
 
 ![alt_text](images/image2.png?classes=content-img "image_tooltip")
 
 #### IP Address Details
 
-For all four network categories, choose whether static or DHCP will be utilized as the IP allocation mechanism. If static is chosen, the following details will also be required:
+For all four network categories, choose whether a static IP or DHCP will be utilized as the IP allocation mechanism. If static is chosen, the following details will also be required:
 
 *   IP range: the list of IP addresses that are free to be allocated 
 *   Subnet mask: subnet of the IP range
 *   Gateway: gateway IP of the network
 *   Domain: domain name of the network
-*   DNS: to translate the domain name to IP
+*   DNS: to translate the domain name to the IP address
 *   NTP: for time sync
 
 Skip this configuration if DHCP is chosen.
 
 **Note**: 
 1. The NTP server must be specified for static IP configuration. Failure to provide this input may cause further HDM operations to fail.
-2. When static IP is used, the gateway IP and the specified IP range should reside in the same subnet.
+2. When a static IP is used, the gateway IP and the specified IP range should reside in the same subnet.
 
 ![alt_text](images/image57.png?classes=content-img "image_tooltip")
 
 #### Gateway settings
 
-The setting in **Default gateway network** should be chosen so
-that traffic for other subnets can be routed through this interface. This would 
-generally be the WAN network but please verify the specifics for
-your network.
+The setting in **Default gateway network** should enable that traffic for other subnets to be routed through its interface. This will generally be the WAN network, but be sure to verify the specifics for your network.
 
-In the field **Default Gateway** set the default gateway for the 
-network chosen under **Default gateway network**. 
+In the field **Default Gateway** set the default gateway for the chosen network under **Default gateway network**. 
 
-> **Getting this wrong will cause deployment to fail eventually and you will have to perform an [HDM Reset](../../hdm%20reset)**
+> **If this information is entered incorrectly, the deployment will eventually fail, and will require an [HDM Reset](../../hdm%20reset)**
 
-_Figure 8b: Configuring gateway, NTP and default gateway_
+_Figure 8b: Configuring Gateway, NTP and Default Gateway_
 ![alt_text](images/Gateway-OVF.png?classes=content-img)
 
 
 #### Power on the Appliance
 
-Go through the rest of the wizard and wait for the deployment to complete. Once the deployment is done, power on the Appliance from the vCenter.
+Complete the rest of the wizard and wait for the deployment to complete. Once the deployment has completed, use vCenter to power on the appliance.
 
 
-#### Enable VMware HA on the Appliance
+#### Enable VMware HA on the HDM Appliance
 
-(_This step should be performed only for Cluster mode deployments of HDM_)
+(_This step should only be performed for Cluster mode deployments of HDM_)
 
-vmware HA should be enabled on the cluster on which Appliance has been deployed. For this, follow the below procedure
+VMware HA should be enabled on the cluster where the HDM appliance has been deployed. Follow these procedures to do this:
 
-
-
-1. In the On-Premise vCenter, select the cluster on which Appliance is deployed
-2. On the right hand pane, click on Configure tab and go to Services -> vSphere Availability
-3. If the vSphere HA is Turned OFF, click on EDIT and enable vSphere HA
+1. In the on-premises vCenter, select the cluster where the HDM appliance has been deployed
+2. On the right hand pane, select the _Configure_ tab, then select _Services_ followed by _vSphere Availability_
+3. If the vSphere HA is turned off, select _EDIT_ and enable vSphere HA
 
 
-### Step 2/6 : Add On-Premise vCenter to the HDM Appliance
+### Step 2 : Add On-Premises vCenter to the HDM Appliance
 
-**Note**: The On-Premise vCenter to be added should be the same as where the HDM Appliance is deployed. 
+**Note**: The on-premises vCenter should be added should to the same location where the HDM appliance has been deployed. 
 
-Pre-requisites
+Prerequisites:
 
-
-
-1. Ensure that HDM Appliance is powered on and you have valid vCenter administrator credentials.
-
-Steps
-
-
-
-1. Log into the _PIO Appliance_ by accessing _https://&lt;appliance ip>_ in a supported web browser and entering the administrator credentials. The default administrator username and password are _‘administrator’_ and _‘2Hdm$aK!N@h!’_ respectively. Users are recommended to change the default password after the first login.
-2. Click on **vCenters** in the top pane.
-3. Click on **Add vCenter** at the top right.
-
+1. Ensure that the HDM appliance is powered on and you have valid vCenter administrator credentials. To do this, log into the PrimaryIO appliance by accessing _https://&lt;appliance ip>_ in a supported web browser and enter the administrator credentials. The default administrator username and password are _‘administrator’_ and _‘2Hdm$aK!N@h!’_, respectively. This default password should be changed immediatly following the first login.
+2. Select **vCenters** from the top pane.
+3. Select **Add vCenter** from the top right.
 
 ![alt_text](images/image56.png?classes=content-img "image_tooltip")
 
-
-4. Specify the On-Premise vCenter IP or FQDN by which the vCenter is configured while its installation along with administrator credentials and click **Add vCenter**.
-5. You should see the PIO Appliance now listing the On-Premise vCenter
-
-
+4. Specify the IP or FQDN where the on-premises vCenter is configured. Enter the administrator credentials and select **Add vCenter**.
+5. The on-premises vCenter should now be listed on the PrimaryIO appliance
 
 ![alt_text](images/image58.png?classes=content-img "image_tooltip")
-
-
 
 
 ### Step 3/6 : Register HDM Plugin to vCenter
