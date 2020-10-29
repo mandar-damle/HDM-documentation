@@ -148,10 +148,8 @@ There are known limitations with virtual machine disk controller configurations 
 
 
 
-1. Virtual machines having SATA and IDE based virtual disks
-2. Virtual machines having more than 3 controllers if the first controller is not paravirtual
-3. Virtual machines with more than 15 virtual disks for the first paravirtual controller
-4. Virtual machines with an LSI controller as the boot disk and a paravirtual controller as data disks
+1. Virtual machines having IDE and NVMe based virtual disks.
+2. Virtual machines with USB or ISO attached during migration.
 
 
 # HDM System Health

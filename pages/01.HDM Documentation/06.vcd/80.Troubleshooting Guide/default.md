@@ -162,10 +162,8 @@ Following are known limitations with virtual machine disk controller configurati
 
 
 
-1. Virtual machines having SATA and IDE based virtual disks
-2. Virtual machines having more than 3 controllers if the first controller is not paravirtual.
-3. Virtual machines with more than 15 virtual disks for the first paravirtual controller.
-4. Virtual machines with LSI controller as boot disk and paravirtual controller as data disks. 
+1. Virtual machines having IDE and NVMe based virtual disks.
+2. Virtual machines with USB or ISO attached during migration.
 
 
 ###### **VM fails to poweron on IBM VCD after migration is successfully completed. **

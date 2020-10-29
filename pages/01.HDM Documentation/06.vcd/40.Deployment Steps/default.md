@@ -337,7 +337,7 @@ _Figure 22: HDM Cloud Wizard_
 
 
 
-5. Select vDC, vApp and storage profile cloud where HDM components will be deployed (figure 23). 
+5. Select vDC, vApp and storage profile cloud where HDM components will be deployed (figure 23). You must use a Storage Profile of at least **10 IOPS/GB** or **standard** for deployment.
 
 _Figure 23: Select Cloud Cluster_
 
