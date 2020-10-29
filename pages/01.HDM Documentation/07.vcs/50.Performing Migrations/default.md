@@ -231,14 +231,14 @@ Follow these steps to perform a cold migration using the SQS interface:
 1. Wait until system status is ‘Ready’. This is indicated by the heartbeat between HDM and the SQS client. 
 2. Send a ‘SourceInventoryRequest’ message to get the list of VMs that can be migrated using HDM.
 3. Choose a VM from the list in the response message.
-4. Set the mode of migration to ‘cold’
+4. Set the mode of migration to ‘cold’.
 5. Submit a request for migration using ‘SourceCloneRequest’.
 6. After submission, periodic responses will be sent with the status of the submitted request.
 
 Cold migration of a VM will entail the following steps:
 
 1. A bulk transfer of the VM will be initiated.
-    1. Progress and updates will be sent via message bus responses
+    1. Progress and updates will be sent via message bus responses.
     2. vCenter Tasks will show the progress of the export and import of ovf on the source and target vCenters, respectively.
     3. This operation may get queued, depending on the resource profile, the number of migrations in progress, and total number of VMs migrated. A maximum of eight migrations can run concurrently. 
 2. Necessary network changes will be performed on the migrated VM.
@@ -250,36 +250,31 @@ If the bulk transfer fails, it will be automatically retried a few times. The fa
 
 Pre-requisites
 
+1. The HDM deployment mode cannot be ‘Appliance Only’. Any other mode is acceptable.
+2. The VM must be in a powered-on state and must have the latest VMware tools installed.
 
-
-1. HDM deployment mode should be anything other than ‘Appliance Only’.
-2. VM must be in a powered-on state and must have the latest vmware tools installed.
 
 Steps
 
-
-
-1. Wait until system status is ‘Ready’. This is indicated by the heartbeat between HDM and SQS client. 
+1. Wait until system status is ‘Ready’. This is indicated by the heartbeat between HDM and the SQS client. 
 2. Send a ‘SourceInventoryRequest’ to get the list of VMs that can be migrated using HDM.
-3. Choose a VM from the list of VMs returned in the response message.
-4. Set the mode of migration to ‘warm’ and bulk transfer mode to online or offline.
-5. Additionally the root user credentials of the VM for the “prepare to migrate” step would be required.
-6. Submit request for migration using ‘SourceCloneRequest’.
-7. After submission periodic responses will be sent with the status of the submitted request.
+3. Choose a VM from the list returned in the response message.
+4. Set the mode of migration to ‘warm’ and the bulk transfer mode to 'online' or 'offline'.
+5. The root user credentials of the VM for the “prepare to migrate” step will be required.
+6. Submit the request for migration using ‘SourceCloneRequest’.
+7. After submission, periodic responses will be sent with the status of the submitted request.
 
-Warm migration of a VM will go through the following steps
+Warm migration of a VM will entail the following steps:
 
-
-
-1. Prepare to migrate the VM
-2. Apply HDM SPBM policy to the VM
-3. Take snapshot of the VM and create a linked clone on it
-4. Do compute migrate the VM where the cloud cache is created and data path to On-Premise is also maintained
-5. Bulk transfer the previously created a snapshot of the VM to the On-Cloud
-6. Reconcile the new data in the cloud cache with the VM image transferred to On-Cloud
+1. Prepare to migrate the VM.
+2. Apply the HDM SPBM policy to the VM.
+3. Take a snapshot of the VM and create a linked clone on it.
+4. Migrate the compute VM, where the cloud cache is created and the data path to the on-premises environment is also maintained.
+5. Bulk transfer the previously created VM snapshot to the cloud
+6. Reconcile the new data in the cloud cache with the VM image transferred to the cloud
 7. Power off the running VM and reboot from the reconciled VM image. 
 
-In case of failure of any of the above steps, HDM would retry the step, before declaring the entire migration as failed.
+If any of the above steps fail, HDM will retry the step before declaring that the entire migration has failed.
 
 
 ## Migrate Back a VM
