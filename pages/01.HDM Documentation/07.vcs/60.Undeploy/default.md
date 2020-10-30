@@ -6,59 +6,39 @@ title: 'Undelpoy Steps'
 
 HDM undeployment consists of the following high level tasks:
 
-
-
-1. Undeploy HDM On-Cloud
+1. Undeploy HDM in the cloud
 2. Disable monitoring
-3. Undeploy HDM On-Premise
-4. Uninstall HDM filter from cluster
-5. Unregister HDM vCenter plugin
-6. Delete PrimaryIO Appliance from vCenter
+3. Undeploy HDM on-premises
+4. Uninstall the HDM filter from the cluster
+5. Unregister the HDM vCenter plugin
+6. Delete the PrimaryIO appliance from vCenter
 
 
-## Undeploy HDM On-Cloud
+## Undeploy HDM in the Cloud
 
-Pre-requisites
+Prerequisites
 
+1. Ensure that all virtual machines have been migrated back to the on-premises environment. To do this, check to make sure the resource pool _HDM_MIGRATE_POOL_ in the on-premises vCenter is empty.
 
-
-1. Ensure all virtual machines have been migrated back to On-Premise. An indicator for this is the resource pool HDM_MIGRATE_POOL in On-Premise vCenter, which should be empty before the undeployment.
 
 Steps
 
-
-
-1. In the On-Premise vCenter, click on HDM from Shortcuts or from Menu to access the HDM dashboard
-2. Select **Administration** from the tab
-3. Click on **Clouds** to access the On-Cloud listing.
-4. Select the On-Cloud from the listing and click on **DELETE CLOUD**
+1. In the on-premises vCenter, select _HDM_ from _Shortcuts_ or from _Menu_ to access the HDM dashboard.
+2. Select **Administration** from the tab.
+3. Select **Clouds** to access the cloud listing.
+4. Select the appropriate cloud from the listing, then select **DELETE CLOUD**
 
 ![alt_text](images/image28.png?classes=content-img "image_tooltip")
 
-
-
-
-5. Click **OK** on the Delete OnCloud popup to start the undeployment.
-
+5. Select **OK** on the _Delete Cloud_ popup to begin the undeployment.
 
 ![alt_text](images/image10.png?classes=content-img "image_tooltip")
 
-
-
-
-6. This will create undeployment tasks for On-Cloud components. The task can be monitored in vCenter Tasks. Also, the progress can be seen in HDM clouds view.
-
+6. This will create undeployment tasks for the cloud components. The task can be monitored in vCenter tasks, as well as in HDM clouds view.
 
 ![alt_text](images/image24.png?classes=content-img "image_tooltip")
 
-
-
-
-
-
 7. Wait for the undeployment task to finish.
-
-
 
 ![alt_text](images/image32.png?classes=content-img "image_tooltip")
 
@@ -66,15 +46,12 @@ Steps
 
 ## Disable Monitoring
 
-Pre-requisites
+Prerequisites
 
+1. There must not be any VMs migrated to cloud (i.e., the _HDM_MIGRATE_POOL_ resource pool in the on-premises vCenter must be empty).
 
-
-1. There must not be any VMs migrated to On-Cloud ie. the HDM_MIGRATE_POOL resource pool in On-Premise vCenter must be empty.
 
 Steps
-
-
 
 1. In the On-Premise vCenter, click on HDM from Shortcuts or from Menu to access the HDM dashboard
 2. Select **Administration** from the tab
