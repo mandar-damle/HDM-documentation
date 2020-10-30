@@ -667,39 +667,28 @@ The following steps should be followed to recover VMs from recovery resource poo
 
 ### Multiple Component Failure
 
-During the process of recovery from failure of a single component, if another component also fails, HDM would detect the failure and notify the user through the vCenter events. This also applies to the case of simultaneous multiple HDM component hosts restart. HDM components may not fully recover and migrated VMs may not get rolled back. 
+If a second component fails while the system is recovering from the failure of a single component, HDM will detect the failure send a notification through vCenter events. This will also be the case if multiple HDM component hosts restart simultaneously. HDM components may not fully recover and migrated VMs may not migrate back. 
 
-Multiple component failures may require HDM Reset to restore the system.
+Multiple component failures may require an HDM reset to restore the system.
 
 
 ### HDM Appliance Restart
 
-Restarting the Appliance does not impact migrated VMs and it does not impact future migration operations as well.
+Restarting the appliance does not impact migrated VMs, nor does it impact future migration operations. Operations in progress during the appliance restart will be affected as follows:
 
-Operations in progress during the appliance restart will be affected in the following way.
-
-
-
-1. ARM cold migration of a VM.
-    *   The ongoing bulk transfer will fail and the operation will be retried from the beginning.
-2. VM migration to On-Cloud would resume after restart and complete successfully
-3. ARM warm migration
-    *   If the appliance reboot happened during the VM compute migrate of the flow, both the migrate and bulk transfer will fail.
-    *   If the appliance reboot was after the successful VM compute migrate, only the bulk transfer will be retried.
-4. VMs running on the cloud
-    *   Will continue to run.
-    *   Some operations like RTO/RPO periodic flush will resume after the reboot completes
-5. SQS heartbeat
-    *   SQS heartbeats will be missing for the duration of the reboot for about 2 minutes
-6. vCenter plugin
-    *   vCenter plugin will display the message that it cannot connect with appliance for this duration.
+1. ARM cold migration of a VM: The ongoing bulk transfer will fail and the operation will be retried from the beginning.
+2. VM migration to the cloud will resume after restart and complete successfully
+3. ARM warm migration:
+    *   If the appliance reboot occurs while migrating the compute VM, the migration and the bulk transfer will both fail.
+    *   If the appliance reboot occurs after the successful migration of the compute VM, only the bulk transfer will be retried.
+4. VMs running in the cloud will continue to run. Some operations such as RTO/RPO periodic flush will resume after the reboot completes.
+5. SQS heartbeats will be missing throughout the duration of the reboot, which should last approximately two minutes.
+6. vCenter plugin will display a message throughout the duration of the reboot, that it cannot connect with the appliance.
 
 
 ### HDM Component VM Restart
 
-The HDM deployment consists of a set of  microservices running as containers in VM which are deployed On-Premise as well as On-Cloud. Depending on the deployment type, we will have all the below VMs or a subset of them
-
-
+HDM deployment consists of a set of  microservices running as containers in VM which are deployed On-Premise as well as On-Cloud. Depending on the deployment type, we will have all the below VMs or a subset of them
 
 *   HDM_Cloud_Manager
 *   HDM_Cloud_Cache
