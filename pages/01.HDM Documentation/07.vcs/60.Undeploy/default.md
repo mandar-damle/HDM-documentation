@@ -165,12 +165,12 @@ Steps
 1. Access the PrimaryIO appliance from the browser.
 2. Log into the appliance using administrator credentials.
 3. Select the vCenters tab to view the vCenter listing.
-4. From vCenter, select **Delete**.
+4. Find vCenter, then select **Delete**.
 
 ![alt_text](images/image25.png?classes=content-img "image_tooltip")
 
 5. Select **Yes** in the popup to delete vCenter from the appliance.
 6. Log into vCenter.
 7. Select _Host_, followed by _Clusters_, then power off the PrimaryIO Appliance VM.
-8. Right click on the appliance VM and select _Delete from Disk_ to delete the appliance.
+8. Right click on the appliance VM and select _Delete from Disk_ to delete it.
 
