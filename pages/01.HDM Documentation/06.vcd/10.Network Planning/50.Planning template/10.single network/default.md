@@ -514,9 +514,9 @@ The following WAN routes are required to access on-cloud from on-premise and vic
    </td>
   </tr>
   <tr>
-   <td><strong>On-Cloud WAN subnet</strong>
+   <td><strong>On-Premise WAN subnet</strong>
    </td>
-   <td><em>10.50.0.0/16</em>
+   <td><em>10.102.0.0/16</em>
    </td>
    <td>
    </td>
@@ -530,9 +530,9 @@ The following WAN routes are required to access on-cloud from on-premise and vic
    </td>
   </tr>
   <tr>
-   <td><strong>On-Premise WAN subnet</strong>
+   <td><strong>On-Cloud WAN subnet</strong>
    </td>
-   <td><em>10.102.0.0/16</em>
+   <td><em>10.50.0.0/16</em>
    </td>
    <td>
    </td>
@@ -547,74 +547,3 @@ The following WAN routes are required to access on-cloud from on-premise and vic
   </tr>
 </table>
 
-
-Again, HDM appliances on cloud will need to access Cloud vCenter and ESXi. If routes are requires, note the Network and the gateway which will allow access
-
-**Cloud vCenter Route:**
-
-
-<table>
-  <tr>
-   <td>
-   </td>
-   <td><strong>Example</strong>
-   </td>
-   <td><strong>Fill value here</strong>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Route through</strong>
-   </td>
-   <td><em>10.50.10.1</em>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Network Type</strong>
-   </td>
-   <td><em>HDM Internal Network</em>
-   </td>
-   <td>
-   </td>
-  </tr>
-</table>
-
-
-**ESXi Route:**
-
-
-<table>
-  <tr>
-   <td>
-   </td>
-   <td><strong>Example</strong>
-   </td>
-   <td><strong>Fill value here</strong>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Subnet</strong>
-   </td>
-   <td><em>192.163.0.0/16</em>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Route through</strong>
-   </td>
-   <td><em>10.50.10.1</em>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>Network Type</strong>
-   </td>
-   <td><em>HDM Internal Network</em>
-   </td>
-   <td>
-   </td>
-  </tr>
-</table>
