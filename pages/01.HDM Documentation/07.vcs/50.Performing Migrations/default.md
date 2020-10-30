@@ -741,11 +741,11 @@ If the bulk transfer fails during cold migration, the operation will be retried 
 
 **Note:** All retries will be attempted a fixed number of times. Once the number of retries has been exhausted, the operation will be marked as _failed_.
 
-If a snapshot of a VM has been bulk transferred to On-Cloud and a failure occurs when sync to it is in progress through the cloud cache, the user has to explicitly delete the bulk transferred VM from the On-Cloud. The HDM failure handling does not automatically delete the bulk transferred VM.
+If a VM snapshot has been bulk transferred to the cloud and a failure occurs while the cloud cache syncs with it, the portion that has already transferred to the cloud must be explicitly deleted. HDM failure handling does not automatically delete the bulk transferred VM.
 
 
 ### Unresolved Issues
 
-**Refer to the Troubleshooting Guide in case the failure issues are not resolved. The failure might have been caused due to one of the known product issues. **
+**Refer to the Troubleshooting Guide if failure issues are not resolved. The failure might have been caused by a known product issue. **
 
-**Finally, seeking help from PrimaryIO support may be required, refer to the Install Guide for the details. **
+**PrimaryIO support may be required. Refer to the Install Guide for the details. **
