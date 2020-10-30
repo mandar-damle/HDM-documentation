@@ -688,62 +688,58 @@ Restarting the appliance does not impact migrated VMs, nor does it impact future
 
 ### HDM Component VM Restart
 
-HDM deployment consists of a set of  microservices running as containers in VM which are deployed On-Premise as well as On-Cloud. Depending on the deployment type, we will have all the below VMs or a subset of them
+An HDM deployment consists of a set of microservices running as containers in a VM that are deployed on-premises, as well as in the cloud. Depending on the deployment type, some or all of the following VMs will be included:
 
 *   HDM_Cloud_Manager
 *   HDM_Cloud_Cache
 *   HDM_OnPrem_Manager
 *   HDM_OnPrem_ESXi_Manager
 
- 
+Rebooting any of these VMs triggers the following repair actions:
 
-When either of these are rebooted the repair actions are triggered:
-
-
-
-1. All affected VMs as in single component failure case are migrated back to the last RTO/RPO state.
-2. A vCenter event is logged specifying a “Docker reboot” has occurred specifying the particular VM which has reboot.
+1. All affected VMs are migrated back to the last RTO/RPO state.
+2. A vCenter event is logged, communicating that a “Docker reboot” has occurred on the identified VM.
 3. All components within that VM are repaired.
 4. All future operations involving the repaired components should work correctly.
 
 
 ### WAN Network Disconnect
 
-The WAN network disconnect may result in HDM components losing the network connectivity with the central heartbeat monitoring entity. 
+The WAN network disconnect may result in HDM components losing network connectivity with the central heartbeat monitoring entity. 
 
 
 #### Transient Network Failure
 
-HDM can recover from short network outages by retrying ongoing operations. Outages less than 5 minutes are considered short outages.
+HDM can recover from short network outages (those lasting less than 5 minutes) by retrying ongoing operations.
 
 
 #### Permanent Network Failure
 
-If the network outage is for extended periods of time(greater than 5 minutes), the HDM recovery may not succeed and HDM Reset may be required.
+If the network outage lasts for an extended period of time (greater than 5 minutes), the HDM recovery may not succeed and an HDM reset may be required.
 
 
 ### ESXii Host Restart
 
-If On-Premise ESXi host is restarted or the PRAAPA iofilter daemon service is restarted, the ongoing migrations will fail, VMs already migrated to On-Cloud, will be migrated back. Also, new VM migration will fail. HDM reset and re-deployment of HDM On-Premise and On-Cloud components is required before retrying the migration operation.
+If an on-premises ESXi host is restarted or the PRAAPA iofilter daemon service is restarted, the ongoing migrations will fail, VMs already migrated to the cloud will be migrated back, and new VM migrations will fail. An HDM reset and re-deployment of HDM on-premises and cloud components will be required prior to retrying the migration operation.
 
 
 ### System Failures
 
-Failures like storage or memory, may result in either some HDM component failures or their impact could be limited to few operations or IOs. We have already discussed the single and multiple component failures. If IOs or some operations fail, such failures are dealt with by retrying them.
+Failures such as storage or memory may result in some HDM component failures, or their impact could be limited to few operations or I/Os. If I/Os or some operations fail, they will be retried.
 
 
 #### Boot Failure During Migrate
 
-Guest VM boot may fail due to reasons like vmware tools not coming up early enough to detect successful boot. HDM retries (in this case reboot) the operation a few times. 
+A guest VM boot may fail if VMware tools are not available early enough to detect the successful boot. HDM will retry (or, in this case, reboot) the operation a few times. 
 
-**Note**: Multiple retries can delay the boot and in such cases, the user may have to wait till 30 minutes for the migration operation to complete.
+**Note**: Multiple retries can delay the boot. In this case, wait 30 minutes for the migration operation to complete.
 
 
 #### Bulk Transfer Failure During ARM Migration
 
-If the bulk transfer failed during cold migration, the operation is retried a few times. Errors such as transient network issues can be dealt with this mechanism.
+If the bulk transfer fails during cold migration, the operation will be retried a few times. Errors such as transient network issues can be dealt with this mechanism.
 
-**Note:** All retries happen for a fixed number of times. If the retries exhaust, the operation is marked as failed.
+**Note:** All retries will be attempted a fixed number of times. Once the number of retries has been exhausted, the operation will be marked as _failed_.
 
 If a snapshot of a VM has been bulk transferred to On-Cloud and a failure occurs when sync to it is in progress through the cloud cache, the user has to explicitly delete the bulk transferred VM from the On-Cloud. The HDM failure handling does not automatically delete the bulk transferred VM.
 
