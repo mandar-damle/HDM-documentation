@@ -281,112 +281,75 @@ If any of the above steps fail, HDM will retry the step before declaring that th
 
 **Note**: The flow described here is useful for the TBC use case. 
 
-Pre-requisites
 
+Prerequisites
 
+1. The VM must be in a migrated state. It should be listed in _HDM_MIGRATE_POOL_ in the on-premises vCenter.
 
-1. The VM must be in a migrated state. It should be present in HDM_MIGRATE_POOL in On-Premise vCenter.
 
 Steps
 
-
-
-1. In the On-Premise vCenter, right click on the VM that is to be migrated back. Click on the HDM -> Migrate Back option.
-
+1. In the on-premises vCenter, right click on the VM to be migrated back. Select _HDM_, followed by _Migrate Back_.
 
 ![alt_text](images/image30.png?classes=content-img "image_tooltip")
 
-
-
-
-2. Select the VMs that are to be migrated back. The dependent VMs will be migrated back together.
-
+2. Select the VMs to be migrated back. The dependent VMs will be migrated back together.
 
 ![alt_text](images/image23.png?classes=content-img "image_tooltip")
 
-
-
-
-3. Review the selection and click on MIGRATE BACK.
-
-
+3. Review the selection and select _MIGRATE BACK_.
 
 ![alt_text](images/image24.png?classes=content-img "image_tooltip")
 
-
-
-
-4. You can view the status of the migrate back in the wizard
-
-
+4. The status of the migration back can be seen in the wizard.
 
 ![alt_text](images/image25.png?classes=content-img "image_tooltip")
 
-
-
-
-5. Also, the migrate back task in vCenter can be tracked
-
+5. The migrate back task can also be tracked in vCenter.
 
 ![alt_text](images/image26.png?classes=content-img "image_tooltip")
 
-
-
-
-6. Once the migration back is successful, the VM is deleted from the On-Cloud vCenter. It has now moved from the HDM_MIGRATE_POOL to the original resource pool where it belonged before migration. Users should power on the VM explicitly.
+6. Once the migration back is successful, the VM will be deleted from the cloud vCenter. It will then be moved from the _HDM_MIGRATE_POOL_ to the original resource pool where it resided prior to the migration. At this point, the VM will have to be explicitly powered on.
 
 
 # HDM Monitoring
 
-HDM monitors the VMs in a cluster for the IO and resource usage activity. The monitoring gives the following data:
-
-
+HDM monitors the VMs in a cluster for I/O and resource usage activity. The following data will be provided:
 
 *   Active data set identification for VMs
 *   Recommendation of what VMs to migrate
-*   Cache size required on On-Cloud to meet the VM’s workload requirements
+*   Cache size required on the cloud to meet the VM’s workload requirements
 *   CPU resource utilization of the VMs
-*   IO performance statistics for VMs
-*   Network and cache usage statistics for migrated VMs
+*   I/O performance statistics for the VMs
+*   Network and cache usage statistics for the migrated VMs
 
-**Note**: In Lite mode of deployment(both standalone and cluster), the monitoring of VMs is limited to just applying the HDM SPBM policy. The detailed monitoring of VMs is present only in Standard and Performance mode of deployment. 
+**Note**: In Lite mode (Standalone and Cluster), the monitoring of VMs is limited to applying the HDM SPBM policy. The detailed monitoring of VMs is only present in the Standard and Performance modes. 
 
 
 ## Monitoring VMs On-Premise
 
-HDM monitors the IO activity on all VMs on On-Premise on the cluster in which it is installed.
+HDM monitors the I/O activity on all on-premises VMs on the cluster where it is installed. To view monitored data for these VMs:
 
-To view monitored data for such VMs
-
-
-
-1. In the On-Premise vCenter, select the cluster
-2. On the right hand panel, go to Monitor -> HDM -> Profiling
-
-
+1. In the on-premises vCenter, select the cluster
+2. On the right-hand panel, select _Monitor_, followed by _HDM_, then _Profiling_
 
 ![alt_text](images/image27.png?classes=content-img "image_tooltip")
 
-
-**Note**: In Lite mode of deployment(both standalone and cluster), this view is not present. Instead the following message should be there
-
+**Note**: In Lite mode (both standalone and cluster), this view is not present. Instead, the following message will be displayed:
 
 ![alt_text](images/image10.png?classes=content-img "image_tooltip")
 
-
-
-
-3. You should see the doughnuts for
-    1. Storage monitored : the amount of storage monitored within the vCenter. Monitoring is done only for the selected cluster within the vCenter.
-    2. Active dataset : the active dataset size out of the total. IO activity is recorded periodically. The data set recently touched forms the active data set.
-    3. Active VM storage health : the health of the storage is determined by the latency and throughput of the storage.
-    4. Top storage utilized VMs : the VMs that are accessing the storage most often fall in this category.
-4. A table summarizing the VM’s activity is also present below the doughnuts. Few important columns are
-    5. Storage : The storage capacity of the VMs
-    6. Cache size : The estimated working set size of the VM. If the VM is migrated to the On-Cloud, we should provision at least this much of cache to have optimal performance.
-    7. Read IOPs : The observed rate of reads happening on the VM.
-    8. Write IOPs : The observed rate of writes happening on the VM.
-    9. Health : The health of the storage of VM based on the observed read/write IOPs.
+3. You should see the doughnuts for:
+    1. Storage monitored: The amount of storage monitored within vCenter. Monitoring is only active on the selected cluster within vCenter.
+    2. Active dataset: The size of the active dataset, compared with the total. I/O activity is recorded periodically.
+    3. Active VM storage health: The health of the storage is determined by its latency and throughput.
+    4. Top storage utilized VMs: The VMs that access the storage most frequently.
+4. A table summarizing the activity of the VMs is presented below the doughnuts. Some columns of particular importance are:
+    5. Storage: The storage capacity of the VMs.
+    6. Cache size: The estimated size of the VM's working set. If the VM is migrated to the cloud, this represents the minimum amount of cache that needs to be provisioned to maintain optimal performance.
+    7. Read IOPs: The observed rate of reads happening on the VM.
+    8. Write IOPs: The observed rate of writes happening on the VM.
+    9. Health : The health of the VM storage, based on the observed read/write IOPs.
 
 
 ## Monitoring VMs On-Cloud
@@ -394,40 +357,27 @@ To view monitored data for such VMs
 
 ### Migration Status
 
-HDM keeps track of the number of VMs migrated and migrated back, their status etc. 
+HDM keeps track of the number of VMs migrated and migrated back, as well as their statuses and other essential information. This data is accessible through the following steps:
 
-Such data is accessible through the steps
-
-
-
-1. In the On-Premise vCenter, select the cluster
-2. On the right hand panel, go to Monitor -> HDM -> Migration -> In Progress
-
+1. In the on-premises vCenter, select the cluster
+2. On the right hand panel, select _Monitor_, followed by _HDM_, _Migration_, then _In Progress_
 
 ![alt_text](images/image28.png?classes=content-img "image_tooltip")
 
 
 
-### IO And Resource Usage
+### I/O And Resource Usage
 
-The VMs which have been migrated to the On-Cloud are also monitored for resource utilization and IO activity. To view monitored data for such VMs
+The VMs that have been migrated to the cloud are also monitored for resource utilization and I/O activity. To view monitored data for these VMs:
 
-
-
-1. In the On-Premise vCenter, select the cluster
-2. On the right hand panel, go to Monitor -> HDM -> Monitoring
+1. In the on-premises vCenter, select the cluster
+2. On the right hand panel, select _Monitor_, followed by _HDM_, then _Monitoring_
 
 ![alt_text](images/image9.png?classes=content-img "image_tooltip")
 
-
-
-**Note**: In Lite mode of deployment(both standalone and cluster), this view is not present. Instead the following message will be displayed
-
+**Note**: In Lite mode (both Standalone and Cluster), this view is not present. Instead, the following message will be displayed:
 
 ![alt_text](images/image10.png?classes=content-img "image_tooltip")
-
-
-
 
 3. You can view graphs for
     1. utilization for compute, memory and cache resources
