@@ -14,14 +14,14 @@ HDM undeployment consists of the following four steps:
 4. Delete the HDM appliance from vCenter
 
 
-## Step 4: Undeploy HDM in the Cloud
+## Step 1: Undeploy HDM in the Cloud
 
 Steps
 
 
 
 1. In the on-premises vCenter, access the HDM dashboard by selecting _HDM_ from _Shortcuts_ or from the Menu.
-2. Select the _Administration** **_tab, then _Clouds_ to access the Cloud listing (figure 33).
+2. Select the _Administration_ tab, then _Clouds_ to access the Cloud listing (figure 33).
 3. Choose the cloud from the listing and select _DELETE CLOUD_
 
 _Figure 33: vCenter Cloud Listing_
@@ -41,7 +41,7 @@ _Figure 34: Delete Cloud Pop-Up_
 
 
 
-5. This will create an undeployment task for the cloud components. The task can be monitored in _vCenter Tasks_. The progress can be seen in the _HDM Clouds _view (figure 35).
+5. This will create an undeployment task for the cloud components. The task can be monitored in _vCenter Tasks_. The progress can be seen in the _HDM Clouds_ view (figure 35).
 
 _Figure 35: HDM Clouds View_
 
@@ -63,8 +63,8 @@ Steps
 
 
 1. To access the HDM dashboard, select _HDM_ from _Shortcuts_ or from the Menu in the on-premises vCenter.
-2. Select the _Administration** **_tab, then _Configuration_ to access the cluster listing (figure 36)
-3. Choose the cluster where HDM is installed and select _UNINSTALL**. **_
+2. Select the _Administration_ tab, then _Configuration_ to access the cluster listing (figure 36)
+3. Choose the cluster where HDM is installed and select _UNINSTALL_
 
 _Figure 36: vCenter On-Premises Cluster Listing_
 
@@ -84,7 +84,7 @@ _Figure 37: Uninstall On-Premises Pop-up_
 
 
 
-5. This will create an undeployment task for the on-premises components. The task can be monitored in _vCenter Tasks_. The progress can be seen in the _HDM Configuration _view (figure 38).
+5. This will create an undeployment task for the on-premises components. The task can be monitored in _vCenter Tasks_. The progress can be seen in the _HDM Configuration_ view (figure 38).
 
 _Figure 38: HDM Configuration View_
 
@@ -131,7 +131,7 @@ Steps
 2. Log into the HDM appliance using the administrator credentials.
 3. Select _vCenters_ tab to view the PrimaryIO vCenter listing (figure 40).
 4. Choose the vCenter, then select _Delete_.
-5. In the pop-up, select _Yes** **_to delete vCenter from the HDM appliance.
+5. In the pop-up, select _Yes_ to delete vCenter from the HDM appliance.
 6. Log into vCenter.
 7. Select _Host_ and _Clusters_, then power off the HDM Appliance.
 8. Right-click on the HDM appliance and select _Delete From Disk_ to delete the HDM appliance.

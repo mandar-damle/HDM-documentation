@@ -1,18 +1,10 @@
 ---
 title: 'Performing Migrations'
-media_order: ''
-body_classes: ''
-order_by: ''
-order_manual: ''
 ---
-
 
 # HDM Migrations
 
-
-
-HDM is used to perform migration of VMs from On-Premise to the cloud. HDM support the
-three types of migration these are.
+HDM is used to migrate VMs from on-premises to cloud environments. HDM supports the following migration types:
 
 1. Agile Rapid Migration (ARM)
 2. Try Before Commit (TBC)
@@ -20,20 +12,16 @@ three types of migration these are.
 
 ## Migrate a VM using vCenter 
 
-**Note:** Migration operation is performed using the PrimaryIO GUI interface in vCenter as well as through SQS interface library.  Following sections describe the steps for executing the migration operation through vCenter. 
+**Note:** The migration operation can be performed using the PrimaryIO GUI interface in vCenter, or through the SQS interface library. The following sections describe the steps for executing the migration operation using vCenter. 
 
-**Note**: Currently, HDM supports deployment for migration for only one cluster per vCenter at a time. If the VMs are to be migrated from multiple clusters, the process of deploy, migrate, undeploy would have to repeat for multiple clusters.
+**Note**: Currently, HDM migration support is limited to one simultaneous cluster per vCenter. If the VMs to be migrated are from multiple clusters, the process will need to be repeated for each of them.
 
 Pre-requisites
 
-
-
-1. HDM deployment must be complete on both On-Premise and On-Cloud.
-2. HDM SPBM policy must be configured. 
+1. HDM deployment must be complete in the on-premises and cloud environments.
+2. The HDM SPBM policy must be configured. 
 
 Steps
-
-
 
 1. Prepare the VM to migrate
 2. Migrate the VM
@@ -41,240 +29,148 @@ Steps
 
 ### Prepare to Migrate
 
-VMs that are to be migrated need to go through the prepare to migrate step. It does the following:
+The VMs to be migrated will first need to be prepared:
 
-
-
-1. Perform various checks to see if VM OS type and configuration is supported for migration.
-2. If required make necessary configuration updates so that the migration is successful.
+1. Perform various checks to ensure that the VM's OS type and configuration are supported for migration.
+2. If required, make the necessary configuration updates.
 
 Pre-requisites
 
-
-
-1. VM must be “powered on” for “prepare to migrate” to succeed.
-2. VM OS type should be one of the supported OS for migration.
-3. Latest version of vmware tools must be installed on the VM. Also ensure that vmware tools service is running and functional.
-4. Administrator/root credentials of the VM should be available.
-5. OS should be present on the first VMDK of the VM
-6. All OS related partitions should be present on the same disk/device only. Example
-    *   'System Reserved' partition and 'System' partition should be on the same disk
-    *   /boot or /home should be present on the same disk
-    *   LVM should be created from partitions which are on the same disk
-7. E1000E and VMXNet3 network adapter should be available in both On-Premise and On-Cloud vCenters
-8. The VM must have access to the Internet to download the required packages.
-9. Minimum 50 MB of disk size should be available in the system partition
-10. The OS or repository is configured to download the required install packages from the Internet.
+1. The VM must be powered on.
+2. The VM's OS type must be supported for migration.
+3. The latest version of VMware tools must be installed on the VM, and the tools service must be running and functional.
+4. Administrator/root credentials of the VM must be available.
+5. The OS must be present on the first VMDK of the VM
+6. All OS related partitions must be present on the same disk/device. For example:
+    *   The 'System Reserved' and 'System' partitions must be on the same disk
+    *   /boot or /home must be present on the same disk
+    *   LVM must be created from partitions on the same disk
+7. The E1000E and VMXNet3 network adapters must be available in the on-premises and cloud vCenters
+8. The VM must have access to the Internet.
+9. A minimum of 50 MB must be available in the system partition
+10. The OS or repository must configured to download the required install packages from the Internet.
 11. For Ubuntu 16.04, LVM is not supported.
-12. For all versions of Ubuntu, users should ensure that either the static IP is configured for internal network or in case of DHCP, increase the lease to 30 days or more.
-13. If the OS is linux, the sudo user’s home directory must be <code><em>/home</em></code>.
-14. Users should wait for the boot process to get completed. For example, on linux
-    *   Use command <code>systemctl is-system-running </code>to ensure that system is fully operational
-15. The VM should not have UEFI BIOS. Only IBM PC BIOS is supported.
-16. For Windows VM, firewalls should be disabled for the duration of prepare to migrate operation.
-17. For Windows Domain user, the local security policy should be modified for the duration of prepare to migrate operation. This can be done using the following steps
-    *   Go to Local Security Policy -> Local Policies -> Security Options
+12. For all versions of Ubuntu, ensure that either the static IP is configured for internal network, or the DHCP lease is set to 30 days or greater.
+13. If the OS is Linux, the sudo user’s home directory must be <code><em>/home</em></code>.
+14. Wait for the boot process to complete. For example, on Linux:
+    *   Use command <code>systemctl is-system-running </code>to ensure the system is fully operational
+15. The VM cannot have UEFI BIOS. Only IBM PC BIOS is supported.
+16. For a Windows VM, firewalls must be disabled for the duration of the _prepare to migrate_ operation.
+17. For the Windows Domain user, the local security policy must be modified for the duration of the _prepare to migrate_ operation:
+    *   Select _Local Security Policy_, followed by _Local Policies_, then _Security Options_
     *   On the policy <code>User Account Control: Behavior of the elevation prompt for administrators in Admin Approval Mode, </code>choose the <code>Elevate without prompting </code>option
-    *   Disable the policy User Account Control: Turn on Admin Approval Mode
+    *   Disable the policy _User Account Control: Turn on Admin Approval Mode_
     *   Reboot the VM
+
 
 Steps
 
-
-
-1. In the On-Premise vCenter, right click on the VM you want to migrate.
+1. In the on-premises vCenter, right click on the VM to be migrated.
 2. Select the **HDM -> Prepare to Migrate** option
-
-
-
 
 ![alt_text](images/image30.png?classes=content-img "image_tooltip")
 
-
-
-
-3. Specify the administrator/root user credentials to the pop-up wizard 
-
-
+3. Specify the administrator/root user credentials in the pop-up wizard 
 
 ![alt_text](images/image33.png?classes=content-img "image_tooltip")
 
 
-**Note:  A full clone or linked clone of a VM needs “prepare to migrate” operation, even if its base VM has already been prepared for migration. For example, HDM migrate wizard in vCenter, such clones are not shown in available list of VMs for migration unless they have been explicitly prepared for migration.**
+**Note:  A full clone or linked clone of a VM must go through the “prepare to migrate” operation, even if its base VM has already has. For example, in the HDM migrate wizard in vCenter, clones are not shown in the list of available VMs for migration unless they have been explicitly prepared for migration.**
 
 
 ### Apply SPBM Policy
 
-Migrate operation requires the VM to have HDM SPBM policy applied to its disks. This may have already been attached when the enable IO monitoring was done (see section Enable IO Monitoring for more details). But in cases where the attempt to attach VM policy at that time failed or the VM was created at a later point of time, the following steps can be taken to verify and if required apply SPBM policy.
+The migrate operation requires the VM to have the HDM SPBM policy applied to its disks. This may have already been attached when the _Enable I/O Monitoring_ was performed (see the Enable I/O Monitoring section for more details). But in cases where either the attempt to attach the VM policy failed at that time, or the VM was created at a later point in time, the following steps can be taken to verify - and, if required, apply - SPBM policy:
 
 Pre-requisites
 
+1. Enable I/O Monitoring has already been executed.
 
-
-1. Enable IO monitoring has already been executed.
 
 Steps
 
-
-
-1. In the On-Premise vCenter, right click on the VM you want to migrate.
-2. Select VM Policies -> Edit VM Storage Policies
-
-    
-
-
+1. In the on-premises vCenter, right click on the VM to be migrated.
+2. Select _VM Policies_, followed by _Edit VM Storage Policies_
 
 ![alt_text](images/image32.png?classes=content-img "image_tooltip")
 
-
-3. In the popup, if the VM storage policy is already HDM Analyzer Profile, then no need to do anything. But if it is **Datastore Default**, select VM storage policy as **HDM Analyzer Profile **and click on **Apply to all.**
-
-
-
-
+3. In the popup window, there is no need to do anything if the VM storage policy has already been set to the HDM Analyzer Profile. However, if it is set to **Datastore Default**, change it to _HDM Analyzer Profile_ and select _Apply to all_.
 
 ![alt_text](images/image35.png?classes=content-img "image_tooltip")
-
-
 
 ### Migrate the VM
 
 Pre-requisites
 
+1. _Prepare to Migrate_ has been successful on the VM
+2. The HDM SPBM policy has been applied to all disks within the VM
 
-
-1. Prepare to migrate has been successful on the VM
-2. HDM SPBM policy has been applied to all the disks of the VM
 
 Steps
 
-
-
-1. In the On-Premise vCenter, right click on the VM you want to migrate.
+1. In the on-premises vCenter, right click on the VM to be migrated.
 2. Select the **HDM -> Migrate** option
-
-
 
 ![alt_text](images/image34.png?classes=content-img "image_tooltip")
 
-
-
-
-3. The Migrate wizard will open.  **Select a migration type **by which virtual machine should be migrated on On-Cloud.
-
-
+3. The Migrate wizard will open. Select the migration type to be used to migrate the VM to the cloud.
 
 ![alt_text](images/image37.png?classes=content-img "image_tooltip")
 
-
-
-
-4. In the **Select Cloud** page, review the On-Cloud to which the VM is being migrated and resources available
-
+4. On the **Select Cloud** page, review the cloud where the VM is to be migrated and ensure that adequate resources are available
 
 ![alt_text](images/image36.png?classes=content-img "image_tooltip")
 
-
-
-5. Choose the list of VMs to migrate. 
-    *   The option “Application Dependency” should be kept as checked. 
-    *   You should review the cache size, CPU and memory required on the On-Cloud side
-
-
-
+5. Choose the list of VMs to migrate:
+    *   Keep the option “Application Dependency” checked. 
+    *   Review the cache size, CPU, and memory required in the cloud
 
 ![alt_text](images/image40.png?classes=content-img "image_tooltip")
 
-
-
-
-6. If Warm and Cold migration type has been selected, users can select the target resources on On-Cloud on which the virtual machine should be migrated
-
+6. If the Warm and Cold Migration type has been chosen, select the target resources on the cloud where the virtual machine will be migrated
 
 ![alt_text](images/image38.png?classes=content-img "image_tooltip")
 
-
-
-
-7. If Warm and Cold migration type has been selected, users can map the network for the virtual machine
-
-
+7. If the Warm and Cold Migration type has been selected, map the network for the VM
 
 ![alt_text](images/image39.png?classes=content-img "image_tooltip")
 
-
-
-
-8. Confirm your selections and click on MIGRATE
-
+8. Confirm all selections and select _MIGRATE_
 
 ![alt_text](images/image41.png?classes=content-img "image_tooltip")
 
-
-
-
-9. Migration status page will display the status of migration as it progresses.
-
+9. The migration status page will display the status of the migration as it progresses.
 
 ![alt_text](images/image42.png?classes=content-img "image_tooltip")
 
-
-
-
-10. You can also track the migration status in vCenter task.
-
-
+10. The migration status can also be tracked in vCenter tasks.
 
 ![alt_text](images/image43.png?classes=content-img "image_tooltip")
 
-
-
-
-11. The migrated VM can be seen in a new resource pool HDM_MIGRATE_POOL in the On-Premise vCenter and would be in a powered off state, while the same VM would be in a powered on state in the On-Cloud vCenter.
-
+11. The migrated VM can be seen in a new resource pool _HDM_MIGRATE_POOL_ in the on-premises vCenter in a powered off state, while the same VM will be in a powered on state in the cloud vCenter.
 
 ![alt_text](images/image44.png?classes=content-img "image_tooltip")
 
-
-
-
-12. All migrations can be monitored through Cluster->Monitor->HDM>Migration->In Progress tab.
-
+12. All migrations can be monitored by selected _Cluster_, followed by _Monitor_, _HDM_, _Migration_, then the _In Progress_ tab.
 
 ![alt_text](images/image28.png?classes=content-img "image_tooltip")
 
-
-
-
-13.  For virtual machines that have been migrated using WARM migration, to complete the migration workflow the following steps would need to be performed.
-    *   START TRANSFER : This is an optional step where the virtual machine data can be transferred using **HDM Bulktransfer**. Select the virtual machine and click on **Start Transfer **to transfer virtual machine data.
+13.  For virtual machines that have been migrated using Warm Migration, the following steps are required to complete the migration workflow:
+    *   START TRANSFER : This is an optional step where the virtual machine data can be transferred using **HDM Bulktransfer**. Select the virtual machine, then select **Start Transfer **.
 
 ![alt_text](images/image-start-transfer.png?classes=content-img "image_tooltip")
 
 ![alt_text](images/image45.png?classes=content-img "image_tooltip")
 
-
-
-
-    *   CONFIGURE & SYNC : Once the virtual machine data has been moved onto On-Cloud, user should select the virtual machine that has been moved to the On-Cloud to sync the latest changes.
-
-
+    *   CONFIGURE & SYNC : Once the virtual machine data has been moved to the cloud, select the newly-moved virtual machine to sync the latest changes.
 
 ![alt_text](images/image46.png?classes=content-img "image_tooltip")
 
-
-
-
-    *   COMMIT :  Once the data has been synced, commit all the changes to the migrated virtual machine on On-Cloud and cleanup HDM configuration.
-
+    *   COMMIT :  Once the data has been synced, commit all changes to the migrated virtual machine on the cloud and clean up the HDM configuration.
 
 ![alt_text](images/image47.png?classes=content-img "image_tooltip")
 
-
-
-
-14. Virtual machines that have been migrated onto the cloud will be shown in Cluster->Monitor->HDM->Migration->Summary tab
-
+14. VMs that have been migrated to the cloud will be shown in _Cluster_, followed by _Monitor_, _HDM_, _Migration_, then _Summary_ 
 
 ![alt_text](images/image11.png?classes=content-img "image_tooltip")
 
@@ -282,19 +178,16 @@ Steps
 
 ### Migrate Time Snapshot
 
-As part of the VM migration, HDM creates a “migrate time snapshot”  for the VM. This snapshot is useful to restore the data in certain cases of failures.
+As part of the VM migration, HDM creates a “migrate time snapshot”  for the VM. This snapshot is useful to restore data in the event of certain failures.
 
-**Note**: Restoring the VM from the migrate time snapshot will result in loss of data for the time the VM was on On-Cloud.
+**Note**: Restoring the VM from the migrate time snapshot will result in loss of data for the time the VM was in the Cloud.
 
-To view the snapshot
+To view the snapshot:
 
+1. In the on-premises vCenter, right click on the VM in the resource pool _HDM_MIGRATE_POOL_
+2. Select _Snapshots_, followed by _Manage Snapshots_
 
-
-1. In the On-Premise vCenter, in the resource pool HDM_MIGRATE_POOL, right click on the VM
-2. Select Snapshots -> Manage Snapshots
-
-    The Manage Snapshots popup should display a snapshot named hdm_xx, for example hdm_1 shown below
-
+The Manage Snapshots popup should display a snapshot named _hdm_xx_. For example, _hdm_1_ shown below:
 
 ![alt_text](images/image21.png?classes=content-img "image_tooltip")
 
@@ -302,101 +195,86 @@ To view the snapshot
 
 ### Cache Size For Migrated VMs
 
-HDM allocates a cache quota on the On-Cloud, for all the migrated VMs for optimal performance of the applications running on On-Cloud. The cache size allocation follows the below rules
+HDM allocates a cache quota in the cloud for all migrated VMs to ensure optimal performance of the applications running in the cloud. The cache size allocation follows these rules:
 
-
-
-*   If the VM has been monitored for IOs on the On-Premise for sufficient time, the working set is derived by the IO analysis and the cache size is based on the working set size. Note that, this is valid only for standard and performance mode of deployment.
-*   If the VM is not monitored, the cache size is based on the size of the VMDKs. It is
-    *   15% for standard and performance mode of deployment
-    *   25% for lite mode of deployment 
-*   There is also a minimum cache size per deployment mode. It is
-    *   5 GB for lite and performance mode of deployment
-    *   3 GB for standard mode of deployment
+*   If the on-premises VM has been monitored for I/Os for a sufficient amount of time, the working set is derived by the I/O analysis and the cache size is based on the working set size. Note that this is only valid for _Standard_ and _Performance_ modes of deployment.
+*   If the VM is not monitored, the cache size is based on the size of the VMDKs:
+    *   15% for _Standard_ and _Performance_ modes of deployment
+    *   25% for the _Lite_ mode of deployment 
+*   There is also a minimum cache size per deployment mode:
+    *   5 GB for _Lite_ and _Performance_ modes of deployment
+    *   3 GB for the _Standard_ mode of deployment
 
 
 ## Migrate a VM using the SQS Interface 
 
-HDM migration for ARM use case is supported through SQS interface. The prerequisites for using SQS interface for migration are
+HDM migration for the ARM use case is supported through the SQS interface. The prerequisites for using the SQS interface for migration are:
 
+1. The HDM appliance must have access to Internet.
+2. The SQS queues for command and response must be created in the Amazon SQS service.
+3. The HDM appliance should be configured for the SQS message bus with the correct message bus token
 
+Some important command messages exchanged between the client and HDM are:
 
-1. HDM Appliance must have access to Internet
-2. The SQS queues for command and response queues must be created in the Amazon SQS service
-3. The HDM Appliance should be configured for SQS message bus with correct message bus token
+1. **Heartbeat**: This message is from HDM to the client, to communicatethe state of HDM. Clients usually look for a ‘Ready’ state before sending the next migration request to HDM. 
+2. **SourceInventoryRequest**: This message provides the list of on-premises VMs and their details. Clients select what to migrate from this list.
+3. **SourceCloneRequest**: This is essentially the migration request to HDM. It has parameters to specify the migration type and associated details.
+4. **BulkMigrationDoneRequest**: This message is important for migrations initiated using the offline bulk transfer option, because it tells HDM whether or not the offline bulk transfer is complete. 
 
-Few important command messages exchanged between client and HDM are
-
-
-
-1. **Heartbeat **: This message is from HDM to the client. This tells the state of HDM. Usually clients would look for ‘Ready’ state before sending a next migration request to HDM. 
-2. **SourceInventoryRequest **: This message gives the list of VMs On-Premise and their details. Clients can choose what to migrate by looking at this list.
-3. **SourceCloneRequest **: This is essentially the migration request to HDM. It has parameters to specify the warm or cold migration and details related to those.
-4. **BulkMigrationDoneRequest **: For migrations initiated with offline bulk transfer option, this message is important. This tells HDM whether the offline bulk transfer is complete or not. 
-
-Details for how these are used for warm and cold migration are given below.
+Details for how these are used for warm and cold migration are provided below.
 
 
 ### Cold Migration
 
-Cold migration using SQS interface involves the following steps
+Follow these steps to perform a cold migration using the SQS interface:
 
-
-
-1. Wait until system status is ‘Ready’. This is indicated by the heartbeat between HDM and SQS client. 
+1. Wait until system status is ‘Ready’. This is indicated by the heartbeat between HDM and the SQS client. 
 2. Send a ‘SourceInventoryRequest’ message to get the list of VMs that can be migrated using HDM.
-3. Choose a VM from the list of VMs returned in the response message.
-4. Set the mode of migration to ‘cold’
-5. Submit request for migration using ‘SourceCloneRequest’.
-6. After submission periodic responses will be sent with the status of the submitted request.
+3. Choose a VM from the list in the response message.
+4. Set the mode of migration to ‘cold’.
+5. Submit a request for migration using ‘SourceCloneRequest’.
+6. After submission, periodic responses will be sent with the status of the submitted request.
 
-Cold migration of a VM will go through the following steps.
-
-
+Cold migration of a VM will entail the following steps:
 
 1. A bulk transfer of the VM will be initiated.
-    1. Progress and updates will be sent via message bus responses
-    2. vCenter Tasks will show the progress of the export and import of ovf on the source vCenter and the target vCenter respective.
-    3. This operation might get queued depending on resource profile and number of migrations in progress and total number of VMs migrated. There can be at most 8 concurrent migrations running concurrently. 
-2. Necessary network changes will be done on the migrated VM.
+    1. Progress and updates will be sent via message bus responses.
+    2. vCenter Tasks will show the progress of the export and import of ovf on the source and target vCenters, respectively.
+    3. This operation may get queued, depending on the resource profile, the number of migrations in progress, and total number of VMs migrated. A maximum of eight migrations can run concurrently. 
+2. Necessary network changes will be performed on the migrated VM.
 
-In case of failure of bulk transfer, few retries would be done. Failure is reported in the response message on the final failure only. In the vCenter, however, the retries and their status can also be seen.
+If the bulk transfer fails, it will be automatically retried a few times. The failure will be reported in the response message on the final failure only. In the vCenter, however, the retries and their statuses can also be seen.
 
 
 ### Warm Migration
 
 Pre-requisites
 
+1. The HDM deployment mode cannot be ‘Appliance Only’. Any other mode is acceptable.
+2. The VM must be in a powered-on state and must have the latest VMware tools installed.
 
-
-1. HDM deployment mode should be anything other than ‘Appliance Only’.
-2. VM must be in a powered-on state and must have the latest vmware tools installed.
 
 Steps
 
-
-
-1. Wait until system status is ‘Ready’. This is indicated by the heartbeat between HDM and SQS client. 
+1. Wait until system status is ‘Ready’. This is indicated by the heartbeat between HDM and the SQS client. 
 2. Send a ‘SourceInventoryRequest’ to get the list of VMs that can be migrated using HDM.
-3. Choose a VM from the list of VMs returned in the response message.
-4. Set the mode of migration to ‘warm’ and bulk transfer mode to online or offline.
-5. Additionally the root user credentials of the VM for the “prepare to migrate” step would be required.
-6. Submit request for migration using ‘SourceCloneRequest’.
-7. After submission periodic responses will be sent with the status of the submitted request.
+3. Choose a VM from the list returned in the response message.
+4. Set the mode of migration to ‘warm’ and the bulk transfer mode to 'online' or 'offline'.
+5. The root user credentials of the VM for the “prepare to migrate” step will be required.
+6. Submit the request for migration using ‘SourceCloneRequest’.
+7. After submission, periodic responses will be sent with the status of the submitted request.
 
-Warm migration of a VM will go through the following steps
+Warm migration of a VM will entail the following steps:
 
-
-
-1. Prepare to migrate the VM
-2. Apply HDM SPBM policy to the VM
-3. Take snapshot of the VM and create a linked clone on it
-4. Do compute migrate the VM where the cloud cache is created and data path to On-Premise is also maintained
-5. Bulk transfer the previously created a snapshot of the VM to the On-Cloud
-6. Reconcile the new data in the cloud cache with the VM image transferred to On-Cloud
+1. Prepare to migrate the VM.
+2. Apply the HDM SPBM policy to the VM.
+3. Take a snapshot of the VM and create a linked clone on it.
+4. Migrate the compute VM, where the cloud cache is created and the data path to the on-premises environment is also maintained.
+5. Bulk transfer the previously created VM snapshot to the cloud
+6. Reconcile the new data in the cloud cache with the VM image transferred to the cloud
 7. Power off the running VM and reboot from the reconciled VM image. 
 
-In case of failure of any of the above steps, HDM would retry the step, before declaring the entire migration as failed.
+If any of the above steps fail, HDM will retry the step before declaring that the entire migration has failed.
 
 
 ## Migrate Back a VM

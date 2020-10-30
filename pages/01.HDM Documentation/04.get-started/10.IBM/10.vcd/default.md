@@ -132,7 +132,7 @@ Before proceeding with the installation, watch the training videos ([https://www
 <table>
   <tr>
    <td>
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.vcd/images/image10.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/10.vcd/images/image10.png" width="" alt="alt_text" title="image_tooltip">
    </td>
    <td>
 <ul>
@@ -183,7 +183,7 @@ Before proceeding with the installation, watch the training videos ([https://www
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.vcd/images/image15.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/10.vcd/images/image15.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -204,7 +204,6 @@ Before proceeding with the installation, watch the training videos ([https://www
   <tr>
    <td>
 
-<img src="images/image19.png" width="" alt="alt_text" title="image_tooltip">
 <img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/10.vcd/images/image19.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
@@ -246,7 +245,7 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
 
 <li>On the <em>Licensing</em> tab, select <em>Add License</em>
 
-<li>Add the license key you received by mail
+<li>Add the license key you received by email
 </li>
 </ul>
    </td>
@@ -255,7 +254,7 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
 
 
 
-## Configure the On-premises vCenter
+## Deploy HDM on-premises
 
 
 <table>

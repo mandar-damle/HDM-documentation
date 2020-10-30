@@ -1,5 +1,6 @@
 ---
 title: 'VCS Hands-on Lab'
+published: false
 ---
 
 This Hands-on Lab is designed to quickly enable you to set up 
@@ -277,7 +278,7 @@ Navigate to the Licensing page on the HDM vCenter Plugin
 
 
 
-## Configure On-premises vCenter
+## Deploy HDM on-premises
 
 
 <table>
