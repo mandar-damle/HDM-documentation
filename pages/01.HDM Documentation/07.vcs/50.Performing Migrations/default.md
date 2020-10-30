@@ -542,16 +542,16 @@ HDM strives to meet the following requirements for handling failures:
 
 ## Ensuring VM Availability 
 
-As part of failure recovery, HDM will resume transfer of VM being cold migrated. Under pathological conditions or in warm migration HDM may identify that some VMs which were already migrated or some ongoing migrations can no longer continue to run on On-Cloud. Typically this is due to failure in the component that was used by VM to connect to On-Premise. To ensure application availability, such VMs are migrated back to On-Premise. 
+As part of failure recovery, HDM will resume the transfers of VMs that were in the process of being cold migrated. Under pathological conditions, or in the event of warm migration, HDM may identify that some VMs that were already migrated or some ongoing migrations can no longer continue to run in the cloud. This is typically due to a component failure that was used by the VM to connect to the on-premises environment. To ensure application availability, these VMs will be migrated back to the on-premises environment. 
 
 
 ## Data Consistency and Data Loss
 
-VMs being cold migrated can never have data loss. For VMs being used for “Try Before Commit” VMs migrated back as part of failure recovery do not get the opportunity to synchronize the On-Premise with the latest data On-Cloud. Since On-Premise is synchronized in RTO/RPO interval, such VMs will have data till last RTO/RPO flush. 
+VMs being cold migrated can never experience data loss. Conversely, VMs utilizing “Try Before Commit” that are migrated back as part of failure recovery do not get the opportunity to synchronize the on-premises environment with the latest cloud data. Since the on-premises environment is synchronized using an RTO/RPO interval, these VMs will hold data since the last RTO/RPO flush. 
 
-Since the RTO/RPO flushes happen through point in time snapshot of the data on On-Cloud, this data is expected to be crash consistent. Modern applications and file systems are designed to deal with crashes and so, they should be able to use this data On-Premise.
+Since the RTO/RPO flushes occur through point-in-time snapshots of the cloud data, this data is expected to be crash consistent. Modern applications and file systems are designed to withstand crashes. Therefore, they should be able to use this data on-premises.
 
-In the extreme case, if the OS or the application is not able to utilize the data, the user has a choice to restore the data from migrate time snapshot, with the caveat that it causes all data while the VM was on On-Cloud, to be lost.
+In an extreme case, if the OS or the application is incapable of utilizing the data, the data can be restored from the migrate time snapshot, with the caveat that it causes the loss of all data that was written while the VM was in the cloud.
 
 
 ## HDM Failure Recovery
@@ -559,12 +559,10 @@ In the extreme case, if the OS or the application is not able to utilize the dat
 
 ### Nature of Failures
 
-Failures can be of various types. HDM mainly deals with the following types of errors
+While there can be a wide range of failures, HDM mainly deals with the following:
 
-
-
-*   HDM Component Failures
-    *   Appliance Restart
+*   HDM Component Failures:
+    *   Appliance restart
     *   HDM component VM restart
     *   HDM individual component failure due to software issues 
 *   Network failures
