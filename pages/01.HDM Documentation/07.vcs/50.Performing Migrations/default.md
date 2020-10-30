@@ -400,122 +400,90 @@ A summary of the migration statistics and cloud resource utilization can be foun
 # HDM Policies
 
 
-## RTO/RPO
+## Recovery Time Objective/Recovery Point Objective (RTO/RPO)
 
 HDM maintains an optimal cache in the cloud for migrated VMs to provide superior I/O performance. The cache maintains the working set of VM to serve read requests without having to traverse the WAN for every I/O. The cache also absorbs writes, which are flushed to the on-premises environment at regular intervals.
 
-The frequency of the write flush is based on the RTO/RPO requirements. By default it is set to flush to the on-premises environment every 20 minutes. Therefore, in the event of a failure, the application can only lose up to 20 minutes worth of data.
+The frequency of the write flush is based on the Recovery Time Objective/Recovery Point Objective (RTO/RPO) requirements. By default it is set to flush to the on-premises environment every 20 minutes. Therefore, in the event of a failure, the application can only lose up to 20 minutes worth of data.
 
 
 ### Guidelines to Configure RTO/RPO policies
 
 Configuring RTO/RPO should be based on the application need. The trade-offs are:
 
-1. If the time is reduced, the write data flush would be triggered more often and it can cause additional WAN traffic, especially for applications that do frequent overwrites.
-2. If the time is increased, the write data flush would be triggered less aggressively. If there are failures that result into VMs migrated back to On-Premise, the VMs would have data till last RTO/RPO flush, which can result in higher data loss. 
+1. If the time is reduced, the write data flush will be triggered more often. This can cause additional WAN traffic, especially for applications that perform frequent overwrites.
+2. If the time is increased, the write data flush will be triggered less frequently. In the event of a failure that results in VMs having to migrate back to the on-premises environment, more data will reside on the VMs since the last RTO/RPO flush, which can result in higher data loss. 
 
-Currently the setting is done at the cluster level, which means all the VMs within the cluster will inherit the same setting. 
+The setting is maintained at the cluster level, so it will be inherited by all VMs within the cluster. 
 
-**Note**: **RTO/RPO is set to the default value of 20 minutes, which is good enough for most applications. It should be reconfigured carefully keeping in mind the recovery tradeoffs for the application.**
+**Note**: **RTO/RPO is set to the default value of 20 minutes, which is acceptable for most applications. Care should be taken prior to reconfiguring it, keeping in mind the recovery trade-offs for the application.**
 
 
 ### Steps to Configure
 
-Following are the steps to configure RTO/RPO policy
+To configure the RTO/RPO policy:
 
-
-
-1. In the On-Premise vCenter, select the cluster
-2. On the right hand panel, go to Configure-> HDM -> Administration
-3. Modify the default value of Recovery Time Objective (RTO) according to application needs
-
-
+1. In the on-premises vCenter, select the cluster
+2. On the right hand panel, select _Configure_, followed by _HDM_, then _Administration_
+3. Modify the default value of the Recovery Time Objective (RTO) according to the needs of the application
 
 ![alt_text](images/image12.png?classes=content-img "image_tooltip")
 
 
-	
-
 
 # HDM System Health
 
-HDM keeps track of its constituent component’s health. It uses periodic messages (heartbeat) to keep track of the health of its components and thus determines the overall health of the system. If the heartbeat from a component is missed for two minutes, then the component is marked as failed. Additional probes are made to understand the nature of failure. Once the failure reason is understood, the recovery process is initiated.
+HDM uses periodic messages (heartbeat) to monitor the health of its components and determine the overall health of the system. If the heartbeat from a component is missed for two minutes, the component will be marked as failed. Additional probes will be conducted to understand the nature of the failure. Once the reason for the failure is understood, the recovery process will be initiated.
 
 
 ## HDM in a Healthy State 
 
-When there are no failures, all the HDM components show the state as ‘Healthy’ and its color can be seen as blue in the Appliance control panel. The HDM overall state is good if nothing is in red or yellow color. This can be seen in Appliance’s Control Panel. In addition to the Appliance Control Panel this information is also available on vCenter on the HDM plugin.
-
-Menu > HDM > Administration > HDM Health > Component Health
-
-
+When there are no failures, all HDM components will show the state as ‘Healthy’ and their color will be seen as blue in the appliance control panel. The overall state of the HDM is good if nothing is colored red or yellow. This can be seen in the appliance’s control panel, or on the HDM plugin within vCenter. To view this data, select _Menu_, followed by _HDM_, _Administration_, _HDM Health_, then _Component Health_.
 
 ![alt_text](images/image19.png?classes=content-img "image_tooltip")
 
-
-Incase of a failure the affected components will be shown here.
-
+In the event of a failure, the affected components will be shown here.
 
 ![alt_text](images/image4.png?classes=content-img "image_tooltip")
-
-
 
 ![alt_text](images/image13.png?classes=content-img "image_tooltip")
 
 
-
 ## HDM in a Degraded State
 
-When the system is in a degraded state due to a failure this will be visible in;
+When the system is in a degraded state due to a failure, it can be seen in the following locations:
 
-
-
-1. The Dashboard on the vCenter
-2. The Control Panel on the appliance
-3. vCenter event log
+1. The vCenter dashboard
+2. The appliance control panel
+3. The vCenter event log
 4. The state in the SQS heartbeat
 
 
 ### vCenter Dashboard
 
-
-
-*   On the vCenter HDM -> Dashboard ,  we will see a notification mentioning **Services not ready or down...**
-
+*   Select _vCenter HDM_, followed by _Dashboard_ to view a notification mentioning **Services not ready or down...**
 
 ![alt_text](images/image14.png?classes=content-img "image_tooltip")
 
 
-
 ### Appliance Control Panel
 
-In case a failure occurs, some components would get affected. The state of those components would be updated in the Appliance Control Panel as **Poor** and the HDM overall state is set to be ‘Not Ready’. The component color would change from blue to red. 
-
+In the event of a failure, some components may be affected. The state of those components will be listed in the appliance control panel as **Poor** and the overall state of HDM will be set to _Not Ready_. The component color will change from blue to red. 
 
 ![alt_text](images/image15.png?classes=content-img "image_tooltip")
 
-
-
-
-*   A hover over the faulted component will give detail about the error.
-
+*   Simply hover over the faulted component to view details regarding the error.
 
 ![alt_text](images/image16.png?classes=content-img "image_tooltip")
 
 
-
 ### vCenter Event Log
 
-If there are failure events that impact the operation of HDM these are recorded in an “Events Logs”. This is present in the vCenter Events log as well as a HDM Events Logs. The HDM Events Logs can be reached
-
-Menu > HDM > Administration > Event Logs
-
-  
+If failure events impact HDM operations, they will be recorded in the vCenter events log, as well as the HDM events logs. The HDM events logs can be accessed by selecting _Menu_, followed by _HDM_, _Administration_, then _Event Logs_.  
 
 ![alt_text](images/image8.png?classes=content-img "image_tooltip")
 
-
-Failure and repair events generated will be shown in this events logs. A example of a failure seen in the log is below. There are events capturing failure of components and their successful recovery. The last failure on top of the log is an unrecoverable failure for which we need to do an HDM reset to recover from this error.
+Failure and repair events will appear in the events logs. A sample of a logged failure is shown below. There are events capturing failure of components and their successful recovery. The last failure on top of the log is an unrecoverable failure for which we need to do an HDM reset to recover from this error.
 
 
 
