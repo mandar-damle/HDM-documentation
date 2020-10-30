@@ -575,126 +575,94 @@ While there can be a wide range of failures, HDM mainly deals with the following
 
 ### Single Component Failure
 
-The impact of the failure can result in failing a single HDM component. HDM is designed to recover from it automatically. The following scenarios are possible:
+The impact of the failure can result in the failure of a single HDM component, which HDM is designed to recover from automatically. The following scenarios are possible:
 
+#### Failure When There is No Activity
 
-#### Failure when there is No Activity
+Even when the system is idle following a successful deployment, a component failure may cause it to go from “Healthy” to “Degraded”. The HDM system health will be in the degraded state. It can be viewed in vCenter, as well as the appliance (See the _System Health_ section for details).
 
-Even when the system is idle after a successful deployment, it may go from “Healthy” to “Degraded”, due to a component failure. 
+*   vCenter Events will list a new event for a component failure
 
-The HDM system health will be in the degraded state can be viewed in vCenter and Appliance (See System Health section for details).
-
-
-
-*   Also, the vCenter Events would have new event for component failure
-
-HDM would attempt to recover from the failure and bring the system back to a “Healthy” state. Here is a depiction of the recovery process. It shows three important stages:
-
-
+HDM will attempt to recover from the failure and bring the system back to a “Healthy” state. There are three important stages of the recovery process:
 
 *   Failure detection and moving to degraded state
 *   HDM system repair
 *   Healthy state
 
-    
-
 <p id="gdcalert46" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert47">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
 
 ![drawing](https://docs.google.com/drawings/d/12345/export/png?classes=content-img)
 
-
-After recovery, a message is logged in vCenter Events:
-
-
+Following recovery, the following message is logged into vCenter Events:
 
 <p id="gdcalert47" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image46.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert48">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
 
 ![alt_text](images/image46.png?classes=content-img?classes=content-img "image_tooltip")
 
 
-
 #### Failure during Migrations
 
-If a failure occurs while the migration operation is going on. HDM will go in degraded state. HDM will repair itself and will come back to a healthy state. The ongoing migration operation may fail and those VMs can be migrated back as part of this recovery. Here is a depiction of the recovery process :
-
-
-    
+If a failure occurs during the migration operation, HDM will enter a degraded state. HDM will repair itself and will return to a healthy state. The ongoing migration operation may fail and those VMs can be migrated back as part of this recovery. The recovery process will look like this:
 
 <p id="gdcalert48" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert49">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![drawing](https://docs.google.com/drawings/d/12345/export/png?classes=content-img)
 
-For redundant components like HDM message gateway, recovery is complete only when the required level of redundancy is restored. If a migration operation is attempted, before the recovery is complete, it will fail.
+For redundant components like HDM message gateway, recovery is complete only when the required level of redundancy is restored. If a migration operation is attempted before the recovery is complete, it will fail.
 
 
 #### Failure when there are Migrated VMs
 
-Out of all VMs already migrated to the On-Cloud some might get affected due to a component failure. This would result in those VMs getting migrated back from On-Cloud to the On-Premise. The VMs would have data till the last RTO/RPO flush. 
+Some VMs already migrated to the cloud may be affected by a component failure. This will result in those VMs getting migrated back from the cloud to the on-premises environment. The VMs will hold data since the last RTO/RPO flush. 
 
-Here is a depiction of the recovery process :
-
-
-    
+The recovery process will look like this:
 
 <p id="gdcalert49" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert50">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
 
 ![drawing](https://docs.google.com/drawings/d/12345/export/png?classes=content-img)
 
 **Note: **
-
-
-
-1. As part of failure recovery, if the migrated back VMs can be booted successfully, they would be in HDM_RECOVERY_SUCCESS pool, else they would be placed in HDM_RECOVERY_FAILED pool. 
-2. There are cases where HDM is not able to do the auto repair of its failed component. This could be due to a software issue or the error condition is permanent (example permanent network or storage disconnect). In such cases users can issue HDM Reset to come out of the situation and start over again. See the TroubleShooting section for more details.
+1. As part of the failure recovery, if the migrated back VMs can be booted successfully, they will appear in the _HDM_RECOVERY_SUCCESS_ pool. Otherwise, they will be placed in the _HDM_RECOVERY_FAILED_ pool. 
+2. There are cases where HDM is not able to perform the auto repair of its failed components. This could be due to either a software issue, or the error condition is permanent (e.g., permanent network or storage disconnect). In these cases, an HDM reset can be issued to recover fro the error and restart the entire process. See the _Troubleshooting_ section for more details.
 
 
 #### Recovery Resource Pools
 
-VMs migrated back as part of failure recovery are kept in recovery resource pools. These are of two types
+VMs migrated back as part of failure recovery are kept in recovery resource pools. There are two types:
 
 
 ##### **HDM_RECOVERY_SUCCESS **
 
-This resource pool hosts the VMs which have been migrated back as part of failure handling and are likely to get successfully booted in On-Premise vCenter. They may have some data loss equivalent to the last RTO/RPO flush cycle (default 20 minutes).
-
-
-    
+This resource pool hosts the VMs that have been migrated back as part of failure handling, and are likely to be successfully booted in the on-premises vCenter. They may have some data loss equivalent to the last RTO/RPO flush cycle (default 20 minutes).
 
 <p id="gdcalert50" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image47.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert51">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
 
 ![alt_text](images/image47.png?classes=content-img "image_tooltip")
 
 
-
 ##### **HDM_RECOVERY_FAILED **
 
-This resource pool hosts the VMs which have been migrated back as part of failure handling but are likely not to have consistent data. Such VMs will require to restore their data from the migration time snapshot.
+This resource pool hosts the VMs that have been migrated back as part of failure handling, but are unlikely to have consistent data. These VMs will be required to restore their data from the migration time snapshot.
 
-**Note: **Restoring data from the migrate time snapshot would mean the data loss for the entire duration for which the VM was on On-Cloud.
+**Note: **Restoring data from the migrate time snapshot will cause the loss of all data written while the VM was in the cloud.
 
 
 ##### **Recovering VMs from the HDM Recovery Pools**
 
-User should perform the following steps, if there are VMs in recovery resource pools:
-
-
+The following steps should be followed to recover VMs from recovery resource pools:
 
 1. Power on the VM and verify the sanity of the data. 
-2. If the power on and data sanity checks passed
+2. If the power on and data sanity checks pass:
     1. delete the HDM migration time snapshot.
-    2. Move the VM to the resource pool it originally belonged to before the migration.
-3. If the power on or the data sanity failed
-    3. Restore the data from migrate time snapshot
-    4. Delete the HDM migrate time snapshot
-    5. Move the VM to the resource pool it originally belonged before migration
+    2. Move the VM to the resource pool where it originally resided prior to the migration.
+3. If the power on or the data sanity failed:
+    3. Restore the data from the migrate time snapshot.
+    4. Delete the HDM migrate time snapshot.
+    5. Move the VM to the resource pool where it originally resided prior to the migration.
     6. Power on the VM 
 
-**Note: **Not moving the VMs to their original resource pool would cause the subsequent migration and migration back of these VMs happening from the HDM recovery pool only. 
+**Note: **Failure to move the VMs to their original resource pool will cause their subsequent migration and migration back to only occur from the HDM recovery pool. 
 
 
 ### Multiple Component Failure
