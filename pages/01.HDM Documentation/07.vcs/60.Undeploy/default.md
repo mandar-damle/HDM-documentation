@@ -67,7 +67,7 @@ Steps
 6. A reconfiguration task will be created in vCenter for each VM when removing the HDM SPBM policy associated with monitoring.
 
 
-## Undeploy HDM On-Premise
+## Undeploy HDM On-Premises
 
 Prerequisites
 
@@ -131,7 +131,7 @@ Steps
 ![alt_text](images/image36.png?classes=content-img "image_tooltip")
 
 
-## Unregister HDM vCenter Plugin
+## Unregister the HDM vCenter Plugin
 
 Unregistering the HDM plugin causes the HDM icon to be removed from vCenter.
 
@@ -149,39 +149,28 @@ Steps
 
 ![alt_text](images/image38.png?classes=content-img "image_tooltip")
 
-
-
-
-5. Once the unregister is successful, the HDM icon should not appear in the vCenter menu. However, to see this change, you must logout and login to the vCenter again.
+5. Once the unregister is successful, the HDM icon should no longer appear in the vCenter menu. However, you must logout and log back in to vCenter to see this change.
 
 
 ## Delete PrimaryIO Appliance from vCenter
 
 
-    Pre-requisites 
+    Prerequisites 
 
+1. Ensure that the HDM plugin has been unregistered.
 
-
-1. Ensure that HDM plugin has been unregistered.
 
 Steps
 
-
-
-1. Access PrimaryIO Appliance on browser.
-2. Log into Appliance using Administrator credentials.
-3. Select tab vCenters to view the vcenter listing.
-4. Against the vCenter, click on **Delete**.
-
-
+1. Access the PrimaryIO appliance from the browser.
+2. Log into the appliance using administrator credentials.
+3. Select the vCenters tab to view the vCenter listing.
+4. From vCenter, select **Delete**.
 
 ![alt_text](images/image25.png?classes=content-img "image_tooltip")
 
-
-
-
-5. On the popup, click on **Yes** to delete the vCenter from the Appliance.
+5. Select **Yes** in the popup to delete vCenter from the appliance.
 6. Log into vCenter.
-7. From Host and Clusters, power off PrimaryIO Appliance VM.
-8. Right click on the Appliance VM and select Delete from Disk to delete the Appliance.
+7. Select _Host_, followed by _Clusters_, then power off the PrimaryIO Appliance VM.
+8. Right click on the appliance VM and select _Delete from Disk_ to delete the appliance.
 
