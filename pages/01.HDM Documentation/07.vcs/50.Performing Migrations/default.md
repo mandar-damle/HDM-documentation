@@ -352,7 +352,7 @@ HDM monitors the I/O activity on all on-premises VMs on the cluster where it is 
     9. Health : The health of the VM storage, based on the observed read/write IOPs.
 
 
-## Monitoring VMs On-Cloud
+## Monitoring VMs in the Cloud
 
 
 ### Migration Status
@@ -379,31 +379,22 @@ The VMs that have been migrated to the cloud are also monitored for resource uti
 
 ![alt_text](images/image10.png?classes=content-img "image_tooltip")
 
-3. You can view graphs for
-    1. utilization for compute, memory and cache resources
-    2. read and write data transferred over WAN
-4. Detailed statistics for each migrated VM is available in tabular form
+3. You can view graphs for:
+    1. Utilization for compute, memory, and cache resources
+    2. Read and write data transferred over the WAN
+4. Detailed statistics for each migrated VM is displayed in tabular form
 
 
 ### Dashboard
 
-A summarized information of the migration statistics and On-Cloud resource utilization can be found in a single dashboard. 
+A summary of the migration statistics and cloud resource utilization can be found in a single dashboard. To view this dashboard data:
 
-To view the dashboard data for such VMs
-
-
-
-1. In the On-Premise vCenter, select the cluster
-2. On the right hand panel, go to Monitor -> HDM -> Cloud Burst -> Dashboard
-3. The migration summary gives the migration statistics and resource usage
-
+1. In the on-premises vCenter, select the cluster.
+2. On the right hand panel, select _Monitor_, followed by _HDM_, _Cloud Burst_, then _Dashboard_.
 
 ![alt_text](images/image11.png?classes=content-img "image_tooltip")
 
-
-
-
-4. Detailed log of migrate and migrate back is also present in tabular form
+4. A detailed log of the migrate and migrate back activities are also displayed in tabular form.
 
 
 # HDM Policies
@@ -411,16 +402,14 @@ To view the dashboard data for such VMs
 
 ## RTO/RPO
 
-HDM maintains an optimal cache on the On-Cloud for migrated VMs to provide good IO performance. The cache maintains the working set of the VM thus serving reads without having to go over WAN for every IO. The cache also absorbs writes, which are flushed on to On-Premise at regular intervals.
+HDM maintains an optimal cache in the cloud for migrated VMs to provide superior I/O performance. The cache maintains the working set of VM to serve read requests without having to traverse the WAN for every I/O. The cache also absorbs writes, which are flushed to the on-premises environment at regular intervals.
 
-The periodicity of the write flush can be controlled by the user based on the RTO/RPO requirements.  It is currently set as 20 minutes as default, which means at 20 minutes interval data is flushed on to the on On-Premise. In case of failure, the application can lose 20 minutes worth of data.
+The frequency of the write flush is based on the RTO/RPO requirements. By default it is set to flush to the on-premises environment every 20 minutes. Therefore, in the event of a failure, the application can only lose up to 20 minutes worth of data.
 
 
 ### Guidelines to Configure RTO/RPO policies
 
-Configuring RTO/RPO (Recovery Time Objective/Recovery Point Objective) should be based on the application need. Tradeoffs are
-
-
+Configuring RTO/RPO should be based on the application need. The trade-offs are:
 
 1. If the time is reduced, the write data flush would be triggered more often and it can cause additional WAN traffic, especially for applications that do frequent overwrites.
 2. If the time is increased, the write data flush would be triggered less aggressively. If there are failures that result into VMs migrated back to On-Premise, the VMs would have data till last RTO/RPO flush, which can result in higher data loss. 
