@@ -50,38 +50,31 @@ After changing the default appliance password, the new password has been forgott
 
 ###### **A user who does not have administrator privileges for a specified vCenter cannot add that vCenter to the appliance**
 
-**Resolution: **The user will have to be assigned, administrator privileges for the vCenter that needs to be added.** **Follow the steps described below to assign administrator privileges to the user:
+**Resolution:** The user must be assigned administrator privileges for the specified vCenter. Follow the steps below to do this:
 
-
-
-1. Go to **Administration > Users and Groups** from the **Navigation** bar in vCenter.
-2. Under **Users** tab, click on **Add User** button as shown in the image below.
-
+1. Select _Administration_, followed by _Users and Groups_ in vCenter.
+2. Select the _Users_ tab, then _Add User_, as shown below.
 
 ![alt_text](images/image4.png?classes=content-img "image_tooltip")
 
+3. Once the new user has been created, select _Administrator_, followed by _Global Permissions_ from the navigation bar.
+4. Select the _Manage tab, followed by _Add Permissions_. The _Add Permission_ popup window will appear.
+5. Select _Administrator_ from the _Assigned Role_ drop-down. Select _Propagate to children_, then select _Add_ to add the user.
+6. The _Select Users/Groups_ window will be displayed.
+7. Select the appropriate domain from the _Domain_ drop down box.
+8. Select the appropriate user, then _Add_.
+9. Select _OK_ to complete the process.
 
-3. Once the new user is created, click on **Administrator** > **Global Permissions** from the **Navigation** bar.
-4. Under the **Manage** tab, click on the **Add Permissions** button. The **Add Permission** window will be displayed.
-5. Select **Administrator** from the **Assigned Role** drop-down. Select **Propagate to children** and click **Add **to add the user.
-6. The **Select Users/Groups** window will be displayed.
-7. Select the appropriate domain from the **Domain** drop down box.
-8. Select the appropriate user and click on **Add**.
-9. Click on **OK** to complete the process of assigning administrator privileges to the user.
-
-This user will now be able to add the vCenter to the PIO Appliance.
+This user will now be able to add the specified vCenter to the appliance.
 
 
-###### **vCenter is in an ERROR state in the vCenter page in PIO Appliance**
+###### **vCenter is in an ERROR state on the vCenter page in the appliance**
 
-A vCenter entry in the PIO Appliance can show an _‘ERROR’_ state if its credentials have been changed externally in the vCenter after adding it to the PIO Appliance. This issue can also occur if the vCenter is no longer reachable.
+A vCenter entry in the PrimaryIO appliance can show an _‘ERROR’_ state if its credentials have been changed externally in vCenter after adding it to the appliance. This issue can also occur if vCenter is no longer reachable.
 
 **Resolution: **
 
-
-
-1. Click on the **Edit** action as shown below.
-
+1. Select **Edit** action as shown below.
 
 ![alt_text](images/image2.png?classes=content-img "image_tooltip")
 
