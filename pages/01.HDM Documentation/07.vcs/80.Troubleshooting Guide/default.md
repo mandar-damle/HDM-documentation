@@ -41,14 +41,14 @@ If vCenter has already been added, it is no longer possible to change the networ
 HDM does not support an IPv6 configured VMware environment. 
 
 
-###### **The PIO Appliance password cannot be recovered**
+###### **The PrimaryIO appliance password cannot be recovered**
 
 After changing the default appliance password, the new password has been forgotten.
 
 **Resolution:** Contact PrimaryIO support to reset the password.
 
 
-###### **A user who **d**oes **n**ot **h**ave **a**dministrator **p**rivileges for a vCenter cannot add that vCenter to the PIO Appliance**
+###### **A user who does not have administrator privileges for a specified vCenter cannot add that vCenter to the appliance**
 
 **Resolution: **The user will have to be assigned, administrator privileges for the vCenter that needs to be added.** **Follow the steps described below to assign administrator privileges to the user:
 
