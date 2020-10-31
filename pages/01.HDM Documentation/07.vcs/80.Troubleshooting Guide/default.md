@@ -104,56 +104,52 @@ The HDM filter deployment on a cluster is unsuccessful and the ‘_Install Filte
 
 This can happen if the previous version of HDM has not been cleanly uninstalled, or the PrimaryIO appliance IP that was used during installation is not reachable. In this case, check the EAM logs within vCenter and look for the error message, `"https://&lt;IP>/bundle/primaryio_6.x.zip is not reachable". Check to ensure the IP of the appliance is the same one that is shown in the error message, and that the URL is reachable.
 
-**Resolution:** Log into “https://&lt;vcenter_ip>/eam/mob” using vCenter administrator credentials to access the ESXi Agent Manager. In front of the agency there will be an array of Managed Object Reference. 
+**Resolution:** Log into “https://&lt;vcenter_ip>/eam/mob” using vCenter administrator credentials to access the ESXi Agent Manager. Next to _agency_ you will see _ArrayofManagedObjectReference_. 
 
 ![alt_text](images/image5.png?classes=content-img "image_tooltip")
 
-
-Select the agency to get the list of agents and check the AgencyConfigInfo to verify if this belongs to PrimaryIO. 
+Select the associated action to obtain the list of agents. Then, check _AgencyConfigInfo_ to see if if belongs to PrimaryIO. 
 
 ![alt_text](images/image6.png?classes=content-img "image_tooltip")
 
+Select _Uninstall_ if the agent was not cleanly uninstalled earlier. Wait for the uninstallation task to succeed in vCenter, then select _Destroy_ to clean the agent. 
 
-Click on uninstall if the agent was not cleanly un-installed earlier. Wait for the uninstallation task to succeed on vCenter. Once the task succeeds, click on destroy to clean the agent. 
-
-Refresh “`https://&lt;vcenter_ip>/eam/mob`”  to make sure that the agency has been successfully removed. This will remove the vCenter from invalid state and admin will then have to use HDM Reset and redeploy the product On-Premise.
-
-
-###### **Network configuration issues for On-Cloud deployment **
-
-In case, vCenter and ESXi On-Cloud are configured on different networks and resolved through different DNS settings. In this case On-Cloud vCenter will get added if correct DNS is set during Add Cloud, but ESXi resolution will fail resulting in Cold and Warm migration Failure. 
-
-Similarly, “Add Cloud” may fail if On-Cloud vCenter has been configured with FQDN and DNS to resolve vCenter is incorrect or is not provided during the operation.
-
-**Resolution: ** Customers should add rules in their Network to forward resolution of these FQDN to the correct DNS, whether it is for the vCenter or ESXi.
+Refresh “`https://&lt;vcenter_ip>/eam/mob`”  to ensure the agency has been successfully removed. This will remove vCenter from the invalid state. Use _HDM Reset_ to redeploy the product on-premises.
 
 
-###### **IO monitoring may not start due to delay in creation of HDM SPBM policy **
+###### **Network configuration issues for cloud deployment **
 
-After the creation of the HDM SPBM policy, VM storage policies should show ‘praapa’ as a new Caching Component. However, the creation of a new VM storage policy and its display in vCenter might take time. Due to this ‘praapa’ may not be displayed under Caching Component after the creation of HDM SPBM Policy and IO monitoring may not succeed for VMs.
+If vCenter and the cloud ESXi are configured on different networks and resolved through different DNS settings, the cloud vCenter will be added if the correct DNS is set during _Add Cloud_. However, ESXi resolution will fail, resulting in the subsequent failures of cold and warm migrations. 
 
-**Resolution**: In vCenter, go to Administration->System Configuration->Services and Restart VMware vSphere Profile-Driven Storage Service. This will update the vCenter state and "praapa" will be visible.
+Similarly, _Add Cloud_ may fail if the cloud vCenter has been configured with FQDN, but the DNS used to resolve vCenter is incorrect or is not provided during the operation.
+
+**Resolution:** Add rules in the network to forward the resolution of the specified vCenter or ESXi FQDNs to the correct DNS.
 
 
-###### **SPBM policy creation failure during enable monitoring**
+###### **I/O monitoring may not start due to a delay in creating an HDM SPBM policy**
 
-During enable monitoring HDM SPBM policy creation can fail.
+After creating the HDM SPBM policy, the VM storage policies should list _praapa_ as a new caching component. However, the creation of a new VM storage policy, and its subsequent display in vCenter, may take time. As a result, _praapa_ may not be displayed under _Caching Component_ following the creation of the HDM SPBM Policy and I/O monitoring may not succeed for the VMs.
 
-**Workaround**: Customer can create SPBM policy manually with name **HDM Analyzer Profile. **If ‘praapa’ policy is not shown, customers should delete and rescan ‘praapa’ Storage Provider under vCenter->Configure.** **
+**Resolution**: In vCenter, select _Administration_, followed by _System Configuration_, _Services_, then _Restart VMware vSphere Profile-Driven Storage Service_. This will update the vCenter state and _praapa_ will be visible.
+
+
+###### **SPBM policy creation failure during "Enable Monitoring"**
+
+During _Enable Monitoring_ the HDM SPBM policy creation can fail.
+
+**Workaround**: Manually create the SPBM policy with the name _HDM Analyzer Profile_. If the _praapa_ policy is not shown, delete and rescan the praapa storage provider by selecting _vCenter_, followed by _Configure_.
 
 
 ###### **HDM SPBM policy attach failure on disks with IDE controllers**
 
 VMs with IDE controllers do not allow the HDM SPBM policy to be attached in the powered on state.
 
-**Resolution**: The VMs should be powered off and then attach the policy. (Ref: **CP-4297)**
+**Resolution**: Power the VMs off, then attach the policy. (Ref: **CP-4297)**
 
 
 ###### **Applying SPBM Policy in Enhanced Linked Mode vCenter may fail**
 
-This problem is specific to an _Enhanced Linked_ setup.** **Consider an Enhanced Linked setup with two vCenter servers, each containing ESXi hosts as shown below:
-
-
+This problem is specific to an _Enhanced Linked_ setup. Consider an Enhanced Linked setup with two vCenter servers, each containing ESXi hosts as shown below:
 
 1. 
 vcenterserver01.dopio.com 
