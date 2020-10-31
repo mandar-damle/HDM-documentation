@@ -149,27 +149,24 @@ VMs with IDE controllers do not allow the HDM SPBM policy to be attached in the 
 
 ###### **Applying SPBM Policy in Enhanced Linked Mode vCenter may fail**
 
-This problem is specific to an _Enhanced Linked_ setup. Consider an Enhanced Linked setup with two vCenter servers, each containing ESXi hosts as shown below:
+This problem is specific to an _Enhanced Linked_ setup. Consider configuring an Enhanced Linked setup using two vCenter servers, each containing ESXi hosts:
 
-1. 
-vcenterserver01.dopio.com 
+1. vcenterserver01.dopio.com 
+2. vcenterserver02.dopio.com
 
+Assume that HDM is installed using vCenter _vcenterserver01.dopio.com_. The HDM SPBM policy **HDM Analyzer Profile** will be visible in _vcenterserver02.dopio.com_, but the policy attributes will not available. Attempting to apply this policy from _vcenterserver02.dopio.com_ to any VM may fail. 
 
-2. 
-vcenterserver02.dopio.com 
-Further, assume that the PrimaryIO HDM is installed using vCenter _vcenterserver01.dopio.com_. In such a setup, HDM SPBM policy **HDM Analyzer Profile** is visible in _vcenterserver02.dopio.com_ but the attributes of the policy are not available. Also, trying to apply this policy from _vcenterserver02.dopio.com _to any VM may fail. 
-
-**Workaround** : Use the vCenter _vcenterserver01.dopio.com_ to apply SPBM policy to any VM.
+**Workaround** : Use the vCenter _vcenterserver01.dopio.com_ to apply an SPBM policy to any VM.
 
 
-###### **HDM SQS Message Bus Configuration Failed**
+###### **Failure of the HDM SQS Message Bus configuration**
 
-Configuration of SQS message bus can fail because of incorrect token or non-existent queues provided during the configuration. Users should ensure that the queues provided are already created in the Amazon SQS service. 
+Configuration of the SQS message bus can fail if incorrect tokens or non-existent queues are provided during configuration. Ensure that the queues provided are already created in the Amazon SQS service. 
 
 
-###### **Re-deployment On-Premise can fail if IOFilter ‘praapa’ is stopped or is restarting**
+###### **Re-deployment on-premises can fail if the I/O filter ‘praapa’ has stopped or is in the process of restarting**
 
-Re-deployment On-Premise can fail during the HDM ESXi Manager configuration. Services within the ESXi manager need to be configured to communicate with IOfilter service within the ESXi to service IO requests. If IOfilter service ‘praapa’ is stopped or is restarting within an ESXi, configuration will fail. Check IOfilter status under ESXi configure page on vCenter and restart the service to retry on-premise deployment. 
+Re-deployment on-premises can fail during configuration of the HDM ESXi Manager. Services within the ESXi Manager must be configured to communicate with the I/O filter service within ESXi to service I/O requests. If the I/O filter service _praapa_ is stopped or is in the process of restarting within ESXi, configuration will fail. Check the I/O filter status on the ESXi _Configure_ page in vCenter and restart the service to retry the on-premises deployment. 
 
 
 # HDM Migrations
