@@ -74,48 +74,37 @@ A vCenter entry in the PrimaryIO appliance can show an _‘ERROR’_ state if it
 
 **Resolution: **
 
-1. Select **Edit** action as shown below.
+1. Select **Edit** on the appropriate entry line.
 
 ![alt_text](images/image2.png?classes=content-img "image_tooltip")
-
-
-
 
 2. Enter and save the correct (or most recent) vCenter credentials.
 
 ![alt_text](images/image1.png?classes=content-img "image_tooltip")
 
 
+###### **The HDM plugin is not visible on vCenter**
 
-###### **HDM plugin is not visible on vCenter**
-
-HDM plugin fails to appear in vCenter’s UI even though it has been registered with the vCenter. 
+The HDM plugin fails to appear in the vCenter UI, despite having been registered with vCenter. 
 
 **Resolution: **
 
-
-
 1. Unregister the HDM plugin from vCenter.
-2. Search and delete _‘PrimaryIO’_ or _‘praapa’_ files from vCenter. To find the files execute the following command:
-
-	
-
+2. Search and delete the _‘PrimaryIO’_ or _‘praapa’_ files from vCenter. Execute the following command to locate the files:
 
     _find / -name **piohyc** -exec rm -rf {} +; service-control --stop vsphere-ui;service-control --start vsphere-ui;"_
 
-
-
 3. Restart vCenter.
-4. Register HDM plugin again with the same vCenter from where it was deleted.
+4. Re-register the HDM plugin with the same vCenter it was deleted from.
 
 
-###### **HDM deployment for On-Premise cluster fails if vCenter went to an Invalid State**
+###### **The HDM deployment for the on-premises cluster fails if vCenter reflects an invalid state**
 
-The deployment of HDM filter on a cluster is unsuccessful and the ‘_Install Filter Task’_ result shows vCenter to be in an invalid state (‘vim.fault.InvalidState’).  
+The HDM filter deployment on a cluster is unsuccessful and the ‘_Install Filter Task’_ shows vCenter in an invalid state (‘vim.fault.InvalidState’).  
 
-This can happen if the previous version of HDM product has not been uninstalled cleanly or the PIO Appliance's IP which was used for the installation is not reachable. In this case please check the EAM logs within the vCenter and look for an error message stating `"https://&lt;IP>/bundle/primaryio_6.x.zip is not reachable". P`lease make sure PIO Appliance's IP is the same as shown in the error and the URL is reachable.
+This can happen if the previous version of HDM has not been cleanly uninstalled, or the PrimaryIO appliance IP that was used during installation is not reachable. In this case, check the EAM logs within vCenter and look for the error message, `"https://&lt;IP>/bundle/primaryio_6.x.zip is not reachable". Check to ensure the IP of the appliance is the same one that is shown in the error message, and that the URL is reachable.
 
-**Resolution:** Log into “https://&lt;vcenter_ip>/eam/mob” using vCenter admin credentials to access ESXii Agent Manager. In front of the agency there will be an array of Managed Object Reference. 
+**Resolution:** Log into “https://&lt;vcenter_ip>/eam/mob” using vCenter administrator credentials to access the ESXi Agent Manager. In front of the agency there will be an array of Managed Object Reference. 
 
 ![alt_text](images/image5.png?classes=content-img "image_tooltip")
 
