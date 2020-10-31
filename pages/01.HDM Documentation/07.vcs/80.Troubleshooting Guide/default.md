@@ -2,7 +2,7 @@
 title: Troubleshooting
 ---
 
-This section covers troubleshooting for issues known in the HDM 2.1.3 product. In case there are issues that are not covered in this document or are not resolved easily, users should contact PrimaryIO support for further help. 
+This section covers troubleshooting for known issues in HDM 2.1.3. In the event there are issues that are not covered in this document or are not easily resolved, contact PrimaryIO support for assistance. 
 
 
 # HDM Deployment
@@ -10,46 +10,42 @@ This section covers troubleshooting for issues known in the HDM 2.1.3 product. I
 
 ###### **Failures during HDM deployment are not currently handled for recovery**
 
-Failures during the HDM deployment On-Premise or On-Cloud will require the user to first clean the state using HDM reset and retry the deployment. In the current release, HDM doesn’t attempt to automatically recover from deployment failures. (Ref: **CP-4686)**
+Failures during HDM deployment on-premises or in the cloud will require the state to be cleaned using HDM reset, then the deployment can be retried. In the current release, HDM does not attempt to automatically recover from deployment failures. (Ref: **CP-4686)**
 
 
-###### **Deployment taking time or appears in a hung state**
+###### **Deployment taking time or appears to be in a hung state**
 
-During deployment, the synchronization with NTP server is required. This operation may take time and during this period, the deployment may seem stuck or taking longer than expected. User is not required to take any action here, there will be a delay after which the deployment would continue as usual.
-
-(Ref: **CP-4419)**
+During deployment, synchronization with the NTP server is required. This operation may take time. During this period, the deployment may seem stuck or taking longer than expected. No action is required. After this expected delay, the deployment will continue as usual. (Ref: **CP-4419)**
 
 
 ###### **Deployment failure with message “Insufficient resources to satisfy configured failover level for vSphere HA”**
 
-If there are insufficient CPU or memory resources On-Premise or On-Cloud, the HDM deployment can fail with event in vCenter “Insufficient resources to satisfy configured failover level for vSphere HA”.  
+Insufficient CPU or memory resources on-premises or in the cloud may cause the HDM deployment to fail and log the following event in vCenter: “Insufficient resources to satisfy configured failover level for vSphere HA.”  
 
-This should be avoided by choosing HDM deployment type according to the resource availability On-Premise and On-Cloud or change the Deployment Type.(Ref: **CP-4243**)
+This can be avoided by choosing the HDM deployment type based on the availability of on-premises and cloud resources. (Ref: **CP-4243**)
 
 
 ###### **Network configuration change for the PIO Appliance**
 
-If the network selected during PIO Appliance deployment is incorrect and vCenter has not been added yet, user can change the network using the following procedure
+If the network selected during deployment of the PrimaryIO appliance is incorrect and vCenter has not been added yet, the following procedure can be used to change the network:
 
+1. Power off the appliance
+2. Change the network by editing vApp options and setting the correct configuration
+3. Reboot the appliance
 
-
-1. Power off PIO Appliance
-2. Change the network by editing vApp options and set the correct configuration
-3. Reboot the PIO Appliance
-
-If the add vCenter has already been performed, change of the network is not possible on the deployed Appliance. User needs to redeploy PIO Appliance.
+If vCenter has already been added, it is no longer possible to change the network. The appliance will need to be redeployed.
 
 
 ###### **HDM does not support IPv6 based IPs**
 
-HDM does not support IPv6 configured vmware environment. 
+HDM does not support an IPv6 configured VMware environment. 
 
 
 ###### **The PIO Appliance password cannot be recovered**
 
-The PIO Appliance password was changed and the user has forgotten the new password.
+After changing the default appliance password, the new password has been forgotten.
 
-**Resolution:** Contact PrimaryIO Support to change the password.
+**Resolution:** Contact PrimaryIO support to reset the password.
 
 
 ###### **A user who **d**oes **n**ot **h**ave **a**dministrator **p**rivileges for a vCenter cannot add that vCenter to the PIO Appliance**
