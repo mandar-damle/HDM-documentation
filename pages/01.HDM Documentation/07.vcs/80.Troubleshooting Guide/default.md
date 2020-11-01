@@ -171,79 +171,70 @@ Re-deployment on-premises can fail during configuration of the HDM ESXi Manager.
 
 # HDM Migrations
 
-
 ###### **Not able to connect or validate Key Manager. Please verify settings**
 
-This issue can occur when CA certificate details are provided for Key Manager. Providing valid CA certificates for Key Manager will resolve the issue. (Ref: **CP-5408**)
+This issue can occur when CA certificate details are provided for the key manager. Providing valid CA certificates for the key manager will resolve the issue. (Ref: **CP-5408**)
 
 
 ###### **Failed to generate migration request**
 
-This issue could occur when Key Manager details are not updated correctly. When editing the Key Manager, make sure the operation is successful. If the operation fails the Key Manager is marked as unreachable. This will lead to Try in Cloud and Warm migration failing. Use correct credentials and certificates to edit the Key Manager until integration is successful. Make sure the Key Manager is reachable from the appliance all the time. (Ref: **CP-5444**)
+This issue can occur when the key manager details are not updated correctly. When editing the key manager, ensure that the operation is successful. If the operation fails, the key manager will be marked as unreachable. This will lead to the failure of try in cloud and warm migration. To ensure successful integration, be sure to use correct credentials and certificates to edit the key manager. Ensure that the key manager is reachable from the appliance at all times. (Ref: **CP-5444**)
 
 
 ###### **Prepare to migrate failed for VMs with UEFI BIOS**
 
-HDM currently does not support UEFI BIOS and prepare to migrate operation will fail for such VMs. Use VMs with IBM PC BIOS only for HDM migration.
+HDM does not currently support UEFI BIOS. As a result, the prepare to migrate operation will fail for these VMs. Only use VMs with IBM PC BIOS for HDM migration.
 
 
-###### **VMDK operations on the migrated VMs in On-Cloud vCenter**
+###### **VMDK operations on the migrated VMs in cloud vCenter**
 
-On-Cloud vCenter enables few VMDK operations like add/grow disks on the migrated VMs. 
-
-HDM does not support these operations on the migrated VMs. The operation may succeed, however, such VMs can’t be migrated back or re-migrated to On-Cloud. (Ref: **CP-2595)**
+The Cloud vCenter enables a few VMDK operations such as add/grow disks on the migrated VMs. HDM does not support these operations on the migrated VMs. While the operation may succeed, these VMs can’t be migrated back or re-migrated to the cloud. (Ref: **CP-2595)**
 
 
-###### **Cold migration may be retried even after the user cancelled the vCenter task**
+###### **Cold migration may be retried, even after the user cancelled the vCenter task**
 
-If the vCentre task for cold migration is cancelled by the user, the existing task gets cancelled. However, HDM re-attempts, the cold migration till all the retry attempts are over. The user should cancel all the re-attempts, so as to truly cancel the operation, (Ref: **CP-4365)**
+If the vCenter task for cold migration is cancelled by the user, the existing task gets cancelled. However, HDM will retry the cold migration until all retry attempts have been exhausted. To truly cancel the operation, cancel all retries. (Ref: **CP-4365)**
 
 
 ###### **Migration failure due to insufficient space on the target**
 
-Even though HDM checks free space on the target of a warm migration, the available space on target cannot always be pre-validated because actual storage required for thin disks can vary. This may lead to failure because of insufficient storage space during migration. 
-
-User should explicitly make sure that the target has enough free space before attempting to migrate. 
-
-(Ref: **CP-4301)**
+Prior to warm migration, HDM will check for free space on the target. However, because the actual storage required for thin disks can vary, the available space on the target cannot always be pre-validated. As a result, failure due to insufficient storage space during migration is still possible. To avoid this failure, ensure that the target has enough free space prior to attempting the migration. (Ref: **CP-4301)**
 
 
 ###### **Failed to do warm migration of a linked clone VM**
 
-To warm migrate linked clones, the user needs to attach the SPBM policy “HDM Analyzer Profile” on the base VM of the linked clone.
+To warm migrate linked clones, attach the SPBM policy _HDM Analyzer Profile_ to the base VM of the linked clone.
 
 
-###### **Warm migration fails due to On-Cloud vCenter or ESXi not accessible in an FQDN based On-Cloud environment **
+###### **Warm migration fails due to the inaccessibility of the cloud vCenter or ESXi in an FQDN based cloud environment **
 
-In an FQDN based deployment, HDM may not be able to resolve On-Cloud vCenter or ESXi, which can cause the warm migration to fail. In HDM install steps the DNS entry should be configured to resolve the FQDN. In case this is missed out, the user should add the DNS nameserver in HDM cloud cache component explicitly, using the following procedure:
+In an FQDN based deployment, HDM may not be able to resolve the cloud vCenter or ESXi, which can cause the warm migration to fail. During HDM installation, the DNS entry should have been configured to resolve the FQDN. If this is missing, manually add the DNS nameserver to the HDM cloud cache component, using the following procedure:
 
-
-
-1. Login to the On-Cloud vCenter
-2. User should find HDM cloud cache component VMs with name ‘HDM-Cloud-Cache-*’.
-3. ssh into each HDM cloud cache component VM with root credentials and password ‘admin123’
-4. Set the DNS server in /`etc/resolv.conf` required for resolving the FQDN
-5. Ensure FQDN is reachable using ping command
+1. Login to the cloud vCenter.
+2. Find the HDM cloud cache component VMs with the name _HDM-Cloud-Cache-*_.
+3. ssh into each HDM cloud cache component VM with root credentials and use the password _admin123_.
+4. Set the DNS server in /`etc/resolv.conf` to resolve the FQDN.
+5. Use the ping command to ensure that the FQDN is reachable.
 
 (Ref: **CP-4330**)
 
 
-###### **Applications on migrated VMs may fail due to incorrect network mapping specified**
+###### **Applications on migrated VMs may fail due to incorrect network mapping**
 
-During add cloud operation, users should specify the correct default application network On-Cloud or map  On-Premise network to On-Cloud network. Failing to do so, the VM migration may succeed but applications on the migrated VMs may fail. In the SQS based migration, the network mapping can be specified at the migration time. (Ref: **CP-4433)**
+During the _add cloud_ operation, specify the correct default application network for the cloud, or map the on-premises network to the cloud network. If this is not done, the VM migration may succeed but applications on the migrated VMs may still fail. In an SQS based migration, network mapping can be specified during migration. (Ref: **CP-4433)**
 
 
 ###### **Enable Virtualized CPU Performance Counters Check flag not retained on cloud**
 
-Certain virtual machine parameters will not be retained post migration. These need to be enabled manually. (Ref : **CP-2859**)
+Certain VM parameters will not be retained post migration, so will need to be enabled manually. (Ref : **CP-2859**)
 
 
 ###### **VM is present in HDM_MIGRATE_POOL even after migrate back**
 
-After migrating back, moving the VM to its original resource pool can fail at times in vCenter 6.7. In such a case, users would be required to explicitly move the VM from the HDM_MIGRATE_POOL to its original resource pool using the vCenter. (Ref: **CP-4652**)
+After migrating back, moving the VM to its original resource pool can sometimes fail in vCenter 6.7. If this happens, use vCenter to move the VM from the HDM_MIGRATE_POOL to its original resource pool. (Ref: **CP-4652**)
 
 
-###### **vCenter does not show the option to migrate VM**
+###### **vCenter does not show the option to migrate the VM**
 
 After complete deployment, users may not find any action available to migrate VM in vCenter or it may just show ‘loading...’. 
 
