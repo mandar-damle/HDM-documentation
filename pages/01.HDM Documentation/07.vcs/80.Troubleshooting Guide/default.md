@@ -201,7 +201,7 @@ If the vCenter task for cold migration is cancelled by the user, the existing ta
 Prior to warm migration, HDM will check for free space on the target. However, because the actual storage required for thin disks can vary, the available space on the target cannot always be pre-validated. As a result, failure due to insufficient storage space during migration is still possible. To avoid this failure, ensure that the target has enough free space prior to attempting the migration. (Ref: **CP-4301)**
 
 
-###### **Failed to do warm migration of a linked clone VM**
+###### **Warm migration fails for a linked clone VM**
 
 To warm migrate linked clones, attach the SPBM policy _HDM Analyzer Profile_ to the base VM of the linked clone.
 
@@ -236,54 +236,52 @@ After migrating back, moving the VM to its original resource pool can sometimes 
 
 ###### **vCenter does not show the option to migrate the VM**
 
-After complete deployment, users may not find any action available to migrate VM in vCenter or it may just show ‘loading...’. 
+Once the deployment has completed, vCenter may not show an option to migrate the VM. Alternatively, it may just display _loading..._. 
 
-**Resolution**: The solution will be do logout-login of vCenter and try again migrating, if it still not giving any option then please restart vsphere-ui (`service-control --stop vsphere-ui;service-control --start vsphere-ui;`)  service from the vcenter ssh console.
+**Resolution**: Logout and re-log into vCenter, then attempt the migration again. If the issue persists, restart the vsphere-ui (`service-control --stop vsphere-ui;service-control --start vsphere-ui;`) service from the vCenter ssh console.
 
 
-###### **Power off during migrate back is taking long time for some flavor of Linux guest VMs**
+###### **Some Linux guest VMs require an excessive amount of time to power off during migrate back**
 
-VMs that are migrated back are first powered off on the On-Cloud. For Ubuntu 16.04 and RHEL 7.4, this operation can take longer time. IO errors can also be seen in the guest VMs during this process. 
+VMs that are migrated back are first powered off in the cloud. For Ubuntu 16.04 and RHEL 7.4, this operation can require an extended period of time. I/O errors can also be seen in the guest VMs during this process. 
 
-This is due to an issue in a specific version of linux kernel, where iSCSI connection is closed too early during the shutdown process. This causes ongoing IOs to not be able to go through and thus stalls the guest VM shutdown. HDM does multiple retries and finally hard power off such VMs during migration back. This is also discussed in public forum at::
+This is due to an issue in a specific version of the Linux kernel, where the iSCSI connection is closed too early during the shutdown process. This creates a backlog of ongoing I/Os, which stalls the shutdown of the guest VM. HDM will perform multiple retries and will ultimately hard power off these VMs during migration back. This issue is discussed further in a public forum:
 
 [https://bugzilla.redhat.com/show_bug.cgi?id=1164756](https://bugzilla.redhat.com/show_bug.cgi?id=1164756)
 
 
-###### **Migration request through SQS failed due to Appliance not having access to Internet**
+###### **The migration request through SQS failed, because the appliance was not connected to the Internet**
 
-The SQS initiated migration request can fail if the Appliance does not have access to the Internet. Users should ensure that Appliance has access to the Internet while using SQS for migration. 
-
-
-###### **Virtual machine rename On-Cloud failed during warm migration**
-
-During warm migration, virtual machines On-Cloud have postfix ‘ARM’ to identify virtual machines being managed by HDM. This postfix is later removed once the data has been transferred and changes have been synced to the On-Cloud virtual machine. The renaming of a virtual machine can fail if there is an existing virtual machine with the same name on On-Cloud.
+Migration requests initiated through SQS can fail if the appliance lacks Internet access. Ensure that the appliance has Internet access while using SQS for migration. 
 
 
-###### **Completed Migration may sometimes not show correct status on Wizard **
+###### **Renaming the cloud VM failed during warm migration**
 
-This could happen if the Wizard continues to remain open while the operation is performed and gets completed. The status on WIzard sometimes may not get updated. For accurate status of the operation, refer to the VCenter tasks. (Ref : **CP-5622**) 
-
-
-###### **Already completed Migration status for Virtual machine goes into an error state**
-
-For each Virtual Machine migration a vCenter task is created. The progress and status of migration is then updated in the vCenter task object. The same status is also reflected on the Migration’s In-Progress tab on HDN vCenter Plugin for global and cluster view. In cases where the task has been completed, a vSphere server may delete the reference from the vSphere database. In this case, as the task object has been removed, the correct status of migration does not reflect on the UI and shows the migration state as ERROR. Users can check the task status under vCenter task list for the virtual machine to get the correct status.
+During warm migration, VMs in the cloud that are managed by HDM are identified by the postfix ‘ARM’. This postfix is later removed once the data has been transferred and changes have been synced to the cloud VM. The renaming of a VM can fail if an existing VM in the cloud has the same name.
 
 
-###### **IP conflict if HDM internal network configured with DHCP for Ubuntu and SLES**
+###### **Completed migration status may not be correctly refelected in the wizard **
 
-In HDM On-Cloud deployment, if the Internal network on the On-Cloud is configured for DHCP IP addresses, IP addresses assigned to migrated VM (WARM or TBC) with DHCP can experience lease timeout. This is because on some versions of Linux distributions (mainly all Ubuntu and SLES distributions) DHCP lease is not renewed for the IBFT enabled NIC which is connected to the Internal network for TFTP/iSCSI booting. 
+This may happen if the wizard is still open when the operation completes. Sometimes the status on the wIzard is not updated in a timely manner. For accurate status of the operation, refer to vCenter tasks. (Ref : **CP-5622**) 
 
-All the versions of Windows and RHEL/CentOS distributions are not affected by this issue.
 
-If the Internal network on the On-Cloud is configured for IP addresses with Static IP address pool, this issue will not arise.
+###### **Status for completed VM migration displays an error state**
+
+A vCenter task is created for each VM migration. The progress and status of the migration is then updated in the vCenter task object, as well as in the _Migrations In-Progress_ tab on the HDM vCenter plugin. Once the task is complete, a vSphere server will delete the reference from the vSphere database. As a result, rather than displaying the correct migration status in the user interface, it will be listed as _ERROR_. The correct status can be seen in the vCenter task list for the VM.
+
+
+###### **IP conflicts may occur when the HDM internal network is configured with DHCP for Ubuntu and SLES**
+
+If the Internal cloud network is configured for DHCP for HDM cloud deployments, IP addresses assigned to migrated VMs (warm or TBC) may experience lease timeouts. This is because some Linux distributions (mainly Ubuntu and SLES) do not renew DHCP leases for the IBFT enabled NIC that is connected to the Internal network for TFTP/iSCSI booting. 
+
+No versions of Windows or RHEL/CentOS distributions are affected by this issue.
+
+This issue will also not be seen if the internal cloud network is configured for Static IP addresses.
 
 Workaround:
 
-
-
-*   If HDM On-Cloud deployment is configured for DHCP IP addresses on the Internal network, configure DHCP IP address lease timeout to be greater than the time the migrated VM is supposed to stay booted on the On-Cloud.
-*   Configure the HDM On-Cloud deployment to use IP addresses with Static IP address pool on the Internal network.
+*   If the cloud HDM deployment is configured for DHCP on the internal network, configure DHCP lease timeout to be greater than the time the migrated VM is expected to remain booted in the cloud.
+*   Configure the HDM cloud deployment to use Static IP addresses on the internal network.
 
 (Ref: **DP-2777**)
 
