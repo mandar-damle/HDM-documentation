@@ -291,7 +291,7 @@ Workaround:
 
 ###### **Failure Alerts and Notification HDM component or operations failure details are not visible in vCenter. **
 
-Failures for migration/ migration back, on-premise deployment and add On-Cloud are shown in vCenter under Tasks and Events. Any failure seen due to the HDM component going down is also captured within vCenter events with the description starting with ‘<code><em>com.primaryio.hdm.'</em></code>. This is currently shown in HTML and Flash view of the vCenter. However the details for the failures are not always available in both the views, for example for vCenter version 6.5 it is available in the Adobe Flash view.  
+Failures for migrate, migrate back, on-premises deployment, and add cloud are shown in vCenter under _Tasks and Events_. Any failure attributed to the HDM component going down will also be captured within vCenter events with a description that begins with ‘<code><em>com.primaryio.hdm.'</em></code>. This is currently shown in HTML and Flash view of the vCenter. However the details for the failures are not always available in both the views, for example for vCenter version 6.5 it is available in the Adobe Flash view.  
 
 
 ###### **PIO Appliance not reflecting the failure status of HDM components**
