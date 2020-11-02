@@ -450,41 +450,37 @@ If the I/O filter service ‘praapa’ is stopped or is restarting within an ESX
 
 ###### **HDM Reset did not remove all component VMs**
 
-If there is a network disconnect between appliance and On-Cloud, HDM components On-Cloud  and migrated VMs will not get deleted. Even though the HDM reset task on vCenter shows as completed,  HDM components as well as migrated VMs might still be present on the On-Cloud leaving the system in an unclean state. 
+If there is a network disconnect between the appliance and the cloud, HDM cloud components and migrated VMs will not be deleted. Even if the HDM reset task on vCenter lists the operation as completed, HDM components and migrated VMs may still reside in the cloud, leaving the system in an unclean state. 
 
-**Resolution**: The resolution is to manually delete HDM components and migrated VMs for completing the process of clean up and get it to state for new deployment. 
-
-
-###### **HDM Reset failure due to PIO Appliance restart issues**
-
-As part of HDM reset, PIO Appliance VM restart is required. In some cases, this restart may not succeed or the PIO Appliance may not get IP. 
-
-**Resolution**: This could be a transient error situation and the user should attempt restart of the PIO Appliance so that the HDM reset can complete successfully. (Ref: **CP-4610)**
+**Resolution**: Manually delete the HDM components and migrated VMs to complete the cleanup process and make it ready for a new deployment. 
 
 
-###### **Cleanup issues due to ESXi host reboot during HDM Reset **
+###### **HDM reset failure due to appliance restart issues**
 
-During HDM reset, if any of the ESXi hosts in the On-Premise cluster is rebooted for some reason, the cleanup for that host may not happen. The HDM reset may still succeed, however a future attempt for On-Premise deployment may fail. 
+As part of the HDM reset, the PrimaryIO appliance must be restarted. In some cases, this restart may not succeed, or the appliance may not be assigned an IP address. 
 
-**Resolution**: In such a situation, users should do HDM reset again and perform redeployment. 
-
-(Ref: **CP-4648)**
+**Resolution**: This is probably a transient error, so restart the appliance to enable the HDM reset to successfully complete. (Ref: **CP-4610)**
 
 
-###### **HDM Reset did not start even after rebooting the PIO appliance**
+###### **Cleanup issues due to an ESXi host reboot during HDM Reset **
 
-Post appliance reboot, HDM reset task stays in queued state even after the appliance has been rebooted. This may happen if there has been some transient issues while configuring all the network adapters within the PIO appliance post reboot.
+During HDM reset, if any of the ESXi hosts in the on-premises cluster are rebooted, the cleanup for that host may not happen. While the HDM reset may still succeed, any future attempts for an on-premises deployment may fail. 
 
-**Resolution: **In such a situation, users should reboot the appliance again. (Ref: **CP-4836**)
-
-
-###### **HDM Reset and other operations fail after rebooting the PIO appliance post an ESXi failure**
-
-In case of non DRS or HA enabled clusters, when an ESXi on which PIO Appliance fails the vApp option properties set on the virtual machine gets reset.
-
-**Resolution:** Need to perform the following steps:
+**Resolution**: Retry the HDM reset, then attempt to redeploy. (Ref: **CP-4648)**
 
 
+###### **HDM reset did not start, even after rebooting the appliance**
+
+After rebooting the appliance, the HDM reset task remains queued, even after the appliance has been rebooted. This may happen if there have been transient issues while configuring network adapters within the appliance, following the reboot.
+
+**Resolution:** Reboot the appliance again. (Ref: **CP-4836**)
+
+
+###### **HDM reset and other operations fail after rebooting the appliance following an ESXi failure**
+
+With non DRS or HA enabled clusters, when the appliance fails on an ESXi, the vApp option properties are reset on the VM.
+
+**Resolution:** Perform the following steps:
 
 *   Power off appliance
 *   Under Configure->vapp-> edit and under OVF setting, reset the VMware tool checkbox and save.
