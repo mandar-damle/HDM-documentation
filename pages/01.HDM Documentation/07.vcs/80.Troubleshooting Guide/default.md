@@ -482,9 +482,9 @@ With non DRS or HA enabled clusters, when the appliance fails on an ESXi, the vA
 
 **Resolution:** Perform the following steps:
 
-*   Power off appliance
-*   Under Configure->vapp-> edit and under OVF setting, reset the VMware tool checkbox and save.
-*   Again Under Configure->vapp-> edit and under OVF setting, set the VMware tool checkbox and save.
-*   Power on the appliance
+*   Power the appliance off.
+*   Select _Configure_, followed by _vApp_, then _Edit_. In the OVF setting, reset the VMware tool checkbox, then select _Save_.
+*   Select _Configure_, followed by _vApp_, then _Edit_. In the OVF setting, set the VMware tool checkbox, then select _Save_.
+*   Power the appliance on.
 
 (Ref: **CP-4848**)
