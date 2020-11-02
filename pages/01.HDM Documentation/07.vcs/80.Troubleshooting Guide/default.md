@@ -289,16 +289,14 @@ Workaround:
 # HDM System Health
 
 
-###### **Failure Alerts and Notification HDM component or operations failure details are not visible in vCenter. **
+###### **Details of failures associated with the HDM component are not visible in vCenter. **
 
-Failures for migrate, migrate back, on-premises deployment, and add cloud are shown in vCenter under _Tasks and Events_. Any failure attributed to the HDM component going down will also be captured within vCenter events with a description that begins with ‘<code><em>com.primaryio.hdm.'</em></code>. This is currently shown in HTML and Flash view of the vCenter. However the details for the failures are not always available in both the views, for example for vCenter version 6.5 it is available in the Adobe Flash view.  
+Failures for migrate, migrate back, on-premises deployment, and add cloud are shown in vCenter under _Tasks and Events_. Any failure attributed to the HDM component going down will also be captured within vCenter events with a description that begins with <code><em>com.primaryio.hdm</em></code>. While the failures can be seen in the HTML and Flash views of vCenter, the details for the failures are not always available in both the views (e.g., it is only available in Flash view in vCenter version 6.5).  
 
 
-###### **PIO Appliance not reflecting the failure status of HDM components**
+###### **PrimaryIO appliance does not reflect the failure status of HDM components**
 
-If a HDM On-Cloud component VM remains shutdown for an extended period, the failed HDM components health may not get reflected in the PIO Appliance. 
-
-However**, **the failed component will be detected and alerts can be seen in the Home -> HDM-> Dashboard. Once the component VM gets rebooted successfully, the PIO Appliance will correctly show the health of all components. (Ref: **CP-4647**)
+If an HDM cloud component VM remains shutdown for an extended period of time, the health of the failed HDM components may not be reflected in the PrimaryIO appliance. However, the failed component will be detected and alerts can be seen by selecting _Home_, followed by _HDM_, then _Dashboard_. Once the component VM is successfully rebooted, the appliance will correctly reflect the health of all components. (Ref: **CP-4647**)
 
 
 # Failure Handling in HDM
@@ -306,71 +304,67 @@ However**, **the failed component will be detected and alerts can be seen in the
 
 ###### **vCenter task failures with message “Request exceeded the limit set”**
 
-HDM operations at times can fail with vCenter giving the error message “Request exceeded the limit set”.
+Sometimes HDM operations fail and vCenter delivers the error message _Request exceeded the limit set_.
 
-**Resolution**: VAPI Endpoint Service may need a restart. To restart the service, you need to login to vCenter using Flash and go to Home -> Administration -> Deployment -> System Configuration -> Services. Right click on the VAPI Endpoint Service and choose Restart. (Ref: **DP-2700)**
+**Resolution**: The VAPI endpoint service may need to be restarted. To do this, log into vCenter using Flash and select _Home_, followed by _Administration_, _Deployment_, _System Configuration_, then _Services_. Right click on the VAPI endpoint service and select _Restart_. (Ref: **DP-2700)**
 
 
 ###### **HDM is in a hung state or crawling**
 
-This can happen sometimes when there is a failure that HDM is repairing, for example a component failure. The repair may be  in progress but it is not complete. Users might notice a hung system while HDM is still attempting, retrying for recovery.  It may happen both when HDM is deployed but there is no activity on the system or it may happen when there is migration activity on the system. 
+This can happen when HDM is in the process of repairing a failure, or while HDM is engaged in a recovery attempt. It can happen when HDM is deployed but there is no activity on the system, or when there is migration activity on the system. 
 
-Users can wait for sometime and give time for  the system repair to complete. If it looks that HDM recovery is stalled for some reason, it recommended that the user executes HDM reset and proceeds with the redeployment with a clean state. 
+Wait for the system repair to finish. If it appears that HDM recovery has stalled, reset HDM and proceed with the redeployment with a clean state. 
 
 
-###### **HDM has active migrations going on but the migrations did not complete as expected**
+###### **HDM has active migrations, but they fail to complete as expected**
 
-A user starts a few migrations or the user might have ongoing migrations. All or some of the migrations might not complete due to a failure. The process of recovery in HDM would migrate back the affected VMs that were either already migrated or in the process of being migrated. The VMs would be found in the HDM Recovery Pool On-Premise. 
+If a failure causes migrations to not complete, the HDM recovery process will migrate back the affected VMs that were previously migrated, or are in the process of migrating. These VMs can be found in the on-premises HDM recovery pool. 
 
 
 ###### **All migrated VMs are automatically migrated back and present in RECOVERY_POOL_SUCCESS**
 
-Migrated VMs can be migrated back, if any of the HDM component fails. As part of HDM recovery, the failed component is repaired and only the affected VMs are migrated back and brought to the RECOVERY_POOL_SUCCESS. However, HDM cloud cache is a critical component and its failure would affect all the migrated VMs and this  would  result in all VMs to be migrated back.(Ref: **DP-2739**)
+In the event of an HDM component failure, migrated VMs can be migrated back. As part of HDM recovery, the failed component will be repaired and only the affected VMs will be migrated back and appear in _RECOVERY_POOL_SUCCESS_. However, HDM cloud cache is a critical component and its failure would affect all migrated VMs. As a result, all VMs will be migrated back. (Ref: **DP-2739**)
 
 
-###### **HDM Appliance got hung due to its datastore space full**
+###### **HDM Appliance hangs, becuase its datastore is full**
 
-HDM Appliance can get hung if the datastore on which it was present has no space left.
-
-Users should power off the HDM Appliance VM, create enough space in the datastore and power on the Appliance again. Please note that datastore full can cause other issues and the resolution here may not always work. User may need to do HDM reset or re-deploy HDM with appropriate storage.
+The HDM appliance can get hung if the datastore where it resides runs out of space. If this occurs, power off the HDM appliance VM, create enough space in the datastore, thne power the appliance back on. Please note that a full datastore can cause other issues and this resolution may not always work. In this case, an HDM reset may be necessary, or HDM can be re-deployed with adequate storage.
 
 
-###### **Additional NICs attached to the VMs that got migrated back due to network failure **
+###### **Additional NICs attached to the VMs that were migrated back due to a network failure**
 
-Due to network failure, the already migrated VMs can be migrated back by HDM. In some cases, such VMs can be found with additional NICs then the ones they were originally configured with. HDM adds these NICs during the migration operation and are usually cleaned up automatically. However, in some failure scenarios when automatic cleanup has failed, users have to perform manual cleanup of these NICs. (Ref: **CP-4841**) 
+In the event of a network failure, HDM can migrate back previously migrated VMs. In some cases, these VMs can be found with additional NICs beyond what they were originally configured with. HDM adds these NICs during the migration operation and typically cleans them up automatically. However, in some failure scenarios when automatic cleanup has failed, these NICs will need to be manually cleaned up. (Ref: **CP-4841**) 
 
 
-###### **How do network disconnects result in failures**
+###### **How network disconnects result in failures**
 
-HDM is deployed both On-Premise and on the On-Cloud. VMs migrate from the On-Premise to the On-Cloud, there are occasions when VMs are migrated back to the On-Premise after a temporary migration to the On-Cloud (for example for the TBC use case) or because of a failure during the migration. The Network availability is critical during the entire Migration operation and for continuity of HDM component services. 
+Sometimes VMs are migrated back to the on-premises environment following a temporary migration to the cloud (e.g., the TBC use case), or because of a failure during the migration. Network availability is critical during the entire migration operation, as well as for the continuity of HDM component services. The disruption in network connectivity is tolerated for a limited time (typically up to 4-5 minutes), after which HDM will enter into failure and recovery mode. A recovery operation can only succeed when the network is available. If an HDM reset is required, it can only succeed when network connectivity is available for cleaning up state in the cloud. 
 
-Thus the disruption in the network connectivity is tolerated for a limited time, typically upto 4-5 minutes  beyond which HDM gets into Failure and Recovery mode. Recovery operation will also succeed only when the Network is available. If the system gets into a state where HDM reset needs to be executed, it can succeed only when the network connectivity is available for cleaning up the state on the On-Cloud. 
-
-HDM operations are designed for retries and resilience for somewhat jittery Networks. More than 4-5 minutes of continuous disconnect triggers failures and eventual process of recovery and repair if that network becomes available. 
+HDM operations are designed for retries and resilience for somewhat jittery networks. However, if connectivity is lost for more than 4-5 minutes continuously, failures will be triggered. Then, when the network becomes available, the process of recovery and repair will be initiated. 
 
 
 # HDM Undeployment
 
 
-###### **HDM On-Cloud **u**ninstall **f**ails when one of the ESXi hosts in the cluster on which it was installed is inaccessible**
+###### **HDM cloud uninstall fails when one of the ESXi hosts in the cluster where it was installed becomes inaccessible**
 
-Uninstallation happens at the cluster level and it will fail if any host in the cluster is unavailable.
+Because uninstallation happens at the cluster level, it will fail if any host in the cluster becomes unavailable.
 
-**Resolution**: System administrators will have to first resolve the connection issue with the unreachable ESXi host and then retry the uninstallation process.
-
-
-###### **HDM On-Premise uninstall fails when one of the ESXi hosts in the cluster on which it was installed is inaccessible**
-
-Uninstallation happens at the cluster level and will fail if a VIB or HDM component removal cannot be done on any host in the cluster.
-
-**Resolution:** System administrators will first have to resolve the connection issue with the unreachable ESXi host and retry the uninstallation process.
+**Resolution**: Resolve the connection issue with the unreachable ESXi host, then retry the uninstallation process.
 
 
-###### **‘praapa’ vib uninstall failure during undeployment**
+###### **The on-premises HDM uninstall fails when one of the ESXi hosts in the cluster where it was installed becomes inaccessible**
 
-During HDM undeployment the ‘praapa’ vib can fail to uninstall on some ESXi in the cluster.
+Uninstallation happens at the cluster level, so it will fail if a VIB or HDM component removal cannot be performed on any host in the cluster.
 
-**Resolution**: User should restart the iofilter daemon on ESXi (ssh login to the ESXi and run command /etc/init.d/iofilterd-prapaa restart) and then uninstall the product. (Ref: **DP-2578)**
+**Resolution:** Resolve the connectivity issue with the unreachable ESXi host, then retry the uninstallation process.
+
+
+###### **‘praapa’ VIB uninstall failure during undeployment**
+
+During HDM undeployment, the ‘praapa’ VIB can fail to uninstall on some ESXi instnaces in the cluster.
+
+**Resolution**: Restart the iofilter daemon on ESXi (ssh log into the ESXi and run the command _/etc/init.d/iofilterd-prapaa restart_), then uninstall HDM. (Ref: **DP-2578)**
 
 
 ###### **'HDM_DRS_*' tags still present in On-Cloud vCenter after uninstallation of HDM**
