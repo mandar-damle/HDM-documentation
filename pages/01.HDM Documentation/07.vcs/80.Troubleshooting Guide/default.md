@@ -367,91 +367,82 @@ During HDM undeployment, the ‘praapa’ VIB can fail to uninstall on some ESXi
 **Resolution**: Restart the iofilter daemon on ESXi (ssh log into the ESXi and run the command _/etc/init.d/iofilterd-prapaa restart_), then uninstall HDM. (Ref: **DP-2578)**
 
 
-###### **'HDM_DRS_*' tags still present in On-Cloud vCenter after uninstallation of HDM**
+###### **HDM_DRS_* tags still present in the cloud vCenter following HDM uninstallation**
 
-The tags are created to set affinity rules on HDM component hosts managed by HDM On-Cloud vCenter. These rules are only used by PrimaryIO HDM and do not affect the working of other virtual machines in On-Cloud vCenter. Currently these are not deleted as part of uninstallation of HDM.
+The tags are created to set affinity rules on HDM component hosts managed by the cloud HDM vCenter. These rules are only used by PrimaryIO HDM and do not affect other VMs in the cloud vCenter. Currently, these are not deleted as part of the HDM uninstallation process.
 
-**Resolution**: Follow these steps to clean HDM_DRS_* tags from On-Cloud vcenter.
+**Resolution**: Follow these steps to clean HDM_DRS_* tags from the cloud vcenter:
 
-
-
-1. Delete HDM tag
-    *   Login to On-Cloud vCenter
-    *   Go to Menu → Tags & Custom Attributes → TAGS
-    *   Delete tag with name “HDM_DRS_TAG”
-2. Delete HDM category
-    *   Login to On-Cloud vCenter
-    *   Go to Menu → Tags & Custom Attributes → CATEGORIES
-    *   Delete category with name “HDM_DRS_CATEGORY“
-3. Delete HDM DRS policy
-    *   Login to On-Cloud vCenter
-    *   Menu → Policies and Profiles → Compute Policies
-    *   Delete policy with name “HDM_DRS_POLICY“
+1. Delete the HDM tag:
+    *   Log into the cloud vCenter.
+    *   Select _Menu_, followed by _Tags & Custom Attributes_, then _Tags_
+    *   Delete the tag _HDM_DRS_TAG_.
+2. Delete teh HDM category:
+    *   Log into the cloud vCenter.
+    *   Select _Menu_, followed by _Tags & Custom Attributes_, then _Categories_.
+    *   Delete the category _HDM_DRS_CATEGORY_.
+3. Delete the HDM DRS policy:
+    *   Log into the cloud vCenter.
+    *   Select _Menu_, followed by _Policies and Profiles_, then _Compute Policies_.
+    *   Delete the policy _HDM_DRS_POLICY_.
 
 
-###### **Uninstall of HDM **f**ilter fails when a cluster host cannot be put in the Maintenance Mode**
+###### **Uninstallation of the HDM filter fails when a cluster host cannot be placed into maintenance mode**
 
-HDM filter uninstall requires the cluster hosts to be put in the maintenance mode one host at a time. If for any reason, a host fails to go in the Maintenance mode, the HDM filter uninstall fails. 
+Uninstallation of the HDM filter requires the cluster hosts to be in maintenance mode, one host at a time. If a host fails to enter maintenance mode for any reason, the HDM filter uninstall will fail. 
 
-**Resolution**: User should put the host in maintenance mode manually and retry the uninstall operation. This may require the user to perform a vMotion on the active VMs to another host in the cluster. If the cluster has just one host, the User may be required to power off the active VMs. Please note that the PIO Appliance host should not be powered off before initiating the uninstall.
-
-
-###### **‘praapa’ service is still present on ESXi Configure tab in vCenter even after PrimaryIO HDM filter has been uninstalled from the On-Premise cluster**
-
-Uninstall of HDM filter from PIO Appliance creates an uninstall task that executes successfully. However, the HDM icon on vCenter still shows the HDM version and the service  ‘praapa’ is also found on the ESXi host. 
-
-**Resolution**: This issue is seen when the uninstall is attempted on a cluster where the ESXi hosts cannot be put into Maintenance Mode either due to DRS not configured or insufficient number of ESXi for vMotion. In such a situation the ‘uninstall’ request is registered but not executed. To complete the uninstallation, follow the steps:
+**Resolution**: Manually put the host into maintenance mode and retry the uninstall operation. This may require a vMotion on the active VMs to another host in the cluster. If the cluster only has one host, the active VMs may be required to be powered off. Please note that the PrimaryIO appliance host should not be powered off prior to initiating the uninstall.
 
 
+###### **The praapa service is still present on the ESXi Configure tab in vCenter, even after the HDM filter has been uninstalled from the on-premises cluster**
 
-1. The host under the cluster on which the HDM uninstall is pending, needs to be put into Maintenance Mode manually through the vCenter.
-2. This will start the uninstallation task on the ESXi and will cleanly remove the ‘praapa’ IOFilter.
-3. Exit the Maintenance Mode once the installation is complete.
-4. Steps 1-3 may have to be repeated on all the ESXi hosts that could not be put into Maintenance Mode, to completely remove PrimaryIO HDM from the cluster.
+A task to uninstall the HDM filter from the appliance executes successfully, but the HDM icon on vCenter still shows the HDM version, and the ‘praapa’ service remains on the ESXi host. 
 
+**Resolution**: This issue is seen when the uninstall is attempted on a cluster where the ESXi hosts cannot be put into maintenance mode, either because DRS has not been configured or there is an insufficient number of ESXi instances for vMotion. This causes the uninstall request to be registered, but not executed. Follow these steps to complete the uninstallation:
 
-###### **HDM plugin entry is not removed from the vCenter after HDM plugin is unregistered from the appliance.**
-
-An entry for the HDM plugin continues to be displayed in the Administration->Client Plug-Ins listing or in the Menu even after it has been unregistered from the appliance.
-
-This is a vCenter listing issue and does not affect the vCenter functionality.
-
-**Issues**: The new plugin may not load properly if we register the same or lower plugin version but a higher plugin version will always work.
-
-**Resolution**: Steps are:  
+1. Log into vCenter and manually put the host under the cluster where the HDM uninstall is pending into maintenance mode.
+2. This will start the uninstallation task on ESXi and will cleanly remove the ‘praapa’ iofilter.
+3. Exit maintenance mode once the installation is complete.
+4. to completely remove HDM from the cluster, steps 1-3 may have to be repeated on all ESXi hosts that could not be put into maintenance mode.
 
 
+###### **HDM plugin entry is not removed from vCenter after the HDM plugin is unregistered from the appliance.**
 
-1. SSH to vCenter shell.
-2. Following command will find and delete all stale entries for HDM and will restart vsphere-ui service.
+An entry for the HDM plugin continues to be displayed in the _Administration / Client Plug-Ins_ listing, or in the _Menu_, even after it has been unregistered from the appliance.
 
-        "`find / -name *piohyc* -exec rm -rf {} +;  service-control --stop vsphere-ui;service-control --start vsphere-ui;`"
+This is a vCenter listing issue and does not affect vCenter functionality.
 
+**Issues**: The new plugin may not load properly if the same or a lower version of the plugin is registered. However, a higher version of the plugin will always work.
+
+**Resolution**: Complete the following steps:
+
+1. ssh into the vCenter shell.
+2. Enter the following command to find and delete all stale entries for HDM and restart the vsphere-ui service:
+
+_       `find / -name *piohyc* -exec rm -rf {} +;  service-control --stop vsphere-ui;service-control --start vsphere-ui;`_
 
 ###### **Disable monitoring failure during undeployment**
 
-During uninstall disable monitoring on some VMs can fail in certain situations. 
+During uninstall, _disable monitoring_ on some VMs can fail in certain situations. 
 
-**Resolution**: The workaround for this is to power-off the VMs and then disable monitoring. (Ref: **CP-4431)**
+**Resolution**: The workaround for this is to power the VMs off, then disable monitoring. (Ref: **CP-4431)**
 
 
 ###### **Undeployment while migration is in progress**
 
-Do not perform On-Cloud undeployment while migrations are in progress. The UI does not prevent this action. However, the undeployment can fail and the migrating VMs cleanup may not happen. 
-
-(Ref: **CP-4373)** 
+Do not perform cloud undeployment while migrations are in progress. While the UI does not prevent this action, the undeployment can fail and cleanup of the migrating VMs may not happen. (Ref: **CP-4373)** 
 
 
-###### **Undeploy HDM On-Premise failure due to VMs having snapshots**
+###### **Undeploy on-premises HDM failure due to VMs having snapshots**
 
-The HDM On-Premise uninstall can fail, if there are any VMs which have HDM created snapshot (named pio_*). Usually, this applies for VMs that were migrated back as part of failure recovery and are residing in HDM_RECOVERY_SUCCESS. 
+The HDM on-premises uninstall can fail if there are any VMs that have snapshots that were created by HDM (named pio_*). This usually applies to VMs that were migrated back as part of failure recovery, and reside in HDM_RECOVERY_SUCCESS. 
 
-**Resolution**: The migrate time snapshot (pio_*) should be explicitly deleted by the user before retrying the undeploy. (Ref: **CP-3749)**
+**Resolution**: The migrate time snapshot (pio_*) should be explicitly deleted prior to retrying the undeploy. (Ref: **CP-3749)**
 
 
-###### **Detaching SPBM Policy fails when IO Filter service ‘praapa’ in the ESXi is stopped or restarted**
+###### **Detaching the SPBM policy fails when the I/O filter service ‘praapa’ in ESXi is stopped or restarted**
 
-If IO Filter service ‘praapa’ is stopped or is restarting within an ESXi, detach SPBM policy on virtual machines can fail as the service is unavailable and policy state cannot be cleaned. Check service status under ESXi configure page and retry detach operation.
+If the I/O filter service ‘praapa’ is stopped or is restarting within an ESXi, detaching the SPBM policy on the VMs can fail, because the service is unavailable and policy state cannot be cleaned. Check service status on the ESXi configure page and retry the detach operation.
 
 
 # HDM Reset
