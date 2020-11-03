@@ -1,5 +1,5 @@
 ---
-title: 'VMware Cloud Solutions for IBM'
+title: 'IBM Cloud for VMware Solutions'
 ---
 
 IBM Cloud for VMware Solutions is a family of solutions for 
