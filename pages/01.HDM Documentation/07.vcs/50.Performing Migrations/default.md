@@ -281,345 +281,230 @@ If any of the above steps fail, HDM will retry the step before declaring that th
 
 **Note**: The flow described here is useful for the TBC use case. 
 
-Pre-requisites
 
+Prerequisites
 
+1. The VM must be in a migrated state. It should be listed in _HDM_MIGRATE_POOL_ in the on-premises vCenter.
 
-1. The VM must be in a migrated state. It should be present in HDM_MIGRATE_POOL in On-Premise vCenter.
 
 Steps
 
-
-
-1. In the On-Premise vCenter, right click on the VM that is to be migrated back. Click on the HDM -> Migrate Back option.
-
+1. In the on-premises vCenter, right click on the VM to be migrated back. Select _HDM_, followed by _Migrate Back_.
 
 ![alt_text](images/image30.png?classes=content-img "image_tooltip")
 
-
-
-
-2. Select the VMs that are to be migrated back. The dependent VMs will be migrated back together.
-
+2. Select the VMs to be migrated back. The dependent VMs will be migrated back together.
 
 ![alt_text](images/image23.png?classes=content-img "image_tooltip")
 
-
-
-
-3. Review the selection and click on MIGRATE BACK.
-
-
+3. Review the selection and select _MIGRATE BACK_.
 
 ![alt_text](images/image24.png?classes=content-img "image_tooltip")
 
-
-
-
-4. You can view the status of the migrate back in the wizard
-
-
+4. The status of the migration back can be seen in the wizard.
 
 ![alt_text](images/image25.png?classes=content-img "image_tooltip")
 
-
-
-
-5. Also, the migrate back task in vCenter can be tracked
-
+5. The migrate back task can also be tracked in vCenter.
 
 ![alt_text](images/image26.png?classes=content-img "image_tooltip")
 
-
-
-
-6. Once the migration back is successful, the VM is deleted from the On-Cloud vCenter. It has now moved from the HDM_MIGRATE_POOL to the original resource pool where it belonged before migration. Users should power on the VM explicitly.
+6. Once the migration back is successful, the VM will be deleted from the cloud vCenter. It will then be moved from the _HDM_MIGRATE_POOL_ to the original resource pool where it resided prior to the migration. At this point, the VM will have to be explicitly powered on.
 
 
 # HDM Monitoring
 
-HDM monitors the VMs in a cluster for the IO and resource usage activity. The monitoring gives the following data:
-
-
+HDM monitors the VMs in a cluster for I/O and resource usage activity. The following data will be provided:
 
 *   Active data set identification for VMs
 *   Recommendation of what VMs to migrate
-*   Cache size required on On-Cloud to meet the VM’s workload requirements
+*   Cache size required on the cloud to meet the VM’s workload requirements
 *   CPU resource utilization of the VMs
-*   IO performance statistics for VMs
-*   Network and cache usage statistics for migrated VMs
+*   I/O performance statistics for the VMs
+*   Network and cache usage statistics for the migrated VMs
 
-**Note**: In Lite mode of deployment(both standalone and cluster), the monitoring of VMs is limited to just applying the HDM SPBM policy. The detailed monitoring of VMs is present only in Standard and Performance mode of deployment. 
+**Note**: In Lite mode (Standalone and Cluster), the monitoring of VMs is limited to applying the HDM SPBM policy. The detailed monitoring of VMs is only present in the Standard and Performance modes. 
 
 
 ## Monitoring VMs On-Premise
 
-HDM monitors the IO activity on all VMs on On-Premise on the cluster in which it is installed.
+HDM monitors the I/O activity on all on-premises VMs on the cluster where it is installed. To view monitored data for these VMs:
 
-To view monitored data for such VMs
-
-
-
-1. In the On-Premise vCenter, select the cluster
-2. On the right hand panel, go to Monitor -> HDM -> Profiling
-
-
+1. In the on-premises vCenter, select the cluster
+2. On the right-hand panel, select _Monitor_, followed by _HDM_, then _Profiling_
 
 ![alt_text](images/image27.png?classes=content-img "image_tooltip")
 
-
-**Note**: In Lite mode of deployment(both standalone and cluster), this view is not present. Instead the following message should be there
-
+**Note**: In Lite mode (both standalone and cluster), this view is not present. Instead, the following message will be displayed:
 
 ![alt_text](images/image10.png?classes=content-img "image_tooltip")
 
+3. You should see the doughnuts for:
+    1. Storage monitored: The amount of storage monitored within vCenter. Monitoring is only active on the selected cluster within vCenter.
+    2. Active dataset: The size of the active dataset, compared with the total. I/O activity is recorded periodically.
+    3. Active VM storage health: The health of the storage is determined by its latency and throughput.
+    4. Top storage utilized VMs: The VMs that access the storage most frequently.
+4. A table summarizing the activity of the VMs is presented below the doughnuts. Some columns of particular importance are:
+    5. Storage: The storage capacity of the VMs.
+    6. Cache size: The estimated size of the VM's working set. If the VM is migrated to the cloud, this represents the minimum amount of cache that needs to be provisioned to maintain optimal performance.
+    7. Read IOPs: The observed rate of reads happening on the VM.
+    8. Write IOPs: The observed rate of writes happening on the VM.
+    9. Health : The health of the VM storage, based on the observed read/write IOPs.
 
 
-
-3. You should see the doughnuts for
-    1. Storage monitored : the amount of storage monitored within the vCenter. Monitoring is done only for the selected cluster within the vCenter.
-    2. Active dataset : the active dataset size out of the total. IO activity is recorded periodically. The data set recently touched forms the active data set.
-    3. Active VM storage health : the health of the storage is determined by the latency and throughput of the storage.
-    4. Top storage utilized VMs : the VMs that are accessing the storage most often fall in this category.
-4. A table summarizing the VM’s activity is also present below the doughnuts. Few important columns are
-    5. Storage : The storage capacity of the VMs
-    6. Cache size : The estimated working set size of the VM. If the VM is migrated to the On-Cloud, we should provision at least this much of cache to have optimal performance.
-    7. Read IOPs : The observed rate of reads happening on the VM.
-    8. Write IOPs : The observed rate of writes happening on the VM.
-    9. Health : The health of the storage of VM based on the observed read/write IOPs.
-
-
-## Monitoring VMs On-Cloud
+## Monitoring VMs in the Cloud
 
 
 ### Migration Status
 
-HDM keeps track of the number of VMs migrated and migrated back, their status etc. 
+HDM keeps track of the number of VMs migrated and migrated back, as well as their statuses and other essential information. This data is accessible through the following steps:
 
-Such data is accessible through the steps
-
-
-
-1. In the On-Premise vCenter, select the cluster
-2. On the right hand panel, go to Monitor -> HDM -> Migration -> In Progress
-
+1. In the on-premises vCenter, select the cluster
+2. On the right hand panel, select _Monitor_, followed by _HDM_, _Migration_, then _In Progress_
 
 ![alt_text](images/image28.png?classes=content-img "image_tooltip")
 
 
 
-### IO And Resource Usage
+### I/O And Resource Usage
 
-The VMs which have been migrated to the On-Cloud are also monitored for resource utilization and IO activity. To view monitored data for such VMs
+The VMs that have been migrated to the cloud are also monitored for resource utilization and I/O activity. To view monitored data for these VMs:
 
-
-
-1. In the On-Premise vCenter, select the cluster
-2. On the right hand panel, go to Monitor -> HDM -> Monitoring
+1. In the on-premises vCenter, select the cluster
+2. On the right hand panel, select _Monitor_, followed by _HDM_, then _Monitoring_
 
 ![alt_text](images/image9.png?classes=content-img "image_tooltip")
 
-
-
-**Note**: In Lite mode of deployment(both standalone and cluster), this view is not present. Instead the following message will be displayed
-
+**Note**: In Lite mode (both Standalone and Cluster), this view is not present. Instead, the following message will be displayed:
 
 ![alt_text](images/image10.png?classes=content-img "image_tooltip")
 
-
-
-
-3. You can view graphs for
-    1. utilization for compute, memory and cache resources
-    2. read and write data transferred over WAN
-4. Detailed statistics for each migrated VM is available in tabular form
+3. You can view graphs for:
+    1. Utilization for compute, memory, and cache resources
+    2. Read and write data transferred over the WAN
+4. Detailed statistics for each migrated VM is displayed in tabular form
 
 
 ### Dashboard
 
-A summarized information of the migration statistics and On-Cloud resource utilization can be found in a single dashboard. 
+A summary of the migration statistics and cloud resource utilization can be found in a single dashboard. To view this dashboard data:
 
-To view the dashboard data for such VMs
-
-
-
-1. In the On-Premise vCenter, select the cluster
-2. On the right hand panel, go to Monitor -> HDM -> Cloud Burst -> Dashboard
-3. The migration summary gives the migration statistics and resource usage
-
+1. In the on-premises vCenter, select the cluster.
+2. On the right hand panel, select _Monitor_, followed by _HDM_, _Cloud Burst_, then _Dashboard_.
 
 ![alt_text](images/image11.png?classes=content-img "image_tooltip")
 
-
-
-
-4. Detailed log of migrate and migrate back is also present in tabular form
+4. A detailed log of the migrate and migrate back activities are also displayed in tabular form.
 
 
 # HDM Policies
 
 
-## RTO/RPO
+## Recovery Time Objective/Recovery Point Objective (RTO/RPO)
 
-HDM maintains an optimal cache on the On-Cloud for migrated VMs to provide good IO performance. The cache maintains the working set of the VM thus serving reads without having to go over WAN for every IO. The cache also absorbs writes, which are flushed on to On-Premise at regular intervals.
+HDM maintains an optimal cache in the cloud for migrated VMs to provide superior I/O performance. The cache maintains the working set of VM to serve read requests without having to traverse the WAN for every I/O. The cache also absorbs writes, which are flushed to the on-premises environment at regular intervals.
 
-The periodicity of the write flush can be controlled by the user based on the RTO/RPO requirements.  It is currently set as 20 minutes as default, which means at 20 minutes interval data is flushed on to the on On-Premise. In case of failure, the application can lose 20 minutes worth of data.
+The frequency of the write flush is based on the Recovery Time Objective/Recovery Point Objective (RTO/RPO) requirements. By default it is set to flush to the on-premises environment every 20 minutes. Therefore, in the event of a failure, the application can only lose up to 20 minutes worth of data.
 
 
 ### Guidelines to Configure RTO/RPO policies
 
-Configuring RTO/RPO (Recovery Time Objective/Recovery Point Objective) should be based on the application need. Tradeoffs are
+Configuring RTO/RPO should be based on the application need. The trade-offs are:
 
+1. If the time is reduced, the write data flush will be triggered more often. This can cause additional WAN traffic, especially for applications that perform frequent overwrites.
+2. If the time is increased, the write data flush will be triggered less frequently. In the event of a failure that results in VMs having to migrate back to the on-premises environment, more data will reside on the VMs since the last RTO/RPO flush, which can result in higher data loss. 
 
+The setting is maintained at the cluster level, so it will be inherited by all VMs within the cluster. 
 
-1. If the time is reduced, the write data flush would be triggered more often and it can cause additional WAN traffic, especially for applications that do frequent overwrites.
-2. If the time is increased, the write data flush would be triggered less aggressively. If there are failures that result into VMs migrated back to On-Premise, the VMs would have data till last RTO/RPO flush, which can result in higher data loss. 
-
-Currently the setting is done at the cluster level, which means all the VMs within the cluster will inherit the same setting. 
-
-**Note**: **RTO/RPO is set to the default value of 20 minutes, which is good enough for most applications. It should be reconfigured carefully keeping in mind the recovery tradeoffs for the application.**
+**Note**: **RTO/RPO is set to the default value of 20 minutes, which is acceptable for most applications. Care should be taken prior to reconfiguring it, keeping in mind the recovery trade-offs for the application.**
 
 
 ### Steps to Configure
 
-Following are the steps to configure RTO/RPO policy
+To configure the RTO/RPO policy:
 
-
-
-1. In the On-Premise vCenter, select the cluster
-2. On the right hand panel, go to Configure-> HDM -> Administration
-3. Modify the default value of Recovery Time Objective (RTO) according to application needs
-
-
+1. In the on-premises vCenter, select the cluster
+2. On the right hand panel, select _Configure_, followed by _HDM_, then _Administration_
+3. Modify the default value of the Recovery Time Objective (RTO) according to the needs of the application
 
 ![alt_text](images/image12.png?classes=content-img "image_tooltip")
 
 
-	
-
 
 # HDM System Health
 
-HDM keeps track of its constituent component’s health. It uses periodic messages (heartbeat) to keep track of the health of its components and thus determines the overall health of the system. If the heartbeat from a component is missed for two minutes, then the component is marked as failed. Additional probes are made to understand the nature of failure. Once the failure reason is understood, the recovery process is initiated.
+HDM uses periodic messages (heartbeat) to monitor the health of its components and determine the overall health of the system. If the heartbeat from a component is missed for two minutes, the component will be marked as failed. Additional probes will be conducted to understand the nature of the failure. Once the reason for the failure is understood, the recovery process will be initiated.
 
 
 ## HDM in a Healthy State 
 
-When there are no failures, all the HDM components show the state as ‘Healthy’ and its color can be seen as blue in the Appliance control panel. The HDM overall state is good if nothing is in red or yellow color. This can be seen in Appliance’s Control Panel. In addition to the Appliance Control Panel this information is also available on vCenter on the HDM plugin.
-
-Menu > HDM > Administration > HDM Health > Component Health
-
-
+When there are no failures, all HDM components will show the state as ‘Healthy’ and their color will be seen as blue in the appliance control panel. The overall state of the HDM is good if nothing is colored red or yellow. This can be seen in the appliance’s control panel, or on the HDM plugin within vCenter. To view this data, select _Menu_, followed by _HDM_, _Administration_, _HDM Health_, then _Component Health_.
 
 ![alt_text](images/image19.png?classes=content-img "image_tooltip")
 
-
-Incase of a failure the affected components will be shown here.
-
+In the event of a failure, the affected components will be shown here.
 
 ![alt_text](images/image4.png?classes=content-img "image_tooltip")
-
-
 
 ![alt_text](images/image13.png?classes=content-img "image_tooltip")
 
 
-
 ## HDM in a Degraded State
 
-When the system is in a degraded state due to a failure this will be visible in;
+When the system is in a degraded state due to a failure, it can be seen in the following locations:
 
-
-
-1. The Dashboard on the vCenter
-2. The Control Panel on the appliance
-3. vCenter event log
+1. The vCenter dashboard
+2. The appliance control panel
+3. The vCenter event log
 4. The state in the SQS heartbeat
 
 
 ### vCenter Dashboard
 
-
-
-*   On the vCenter HDM -> Dashboard ,  we will see a notification mentioning **Services not ready or down...**
-
+*   Select _vCenter HDM_, followed by _Dashboard_ to view a notification mentioning **Services not ready or down...**
 
 ![alt_text](images/image14.png?classes=content-img "image_tooltip")
 
 
-
 ### Appliance Control Panel
 
-In case a failure occurs, some components would get affected. The state of those components would be updated in the Appliance Control Panel as **Poor** and the HDM overall state is set to be ‘Not Ready’. The component color would change from blue to red. 
-
+In the event of a failure, some components may be affected. The state of those components will be listed in the appliance control panel as **Poor** and the overall state of HDM will be set to _Not Ready_. The component color will change from blue to red. 
 
 ![alt_text](images/image15.png?classes=content-img "image_tooltip")
 
-
-
-
-*   A hover over the faulted component will give detail about the error.
-
+*   Simply hover over the faulted component to view details regarding the error.
 
 ![alt_text](images/image16.png?classes=content-img "image_tooltip")
 
 
-
 ### vCenter Event Log
 
-If there are failure events that impact the operation of HDM these are recorded in an “Events Logs”. This is present in the vCenter Events log as well as a HDM Events Logs. The HDM Events Logs can be reached
-
-Menu > HDM > Administration > Event Logs
-
-  
+If failure events impact HDM operations, they will be recorded in the vCenter events log, as well as the HDM events logs. The HDM events logs can be accessed by selecting _Menu_, followed by _HDM_, _Administration_, then _Event Logs_.  
 
 ![alt_text](images/image8.png?classes=content-img "image_tooltip")
 
-
-Failure and repair events generated will be shown in this events logs. A example of a failure seen in the log is below. There are events capturing failure of components and their successful recovery. The last failure on top of the log is an unrecoverable failure for which we need to do an HDM reset to recover from this error.
-
-
-
+The screenshot below illustrates the types of failure and repair events that will appear in the events logs. These include component failure events and their successful recovery. The failure listed at the top of the log is an unrecoverable failure that will require an HDM reset.
 
 ![alt_text](images/image20.png?classes=content-img "image_tooltip")
 
-
-Additionally there are messages generated in the vCenter events log which indicate these failures. To narrow down on these messages. Select the “VCenter” and then “Monitor > Events”
-
-
-
-*   
-After selection the view will look like below.
-
+These failure messages can also be seen in the vCenter events log, which can be accessed by selecting _vCenter_, followed by _Monitor_, then _Events_:
 
 ![alt_text](images/image17.png?classes=content-img "image_tooltip")
 
-
-
-*   To narrow down on the events generated by HDM we will apply filter on the “Event Type ID” on the extreme right column, apply filter _“com.hdm”_
-
-
-
+*   To narrow down the events generated by HDM, apply a filter on the event type ID. On the extreme right column, apply the filter _“com.hdm”_
 
 ![alt_text](images/image18.png?classes=content-img "image_tooltip")
 
-
-
-
-*   After applying the filter the view will be limited to the event generated by PIO HDM. The selected event in the view below corresponds to a failure of a HDM service.
-
-
-
+*   After applying the filter, the view will be limited to the event generated by HDM. The selected event illustrated below corresponds to a failure of an HDM service:
 
 ![alt_text](images/image1.png?classes=content-img "image_tooltip")
 
+
 ### Health State in the SQS Heartbeat
 
-The changes in the health of the system are also reported through the SQS heartbeats. The typical SQS heartbeat messages (as can be got at the sqs-python client) corresponding to various events are below.
+The changes in system health are also reported through the SQS heartbeats. The typical SQS heartbeat messages (which can be retrieved from the sqs-python client) correspond to the various events listed below.
 
-
-
-*   Fully deployed system which is functional and without any failed components will have heartbeat as below
+*   A fully deployed system that is functional and is free of failed components will have a heartbeat similar to the one listed below:
 
     ```
 'status': 'Ready', 
@@ -627,8 +512,7 @@ The changes in the health of the system are also reported through the SQS heartb
 'appliance_id': 'fa142afc-3c64-4086-b442-4ffcdc1580b2', 
 ```
 
-
-*   When a component failure is detected we will see a heartbeat with the details of the failed component as below.
+*   When a component failure is detected, it will have a heartbeat containing details of the failed component, similar to the one below:
 
     ```
 'status': 'Not Ready', 
@@ -637,8 +521,7 @@ The changes in the health of the system are also reported through the SQS heartb
 'appliance_id': 'fa142afc-3c64-4086-b442-4ffcdc1580b2', 
 ```
 
-
-*   When a reboot of a component VM host is detected we will get a heartbeat with details of the failed VM host.
+*   When a reboot of a component VM host is detected, the heartbeat will display the details of the failed VM host, like the one illustrated below:
 
     ```
 'status': 'Not Ready',
@@ -647,32 +530,28 @@ The changes in the health of the system are also reported through the SQS heartb
 'appliance_id': 'fa142afc-3c64-4086-b442-4ffcdc1580b2', 
 ```
 
-
-
-
 # Failure Handling in HDM 
 
-HDM  strategy in handling failures strives to meet the following requirements:
-
-
+HDM strives to meet the following requirements for handling failures:
 
 *   Cold VM migration will be resumed automatically after repair in case of specific HDM component failures.
-*   In case of pathological scenarios where we can’t resume migration we will ensure VM availability in the event of failures and recovery post the failure. 
-*   HDM system state recovered such that new migrations can be served even if ongoing migrations were cancelled and migrated VMs might have been migrated back. 
+*   In the event of a specific HDM component failure during cold VM migration, the migration will be automatically resumed following repair.
+*   In the event of pathological scenarios where migration can’t be resumed after a failure and subsequent recovery, VM availability will be ensured. 
+*   HDM system state will be recovered to enable new migrations to be served, even if ongoing migrations had to be cancelled and migrated VMs were migrated back. 
 
 
 ## Ensuring VM Availability 
 
-As part of failure recovery, HDM will resume transfer of VM being cold migrated. Under pathological conditions or in warm migration HDM may identify that some VMs which were already migrated or some ongoing migrations can no longer continue to run on On-Cloud. Typically this is due to failure in the component that was used by VM to connect to On-Premise. To ensure application availability, such VMs are migrated back to On-Premise. 
+As part of failure recovery, HDM will resume the transfers of VMs that were in the process of being cold migrated. Under pathological conditions, or in the event of warm migration, HDM may identify that some VMs that were already migrated or some ongoing migrations can no longer continue to run in the cloud. This is typically due to a component failure that was used by the VM to connect to the on-premises environment. To ensure application availability, these VMs will be migrated back to the on-premises environment. 
 
 
 ## Data Consistency and Data Loss
 
-VMs being cold migrated can never have data loss. For VMs being used for “Try Before Commit” VMs migrated back as part of failure recovery do not get the opportunity to synchronize the On-Premise with the latest data On-Cloud. Since On-Premise is synchronized in RTO/RPO interval, such VMs will have data till last RTO/RPO flush. 
+VMs being cold migrated can never experience data loss. Conversely, VMs utilizing “Try Before Commit” that are migrated back as part of failure recovery do not get the opportunity to synchronize the on-premises environment with the latest cloud data. Since the on-premises environment is synchronized using an RTO/RPO interval, these VMs will hold data since the last RTO/RPO flush. 
 
-Since the RTO/RPO flushes happen through point in time snapshot of the data on On-Cloud, this data is expected to be crash consistent. Modern applications and file systems are designed to deal with crashes and so, they should be able to use this data On-Premise.
+Since the RTO/RPO flushes occur through point-in-time snapshots of the cloud data, this data is expected to be crash consistent. Modern applications and file systems are designed to withstand crashes. Therefore, they should be able to use this data on-premises.
 
-In the extreme case, if the OS or the application is not able to utilize the data, the user has a choice to restore the data from migrate time snapshot, with the caveat that it causes all data while the VM was on On-Cloud, to be lost.
+In an extreme case, if the OS or the application is incapable of utilizing the data, the data can be restored from the migrate time snapshot, with the caveat that it causes the loss of all data that was written while the VM was in the cloud.
 
 
 ## HDM Failure Recovery
@@ -680,12 +559,10 @@ In the extreme case, if the OS or the application is not able to utilize the dat
 
 ### Nature of Failures
 
-Failures can be of various types. HDM mainly deals with the following types of errors
+While there can be a wide range of failures, HDM mainly deals with the following:
 
-
-
-*   HDM Component Failures
-    *   Appliance Restart
+*   HDM Component Failures:
+    *   Appliance restart
     *   HDM component VM restart
     *   HDM individual component failure due to software issues 
 *   Network failures
@@ -698,224 +575,177 @@ Failures can be of various types. HDM mainly deals with the following types of e
 
 ### Single Component Failure
 
-The impact of the failure can result in failing a single HDM component. HDM is designed to recover from it automatically. The following scenarios are possible:
+The impact of the failure can result in the failure of a single HDM component, which HDM is designed to recover from automatically. The following scenarios are possible:
 
+#### Failure When There is No Activity
 
-#### Failure when there is No Activity
+Even when the system is idle following a successful deployment, a component failure may cause it to go from “Healthy” to “Degraded”. The HDM system health will be in the degraded state. It can be viewed in vCenter, as well as the appliance (See the _System Health_ section for details).
 
-Even when the system is idle after a successful deployment, it may go from “Healthy” to “Degraded”, due to a component failure. 
+*   vCenter Events will list a new event for a component failure
 
-The HDM system health will be in the degraded state can be viewed in vCenter and Appliance (See System Health section for details).
-
-
-
-*   Also, the vCenter Events would have new event for component failure
-
-HDM would attempt to recover from the failure and bring the system back to a “Healthy” state. Here is a depiction of the recovery process. It shows three important stages:
-
-
+HDM will attempt to recover from the failure and bring the system back to a “Healthy” state. There are three important stages of the recovery process:
 
 *   Failure detection and moving to degraded state
 *   HDM system repair
 *   Healthy state
 
-    
-
 <p id="gdcalert46" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert47">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
 
 ![drawing](https://docs.google.com/drawings/d/12345/export/png?classes=content-img)
 
-
-After recovery, a message is logged in vCenter Events:
-
-
+Following recovery, the following message is logged into vCenter Events:
 
 <p id="gdcalert47" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image46.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert48">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
 
 ![alt_text](images/image46.png?classes=content-img?classes=content-img "image_tooltip")
 
 
-
 #### Failure during Migrations
 
-If a failure occurs while the migration operation is going on. HDM will go in degraded state. HDM will repair itself and will come back to a healthy state. The ongoing migration operation may fail and those VMs can be migrated back as part of this recovery. Here is a depiction of the recovery process :
-
-
-    
+If a failure occurs during the migration operation, HDM will enter a degraded state. HDM will repair itself and will return to a healthy state. The ongoing migration operation may fail and those VMs can be migrated back as part of this recovery. The recovery process will look like this:
 
 <p id="gdcalert48" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert49">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![drawing](https://docs.google.com/drawings/d/12345/export/png?classes=content-img)
 
-For redundant components like HDM message gateway, recovery is complete only when the required level of redundancy is restored. If a migration operation is attempted, before the recovery is complete, it will fail.
+For redundant components like HDM message gateway, recovery is complete only when the required level of redundancy is restored. If a migration operation is attempted before the recovery is complete, it will fail.
 
 
 #### Failure when there are Migrated VMs
 
-Out of all VMs already migrated to the On-Cloud some might get affected due to a component failure. This would result in those VMs getting migrated back from On-Cloud to the On-Premise. The VMs would have data till the last RTO/RPO flush. 
+Some VMs already migrated to the cloud may be affected by a component failure. This will result in those VMs getting migrated back from the cloud to the on-premises environment. The VMs will hold data since the last RTO/RPO flush. 
 
-Here is a depiction of the recovery process :
-
-
-    
+The recovery process will look like this:
 
 <p id="gdcalert49" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert50">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
 
 ![drawing](https://docs.google.com/drawings/d/12345/export/png?classes=content-img)
 
 **Note: **
-
-
-
-1. As part of failure recovery, if the migrated back VMs can be booted successfully, they would be in HDM_RECOVERY_SUCCESS pool, else they would be placed in HDM_RECOVERY_FAILED pool. 
-2. There are cases where HDM is not able to do the auto repair of its failed component. This could be due to a software issue or the error condition is permanent (example permanent network or storage disconnect). In such cases users can issue HDM Reset to come out of the situation and start over again. See the TroubleShooting section for more details.
+1. As part of the failure recovery, if the migrated back VMs can be booted successfully, they will appear in the _HDM_RECOVERY_SUCCESS_ pool. Otherwise, they will be placed in the _HDM_RECOVERY_FAILED_ pool. 
+2. There are cases where HDM is not able to perform the auto repair of its failed components. This could be due to either a software issue, or the error condition is permanent (e.g., permanent network or storage disconnect). In these cases, an HDM reset can be issued to recover fro the error and restart the entire process. See the _Troubleshooting_ section for more details.
 
 
 #### Recovery Resource Pools
 
-VMs migrated back as part of failure recovery are kept in recovery resource pools. These are of two types
+VMs migrated back as part of failure recovery are kept in recovery resource pools. There are two types:
 
 
 ##### **HDM_RECOVERY_SUCCESS **
 
-This resource pool hosts the VMs which have been migrated back as part of failure handling and are likely to get successfully booted in On-Premise vCenter. They may have some data loss equivalent to the last RTO/RPO flush cycle (default 20 minutes).
-
-
-    
+This resource pool hosts the VMs that have been migrated back as part of failure handling, and are likely to be successfully booted in the on-premises vCenter. They may have some data loss equivalent to the last RTO/RPO flush cycle (default 20 minutes).
 
 <p id="gdcalert50" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image47.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert51">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
 
 ![alt_text](images/image47.png?classes=content-img "image_tooltip")
 
 
-
 ##### **HDM_RECOVERY_FAILED **
 
-This resource pool hosts the VMs which have been migrated back as part of failure handling but are likely not to have consistent data. Such VMs will require to restore their data from the migration time snapshot.
+This resource pool hosts the VMs that have been migrated back as part of failure handling, but are unlikely to have consistent data. These VMs will be required to restore their data from the migration time snapshot.
 
-**Note: **Restoring data from the migrate time snapshot would mean the data loss for the entire duration for which the VM was on On-Cloud.
+**Note: **Restoring data from the migrate time snapshot will cause the loss of all data written while the VM was in the cloud.
 
 
 ##### **Recovering VMs from the HDM Recovery Pools**
 
-User should perform the following steps, if there are VMs in recovery resource pools:
-
-
+The following steps should be followed to recover VMs from recovery resource pools:
 
 1. Power on the VM and verify the sanity of the data. 
-2. If the power on and data sanity checks passed
+2. If the power on and data sanity checks pass:
     1. delete the HDM migration time snapshot.
-    2. Move the VM to the resource pool it originally belonged to before the migration.
-3. If the power on or the data sanity failed
-    3. Restore the data from migrate time snapshot
-    4. Delete the HDM migrate time snapshot
-    5. Move the VM to the resource pool it originally belonged before migration
+    2. Move the VM to the resource pool where it originally resided prior to the migration.
+3. If the power on or the data sanity failed:
+    3. Restore the data from the migrate time snapshot.
+    4. Delete the HDM migrate time snapshot.
+    5. Move the VM to the resource pool where it originally resided prior to the migration.
     6. Power on the VM 
 
-**Note: **Not moving the VMs to their original resource pool would cause the subsequent migration and migration back of these VMs happening from the HDM recovery pool only. 
+**Note: **Failure to move the VMs to their original resource pool will cause their subsequent migration and migration back to only occur from the HDM recovery pool. 
 
 
 ### Multiple Component Failure
 
-During the process of recovery from failure of a single component, if another component also fails, HDM would detect the failure and notify the user through the vCenter events. This also applies to the case of simultaneous multiple HDM component hosts restart. HDM components may not fully recover and migrated VMs may not get rolled back. 
+If a second component fails while the system is recovering from the failure of a single component, HDM will detect the failure send a notification through vCenter events. This will also be the case if multiple HDM component hosts restart simultaneously. HDM components may not fully recover and migrated VMs may not migrate back. 
 
-Multiple component failures may require HDM Reset to restore the system.
+Multiple component failures may require an HDM reset to restore the system.
 
 
 ### HDM Appliance Restart
 
-Restarting the Appliance does not impact migrated VMs and it does not impact future migration operations as well.
+Restarting the appliance does not impact migrated VMs, nor does it impact future migration operations. Operations in progress during the appliance restart will be affected as follows:
 
-Operations in progress during the appliance restart will be affected in the following way.
-
-
-
-1. ARM cold migration of a VM.
-    *   The ongoing bulk transfer will fail and the operation will be retried from the beginning.
-2. VM migration to On-Cloud would resume after restart and complete successfully
-3. ARM warm migration
-    *   If the appliance reboot happened during the VM compute migrate of the flow, both the migrate and bulk transfer will fail.
-    *   If the appliance reboot was after the successful VM compute migrate, only the bulk transfer will be retried.
-4. VMs running on the cloud
-    *   Will continue to run.
-    *   Some operations like RTO/RPO periodic flush will resume after the reboot completes
-5. SQS heartbeat
-    *   SQS heartbeats will be missing for the duration of the reboot for about 2 minutes
-6. vCenter plugin
-    *   vCenter plugin will display the message that it cannot connect with appliance for this duration.
+1. ARM cold migration of a VM: The ongoing bulk transfer will fail and the operation will be retried from the beginning.
+2. VM migration to the cloud will resume after restart and complete successfully
+3. ARM warm migration:
+    *   If the appliance reboot occurs while migrating the compute VM, the migration and the bulk transfer will both fail.
+    *   If the appliance reboot occurs after the successful migration of the compute VM, only the bulk transfer will be retried.
+4. VMs running in the cloud will continue to run. Some operations such as RTO/RPO periodic flush will resume after the reboot completes.
+5. SQS heartbeats will be missing throughout the duration of the reboot, which should last approximately two minutes.
+6. vCenter plugin will display a message throughout the duration of the reboot, that it cannot connect with the appliance.
 
 
 ### HDM Component VM Restart
 
-The HDM deployment consists of a set of  microservices running as containers in VM which are deployed On-Premise as well as On-Cloud. Depending on the deployment type, we will have all the below VMs or a subset of them
-
-
+An HDM deployment consists of a set of microservices running as containers in a VM that are deployed on-premises, as well as in the cloud. Depending on the deployment type, some or all of the following VMs will be included:
 
 *   HDM_Cloud_Manager
 *   HDM_Cloud_Cache
 *   HDM_OnPrem_Manager
 *   HDM_OnPrem_ESXi_Manager
 
- 
+Rebooting any of these VMs triggers the following repair actions:
 
-When either of these are rebooted the repair actions are triggered:
-
-
-
-1. All affected VMs as in single component failure case are migrated back to the last RTO/RPO state.
-2. A vCenter event is logged specifying a “Docker reboot” has occurred specifying the particular VM which has reboot.
+1. All affected VMs are migrated back to the last RTO/RPO state.
+2. A vCenter event is logged, communicating that a “Docker reboot” has occurred on the identified VM.
 3. All components within that VM are repaired.
 4. All future operations involving the repaired components should work correctly.
 
 
 ### WAN Network Disconnect
 
-The WAN network disconnect may result in HDM components losing the network connectivity with the central heartbeat monitoring entity. 
+The WAN network disconnect may result in HDM components losing network connectivity with the central heartbeat monitoring entity. 
 
 
 #### Transient Network Failure
 
-HDM can recover from short network outages by retrying ongoing operations. Outages less than 5 minutes are considered short outages.
+HDM can recover from short network outages (those lasting less than 5 minutes) by retrying ongoing operations.
 
 
 #### Permanent Network Failure
 
-If the network outage is for extended periods of time(greater than 5 minutes), the HDM recovery may not succeed and HDM Reset may be required.
+If the network outage lasts for an extended period of time (greater than 5 minutes), the HDM recovery may not succeed and an HDM reset may be required.
 
 
 ### ESXii Host Restart
 
-If On-Premise ESXi host is restarted or the PRAAPA iofilter daemon service is restarted, the ongoing migrations will fail, VMs already migrated to On-Cloud, will be migrated back. Also, new VM migration will fail. HDM reset and re-deployment of HDM On-Premise and On-Cloud components is required before retrying the migration operation.
+If an on-premises ESXi host is restarted or the PRAAPA iofilter daemon service is restarted, the ongoing migrations will fail, VMs already migrated to the cloud will be migrated back, and new VM migrations will fail. An HDM reset and re-deployment of HDM on-premises and cloud components will be required prior to retrying the migration operation.
 
 
 ### System Failures
 
-Failures like storage or memory, may result in either some HDM component failures or their impact could be limited to few operations or IOs. We have already discussed the single and multiple component failures. If IOs or some operations fail, such failures are dealt with by retrying them.
+Failures such as storage or memory may result in some HDM component failures, or their impact could be limited to few operations or I/Os. If I/Os or some operations fail, they will be retried.
 
 
 #### Boot Failure During Migrate
 
-Guest VM boot may fail due to reasons like vmware tools not coming up early enough to detect successful boot. HDM retries (in this case reboot) the operation a few times. 
+A guest VM boot may fail if VMware tools are not available early enough to detect the successful boot. HDM will retry (or, in this case, reboot) the operation a few times. 
 
-**Note**: Multiple retries can delay the boot and in such cases, the user may have to wait till 30 minutes for the migration operation to complete.
+**Note**: Multiple retries can delay the boot. In this case, wait 30 minutes for the migration operation to complete.
 
 
 #### Bulk Transfer Failure During ARM Migration
 
-If the bulk transfer failed during cold migration, the operation is retried a few times. Errors such as transient network issues can be dealt with this mechanism.
+If the bulk transfer fails during cold migration, the operation will be retried a few times. Errors such as transient network issues can be dealt with this mechanism.
 
-**Note:** All retries happen for a fixed number of times. If the retries exhaust, the operation is marked as failed.
+**Note:** All retries will be attempted a fixed number of times. Once the number of retries has been exhausted, the operation will be marked as _failed_.
 
-If a snapshot of a VM has been bulk transferred to On-Cloud and a failure occurs when sync to it is in progress through the cloud cache, the user has to explicitly delete the bulk transferred VM from the On-Cloud. The HDM failure handling does not automatically delete the bulk transferred VM.
+If a VM snapshot has been bulk transferred to the cloud and a failure occurs while the cloud cache syncs with it, the portion that has already transferred to the cloud must be explicitly deleted. HDM failure handling does not automatically delete the bulk transferred VM.
 
 
 ### Unresolved Issues
 
-**Refer to the Troubleshooting Guide in case the failure issues are not resolved. The failure might have been caused due to one of the known product issues. **
+**Refer to the Troubleshooting Guide if failure issues are not resolved. The failure might have been caused by a known product issue. **
 
-**Finally, seeking help from PrimaryIO support may be required, refer to the Install Guide for the details. **
+**PrimaryIO support may be required. Refer to the Install Guide for the details. **
