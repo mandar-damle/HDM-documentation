@@ -589,25 +589,21 @@ HDM will attempt to recover from the failure and bring the system back to a “H
 *   HDM system repair
 *   Healthy state
 
-<p id="gdcalert46" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert47">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-![drawing](https://docs.google.com/drawings/d/12345/export/png?classes=content-img)
+![drawing](images/image6.png?classes=content-img)
 
 Following recovery, the following message is logged into vCenter Events:
 
-<p id="gdcalert47" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image46.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert48">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-![alt_text](images/image46.png?classes=content-img?classes=content-img "image_tooltip")
+![alt_text](images/image2.png?classes=content-img?classes=content-img "image_tooltip")
 
 
 #### Failure during Migrations
 
 If a failure occurs during the migration operation, HDM will enter a degraded state. HDM will repair itself and will return to a healthy state. The ongoing migration operation may fail and those VMs can be migrated back as part of this recovery. The recovery process will look like this:
 
-<p id="gdcalert48" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert49">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-
-![drawing](https://docs.google.com/drawings/d/12345/export/png?classes=content-img)
+![drawing](images/image5.png?classes=content-img)
 
 For redundant components like HDM message gateway, recovery is complete only when the required level of redundancy is restored. If a migration operation is attempted before the recovery is complete, it will fail.
 
@@ -618,9 +614,7 @@ Some VMs already migrated to the cloud may be affected by a component failure. T
 
 The recovery process will look like this:
 
-<p id="gdcalert49" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert50">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-![drawing](https://docs.google.com/drawings/d/12345/export/png?classes=content-img)
+![drawing](images/image7.png?classes=content-img)
 
 **Note: **
 1. As part of the failure recovery, if the migrated back VMs can be booted successfully, they will appear in the _HDM_RECOVERY_SUCCESS_ pool. Otherwise, they will be placed in the _HDM_RECOVERY_FAILED_ pool. 
@@ -636,9 +630,7 @@ VMs migrated back as part of failure recovery are kept in recovery resource pool
 
 This resource pool hosts the VMs that have been migrated back as part of failure handling, and are likely to be successfully booted in the on-premises vCenter. They may have some data loss equivalent to the last RTO/RPO flush cycle (default 20 minutes).
 
-<p id="gdcalert50" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image47.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert51">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-![alt_text](images/image47.png?classes=content-img "image_tooltip")
+![alt_text](images/image3.png?classes=content-img "image_tooltip")
 
 
 ##### **HDM_RECOVERY_FAILED **
