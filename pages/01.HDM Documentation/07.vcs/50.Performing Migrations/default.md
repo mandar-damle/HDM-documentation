@@ -729,7 +729,7 @@ A guest VM boot may fail if VMware tools are not available early enough to detec
 
 #### Bulk Transfer Failure During ARM Migration
 
-If the bulk transfer fails during cold migration, the operation will be retried a few times. Errors such as transient network issues can be dealt with this mechanism.
+If the bulk transfer fails during cold migration, the operation will be retried a few times. Errors such as transient network issues can be dealt with using this mechanism.
 
 **Note:** All retries will be attempted a fixed number of times. Once the number of retries has been exhausted, the operation will be marked as _failed_.
 
