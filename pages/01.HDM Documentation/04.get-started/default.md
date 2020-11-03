@@ -8,5 +8,5 @@ If you are evaluating the HDM technology, the collection of resources in this se
 The Hands on Lab guide for IBM Cloud for VMware Solutions, VMware Cloud Director (VCD) is in the section below.
 
 If you are ready to deploy HDM into your environment, use one of the deployment guides listed below that matches your environment:
-* [VMware Cloud Director (VCD) Deployment](/hdm%20documentation/vcd#vmware-cloud-director)
-* [VMware Cloud Services (VCS) Deployment](/hdm%20documentation/vcs)
+* [IBM Cloud for VMware Solutions Shared (VCD)](/hdm%20documentation/vcd#vmware-cloud-director)
+* [IBM Cloud for VMware Solutions Dedicated (VCS)](/hdm%20documentation/vcs)
