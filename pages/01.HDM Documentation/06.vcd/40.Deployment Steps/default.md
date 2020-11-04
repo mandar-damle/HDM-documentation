@@ -97,7 +97,7 @@ _Figure 8b: Configuring gateway, NTP and default gateway_
 #### Power on the Appliance
 
 Complete the rest of the wizard and wait for the deployment to complete. Then, use vCenter to power on the appliance.
-
+> **Please note that the appliance can take between 5 to 10 minutes to boot depending on the underlying datastore's performance.**
 
 #### Enable VMware HA on the Appliance
 
