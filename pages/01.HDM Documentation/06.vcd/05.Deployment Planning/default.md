@@ -120,7 +120,7 @@ need to
 * The Organization ID can be identified from the location in  _Figure 1_
 
 _Figure 1: Screenshot show how to identify Organization ID_
-![Organization Id](images/Organization-id.png "Screenshot showing how to find organization id") 
+![Organization Id](images/Organization-id.png?classes=content-img "Screenshot showing how to find organization id") 
 
 
 **Create new user with admin priveledges**
@@ -134,10 +134,10 @@ administrator privileges and use it in rest of the document.
 
 
 __Figure 2: Setting role for created user to **Organziation Administrator**__
-![](images/organization-administrator.png)
+![](images/organization-administrator.png?classes=content-img)
 
 __Figure 3: Set the quota to unlimited__
-![](images/quota.png)
+![](images/quota.png?classes=content-img)
 
 From the steps above please capture the information in the table below. 
 The username is the newly created user with admin privileges. You will need 
