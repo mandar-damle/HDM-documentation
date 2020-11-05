@@ -194,7 +194,7 @@ Estimated time 10 minutes
    <td>
 <ul>
 
-<li>Select _Add vCenter_
+<li>Select <b>Add vCenter</b>
 </li>
 </ul>
    </td>
@@ -216,7 +216,7 @@ Estimated time 10 minutes
 
 <li>Provide vCenter credentials
 
-<li>Select _Add_ to add vCenter
+<li>Select <b>Add</b> to add vCenter
 </li>
 </ul>
    </td>
