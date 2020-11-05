@@ -1,6 +1,6 @@
 ---
 title: 'VCS Hands-on Lab'
-published: false
+published: true
 ---
 
 This Hands-on Lab is designed to quickly enable you to set up 
