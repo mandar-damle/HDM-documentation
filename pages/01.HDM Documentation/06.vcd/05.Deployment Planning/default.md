@@ -144,6 +144,7 @@ The username is the newly created user with admin privileges. You will need
 this part of the cloud deployment.
 
 |vCloud Director FQDN| _ |
+| :--| --- |
 |Organization Name | _ |
 |Username  | _ |
 |Password | _ |
