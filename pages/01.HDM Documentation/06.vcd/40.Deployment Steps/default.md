@@ -97,7 +97,7 @@ _Figure 8b: Configuring gateway, NTP and default gateway_
 #### Power on the Appliance
 
 Complete the rest of the wizard and wait for the deployment to complete. Then, use vCenter to power on the appliance.
-
+> **Please note that the appliance can take between 5 to 10 minutes to boot depending on the underlying datastore's performance.**
 
 #### Enable VMware HA on the Appliance
 
@@ -151,7 +151,7 @@ _Figure 10: Viewing the On-Premises vCenter on the HDM Appliance_
 
 
 
-1. Select _Register** **_to register the HDM plug-in to on-premises vCenter.
+1. Select  **Register** to register the HDM plug-in to on-premises vCenter.
 2. Logout, then login twice from the vCenter for the plug-in installation to complete. Successful installation should add an HDM icon to the vCenter home page (figure 11). Sometimes, multiple login/logout cycles may be required for this step to complete.
 
 _Figure 11: HDM Icon on the vCenter Home Page_

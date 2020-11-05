@@ -4,6 +4,8 @@ title: 'Org VDC System and Network Configuration'
 
 This section, describes how to configure the VDC required for HDM deployment.
 
+>> **To perform the configuration steps in this section can take from 30 to 60 minutes**
+
 # Network Configuration
 
 #### <a name="create-routed-network"> Step 1: Create Routed Network UPLINK_WAN_NETWORK</a>
