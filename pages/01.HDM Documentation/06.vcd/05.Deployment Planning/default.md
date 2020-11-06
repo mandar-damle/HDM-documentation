@@ -123,14 +123,13 @@ _Figure 1: Screenshot show how to identify Organization ID_
 ![Organization Id](images/Organization-id.png?classes=content-img "Screenshot showing how to find organization id") 
 
 
-**Create new user with admin priveledges**
+**Create new user with Organization Administrator priveleges**
 
-We do not recommend using the org administrator credentials directly
-while deploying HDM. Instead we recommend that the steps to create a new user with 
-administrator privileges and use it in rest of the document.
+We recommend the creation of a new organization administrator for HDM integration.
+We refer to this administrator in the rest of the documentation.
 
 1. Create the new admin user using procedure [here to create new user.](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Tenant-Portal-Guide/GUID-1CACBB2E-FE35-4662-A08D-D2BCB174A43C.html) 
-1. Make sure you give it the **Organization Administrator* role see _Figure 2._
+1. Make sure you give it the **Organization Administrator** role see _Figure 2._
 
 
 __Figure 2: Setting role for created user to **Organziation Administrator**__
