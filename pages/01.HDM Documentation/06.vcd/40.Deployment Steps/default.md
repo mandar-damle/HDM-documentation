@@ -152,7 +152,9 @@ _Figure 10: Viewing the On-Premises vCenter on the HDM Appliance_
 
 
 1. Select  **Register** to register the HDM plug-in to on-premises vCenter.
-2. Logout, then login twice from the vCenter for the plug-in installation to complete. Successful installation should add an HDM icon to the vCenter home page (figure 11). Sometimes, multiple login/logout cycles may be required for this step to complete.
+2. **Logout and login twice** from the vCenter for the plug-in installation to complete. Successful installation should add an HDM icon to the vCenter home page (figure 11). Sometimes, multiple login/logout cycles may be required for this step to complete.
+
+>> __You might have to logout/login from the web client at least two times or more before the HDM plugin in visible in the vCenter__
 
 _Figure 11: HDM Icon on the vCenter Home Page_
 
@@ -390,6 +392,20 @@ _Figure 27: Network Mapping_
 
 
 10. To submit the request and initiate the cloud deployment, select _FINISH_. This will create deployment tasks for the cloud components, which can be monitored in vCenter Tasks. The progress can also be seen in the HDM Clouds view (figure 29).
+
+>>> **Attention**: 
+>>> After you submit the request, the cloud deployment can take from 45 minutes to 
+>>> over an hour, depending on storage and network performance. Please note
+>>> that the progress bar displayed during this process is not linear and 
+>>> specific steps take longer, resulting in the progress bar spending
+>>> longer time at a certain percentage.
+>>>
+>>> For the Cloud deployment task, it takes about 40-50 minutes at 1%.
+>>>
+>>> Under the Organization VDC upload ISO task, stays at 50% for
+>>> about 25 minutes. 
+>>>
+>>> Under the Organization VDC upload OVF task, lingers at 1% for about 20 minutes.
 
 _Figure 28: Summary and Request Submission_
 
