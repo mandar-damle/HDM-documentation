@@ -18,27 +18,21 @@ This network will be connected to the edge gateway. Cross-WAN communications bet
 1. Select _Network_ -> _NEW_ to create a new network.
 ![Create new network](images/create-new-network.png?classes=content-img "Create new network")
 1. Create a new network and select Routed Network Type
-
 ![alt_text](images/image4.png?classes=content-img "image_tooltip")
 
 1. Provide the name “UPLINK_WAN_NETWORK” and Gateway CIDR for the network. Note the CIDR; this will be required when creating the VPN connection between on-premises and the edge gateway in the cloud.
-
 ![alt_text](images/image3.png?classes=content-img "image_tooltip")
 
 1. Select the edge gateway 
-
 ![alt_text](images/image1.png?classes=content-img "image_tooltip")
 
 1. Specify static-ip pool of at least 20 IP addresses
-
 ![alt_text](images/image8.png?classes=content-img "image_tooltip")
 
 1. Add DNS records if required
-
 ![alt_text](images/image12.png?classes=content-img "image_tooltip")
 
 1. Review, then select "Finish" to create the routed network
-
 ![alt_text](images/image14.png?classes=content-img "image_tooltip")
 
 #### <a name="create-isolated-network">Step 2: Create Isolated Network HDM_INTERNAL_NETWORK</a>
