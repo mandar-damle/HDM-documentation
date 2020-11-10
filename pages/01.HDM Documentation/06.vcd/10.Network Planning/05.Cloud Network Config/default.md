@@ -12,29 +12,34 @@ This section, describes how to configure the VDC required for HDM deployment.
 
 This network will be connected to the edge gateway. Cross-WAN communications between on-premises and cloud will be routed through this network for the HDM Appliance. IPsec tunnels [step 3](#configure-vpn-tunnel-edge) will be configured to this network to complete the network configuration.
 
+1. Select the _Virtual Data Center_ that will be the target of migration.
+![Select ORG VDC](images/select-vdc.png?classes=content-img "Select Org VDC")
+
+1. Select _Network_ -> _NEW_ to create a new network.
+![Create new network](images/create-new-network.png?classes=content-img "Create new network")
 1. Create a new network and select Routed Network Type
 
-![alt_text](images/image4.png "image_tooltip")
+![alt_text](images/image4.png?classes=content-img "image_tooltip")
 
-2. Provide the name “UPLINK_WAN_NETWORK” and Gateway CIDR for the network. Note the CIDR; this will be required when creating the VPN connection between on-premises and the edge gateway in the cloud.
+1. Provide the name “UPLINK_WAN_NETWORK” and Gateway CIDR for the network. Note the CIDR; this will be required when creating the VPN connection between on-premises and the edge gateway in the cloud.
 
-![alt_text](images/image3.png "image_tooltip")
+![alt_text](images/image3.png?classes=content-img "image_tooltip")
 
-3. Select the edge gateway 
+1. Select the edge gateway 
 
-![alt_text](images/image1.png "image_tooltip")
+![alt_text](images/image1.png?classes=content-img "image_tooltip")
 
-4. Specify static-ip pool of at least 20 IP addresses
+1. Specify static-ip pool of at least 20 IP addresses
 
-![alt_text](images/image8.png "image_tooltip")
+![alt_text](images/image8.png?classes=content-img "image_tooltip")
 
-5. Add DNS records if required
+1. Add DNS records if required
 
-![alt_text](images/image12.png "image_tooltip")
+![alt_text](images/image12.png?classes=content-img "image_tooltip")
 
-6. Review, then select "Finish" to create the routed network
+1. Review, then select "Finish" to create the routed network
 
-![alt_text](images/image14.png "image_tooltip")
+![alt_text](images/image14.png?classes=content-img "image_tooltip")
 
 #### <a name="create-isolated-network">Step 2: Create Isolated Network HDM_INTERNAL_NETWORK</a>
     
@@ -56,20 +61,30 @@ This network will be created for HDM Appliance communications and for migrating 
 
 ![alt_text](images/image9.png "image_tooltip")
 
-#### <a name="configure-vpn-tunnel-edge"> Step 3: Configure VPN tunnel with Edge Gateway </a>
+### <a name="configure-vpn-tunnel-edge"> Step 3: Configure VPN tunnel with Edge Gateway </a>
 
 Create an IPSec tunnel between the organization's edge gateway and the on-premises datacenter. To complete the VPN setting the following information will be required:
 
-*   Local ID - Edge gateway tenant external network IP 
-*   Local Endpoint - Edge gateway tenant external network IP
+*   Local ID - Edge gateway tenant external network IP (see _Figure 1_)
+*   Local Endpoint - Edge gateway tenant external network IP (see _Figure 1_)
 *   Local Subnets - Routed network subnet where HDM appliances will be deployed ([Create Routed Network](#create-routed-network))
 *   Peer ID - Public IP for the on-premises WAN network
 *   Peer Endpoint - Public IP for the on-premises WAN network
 *   Peer Subnets - Subnet of the on-premises WAN network where HDM appliances will be deployed.
 
-### Edge gateway VPN config 
-
+_Figure 1: Finding tenant external network IP_
+![Find external IP](images/external-ip.png?classes=content-img "Find external IP")
+#### Edge gateway VPN config 
+To get to the edge VPN configuration page.
+1. Select the services on the edge gateway. 
+![Select services](images/select-service.png?classes=content-img "select services")
+1. Select add VPN
+![Select add VPN](images/select-add-vpn.png?classes=content-img "select add vpn")
+1. Make the settings as recorded earlier.
 ![alt_text](images/image15.png "image_tooltip")
+1. For the VPN configuration options make the exact settings as shown in *Figure 2*.
+__Figure 2: VPN configuration options__
+![VPN configuration options](images/vpn-settings.png?classes=content-img "VPN config")
 
 ### Recommended firewall rules
 
