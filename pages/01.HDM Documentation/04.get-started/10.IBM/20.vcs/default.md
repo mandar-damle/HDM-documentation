@@ -32,7 +32,7 @@ The on-premises configuration is now complete. The target cloud can now be confi
 1. Set up networking on the target VCS cloud
    1. In the step below, be sure to make the configurations using DHCP.
    1. Please follow the steps in [IPSec tunnel configuration](http://docs.primaryio.com/hdm%20documentation/vcs/network%20planning/ipsec%20tunnel#planning-and-preparation-single-network)
-   1. The network created on cloud will be referred to as the cloud Single Network.
+   1. The <a name="network">network created</a> on cloud will be referred to as the cloud Single Network.
    1. After the IPSec tunnel is complete, the networks will be configured 
    on the target cloud and an IPSec tunnel will be connect to it.
    1. Set up DHCP service on the cloud Single Network.
@@ -194,7 +194,7 @@ Estimated time 10 minutes
    <td>
 <ul>
 
-<li>Select _Add vCenter_
+<li>Select <b>Add vCenter</b>
 </li>
 </ul>
    </td>
@@ -216,7 +216,7 @@ Estimated time 10 minutes
 
 <li>Provide vCenter credentials
 
-<li>Select _Add_ to add vCenter
+<li>Select <b>Add</b> to add vCenter
 </li>
 </ul>
    </td>
@@ -232,7 +232,7 @@ Estimated time 10 minutes
 <img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image18.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
-   <td>Register the vCenter plugin by selecting the _Register_ button.
+   <td>Register the vCenter plugin by selecting the <b>Register</b> button.
    </td>
   </tr>
 </table>
@@ -267,7 +267,7 @@ Navigate to the Licensing page on the HDM vCenter Plugin
 
 <li>The first time you navigate to HDM it can take approximately five minutes to load
 
-<li>On the Licensing Tab, select _Add License_
+<li>On the Licensing Tab, select <b>Add License</b>
 
 <li>Add the license key received via email.
 </li>
@@ -291,11 +291,11 @@ Navigate to the Licensing page on the HDM vCenter Plugin
    <td>
 <ul>
 
-<li>Select _Administration_ followed by _Configuration_
+<li>Select <b>Administration</b> followed by <b>Configuration</b>
 
 <li>Choose the cluster you want to install on
 
-<li>Select _Install_
+<li>Select <b>Install</b>
 </li>
 </ul>
    </td>
@@ -387,7 +387,7 @@ Navigate to the Licensing page on the HDM vCenter Plugin
    <td>
 <ul>
 
-<li>Choose _IBM Cloud on VMware Solutions Dedicated_
+<li>Choose <b>IBM Cloud on VMware Solutions Dedicated</b>
 
 <li>Add the required details
 </li>
@@ -398,21 +398,6 @@ Navigate to the Licensing page on the HDM vCenter Plugin
 
 
 
-<table>
-  <tr>
-   <td>
-
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image21.png" width="" alt="alt_text" title="image_tooltip">
-
-   </td>
-   <td>
-<ul>
-<li>For parts one and two, choose <em>DHCP</em>
-</li>
-</ul>
-   </td>
-  </tr>
-</table>
 
 
 
@@ -428,16 +413,30 @@ Navigate to the Licensing page on the HDM vCenter Plugin
    </td>
    <td>
 <ul>
-
-<li> Set the WAN subnet for on-premises and the cloud.
-<li> Set the gateway for WAN on both sides.
-<li> DON'T skip this step.
+<li> For parts one and two, choose <em>DHCP</em>
+<li> Skip these details by going to the next screen.
 </li>
 </ul>
    </td>
   </tr>
 </table>
 
+<table>
+  <tr>
+   <td>
+
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/ESXi Route.png" width="" alt="alt_text" title="image_tooltip">
+
+   </td>
+   <td>
+<ul>
+<li>Set the ESXi subnet.
+<li>Set the gateway IP for the single network created for <a href="#network">cloud configuration</a>
+</li>
+</ul>
+   </td>
+  </tr>
+</table>
 
 
 <table>
@@ -449,8 +448,6 @@ Navigate to the Licensing page on the HDM vCenter Plugin
    </td>
    <td>
 <ul>
-
-<li>Use the network configuration captured in [Appendix B]
 
 <li>Map the on-premises environment to the cloud network.
 

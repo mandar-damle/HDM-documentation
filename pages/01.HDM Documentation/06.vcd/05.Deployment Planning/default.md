@@ -104,3 +104,46 @@ _Table 1: Resource Requirements_
 1. The names _ESXMgr_ and _CloudCache_ are abbreviated names for the VMs containing HDM components. These are created as part of the HDM deployment.
 2. The N in _Cluster (N)_ refers to the number of nodes in the cloud cluster.
 
+
+### Prepare Cloud for Deployment
+
+To deploy the HDM solution on  _IBM Cloud for VMware Solutions Shared_ you would
+need to
+
+* Get the _Organization Administrator_ access credentials to the VCD tenant portal.
+* Identify the organization ID and save for later use.
+* Create a new user with administrator privilege.
+
+**Identify the organization ID**
+
+* Login to the tenant portal
+* The Organization ID can be identified from the location in  _Figure 1_
+
+_Figure 1: Screenshot show how to identify Organization ID_
+![Organization Id](images/Organization-id.png?classes=content-img "Screenshot showing how to find organization id") 
+
+
+**Create new user with Organization Administrator privilege**
+
+We recommend the creation of a new organization administrator for HDM integration.
+We refer to this administrator in the rest of the documentation.
+
+1. Create the new Org administrator user using procedure [here to create new user.](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Tenant-Portal-Guide/GUID-1CACBB2E-FE35-4662-A08D-D2BCB174A43C.html) 
+1. Make sure you give it the **Organization Administrator** role see _Figure 2._
+
+
+__Figure 2: Setting role for created user to **Organziation Administrator**__
+![](images/organization-administrator.png?classes=content-img)
+
+__Figure 3: Set the quota to unlimited__
+![](images/quota.png?classes=content-img)
+
+From the steps above please capture the information in the table below. 
+The username is the newly created user with administrator privileges. You will need 
+this part of the cloud deployment.
+
+|vCloud Director FQDN| _ |
+| :--| --- |
+|Organization Name | _ |
+|Username  | _ |
+|Password | _ |
