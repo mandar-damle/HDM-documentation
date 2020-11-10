@@ -96,7 +96,6 @@ Estimated time 5 minutes
 <li>Perform the steps as directed by the UI.
 <li>Select <em>Single Network</em> created <a href="#single">during lab setup</a>.
 <li> Select IP Allocation as DHCP.
-<li> 
 </li>
 </ul>
    </td>
@@ -381,7 +380,7 @@ Navigate to the Licensing page on the HDM vCenter Plugin
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image10.jpg" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image10.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -526,7 +525,7 @@ Before migration is triggered, ensure that the health of HDM componentes is gree
    <td>
 
 <img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image5.png" width="" alt="alt_text" title="image_tooltip">
-
+<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/cold-migration.png" width="" alt="alt_text" title="image_tooltip">
    </td>
    <td>
 <ul>
