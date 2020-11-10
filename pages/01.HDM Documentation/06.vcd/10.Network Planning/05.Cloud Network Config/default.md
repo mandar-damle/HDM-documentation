@@ -77,14 +77,12 @@ To get to the edge VPN configuration page.
 1. Make the settings as recorded earlier.
 ![alt_text](images/image15.png "image_tooltip")
 1. For the VPN configuration options make the exact settings as shown in *Figure 2* and enter the exactly same values at premises VPN configuration.
-```
-Encryption Alogrithm:   AES256
-Authentication:         PSK
-Diffie-Hellman Group:   DH5
-Digest Algorithm:       SHA-256
-IKE Option:             IKEv2
-Session Type:           Policy Based Session
-```
+>>Encryption Alogrithm:   AES256
+>>Authentication:         PSK
+>>Diffie-Hellman Group:   DH5
+>>Digest Algorithm:       SHA-256
+>>IKE Option:             IKEv2
+>>Session Type:           Policy Based Session
 __Figure 2: VPN configuration options__
 ![VPN configuration options](images/vpn-settings.png?classes=content-img "VPN config")
 
