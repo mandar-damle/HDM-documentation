@@ -217,8 +217,7 @@ vCenter configuration is now complete. Log into the newly-configured vCenter.
 
 
 
-> Note:
-> For the plugin to be visible within vCenter, you will need to logout and log back into vCenter at least twice.
+> **Note: For the plugin to be visible within vCenter, you will need to logout and log back into vCenter at least twice.**
 
 
 
