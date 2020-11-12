@@ -9,7 +9,7 @@ This section covers troubleshooting for issues known in the HDM product. In case
 
 ###### **Failures during HDM deployment are not currently handled for recovery**
 
-Failures during the HDM deployment On-Premise or On-Cloud will require the user to first clean the state using HDM reset and retry the deployment. In the current release, HDM doesn’t attempt to automatically recover from deployment failures. (Ref: **CP-4686)**
+Failures during the HDM deployment on-premises or on-cloud will require the user to first clean the state using HDM reset and retry the deployment. In the current release, HDM doesn’t attempt to automatically recover from deployment failures. (Ref: **CP-4686)**
 
 
 ###### **Deployment taking time or appears in a hung state**
@@ -26,9 +26,9 @@ This failure can occur either due to incorrect credentials or incorrect VMware C
 
 ###### **Deployment failure with message “Insufficient resources to satisfy configured failover level for vSphere HA”**
 
-If there are insufficient CPU or memory resources On-Premise or On-Cloud, the HDM deployment can fail with event in vCenter “Insufficient resources to satisfy configured failover level for vSphere HA”.  
+If there are insufficient CPU or memory resources on-premises or on-cloud, the HDM deployment can fail with event in vCenter “Insufficient resources to satisfy configured failover level for vSphere HA”.  
 
-This should be avoided by choosing HDM deployment type according to the resource availability On-Premise and On-Cloud or change the Deployment Type.(Ref: **CP-4243**)
+This should be avoided by choosing HDM deployment type according to the resource availability on-premises and on-cloud or change the Deployment Type.(Ref: **CP-4243**)
 
 
 ###### **Network configuration change for the PIO Appliance**
@@ -133,11 +133,11 @@ HDM plugin fails to appear in vCenter’s UI even though it has been registered 
 4. Register HDM plugin again with the same vCenter from where it was deleted.
 
 
-###### **Network configuration issues for On-Cloud deployment **
+###### **Network configuration issues for on-cloud deployment **
 
-In case, On-Cloud VMware Cloud Director is configured on different networks and resolved through different DNS settings. In this case On-Cloud VMware Cloud Director will get added if correct DNS is set during Add Cloud, but ESXi resolution will fail resulting in Cold and Warm migration Failure. 
+In case, on-cloud VMware Cloud Director is configured on different networks and resolved through different DNS settings. In this case on-cloud VMware Cloud Director will get added if correct DNS is set during Add Cloud, but ESXi resolution will fail resulting in Cold and Warm migration Failure. 
 
-Similarly, “Add Cloud” may fail if On-Cloud VMware Cloud Director has been configured with FQDN and DNS to resolve vCenter is incorrect or is not provided during the operation.
+Similarly, “Add Cloud” may fail if on-cloud VMware Cloud Director has been configured with FQDN and DNS to resolve vCenter is incorrect or is not provided during the operation.
 
 **Resolution: ** Customers should add rules in their Network to forward resolution of these FQDN to the correct DNS, whether it is for the vCenter or ESXi.
 
@@ -191,10 +191,10 @@ User should explicitly make sure that the target has enough free space before at
 
 ###### **Applications on migrated VMs may fail due to incorrect network mapping specified**
 
-During add cloud operation, users should specify the correct default application network On-Cloud or map  On-Premise network to On-Cloud network. Failing to do so, the VM migration may succeed but applications on the migrated VMs may fail. In the SQS based migration, the network mapping can be specified at the migration time. (Ref: **CP-4433)**
+During add cloud operation, users should specify the correct default application network on-cloud or map  on-premises network to on-cloud network. Failing to do so, the VM migration may succeed but applications on the migrated VMs may fail. In the SQS based migration, the network mapping can be specified at the migration time. (Ref: **CP-4433)**
 
 
-###### **Enable Virtualized CPU Performance Counters Check flag not reatined on cloud**
+###### **Enable Virtualized CPU Performance Counters Check flag not retained after migration to cloud**
 
 Certain virtual machine parameters may not be retained post migration. These will need to be set manually. (Ref : **DP-2859**)
 
@@ -213,18 +213,18 @@ For each Virtual Machine migration a vCenter task is created. The progress and s
 
 ###### **IP conflict if HDM internal network configured with DHCP for Ubuntu and SLES**
 
-In HDM On-Cloud deployment, if the Internal network on the On-Cloud is configured for DHCP IP addresses, IP addresses assigned to migrated VM (WARM or TBC) with DHCP can experience lease timeout. This is because on some versions of Linux distributions (mainly all Ubuntu and SLES distributions) DHCP lease is not renewed for the IBFT enabled NIC which is connected to the Internal network for TFTP/iSCSI booting. 
+In HDM on-cloud deployment, if the Internal network on the on-cloud is configured for DHCP IP addresses, IP addresses assigned to migrated VM (WARM or TBC) with DHCP can experience lease timeout. This is because on some versions of Linux distributions (mainly all Ubuntu and SLES distributions) DHCP lease is not renewed for the IBFT enabled NIC which is connected to the Internal network for TFTP/iSCSI booting. 
 
 All the versions of Windows and RHEL/CentOS distributions are not affected by this issue.
 
-If the Internal network on the On-Cloud is configured for IP addresses with Static IP address pool, this issue will not arise.
+If the Internal network on the on-cloud is configured for IP addresses with Static IP address pool, this issue will not arise.
 
 Workaround:
 
 
 
-*   If HDM On-Cloud deployment is configured for DHCP IP addresses on the Internal network, configure DHCP IP address lease timeout to be greater than the time the migrated VM is supposed to stay booted on the On-Cloud.
-*   Configure the HDM On-Cloud deployment to use IP addresses with Static IP address pool on the Internal network.
+*   If HDM on-cloud deployment is configured for DHCP IP addresses on the Internal network, configure DHCP IP address lease timeout to be greater than the time the migrated VM is supposed to stay booted on the on-cloud.
+*   Configure the HDM on-cloud deployment to use IP addresses with Static IP address pool on the Internal network.
 
 (Ref: **DP-2777**)
 
@@ -234,12 +234,12 @@ Workaround:
 
 ###### **Failure Alerts and Notification HDM component or operations failure details are not visible in vCenter. **
 
-Failures for migration/ migration back, On-Premise deployment and add On-Cloud are shown in vCenter under Tasks and Events. Any failure seen due to the HDM component going down is also captured within vCenter events with the description starting with ‘<code><em>com.primaryio.hdm.'</em></code>. This is currently shown in HTML and Flash view of the vCenter. However the details for the failures are not always available in both the views, for example for vCenter version 6.5 it is available in the Adobe Flash view. Such information is also available in the Health Tab of HDM plugin.  
+Failures for migration/ migration back, on-premises deployment and add on-cloud are shown in vCenter under Tasks and Events. Any failure seen due to the HDM component going down is also captured within vCenter events with the description starting with ‘<code><em>com.primaryio.hdm.'</em></code>. This is currently shown in HTML and Flash view of the vCenter. However the details for the failures are not always available in both the views, for example for vCenter version 6.5 it is available in the Adobe Flash view. Such information is also available in the Health Tab of HDM plugin.  
 
 
 ###### **PIO Appliance not reflecting the failure status of HDM components**
 
-If a HDM On-Cloud component VM remains shutdown for an extended period, the failed HDM components health may not get reflected in the PIO Appliance. 
+If a HDM on-cloud component VM remains shutdown for an extended period, the failed HDM components health may not get reflected in the PIO Appliance. 
 
 However**, **the failed component will be detected and alerts can be seen in the Home -> HDM ->Administration->Health->Component Health. Once the component VM gets rebooted successfully, the PIO Appliance will correctly show the health of all components. (Ref: **CP-4647**)
 
@@ -268,9 +268,9 @@ Users should power off the HDM Appliance VM, create enough space in the datastor
 
 ###### **How do network disconnects result in failures**
 
-HDM is deployed both On-Premise and on the On-Cloud. VMs migrate from the On-Premise to the On-Cloud, there are occasions when VMs are migrated back to the On-Premise after a temporary migration to the On-Cloud (for example for the TBC use case) or because of a failure during the migration. The Network availability is critical during the entire Migration operation and for continuity of HDM component services. 
+HDM is deployed both on-premises and on the on-cloud. VMs migrate from the on-premises to the on-cloud, there are occasions when VMs are migrated back to the on-premises after a temporary migration to the on-cloud (for example for the TBC use case) or because of a failure during the migration. The Network availability is critical during the entire Migration operation and for continuity of HDM component services. 
 
-Thus the disruption in the network connectivity is tolerated for a limited time, typically upto 4-5 minutes  beyond which HDM gets into Failure and Recovery mode. Recovery operation will also succeed only when the Network is available. If the system gets into a state where HDM reset needs to be executed, it can succeed only when the network connectivity is available for cleaning up the state on the On-Cloud. 
+Thus the disruption in the network connectivity is tolerated for a limited time, typically upto 4-5 minutes  beyond which HDM gets into Failure and Recovery mode. Recovery operation will also succeed only when the Network is available. If the system gets into a state where HDM reset needs to be executed, it can succeed only when the network connectivity is available for cleaning up the state on the on-cloud. 
 
 HDM operations are designed for retries and resilience for somewhat jittery Networks. More than 4-5 minutes of continuous disconnect triggers failures and eventual process of recovery and repair if that network becomes available. 
 
@@ -278,7 +278,7 @@ HDM operations are designed for retries and resilience for somewhat jittery Netw
 # HDM Undeployment
 
 
-###### **HDM On-Cloud uninstall fails when one of the ESXi hosts in the cluster on which it was installed is inaccessible**
+###### **HDM on-cloud uninstall fails when one of the ESXi hosts in the cluster on which it was installed is inaccessible**
 
 Uninstallation happens at the cluster level and it will fail if any host in the cluster is unavailable.
 
@@ -305,7 +305,7 @@ This is a vCenter listing issue and does not affect the vCenter functionality.
 
 ###### **Undeployment while migration is in progress**
 
-Do not perform On-Cloud undeployment while migrations are in progress. The UI does not prevent this action. However, the undeployment can fail and the migrating VMs cleanup may not happen. 
+Do not perform on-cloud undeployment while migrations are in progress. The UI does not prevent this action. However, the undeployment can fail and the migrating VMs cleanup may not happen. 
 
 (Ref: **CP-4373)** 
 
@@ -315,7 +315,7 @@ Do not perform On-Cloud undeployment while migrations are in progress. The UI do
 
 ###### **HDM Reset did not remove all component VMs**
 
-If there is a network disconnect between appliance and On-Cloud, HDM components On-Cloud  and migrated VMs will not get deleted. Even though the HDM reset task on vCenter shows as completed,  HDM components as well as migrated VMs might still be present on the On-Cloud leaving the system in an unclean state. 
+If there is a network disconnect between appliance and on-cloud, HDM components on-cloud  and migrated VMs will not get deleted. Even though the HDM reset task on vCenter shows as completed,  HDM components as well as migrated VMs might still be present on the on-cloud leaving the system in an unclean state. 
 
 **Resolution**: The resolution is to manually delete HDM components and migrated VMs for completing the process of clean up and get it to state for new deployment. 
 
@@ -329,7 +329,7 @@ As part of HDM reset, PIO Appliance VM restart is required. In some cases, this 
 
 ###### **Cleanup issues due to ESXi host reboot during HDM Reset**
 
-During HDM reset, if any of the ESXi hosts in the On-Premise cluster is rebooted for some reason, the cleanup for that host may not happen. The HDM reset may still succeed, however a future attempt for On-Premise deployment may fail. 
+During HDM reset, if any of the ESXi hosts in the on-premises cluster is rebooted for some reason, the cleanup for that host may not happen. The HDM reset may still succeed, however a future attempt for on-premises deployment may fail. 
 
 **Resolution**: In such a situation, users should do HDM reset again and perform redeployment. 
 

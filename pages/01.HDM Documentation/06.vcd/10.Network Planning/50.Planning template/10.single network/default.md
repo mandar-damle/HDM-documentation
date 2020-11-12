@@ -112,9 +112,9 @@ Please fill the table below for use during installation later.
 
 
 
-#### Network requirements during on-premise deployment
+#### Network requirements during on-premises deployment
 
-During the premise deployment phase of the installation we will configure the following networks on-premises.
+During the premises deployment phase of the installation we will configure the following networks on-premises.
 
 
 
@@ -122,7 +122,7 @@ During the premise deployment phase of the installation we will configure the fo
 2. Uplink_WAN_Network
 3. ESXi_Network
 
-These are the same as the ones described in previous section on OVF Deployment. During the premise deployment however you need to provide a range or list of IPs for each of these networks.
+These are the same as the ones described in previous section on OVF Deployment. During the premises deployment however you need to provide a range or list of IPs for each of these networks.
 
 
 ![alt_text](images/image18.png "image_tooltip")
@@ -487,21 +487,21 @@ Please fill the table below for reference during the installation process.
 
 #### WAN Routing Configuration
 
-The following WAN routes are required to access on-cloud from on-premise and vice-versa. This is required in during the [Set WAN route](../../../deployment%20steps#wan-cfg) part of cloud configuration.
+The following WAN routes are required to access on-cloud from on-premises and vice-versa. This is required in during the [Set WAN route](../../../deployment%20steps#wan-cfg) part of cloud configuration.
 
 
 *   **On-premises WAN network details**
 
-    The route which would be set on HDM appliance on premise. The routes will enable communication from on-premise to HDM appliances on-cloud.
+    The route which would be set on HDM appliance on-premises. The routes will enable communication from on-premises to HDM appliances on-cloud.
 
-    *   **On-Premise WAN subnet :** Subnet of premise WAN network on which HDM appliances are deployed
-    *   **On-Premise WAN gateway :** On premise WAN gateway which allows access to on-cloud WAN subnet
-*   **On Cloud WAN network details**
+    *   **On-Premises WAN subnet :** Subnet of premises WAN network on which HDM appliances are deployed
+    *   **On-Premises WAN gateway :** On-premises WAN gateway which allows access to on-cloud WAN subnet
+*   **On-cloud WAN network details**
 
-    The route which would be set on HDM appliance on cloud. The routes will enable communication from on-cloud to HDM appliances on-premise.
+    The route which would be set on HDM components on the cloud. The routes will enable communication from the cloud components to HDM appliances on-premises.
 
-    *   **On-Cloud WAN subnet :** Subnet of cloud WAN network on which HDM appliances are deployed
-    *   **On-Cloud WAN gateway :** On cloud WAN gateway which allows access to on-premise WAN subnet
+    *   **On-cloud WAN subnet :** Subnet of cloud WAN network on which HDM appliances are deployed
+    *   **On-cloud WAN gateway :** On-cloud WAN gateway which allows access to on-premises WAN subnet
 
 <table>
   <tr>
@@ -514,7 +514,7 @@ The following WAN routes are required to access on-cloud from on-premise and vic
    </td>
   </tr>
   <tr>
-   <td><strong>On-Premise WAN subnet</strong>
+   <td><strong>On-Premises WAN subnet</strong>
    </td>
    <td><em>10.102.0.0/16</em>
    </td>
@@ -522,7 +522,7 @@ The following WAN routes are required to access on-cloud from on-premise and vic
    </td>
   </tr>
   <tr>
-   <td><strong>On-Premise WAN gateway</strong>
+   <td><strong>On-Premises WAN gateway</strong>
    </td>
    <td><em>10.102.10.1</em>
    </td>
@@ -530,7 +530,7 @@ The following WAN routes are required to access on-cloud from on-premise and vic
    </td>
   </tr>
   <tr>
-   <td><strong>On-Cloud WAN subnet</strong>
+   <td><strong>On-cloud WAN subnet</strong>
    </td>
    <td><em>10.50.0.0/16</em>
    </td>
@@ -538,7 +538,7 @@ The following WAN routes are required to access on-cloud from on-premise and vic
    </td>
   </tr>
   <tr>
-   <td><strong>On-Cloud WAN gateway</strong>
+   <td><strong>On-cloud WAN gateway</strong>
    </td>
    <td><em>10.50.10.1</em>
    </td>

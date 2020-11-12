@@ -38,8 +38,8 @@ The remainder of this document will assume you have created a network topology l
 
 You will need to provision 
 
-*   20 static IPs on Premise network
-*   At least 50 static-pool IPs on Cloud network
+*   20 static IPs on-premises network
+*   At least 50 static-pool IPs on the Cloud network
 
 These will be required throughout the installation process.
 
