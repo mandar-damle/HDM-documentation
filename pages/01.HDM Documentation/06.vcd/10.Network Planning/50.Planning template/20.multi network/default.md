@@ -38,7 +38,7 @@ correct mode using the drop down.
 1. Choose the "Deployment Mode"
 1. Choose the "Resource Allocation" 
 
-After this you need to fill in the number of ESXi on premises and on the cloud. For VMware Cloud Director
+After this you need to fill in the number of ESXi on-premises and on the cloud. For VMware Cloud Director
 the number of nodes on the cloud is irrelevant and please fill in 1 here.
 
 The rest of the form requires you to fill in network configuration details like
@@ -113,7 +113,7 @@ Please fill the table below for use during installation later.
 
 #### Network requirements during on-premise deployment
 
-During the premise deployment phase of the installation we will configure the following networks on prem.
+During the premise deployment phase of the installation we will configure the following networks on-premises.
 
 
 
@@ -490,7 +490,7 @@ Please fill the table below for reference during the installation process.
 The following WAN routes are required to access on-cloud from on-premise and vice-versa. This is required in during the [Set WAN route](../../../deployment%20steps#wan-cfg) part of cloud configuration.
 
 
-*   **On Premises WAN network details**
+*   **On-premises WAN network details**
 
     The route which would be set on HDM appliance on premise. The routes will enable communication from on-premise to HDM appliances on-cloud.
 

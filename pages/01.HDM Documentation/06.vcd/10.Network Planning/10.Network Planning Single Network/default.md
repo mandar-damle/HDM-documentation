@@ -59,7 +59,7 @@ your deployment process.
 1. Choose the "Deployment Mode"
 1. Choose the "Resource Allocation" 
 
-After this you need to fill in the number of ESXi on premises and on the cloud. For VMware Cloud Director
+After this you need to fill in the number of ESXi on-premises and on the cloud. For VMware Cloud Director
 the number of nodes on the cloud is irrelevant and please fill in 1 here.
 
 The rest of the form requires you to fill in network configuration details like

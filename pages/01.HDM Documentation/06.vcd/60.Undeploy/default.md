@@ -66,7 +66,7 @@ Steps
 2. Select the _Administration_ tab, then _Configuration_ to access the cluster listing (figure 36)
 3. Choose the cluster where HDM is installed and select _UNINSTALL_
 
-_Figure 36: vCenter On-Premises Cluster Listing_
+_Figure 36: vCenter on-premises Cluster Listing_
 
 
 ![alt_text](images/image11.png?classes=content-img "image_tooltip")
@@ -76,7 +76,7 @@ _Figure 36: vCenter On-Premises Cluster Listing_
 
 4. Select _OK_ in the Uninstall On-premises pop-up (figure 37).
 
-_Figure 37: Uninstall On-Premises Pop-up_
+_Figure 37: Uninstall on-premises Pop-up_
 
 
 ![alt_text](images/image12.png?classes=content-img "image_tooltip")

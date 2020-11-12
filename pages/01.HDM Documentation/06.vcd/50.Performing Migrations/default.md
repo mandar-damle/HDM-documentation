@@ -32,7 +32,7 @@ Steps
 1. In the on-premises vCenter, right click on the VM/Cluster to be migrated
 2. Select _HDM _followed by_ Migrate_
 
-_Figure 2: On-Premises vCenter_
+_Figure 2: On-premises vCenter_
 
 
 ![alt_text](images/image7.png?classes=content-img "image_tooltip")

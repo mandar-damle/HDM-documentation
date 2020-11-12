@@ -101,7 +101,7 @@ Add recommended firewall rule by specifying source and destination subnet with s
 
 ![alt_text](images/image17.png "image_tooltip")
 
-You can test the IPsec connectivity using ping command from on prem to cloud side routed network gateway. If you have configured advanced firewall rules, ensure that ICMP traffic is allowed.
+You can test the IPsec connectivity using ping command from on-premises to cloud side routed network gateway. If you have configured advanced firewall rules, ensure that ICMP traffic is allowed.
 
 Ping test from on-premises to the cloud gateway
 
