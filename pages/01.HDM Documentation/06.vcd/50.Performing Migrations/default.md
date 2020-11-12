@@ -144,7 +144,7 @@ _Figure 13: vCenter HDM Migration Summary Tab_
 
 # HDM Disk Controller Support
 
-There are known limitations with virtual machine disk controller configurations when migrating to vCD. HDM does not support the following migrations:
+There are known limitations with virtual machine disk controller configurations when migrating to VMware Cloud Director. HDM does not support the following migrations:
 
 
 

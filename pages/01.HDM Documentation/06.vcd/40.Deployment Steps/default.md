@@ -2,7 +2,7 @@
 title: 'Deployment Steps'
 ---
 
-This section describes how to deploy, configure, and undeploy PrimaryIO Hybrid Cloud Data Management (HDM) 2.1.3 for enabling migrations of virtual machines to VMware Cloud Director (vCD).
+This section describes how to deploy, configure, and undeploy PrimaryIO Hybrid Cloud Data Management (HDM) 2.1.3 for enabling migrations of virtual machines to VMware Cloud Director (VMware Cloud Director).
 
 
 ## HDM Deployment Steps
@@ -234,7 +234,7 @@ _Figure 16: HDM Installation Wizard_
 
 
 
-    **NOTE: **For migration to vCD, select _Ultra-Lite_ as the resource allocation mode.** **
+    **NOTE: **For migration to VMware Cloud Director, select _Ultra-Lite_ as the resource allocation mode.** **
 
 
 
@@ -303,7 +303,7 @@ Pre-requisites
 
 1. Ensure that the HDM plug-in has been registered on vCenter and the HDM icon is visible on the home screen. 
 2. Ensure that the on-premises deployment has successfully completed.
-3. Ensure that the vCenter cloud is reachable from the HDM appliance. If cloud vCD is on the WAN and the WAN is not reachable through the appliance’s default route, then a static entry must be added to the HDM appliance to reach the cloud vCD. This can be accomplished by following these steps:
+3. Ensure that the vCenter cloud is reachable from the HDM appliance. If cloud VMware Cloud Director is on the WAN and the WAN is not reachable through the appliance’s default route, then a static entry must be added to the HDM appliance to reach the cloud VMware Cloud Director. This can be accomplished by following these steps:
     1. vim /etc/pio.routes and add the entry
 ```
         ens256|<cloud_subnet>|<gateway_to_access_cloud>
@@ -328,7 +328,7 @@ _Figure 21: vCenter Cloud Listing_
 
 
 3. Select _Add Cloud_. This will open the HDM Cloud Wizard (figure 22).
-4. Select the Cloud type and enter your vCD credentials and the Cloud DNS. 
+4. Select the Cloud type and enter your VMware Cloud Director credentials and the Cloud DNS. 
 
 _Figure 22: HDM Cloud Wizard_
 
@@ -455,7 +455,7 @@ _Figure 32: Verify Installation of the Cloud State_
 ![alt_text](images/image7.png?classes=content-img "image_tooltip")
 
 
-**NOTE:** Configuration information needs to be gathered and loaded from vCD, so it may take a few minutes to load the Cloud Dashboard for the first time. 
+**NOTE:** Configuration information needs to be gathered and loaded from VMware Cloud Director, so it may take a few minutes to load the Cloud Dashboard for the first time. 
 
 
 

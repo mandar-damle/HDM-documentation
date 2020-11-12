@@ -21,7 +21,7 @@ During deployment, the synchronization with NTP server is required. This operati
 
 ###### **Deployment failure with message “Please check the credentials for &lt;IP Address>**
 
-This failure can occur either due to incorrect credentials or incorrect VCD Organization name. Providing the correct credentials or organization name should resolve this issue. (Ref: **CP-5395**)
+This failure can occur either due to incorrect credentials or incorrect VMware Cloud Director Organization name. Providing the correct credentials or organization name should resolve this issue. (Ref: **CP-5395**)
 
 
 ###### **Deployment failure with message “Insufficient resources to satisfy configured failover level for vSphere HA”**
@@ -135,16 +135,16 @@ HDM plugin fails to appear in vCenter’s UI even though it has been registered 
 
 ###### **Network configuration issues for On-Cloud deployment **
 
-In case, On-Cloud VCD is configured on different networks and resolved through different DNS settings. In this case On-Cloud VCD will get added if correct DNS is set during Add Cloud, but ESXi resolution will fail resulting in Cold and Warm migration Failure. 
+In case, On-Cloud VMware Cloud Director is configured on different networks and resolved through different DNS settings. In this case On-Cloud VMware Cloud Director will get added if correct DNS is set during Add Cloud, but ESXi resolution will fail resulting in Cold and Warm migration Failure. 
 
-Similarly, “Add Cloud” may fail if On-Cloud VCD has been configured with FQDN and DNS to resolve vCenter is incorrect or is not provided during the operation.
+Similarly, “Add Cloud” may fail if On-Cloud VMware Cloud Director has been configured with FQDN and DNS to resolve vCenter is incorrect or is not provided during the operation.
 
 **Resolution: ** Customers should add rules in their Network to forward resolution of these FQDN to the correct DNS, whether it is for the vCenter or ESXi.
 
 
 ###### **Installation Failed - Exception during container create syncd-cloud **
 
-This can happen if the VCD cloud end-point is not reachable. The current operation being performed (deployment, mugration) will fail. The connectivity to cloud end-point needs to be re-established before continuing. (Ref : **CP-5596**) 
+This can happen if the VMware Cloud Director cloud end-point is not reachable. The current operation being performed (deployment, mugration) will fail. The connectivity to cloud end-point needs to be re-established before continuing. (Ref : **CP-5596**) 
 
 
 
@@ -166,9 +166,9 @@ Following are known limitations with virtual machine disk controller configurati
 2. Virtual machines with USB or ISO attached during migration.
 
 
-###### **VM fails to poweron on IBM VCD after migration is successfully completed. **
+###### **VM fails to poweron on IBM VMware Cloud Director after migration is successfully completed. **
 
-This can happen is the CPU resources are exhausted for the VCD organization into which the migration happened. Do update the CPU resources and try powering-on the VM. (Ref: **CP-5469**) 
+This can happen is the CPU resources are exhausted for the VMware Cloud Director organization into which the migration happened. Do update the CPU resources and try powering-on the VM. (Ref: **CP-5469**) 
 
 
 ###### **IPs may not be allocated for virtual machines having Ubuntu16 or SLEL16 Operating System post migration**
