@@ -189,19 +189,19 @@ The following table highlights the number of resources required for each HDM dep
    </td>
    <td><strong>1</strong> Appliance (4 vCPU, 8 GB RAM, 144 GB disk)
 <p>
-<strong>1</strong> ESXMgr (4 vCPU, 4 GB RAM, 128 GB disk)
+<strong>1</strong> ESXMgr (8 vCPU, 8 GB RAM, 128 GB disk)
    </td>
    <td>1 Appliance (4 vCPU, 8 GB RAM, 144 GB disk)
 <p>
-2 ESXMgr (4 vCPU, 4 GB RAM, 128 GB disk)
+2 ESXMgr (8 vCPU, 8 GB RAM, 128 GB disk)
    </td>
   </tr>
   <tr>
    <td>On-Cloud
    </td>
-   <td><strong>1</strong> CloudCache (6 vCPU, 5 GB RAM, 64 GB disk)
+   <td><strong>1</strong> CloudCache (6 vCPU, 12 GB RAM, 64 GB disk)
    </td>
-   <td>2 CloudCache (6 vCPU, 5 GB RAM, 64 GB disk)
+   <td>2 CloudCache (6 vCPU, 12 GB RAM, 64 GB disk)
    </td>
   </tr>
   <tr>
@@ -216,7 +216,7 @@ The following table highlights the number of resources required for each HDM dep
    <td>On-Premise
    </td>
    <td><strong>1</strong> Appliance (4 vCPU, 8 GB RAM, 144 GB disk), \
-<strong>1</strong> ESXMgr (4 vCPU, 4 GB RAM, 96 GB disk)
+<strong>1</strong> ESXMgr (8 vCPU, 8 GB RAM, 96 GB disk)
    </td>
    <td><strong>1 </strong>Appliance \
 <strong>2</strong> ESXMgr

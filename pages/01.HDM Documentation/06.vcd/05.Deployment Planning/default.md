@@ -79,19 +79,19 @@ _Table 1: Resource Requirements_
    </td>
    <td><strong>1</strong> Appliance (4 vCPU, 8 GB RAM, 144 GB disk)
 <p>
-<strong>1</strong> ESXMgr (4 vCPU, 4 GB RAM, 128 GB disk)
+<strong>1</strong> ESXMgr (8 vCPU, 8 GB RAM, 128 GB disk)
    </td>
    <td>1 Appliance (4 vCPU, 8 GB RAM, 144 GB disk)
 <p>
-2 ESXMgr (4 vCPU, 4 GB RAM, 128 GB disk)
+2 ESXMgr (8 vCPU, 8 GB RAM, 128 GB disk)
    </td>
   </tr>
   <tr>
    <td>Cloud
    </td>
-   <td><strong>1</strong> CloudCache (6 vCPU, 5 GB RAM, 64 GB disk)
+   <td><strong>1</strong> CloudCache (6 vCPU, 12 GB RAM, 64 GB disk)
    </td>
-   <td>2 CloudCache (6 vCPU, 5 GB RAM, 64 GB disk)
+   <td>2 CloudCache (6 vCPU, 12 GB RAM, 64 GB disk)
    </td>
   </tr>
 </table>
