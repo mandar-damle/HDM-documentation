@@ -1,5 +1,5 @@
 ---
-title: 'HDM Documentation'
+title: '2.2 HDM Documentation'
 ---
 
 ## Hybrid Cloud Data Management Solution
