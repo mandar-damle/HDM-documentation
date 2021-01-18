@@ -1,49 +1,20 @@
-<!-- Copy and paste the converted output. -->
+---
+title: 'OpenVPN Configuration'
+---
 
-<!-----
-NEW: Check the "Suppress top comment" option to remove this info from the output.
-
-Conversion time: 5.509 seconds.
-
-
-Using this Markdown file:
-
-1. Paste this output into your source file.
-2. See the notes and action items below regarding this conversion run.
-3. Check the rendered output (headings, lists, code blocks, tables) for proper
-   formatting and use a linkchecker before you publish this page.
-
-Conversion notes:
-
-* Docs to Markdown version 1.0β29
-* Mon Jan 18 2021 02:10:04 GMT-0800 (PST)
-* Source doc: HDM 2.1 OpenVPN Configuration
-* This document has images: check for >>>>>  gd2md-html alert:  inline image link in generated source and store images to your server. NOTE: Images in exported zip file from Google Docs may not appear in  the same order as they do in your doc. Please check the images!
-
------>
-
-
-
-<h2>**HDM 2.1 : Network Planning**</h2>
-
-
-<h2>**OpenVPN Configuration**</h2>
-
-
-
-<h2>Introduction</h2>
+## Introduction
 
 
 There are certain limitations in the VMware Cloud on AWS such as VPNs configured terminating on T0. Hence we do not have a self-service VPN solution with CDS. VMware recommends openVPN as an alternate solution. 
 
 This document describes the steps to establish VPN connectivity between premises and the VMware Cloud Director using openVPN on PFSense firewalls running on LAN of premises and cloud end.
 
-<h2>Premises Network Planning (Server)</h2>
+## Premises Network Planning (Server)
 
 
 In this example, the premises side openVPN server would be running on PFSense (2.4.4-RELEASE) on the private network 10.105.0.0/19. Port TCP/1194 and TCP/443 would be used for openVPN server.
 
-<h3>Port Forwarding to PFSense</h3>
+### Port Forwarding to PFSense
 
 
 Since clients would be connecting to the public IP, we have forwarded TCP traffic coming to the premises firewall to the port TCP/1194 and TCP/443 to PFSense running on 10.105.0.0/19 network.
@@ -65,7 +36,7 @@ Where,
 *   OpenVPN_Server_pfsense is the LAN IP of premises PFsense
 *   OpenVPN_tcp_port is the set to 1194 for TCP
 
-<h3>OpenVPN Server Configuration</h3>
+### OpenVPN Server Configuration
 
 
 You need to install fresh PFSense on the premises side before you go ahead. You can assign static or DHCP IP to the PFSense WAN interface and access through GUI.
@@ -98,7 +69,7 @@ Please refer following screenshot for more details:
 ![alt_text](images/image1.png "image_tooltip")
 
 
-<h3>Tunnel Settings</h3>
+### Tunnel Settings
 
 
 On the same server configuration page, scroll down to the Tunnel Setting section
@@ -117,7 +88,7 @@ Note : This subnet should not conflict with On-premise and on-cloud networks.
 ![alt_text](images/image2.png "image_tooltip")
 
 
-<h3>Interface Assignment</h3>
+### Interface Assignment
 
 
 We assign WAN interface while configuring PFsense after installation, also make sure LAN interface is assigned to the ovpnc1 which  gets created after client configuration is done. Please make sure that the LAN interface is in enabled mode.
@@ -127,7 +98,7 @@ We assign WAN interface while configuring PFsense after installation, also make 
 ![alt_text](images/image13.png "image_tooltip")
 
 
-<h3>Server Firewall Rules</h3>
+### Server Firewall Rules
 
 
 In this example we have allowed traffic for all services on WAN and OpenVPN interface, but if you want to specify the ports or services please follow the [service-port-level-requirement-for-hdm](http://docs.primaryio.com/hdm%20documentation/vcs/network%20planning/ipsec%20tunnel#service-port-level-requirement-for-hdm) section.
@@ -144,12 +115,12 @@ OpenVPN firewall rules
 ![alt_text](images/image9.png "image_tooltip")
 
 
-<h3>Static Route on OpenVPN Client </h3>
+### Static Route on OpenVPN Client 
 
 
 We need to set a static route so that traffic for the required network can be routed through the otherside tunnel gateway which is 10.8.0.2 in this case. Default gateways for WAN and LAN interface
 
-![alt_text](images/image4.png "image_tooltip")
+![alt_text](images/image18.png "image_tooltip")
 
 
 Static route to route a traffic to tunnel gateway for remote subnet.
@@ -168,12 +139,12 @@ Where,
 ![alt_text](images/image3.png "image_tooltip")
 
 
-<h2>vCD Network Planning(Client)</h2>
+## vCD Network Planning(Client)
 
 
 We need to make a few changes on SDDC to allow internet access to the OpenVPN client running on PFsense.
 
-<h3>Configure Public access on CDS</h3>
+### Configure Public access on CDS
 
 
 In the Tenant portal, customers will need to create the NAT and FW rules to allow OUTBOUND internet access for Virtual Machines.
@@ -197,7 +168,7 @@ The access can be controlled via the firewall rules. Like in the following examp
 ![alt_text](images/image19.png "image_tooltip")
 
 
-<h3>OpenVPN Client configuration</h3>
+### OpenVPN Client configuration
 
 
 You need to install fresh PFSense on the premises side before you go ahead. You can assign static or DHCP IP to the PFSense WAN interface and access through GUI.
@@ -226,7 +197,7 @@ Where,
 ![alt_text](images/image6.png "image_tooltip")
 
 
-<h3>Tunnel Settings</h3>
+### Tunnel Settings
 
 
 On the same server configuration page, scroll down to the Tunnel Setting section
@@ -242,7 +213,7 @@ Where,
 ![alt_text](images/image10.png "image_tooltip")
 
 
-<h3>Interface Assignment</h3>
+### Interface Assignment
 
 
 We assign WAN interface while configuring PFsense after installation, also make sure LAN interface is assigned to the ovpnc1 network port which  gets created after client configuration is done. 
@@ -258,7 +229,7 @@ Please make sure that the LAN interface is in enabled state,  to enable it click
 ![alt_text](images/image20.png "image_tooltip")
 
 
-<h3>Client Firewall Rules</h3>
+### Client Firewall Rules
 
 
 In this example we have allowed traffic for all services on WAN and OpenVPN interface, but if you want to specify the ports or services please follow the [service-port-level-requirement-for-hdm](http://docs.primaryio.com/hdm%20documentation/vcs/network%20planning/ipsec%20tunnel#service-port-level-requirement-for-hdm) section.
@@ -274,7 +245,8 @@ OpenVPN firewall rules
 ![alt_text](images/image15.png "image_tooltip")
 
 
-<h3>Static Route on OpenVPN Client </h3>
+### Static Route on OpenVPN Client
+
 
 
 We need to set a static route so that traffic for the required network can be routed through the tunnel gateway which is 10.8.0.1 in this case.
@@ -299,7 +271,7 @@ Where,
 ![alt_text](images/image21.png "image_tooltip")
 
 
-<h2>Troubleshooting Tips</h2>
+## Troubleshooting Tips
 
 
 
