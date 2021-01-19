@@ -33,7 +33,7 @@ Where,
 
 
 *   Public-Outbound-IP is the public IP of premises firewall
-*   OpenVPN_Server_pfsense is the LAN IP of premises PFsense
+*   OpenVPN_Server_pfsense is the LAN IP of premises PFsense. Should be deplayed on WAN facing network (Uplink_WAN_Network).
 *   OpenVPN_tcp_port is the set to 1194 for TCP
 
 ### OpenVPN Server Configuration
@@ -141,9 +141,6 @@ Where,
 
 ## vCD Network Planning(Client)
 
-
-We need to make a few changes on SDDC to allow internet access to the OpenVPN client running on PFsense.
-
 ### Configure Public access on CDS
 
 
@@ -171,7 +168,7 @@ The access can be controlled via the firewall rules. Like in the following examp
 ### OpenVPN Client configuration
 
 
-You need to install fresh PFSense on the premises side before you go ahead. You can assign static or DHCP IP to the PFSense WAN interface and access through GUI.
+You need to install fresh PFSense on the premises side before you go ahead. You can assign static or DHCP IP to the PFSense WAN interface and access through GUI. PFSense server should be deployed on UPLINK_WAN_NETWORK created during Org. VDC configuration.
 
 To configure openVPN Client on PFsense click on “VPN” -> “OpenVPN” -> “Client” ->”clients”
 
@@ -189,7 +186,7 @@ Where,
 
 
 
-*   Share key is same as used on server  side,
+*   Share key is same as used on server side,
 *   Encryption algorithm None or same as server side,
 *   Auth digest algorithm is SHA256(256-bit).
 
