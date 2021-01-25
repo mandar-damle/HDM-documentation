@@ -22,7 +22,7 @@ HDM consists of the following components that are dispersed between on-premises 
 
 HDM 2.1.3 consists of microservices that have been packaged as VMs that work together to provide the data and control path to support the aforementioned use cases and to provide a flexible deployment model and failure resilience. HDM comprises the following components, dispersed between cloud and on-premises data centers (figure 1): 
 
-The HDM product binaries can be used in VMware Cloud Director or VMware Cloud Service for IBM (VCD and VCS). The components for each of these deployment is shown below.
+The HDM product binaries can be used in VMware Cloud Director or VMware Cloud Service for IBM (Cloud Director and VCS). The components for each of these deployment is shown below.
 
 ## HDM Deployment for VMware Cloud Director
 
@@ -36,7 +36,7 @@ _Figure 1: Location of HDM 2.1.3 components_
 
 ![alt_text](images/image8.png?classes=content-img "image_tooltip")
 
-## HDM Deployment for VMware Cloud Service for IBM, VCD and VCS
+## HDM Deployment for VMware Cloud Service for IBM, Cloud Director and VCS
 
 1. **PrimaryIO Plug-in: **Installed and registered on VMware vCenter for HDM management.
 2. **PrimaryIO Manager:** The main controlling appliance that controls and orchestrates the entire system.
