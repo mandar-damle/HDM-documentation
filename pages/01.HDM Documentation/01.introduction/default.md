@@ -9,13 +9,6 @@ PrimaryIO’s HDM provides solutions to perform migrations of VMware based virtu
 ## How Does Hybrid Cloud Data Management (HDM) Work?
 HDM decouples compute (Virtual Machines - VM) and storage (Virtual Disks - VMDK) functions to quickly and efficiently move workloads to VMware-based cloud providers by identifying the frequently used data (hot dataset) and initially only moving the minimum amount of that data to the cloud. This enables VMs to be migrated and turned up in the cloud provider in the shortest possible timeframe.  
 
-1. **PrimaryIO Plug-in:** Installed and registered on VMware vCenter for HDM management.
-2. **PrimaryIO Manager:** The main controlling appliance that controls and orchestrates the entire system.
-3. **On-premises Storage Gateway:** Provides access across the WAN link to deliver traffic optimization and redundancy against failures. It also accesses and manages the on-premises VMDKs for cloud-based VMs.
-4. **Cloud Storage Gateway:** Provides access across the WAN link to enable cloud-based VMs read/write access back to the on-premises environment. It is possible to have multiple gateways for redundancy.
-5. **Sync Daemon:** Located in both environments to deliver compression, encryption, and de-duplication for data being transferred from on-premises to cloud environments. It also provides a mechanism to pause and resume data transfers in the event of a WAN disconnect.
-
-
 
 _Figure 1: HDM Architecture_
 
