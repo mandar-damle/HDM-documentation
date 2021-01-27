@@ -38,9 +38,9 @@ Non-Recoverable failure conditions and recovery actions
 
 Do not delete the component VMs or the content library deployed as part of the HDM product deployment. Doing so will result in the product to operate incorrectly, and will require an “[HDM Reset](../hdm%20reset)” followed by a redeployment.
 
-**The following issues are related to Cold Migration to VMware Cloud Director**
+**The following issues are related to Cold Migration to Cloud Director**
 
-CP-5262: During deployment, adding a VMware Cloud Director (VCD) target can take up to 5 minutes. This is due the time required by VCD APIs to return information regarding the target environment. 
+CP-5262: During deployment, adding a Cloud Director target can take up to 5 minutes. This is due the time required by Cloud Director APIs to return information regarding the target environment. 
 
 **The following issues are related to the migration to VMware Cloud**
 
