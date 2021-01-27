@@ -20,7 +20,7 @@ _Figure 1: HDM Architecture_
 1. **Rapid VM migration:** HDM allows for VMs to be powered up in the target cloud environment using only the hot data.  The cold data is efficiently transferred as a background process.
 1. **Trial Migrations:** Migrations can be complicated and may take several maintenance windows before they are successful.  HDM’s flexible approach allows for VMs to be rapidly powered up in the target cloud and reverted to the onpremise environment if needed. 
 
-The HDM product binaries can be used in VMware Cloud Director or VMware Cloud Service for IBM (VCD and VCS). The components for each of these deployment is shown below.
+The HDM product binaries can be used in VMware Cloud Director or VMware Cloud Service for IBM (Cloud Director and VCS). The components for each of these deployment is shown below.
 
 ## HDM Deployment for VMware Cloud Director
 
@@ -33,6 +33,7 @@ The HDM product binaries can be used in VMware Cloud Director or VMware Cloud Se
 _Figure 2: Location of HDM 2.1.3 components_
 
 ![alt_text](images/image8.png?classes=content-img "image_tooltip")
+
 ## HDM Deployment for VMware Cloud Service for IBM VCS
 
 1. **PrimaryIO Plug-in: **Installed and registered on VMware vCenter for HDM management.
