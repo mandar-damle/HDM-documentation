@@ -20,7 +20,10 @@ _Figure 1: HDM Architecture_
 1. **Rapid VM migration:** HDM allows for VMs to be powered up in the target cloud environment using only the hot data.  The cold data is efficiently transferred as a background process.
 1. **Trial Migrations:** Migrations can be complicated and may take several maintenance windows before they are successful.  HDM’s flexible approach allows for VMs to be rapidly powered up in the target cloud and reverted to the onpremise environment if needed. 
 
-The HDM product binaries can be used in VMware Cloud Director or VMware Cloud Service for IBM (Cloud Director and VCS). The components for each of these deployment is shown below.
+The HDM product binaries can be used on
+* VMware Cloud Director
+* VMware Cloud Service for IBM (Cloud Director and VCS)
+* VMC on AWS
 
 ## HDM Deployment for VMware Cloud Director
 
@@ -67,6 +70,13 @@ HDM 2.1.3 is used to migrate VMs from on-premises environments to the cloud. The
 ### Agile Rapid Migration (ARM)
 
 This use case permanently moves the VM and all of its data to the cloud. Two types of this migration are possible:
+
+
+|Version|vCenter|IBM VCS|IBM VCD|VMware CD|
+|-------|-------|-------|-------|---------|
+|v2.1|Warm/Cold|Cold|Cold|Warm/Cold|
+|v2.2|Warm/Cold|Warm/Cold|Warm/Cold|Warm/Cold|
+
 
 *   **Cold migration**: Application data is moved to the cloud using **bulk migration**. The VM is powered off throughout the migration and becomes available in the cloud once the data has been fully transferred. 
 *   **Warm migration**: A subset of data, called the working set, is moved to the cloud and the VM is instantly available. HDM’s cloud cache is used for optimal IO performance. Any cache misses are fetched from the on-premises environment via the WAN. The remainder of the data set is either moved online through HDM, or offline in the background. Once all data has been moved to the cloud, it is reconciled with the data from the running application to minimize application downtime.
