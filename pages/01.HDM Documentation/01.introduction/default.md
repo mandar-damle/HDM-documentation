@@ -25,7 +25,39 @@ The HDM product binaries can be used on
 * VMware Cloud Service for IBM (Cloud Director and VCS)
 * VMC on AWS
 
-## HDM Deployment for VMware Cloud Director
+## HDM Migrations
+
+HDM 2.1.3 is used to migrate VMs from on-premises environments to the cloud. There are two main use cases for HDM migrations:
+
+1. **Agile Rapid Migration (ARM):** The capability to decouple compute from data, to minimize downtime during migration.
+2. **Try Before Commit (TBC):** The capability to quickly test the VMs running in the cloud before fully committing to the cloud.
+
+## Use Cases
+
+### Agile Rapid Migration (ARM)
+
+This use case permanently moves the VM and all of its data to the cloud. Two types of this migration are possible:
+
+
+|Version|vCenter|Cloud Director service|VMware CD|
+|-------|-------|-------|-------|---------|
+|v2.1|Warm/Cold|Cold|Cold|
+|v2.2|Warm/Cold|Warm/Cold|Warm/Cold|
+
+
+*   **Cold migration**: Application data is moved to the cloud using **bulk migration**. The VM is powered off throughout the migration and becomes available in the cloud once the data has been fully transferred. 
+*   **Warm migration**: A subset of data, called the working set, is moved to the cloud and the VM is instantly available. HDM’s cloud cache is used for optimal IO performance. Any cache misses are fetched from the on-premises environment via the WAN. The remainder of the data set is either moved online through HDM, or offline in the background. Once all data has been moved to the cloud, it is reconciled with the data from the running application to minimize application downtime.
+
+The choice of which migration type to employ depends on the amount of data in the VM and if the VM needs to be instantly available during the migration, or if prolonged downtime can be tolerated.
+
+
+### Try Before Commit (TBC)
+
+This use case provides a quick way to migrate VMs to the cloud while retaining the data on-premises. This helps users validate how the applications would run in the cloud, to help them decide whether or not to fully migrate them. The user can choose to migrate the applications back to the on-premises environment at any time.
+
+
+
+## HDM Deployment for VMware Cloud Director & Cloud Director services
 
 1. **PrimaryIO Plug-in:** Installed and registered on VMware vCenter for HDM management.
 2. **PrimaryIO Manager:** The main controlling appliance that controls and orchestrates the entire system.
@@ -37,7 +69,7 @@ _Figure 2: Location of HDM 2.1.3 components_
 
 ![alt_text](images/image8.png?classes=content-img "image_tooltip")
 
-## HDM Deployment for VMware Cloud Service for IBM VCS
+## HDM Deployment for VMware Cloud on AWS
 
 1. **PrimaryIO Plug-in: **Installed and registered on VMware vCenter for HDM management.
 2. **PrimaryIO Manager:** The main controlling appliance that controls and orchestrates the entire system.
@@ -57,34 +89,4 @@ HDM provides a flexible deployment model to support a wide range of user needs r
 ### Deployment Overview of HDM
 [plugin:youtube](https://youtu.be/BtpGR64wLGQ)
 
-
-# HDM Migrations
-
-HDM 2.1.3 is used to migrate VMs from on-premises environments to the cloud. There are two main use cases for HDM migrations:
-
-1. **Agile Rapid Migration (ARM):** The capability to decouple compute from data, to minimize downtime during migration.
-2. **Try Before Commit (TBC):** The capability to quickly test the VMs running in the cloud before fully committing to the cloud.
-
-## Use Cases
-
-### Agile Rapid Migration (ARM)
-
-This use case permanently moves the VM and all of its data to the cloud. Two types of this migration are possible:
-
-
-|Version|vCenter|IBM VCS|IBM VCD|VMware CD|
-|-------|-------|-------|-------|---------|
-|v2.1|Warm/Cold|Warm/Cold|Cold|Cold|
-|v2.2|Warm/Cold|Warm/Cold|Warm/Cold|Warm/Cold|
-
-
-*   **Cold migration**: Application data is moved to the cloud using **bulk migration**. The VM is powered off throughout the migration and becomes available in the cloud once the data has been fully transferred. 
-*   **Warm migration**: A subset of data, called the working set, is moved to the cloud and the VM is instantly available. HDM’s cloud cache is used for optimal IO performance. Any cache misses are fetched from the on-premises environment via the WAN. The remainder of the data set is either moved online through HDM, or offline in the background. Once all data has been moved to the cloud, it is reconciled with the data from the running application to minimize application downtime.
-
-The choice of which migration type to employ depends on the amount of data in the VM and if the VM needs to be instantly available during the migration, or if prolonged downtime can be tolerated.
-
-
-### Try Before Commit (TBC)
-
-This use case provides a quick way to migrate VMs to the cloud while retaining the data on-premises. This helps users validate how the applications would run in the cloud, to help them decide whether or not to fully migrate them. The user can choose to migrate the applications back to the on-premises environment at any time.
 
