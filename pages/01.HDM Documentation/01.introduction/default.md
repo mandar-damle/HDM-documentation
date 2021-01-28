@@ -22,8 +22,8 @@ _Figure 1: HDM Architecture_
 
 The HDM product binaries can be used on
 * VMware Cloud Director
-* VMware Cloud Service for IBM (Cloud Director and VCS)
-* VMC on AWS
+* VMware Cloud Director service
+* VMware on AWS
 
 ## HDM Migrations
 
@@ -39,7 +39,7 @@ HDM 2.1.3 is used to migrate VMs from on-premises environments to the cloud. The
 This use case permanently moves the VM and all of its data to the cloud. Two types of this migration are possible:
 
 
-|Version|vCenter|Cloud Director service|VMware CD|
+|Version|vCenter|VMware Cloud Director services|VMware Cloud Director|
 |-------|-------|-------|-------|---------|
 |v2.1|Warm/Cold|Cold|Cold|
 |v2.2|Warm/Cold|Warm/Cold|Warm/Cold|
