@@ -57,7 +57,7 @@ This use case provides a quick way to migrate VMs to the cloud while retaining t
 
 
 
-## HDM Deployment for VMware Cloud Director & Cloud Director services
+## HDM Deployment for VMware Cloud Director & Cloud Director service
 
 1. **PrimaryIO Plug-in:** Installed and registered on VMware vCenter for HDM management.
 2. **PrimaryIO Manager:** The main controlling appliance that controls and orchestrates the entire system.
