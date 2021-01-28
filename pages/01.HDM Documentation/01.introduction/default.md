@@ -74,7 +74,7 @@ This use case permanently moves the VM and all of its data to the cloud. Two typ
 
 |Version|vCenter|IBM VCS|IBM VCD|VMware CD|
 |-------|-------|-------|-------|---------|
-|v2.1|Warm/Cold|Cold|Cold|Warm/Cold|
+|v2.1|Warm/Cold|Warm/Cold|Cold|Cold|
 |v2.2|Warm/Cold|Warm/Cold|Warm/Cold|Warm/Cold|
 
 
