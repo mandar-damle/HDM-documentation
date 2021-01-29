@@ -12,7 +12,7 @@ HDM decouples compute (Virtual Machines - VM) and storage (Virtual Disks - VMDK)
 
 _Figure 1: HDM Architecture_
 
-![HDM Architecture](images/arch-final.png?classes=content-img "image_tooltip")
+![HDM Architecture](images/arch-final.png "HDM Architecture")
 
 
 ## Why Hybrid Cloud Data Management (HDM)?
