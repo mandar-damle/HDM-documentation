@@ -1,5 +1,6 @@
 ---
 title: '2.2 HDM Documentation'
+published: false
 ---
 
 ## Hybrid Cloud Data Management Solution
