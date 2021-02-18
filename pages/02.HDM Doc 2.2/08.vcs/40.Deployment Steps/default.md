@@ -1,0 +1,490 @@
+---
+title: 'Deployment Steps'
+---
+
+This section describes how to deploy, configure, and undeploy PrimaryIO Hybrid Cloud Data Management (HDM) 2.1.3 for enabling migrations of virtual machines to VMware Cloud Director (VCD).
+
+
+## HDM Deployment Steps
+
+HDM deployment involves the following six steps, each of which are discussed in detail in the sections below:
+
+1. Deploy the HDM Appliance On-Premises
+2. Add an On-Premises vCenter to the Appliance
+3. Register the HDM plugin to the On-Premises vCenter
+4. Add the HDM License
+5. Deploy HDM On-Premises
+6. Deploy HDM in the Cloud
+
+### Step 1: Deploy the HDM Appliance On-Premises
+
+The HDM Appliance manages on-premises and cloud HDM operations. This section covers the following topics for deployment and configuration of the HDM Appliance:
+
+1. Placement of the HDM Appliance on-Premises
+2. System Requirements for the Appliance 
+3. Network Requirements
+4. Deployment and Configuration
+5. Network Configuration for the Appliance
+6. Adding vCenter
+
+
+#### Placement of HDM Appliance
+
+1. The HDM Appliance must be deployed on the same on-premises vCenter it will manage.
+2. It should ideally be kept in a separate cluster than the one it will manage.
+
+
+#### Deployment and Configuration
+
+The HDM Appliance is deployed from the OVF shipped as part of the HDM package. Ensure that the placement and sizing of the deployment conforms to the requirements mentioned above.
+
+Use the **Deploy OVF Template **option in vCenter to deploy the Appliance as illustrated below:
+
+![alt_text](images/image55.png?classes=content-img "image_tooltip")
+
+#### Network Configuration
+
+Network configuration of the HDM Appliance requires the user to specify the available networks into four categories, as described in the _Network Requirements_ and _HDM Resource Requirements_ sections, above. While they can point to the same network, the best practice is to leave them separate. In addition, it should be specified whether the appliance will have a static IP or employ DHCP.
+
+![alt_text](images/image2.png?classes=content-img "image_tooltip")
+
+#### IP Address Details
+
+For all four network categories, choose whether a static IP or DHCP will be utilized as the IP allocation mechanism. If static is chosen, the following details will also be required:
+
+*   IP range: the list of IP addresses that are free to be allocated 
+*   Subnet mask: subnet of the IP range
+*   Gateway: gateway IP of the network
+*   Domain: domain name of the network
+*   DNS: to translate the domain name to the IP address
+*   NTP: for time sync
+
+Skip this configuration if DHCP is chosen.
+
+**Note**: 
+1. The NTP server must be specified for static IP configuration. Failure to provide this input may cause further HDM operations to fail.
+2. When a static IP is used, the gateway IP and the specified IP range should reside in the same subnet.
+
+![alt_text](images/image57.png?classes=content-img "image_tooltip")
+
+#### Gateway settings
+
+The setting in **Default gateway network** should enable that traffic for other subnets to be routed through its interface. This will generally be the WAN network, but be sure to verify the specifics for your network.
+
+In the field **Default Gateway** set the default gateway for the chosen network under **Default gateway network**. 
+
+> **If this information is entered incorrectly, the deployment will eventually fail, and will require an [HDM Reset](../../hdm%20reset)**
+
+_Figure 8b: Configuring Gateway, NTP and Default Gateway_
+![alt_text](images/Gateway-OVF.png?classes=content-img)
+
+
+#### Power on the Appliance
+
+Complete the rest of the wizard and wait for the deployment to complete. Once the deployment has completed, use vCenter to power on the appliance.
+
+
+#### Enable VMware HA on the HDM Appliance
+
+(_This step should only be performed for Cluster mode deployments of HDM_)
+
+VMware HA should be enabled on the cluster where the HDM appliance has been deployed. Follow these procedures to do this:
+
+1. In the on-premises vCenter, select the cluster where the HDM appliance has been deployed
+2. On the right hand pane, select the _Configure_ tab, then select _Services_ followed by _vSphere Availability_
+3. If the vSphere HA is turned off, select _EDIT_ and enable vSphere HA
+
+
+### Step 2 : Add On-Premises vCenter to the HDM Appliance
+
+**Note**: The on-premises vCenter should be added should to the same location where the HDM appliance has been deployed. 
+
+Prerequisites:
+
+1. Ensure that the HDM appliance is powered on and you have valid vCenter administrator credentials. To do this, log into the PrimaryIO appliance by accessing _https://&lt;appliance ip>_ in a supported web browser and enter the administrator credentials. The default administrator username and password are _‘administrator’_ and _‘2Hdm$aK!N@h!’_, respectively. This default password should be changed immediatly following the first login.
+2. Select **vCenters** from the top pane.
+3. Select **Add vCenter** from the top right.
+
+![alt_text](images/image56.png?classes=content-img "image_tooltip")
+
+4. Specify the IP or FQDN where the on-premises vCenter is configured. Enter the administrator credentials and select **Add vCenter**.
+5. The on-premises vCenter should now be listed on the PrimaryIO appliance
+
+![alt_text](images/image58.png?classes=content-img "image_tooltip")
+
+
+### Step 3: Register the HDM Plugin to vCenter
+
+1. Select **Register** to register the HDM plugin to the on-premises vCenter.
+2. Logout and login twice (occasionally, more than twice will be required) from vCenter for the plug-in installation to complete. Successful installation will add an HDM icon to the vCenter home page.
+
+![alt_text](images/image59.png?classes=content-img "image_tooltip")
+
+    **Note**:  The PrimaryIO vCenter plugin will be automatically registered on all vCenter instances that are configured using _enhanced linked mode_.
+
+
+### Step 4: Add HDM License
+
+A license key is required to activate the newly-deployed HDM.  A trial license will be shared with the product which can be used to activate HDM. 
+
+**Note**: The HDM configuration page may take a few minutes to load, as product settings need to be initialized. 
+
+Steps to add a license:
+
+1. In the on-premises vCenter, select _PrimaryIO_ from _Shortcuts_ or from _Menu_ to access the PrimaryIO dashboard
+2. Select **Administration** from the tab
+3. Select **License** to add or list any existing license.
+4. Select **Add License** to open a popup window where the **Trial license** can be pasted. 
+
+![alt_text](images/image31.png?classes=content-img "image_tooltip")
+
+5. Copy and paste the shared license key and select **OK**.
+
+![alt_text](images/image60.png?classes=content-img "image_tooltip")
+
+6. The license page may have to be refreshed for the license to be listed.
+7. The same interface can be used to add the **Product License**.
+
+![alt_text](images/image44.png?classes=content-img "image_tooltip")
+
+
+
+### Step 5: Deploy HDM On-Premises
+
+This section covers the steps for completing the deployment of HDM on-premises. This section will explain how to:
+
+1. Select a cluster for HDM deployment 
+2. Select HDM deployment mode
+3. Select HDM resource allocation
+4. Configure the network 
+5. Complete the deployment
+
+The on-premises deployment may take anywhere between 10 and 20 minutes, depending on the network bandwidth and storage. Any failure-retries performed by HDM during the deployment process are logged into vCenter events. Either the **hdm** or the **com.primaryio** keyword can be used in vCenter Event Search to search for events generated by HDM.
+
+
+Prerequisites: 
+
+It is assumed that the HDM appliance deployment and configuration has been executed successfully. Ensure that the plugin has been registered on vCenter, the HDM icon is visible on the vCenter home screen, and a valid HDM license has been added to activate the product.
+
+Steps for deployment:
+
+1. In the on-premises vCenter, select _PrimaryIO_ from _Shortcuts_ or from _Menu_ to access the PrimaryIO dashboard
+2. Select **Administration** from the tab
+3. Select **Configuration** to access the on-premises cluster listing
+
+![alt_text](images/image61.png?classes=content-img "image_tooltip")
+
+4. Select the cluster where HDM will be installed and select **Install**. This will open a wizard to select resources for HDM component deployment.
+5. Verify that the Appliance IP is correct. 
+6. Select the deployment mode based on the scale and failure tolerance requirements for the on-premises and cloud environments, taking care to ensure there are enough resources available in the on-premises and cloud environments. See the _Deployment Requirements_ section for details on each deployment mode.
+7. Select resource allocation based on size and resource requirements. See the _Deployment Requirements_ section for details on each allocation type.
+
+![alt_text](images/image42.png?classes=content-img "image_tooltip")
+
+8. Select the resource pool and shared datastore where the HDM components will be deployed.
+
+![alt_text](images/image46.png?classes=content-img "image_tooltip")
+
+9. Specify Network Configurations
+
+The Administrator can choose either DHCP or static IP for the IP address allocation. If static IP is chosen, any unused IP address or IP ranges, along with the gateway, subnet mask, domain search path, and any DNS or NTP server.  More details on these inputs can be found in the _Deployment Requirements_ section. Each of these steps will need to be repeated for:
+
+1. HDM Internal Network (HDM_Internal_Network)
+2. WAN Network (Uplink_WAN_Network)
+3. ESXi Network (ESXi_Network)
+
+
+**Note:**
+1. **If all are mapping to a single network, separate IP ranges will still need to be provided for each network type.**
+2. **The subnet range 172.17.0.0/16 is not available for the deployment; it is internally used by HDM microservices.**
+
+![alt_text](images/image47.png?classes=content-img "image_tooltip")
+
+10. Confirm the selection and submit the installation request by selecting _FINISH_.
+
+![alt_text](images/image48.png?classes=content-img "image_tooltip")
+
+11. This will create a deployment task which can be monitored from vCenter tasks. Also, the deployment progress can be seen in the HDM configuration view:
+
+![alt_text](images/image43.png?classes=content-img "image_tooltip")
+
+12. Wait for the deployment task to finish.
+
+## 
+
+![alt_text](images/image50.png?classes=content-img "image_tooltip")
+
+
+### Step 6: Deploy HDM to the Cloud
+
+This section covers the steps for deploying HDM in the cloud. It assumes the on-premises deployment of HDM has executed successfully. This section will explain how to:
+
+1. Prerequisites for deployment in the cloud
+2. Add a cloud
+3. Select the cluster, resource pool, and data store for HDM
+4. Configure the networks (multiple will be required) 
+5. Finish deployment
+
+Adding the cloud may take anywhere between 20 and 30 minutes, depending on the bandwidth and latency of the WAN. Any failure-retries performed by HDM during the deployment process will be logged into vCenter events. Either the **hdm** or the **com.hdm** keyword can be used in vCenter Event Search to search for events generated by HDM.
+
+Prerequisites:
+
+1. Ensure that the HDM plugin has been registered on vCenter and that the HDM icon is visible on the home screen. 
+2. Ensure the on-premises deployment has successfully completed.
+3. Ensure that the vCenter cloud environment is reachable from the HDM appliance. If the cloud vCenter is on the WAN network and it is not reachable through the appliance’s default route, then a static entry must be added to the HDM appliance to reach it. Follow these steps to complete this action:
+
+    1. vim /etc/pio.routes and add the entry `ens256|&lt;cloud_subnet>|&lt;gateway_to_access_cloud>`
+
+        Example:  ens256|10.3.0.0/24|10.1.0.1
+
+    2. /usr/bin/setup/network.sh
+
+
+Steps for deployment
+
+1. In the on-premises vCenter, select _HDM_ from _Shortcuts_ or  _Menu_ to access the HDM dashboard
+2. Select **Administration** from the tab
+3. Select **Clouds** to access the cloud listing
+
+![alt_text](images/image52.png?classes=content-img "image_tooltip")
+
+4. Select **Add Cloud**. This will open a wizard where you can select the resources needed to deploy the HDM components.
+5. Select the cloud type, then enter the cloud credentials and the cloud DNS. 
+
+    **Note**: In the current release, the cloud type is just notional; deployment doesn’t change based on which cloud type is selected.
+
+![alt_text](images/image1.png?classes=content-img "image_tooltip")
+
+![alt_text](images/image21.png?classes=content-img "image_tooltip")
+
+6. Select the cluster, resource pool, datastore and VM folder on the cloud where the HDM components will be deployed. 
+
+    **Note**: Select shared datastore in the cloud when deploying HDM components.
+
+![alt_text](images/image15.png?classes=content-img "image_tooltip")
+
+7. Select the network and IP configuration for _ON_CLOUD_HDM_NETWORK_, which will be used by HDM to boot the VM and conduct subsequent I/O handling through the HDM components.
+
+The administrator can either use DHCP or Static IP for the IP address allocation. If static IP is chosen, the administrator will need to specify any unused IP address or IP ranges along with the gateway, subnet mask, domain search path, and any DNS or NTP server.
+
+![alt_text](images/image16.png?classes=content-img "image_tooltip")
+
+8. Select the WAN network IP configurations 
+
+The administrator can either use DHCP or Static IP for the IP address allocation. If static IP is chosen, the administrator will need to specify any unused IP address or IP ranges along with the gateway, subnet mask, domain search path, and any DNS or NTP server.
+
+![alt_text](images/image17.png?classes=content-img "image_tooltip")
+
+9. Set WAN route configuration, so data traffic between the cloud and on-premises environments is possible. See the network planning section <a name="wan-cfg">[WAN Routing Configuration](../network%20planning/planning%20template/single%20network#wan-routing-configuration)</a>.
+
+![alt_text](images/image18.png?classes=content-img "image_tooltip")
+
+10. In the event of a warm migration use case, set routing rules to access the cloud vCenter on port 443 and ESXi on port 443 and 902. Additionally, specify which network will be used for routing from the HDM Internal or WAN Network.
+
+![alt_text](images/image37.png?classes=content-img "image_tooltip")
+
+11. Select network mapping to enable the network categorization performed on-premises gets percolated to the cloud 
+
+![alt_text](images/image19.png?classes=content-img "image_tooltip")
+
+12. Confirm the selection and select **Finish** to submit the request.
+
+![alt_text](images/image13.png?classes=content-img "image_tooltip")
+
+13. This will create deployment tasks for the cloud components. These tasks can be monitored in vCenter Tasks. The progress can also be seen in the HDM configuration view. 
+
+![alt_text](images/image24.png?classes=content-img "image_tooltip")
+
+14. Wait for the deployment task to finish.
+
+![alt_text](images/image20.png?classes=content-img "image_tooltip")
+
+
+
+## DNS Entry to resolve FQDN
+
+If the cloud vCenter or ESXi has been added using FQDN, the DNS nameserver must be explicitly added in the HDM cloud cache component. The following procedure should be used:
+
+1. Log into the cloud vCenter
+2. Locate the HDM cloud cache component VMs with the name _HDM-Cloud-Cache-*_.
+3. ssh into each HDM cloud cache component VM with root credentials and password (admin123)
+4. Set the DNS server in /`etc/resolv.conf` required for resolving the FQDN
+5. Ensure the FQDN is reachable using the ping command
+
+
+## Deployment Validation
+
+Once the on-premises and cloud deployments are complete, there are multiple ways to view the deployed components and their states:
+
+
+### Appliance View
+
+After successfully installing HDM in the cloud, the appliance control panel will list each component and their health. 
+
+![alt_text](images/image22.png?classes=content-img "image_tooltip")
+
+Figure: HDM components after deployment
+
+In addition to the Appliance Control Panel, this information is also available on vCenter on the HDM plugin by selecting _Menu_, followed by _HDM_, _Administration_, _HDM Health_, and then _Component Health_.
+
+![alt_text](images/image45.png?classes=content-img "image_tooltip")
+
+
+
+### On-Premise vCenter
+
+After successfully deploying to the cloud, the on-premises vCenter will show the cloud state as installed. This can be viewed by selecting _PrimaryIO_, followed by _Administration_, then _Clouds View_. 
+
+![alt_text](images/image40.png?classes=content-img "image_tooltip")
+
+
+
+## Enable IO Monitoring
+
+**Notes**: 
+
+1. This step is not required for cold migration.
+2. For Lite Standalone and Lite Cluster deployment modes, this step only creates the SPBM policy and attaches to VMs in the cluster; it doesn’t perform any detailed I/O profiling.
+
+HDM requires the on-premises VMs to be monitored for I/O by HDM. Monitoring helps to:
+
+1. Estimate the cloud cache size requirement for a given VM 
+2. Determine whether the VM is a suitable candidate for migration
+
+This is done by creating an HDM SPBM cache type policy and applying that policy to the existing VMs. Detailed steps are provided below.
+
+Prerequisites 
+
+1. Ensure the on-premises installation has successfully completed.
+2. Ensure there are no HDM SPBM policies named ‘HDM Analyzer Profile’ already existing from previous HDM installation attempts. This can be checked using the following steps:
+    1. In the on-premises vCenter, select _Home_, followed by _Policies and Profiles_, then _VM Storage Policies_
+    2. Delete any instances of ‘HDM Analyzer Profile’
+
+
+Steps
+
+1. In the on-premises vCenter, select _PrimaryIO_ from _Shortcuts_ or from _Menu_ to access the PrimaryIO dashboard
+2. Select **Administration** from the tab.
+3. Select **Configuration** to access the cluster listing.
+4. On the cluster where HDM is installed, select **Enable** under monitoring. This will open a popup.
+
+![alt_text](images/image49.png?classes=content-img "image_tooltip")
+
+5. Select **OK** to enable monitoring.
+
+This will create an SPBM cache type policy for HDM. The default name for the policy is **HDM Analyzer Profile.** This profile can be viewed in the on-premises vCenter by selecting _Home_, followed by _Policies and Profiles_, then _VM Storage Policies_.
+
+![alt_text](images/image4.png?classes=content-img "image_tooltip")
+
+This newly created HDM policy will be applied to all virtual machines under the cluster, and will enable monitoring for I/O activity. A reconfiguration task will be generated for each virtual machine when applying the HDM SPBM policy. If VMs have been successfully reconfigured, VM policies for these virtual machine will have **‘HDM Analyzer Profile’** applied against each of their VMDKs.
+
+Once the policy has been applied, the user can check  analyzer summaries by selecting **VM->Monitoring->PrimaryIO** from **Host and Clusters** view.
+
+**Note**: 
+
+1.The _Enable IO Monitoring_ step can be executed any number of times to enable monitoring for new VMs since the last execution.
+2. Applying the SPBM policy can fail for some VMs. For example, when the VM already has a snapshot. However, this doesn’t fail the entire operation.
+
+
+### Disabling Monitoring on a VM
+
+**Note**: This step must not be executed for a VM that will be migrated to the cloud.
+
+Monitoring a VM is a low overhead activity and is done transparently without affecting the ongoing I/Os or operations. However, if you don’t want HDM to monitor certain VMs, take the following steps: 
+
+1. In the on-premises vCenter, right click on the VM you do not want to be monitored.
+2. Select _VM Policies_, followed by _Edit VM Storage Policies_.
+3. In the popup, if the VM storage policy is the HDM Analyzer Profile, set the VM storage policy to **Datastore Default**, then select **Apply to all**
+
+![alt_text](images/image5.png?classes=content-img "image_tooltip")
+
+4. The vCenter task will display the operation progress and status.
+
+**Note**: HDM cannot migrate a VM that does not have an HDM SPBM policy. However, the SPBM policy can be applied to a VM at any time, thereby making it available for migration.
+
+
+# HDM SQS Configuration
+
+HDM is integrated with an SQS (Simple Queue Service from AWS) message bus. HDM **_sqs-python_** is a python-based library that provides an interface to manage and operate  HDM. 
+
+**Client Application** : Clients will be written by a third party and will use the sqs-python library to send HDM command messages and receive responses.
+
+**SQS Messaging Service** :  This service receives command requests from the client and passes them to HDM. The responses are then received from HDM and passed back to the client.
+
+**HDM** : HDM acts as the server for the commands and sends responses. There is also a periodic heartbeat between HDM and the client, for the client to be aware of the server's system state.
+
+![drawing](images/image12.png?classes=content-img)
+
+For third-party integration to work, after deployment the HDM appliance must be configured with the message bus. HDM will then listen and execute operations posted on this bus and send back the status of these operations to the caller. 
+
+Pre-requisites
+
+1. HDM Appliance must be installed before the configuration of HDM SQS.
+2. No other step in the HDM deployment should have been performed at this point.
+3. User should be ready with the SQS message bus token to be used for the configuration
+
+
+Steps
+
+1. Access the PrimaryIO appliance via a browser.
+2. Log into the appliance using administrator credentials.
+3. Visit the vCenter page and select the user profile icon
+
+![alt_text](images/image6.png?classes=content-img "image_tooltip")
+
+4. Select **Configure Message Bus**.
+5. Provide the third party's SQS message bus token in the pop-up, then select **Configure.** 
+
+![alt_text](images/image8.png?classes=content-img "image_tooltip")
+
+6. The configured message bus details can be seen. To change the message bus configuration, select **Reconfigure**.
+
+![alt_text](images/image9.jpg?classes=content-img "image_tooltip")
+
+**Note: The PrimaryIO Appliance should have access to the Internet for warm or cold migration through SQS.**
+
+
+# TroubleShooting
+
+## Troubleshooting Common Failure Scenarios
+
+Common failure scenarios and possible reasons are provided below. If the failure is not one of the above reasons and the error message is not clear enough, please contact PrimaryIO Support.
+
+
+### Deployment Failures
+
+Here are some common reasons for deployment failures:
+
+1. **Resources not sufficient**: On-premises or cloud resources are insufficient for meeting the deployment mode requirements.
+2. **Unresolved input values**: Inputs such as vCenter FQDN/IP are not resolvable or are unreachable.
+3. **IP range issues**: For static IP allocation, the IP range specified is insufficient for assigning to all HDM components.
+4. **HDM component failed during or after the deployment**: HDM component failed during deployment.
+
+Usually when the deployment UI wizard or vCenter tasks fail, one of the above error messages will appear. After the error has been rectified, a re-deployment can be initiated, or an HDM reset followed by re-deployment can be attempted.
+
+
+### Undeployment Failures
+
+Common reasons for undeployment failures are:
+
+1. VMs are still migrated to the cloud when undeployment is attempted.
+2. The on-premises cluster host is not able to go to maintenance mode. This can be due to:
+    *   DRS not enabled on the cluster, causing powered-on VMs to block the maintenance mode
+    *   In the case where the HDM applicance is part of a single host in the cluster, the maintenance mode will be blocked if the HDM appliance is powered on. In this case, uninstall the HDM filter and immediately power off the appliance.
+
+vCenter tasks will provide the reasons for undeployment failures. If it is one of the above, rectify the problem and retry the operation.
+
+
+# Support and Contact 
+
+HDM support can be reached via **email: [support@primaryio.com](mailto:support@primaryio.com)**
+
+The email should include the following information:
+
+*   **Email subject **: Clearly specify the issue.
+*   **Email body**: Clearly describe the problem. Include information on the deployment type, the operation being performed, any relevant screenshots, etc.
+*   **Email attachment** : Attach the relevant logs (as described in [HDM Support Logs](http://docs.primaryio.com/hdm%20documentation/support%20logs) section)
+    *   HDM logs
+    *   vm-support logs
+
+    If the attachment size is too large, an alternate shared location may be provided by HDM support to enable the logs to be uploaded.
