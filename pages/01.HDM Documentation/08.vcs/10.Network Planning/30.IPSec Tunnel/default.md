@@ -13,7 +13,7 @@ Please ensure that the following prerequisites are met before proceeding for dep
 
 
 1. Cloud ESXi hosts, Cloud Vcenter and Cloud WAN network should be reachable from the appliance through VPN and FQDN is resolved. 
-2. Virtual machines created on the Cloud  should be able to reach Cloud vCenter and Cloud ESXi and FQDN is resolved through either cloud HDM_WAN network or HDM_INTERNAL_NETWORK 
+2. Virtual machines created on the Cloud should be able to reach Cloud vCenter and Cloud ESXi and FQDN is resolved through either cloud HDM_WAN network or HDM_INTERNAL_NETWORK 
 3. The cloud DNS is also reachable from the on-premise through the IPsec tunnel. (Please make note that the Cloud side DNS details are required at the time of deployment of HDM product).
 
 In order to meet above requirements, following route based IPsec VPN  tunnels need to be configure. For additional information please refer to VMware document [Configure a VPN Connection Between Your SDDC and On-Premises Data Center](https://docs.vmware.com/en/VMware-Cloud-on-AWS/services/com.vmware.vmc-aws.networking-security/GUID-92F6C09E-8E74-430E-8F79-C2E5B2150ADA.html)
@@ -29,7 +29,9 @@ In order to meet above requirements, following route based IPsec VPN  tunnels ne
 
 Here is the process to create the  network for HDM which will act as a WAN and INTERNAL network.
 
-
+```
+Note: The recommendation is to have DHCP enabled for HDM_INTERNAL_NETWORK
+```
 
 *   On cloud Vcenter Click on Networking -> SDDC-DSwitch-Private (Right Click)-> Distributed Port Group -> New Distributed Port Group. In this wizard, enter the network name and click on next. 
 
@@ -53,7 +55,6 @@ Here is the process to create the  network for HDM which will act as a WAN and I
 ![alt_text](images/image4.png?classes=content-img "image_tooltip")
 
 *   
-
 
 ## Setting up Single Network IPsec tunnel 
 
