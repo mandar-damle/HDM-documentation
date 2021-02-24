@@ -30,7 +30,7 @@ In order to meet above requirements, following route based IPsec VPN  tunnels ne
 Here is the process to create the  network for HDM which will act as a WAN and INTERNAL network.
 
 ```
-Note: The recommendation is to have DHCP enabled for HDM_INTERNAL_NETWORK
+Note: DHCP needs to be enabled and configured for HDM_INTERNAL_NETWORK
 ```
 
 *   On cloud Vcenter Click on Networking -> SDDC-DSwitch-Private (Right Click)-> Distributed Port Group -> New Distributed Port Group. In this wizard, enter the network name and click on next. 
