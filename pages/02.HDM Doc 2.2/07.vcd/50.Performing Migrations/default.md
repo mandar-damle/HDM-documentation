@@ -8,7 +8,6 @@ order_manual: ''
 
 <!-- Copy and paste the converted output. -->
 
-**NOTE: In HDM 2.1.3, TBC is only supported for demo and test purposes.**
 
 
 ## Migrate a VM using vCenter 
@@ -68,6 +67,8 @@ _Figure 4: Migration Wizard – Step 3_
 
 *   **Be sure to review the CPU and memory required in the cloud**
 *   **Leave “Application Dependency” selected**
+*   **If the VM being migrated has the substring "HDM" or "hdm" (case-insensity) in the name the VM will not be listed in the migration list. Example "test-hdm-vm", "video-hdmi" or  will not be 
+migrated.**
 
 _Figure 5: Migration Wizard - Step 4_
 

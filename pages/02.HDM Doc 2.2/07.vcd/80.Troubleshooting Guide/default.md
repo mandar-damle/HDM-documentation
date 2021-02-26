@@ -198,6 +198,10 @@ During add cloud operation, users should specify the correct default application
 
 Certain virtual machine parameters may not be retained post migration. These will need to be set manually. (Ref : **DP-2859**)
 
+###### **Migration Wizard is not listing selected VM for migration**
+
+If the VM being migrated has the substring "HDM" or "hdm" (case-insensity) in the name the VM will not be listed in the migration list. Example "test-hdm-vm", "video-hdmi" or  will not be 
+migrated.
 
 ###### **vCenter does not show the option to migrate VM**
 
