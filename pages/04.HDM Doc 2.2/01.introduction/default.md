@@ -27,7 +27,7 @@ The HDM product binaries can be used on
 
 ## HDM Migrations
 
-HDM 2.1.3 is used to migrate VMs from on-premises environments to the cloud. There are two main use cases for HDM migrations:
+HDM 2.2.1 is used to migrate VMs from on-premises environments to the cloud. There are two main use cases for HDM migrations:
 
 1. **Agile Rapid Migration (ARM):** The capability to decouple compute from data, to minimize downtime during migration.
 2. **Try Before Commit (TBC):** The capability to quickly test the VMs running in the cloud before fully committing to the cloud.
@@ -65,7 +65,7 @@ This use case provides a quick way to migrate VMs to the cloud while retaining t
 4. **Cloud Storage Gateway: **Provides access across the WAN link to enable cloud-based VMs read/write access back to the on-premises environment. It is possible to have multiple gateways for redundancy.
 5. **Sync Daemon:** Located in both environments to deliver compression, encryption, and de-duplication for data being transferred from on-premises to cloud environments. It also provides a mechanism to pause and resume data transfers in the event of a WAN disconnect.
 
-_Figure 2: Location of HDM 2.1.3 components_
+_Figure 2: Location of HDM 2.2.1 components_
 
 ![alt_text](images/image8.png?classes=content-img "image_tooltip")
 

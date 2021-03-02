@@ -2,7 +2,7 @@
 title: Troubleshooting
 ---
 
-This section covers troubleshooting for known issues in HDM 2.1.3. In the event there are issues that are not covered in this document or are not easily resolved, contact PrimaryIO support for assistance. 
+This section covers troubleshooting for known issues in HDM 2.2.1. In the event there are issues that are not covered in this document or are not easily resolved, contact PrimaryIO support for assistance. 
 
 
 # HDM Deployment

@@ -555,7 +555,7 @@ Before migration is triggered, ensure that the health of all HDM components is g
 
 <li>Following successful migration, the VM will be ready for use in the cloud
 
-<li>To migrate multiple VMs and the HDM dashboard, please refer to the HDM 2.1.3 Admin Guide
+<li>To migrate multiple VMs and the HDM dashboard, please refer to the HDM 2.2.1 Admin Guide
 </li>
 </ul>
    </td>
