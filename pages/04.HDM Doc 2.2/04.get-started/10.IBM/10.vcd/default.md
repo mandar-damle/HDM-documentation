@@ -67,7 +67,7 @@ Before proceeding with the installation, watch the training videos ([https://www
 <table>
   <tr>
    <td>
-<img src="/user/pages/01.HDM%20Documentation/04.get-started/10.IBM/10.vcd/images/image12.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/10.vcd/images/image12.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -90,7 +90,7 @@ Before proceeding with the installation, watch the training videos ([https://www
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/10.vcd/images/image13.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/10.vcd/images/image13.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -115,7 +115,7 @@ Before proceeding with the installation, watch the training videos ([https://www
 <table>
   <tr>
    <td>
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/10.vcd/images/image23.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/10.vcd/images/image23.png" width="" alt="alt_text" title="image_tooltip">
    </td>
    <td>
 <ul>
@@ -132,7 +132,7 @@ Before proceeding with the installation, watch the training videos ([https://www
 <table>
   <tr>
    <td>
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/10.vcd/images/image10.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/10.vcd/images/image10.png" width="" alt="alt_text" title="image_tooltip">
    </td>
    <td>
 <ul>
@@ -165,7 +165,7 @@ Before proceeding with the installation, watch the training videos ([https://www
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/10.vcd/images/image16.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/10.vcd/images/image16.png" width="" alt="alt_text" title="image_tooltip">
    </td>
    <td>
 <ul>
@@ -183,7 +183,7 @@ Before proceeding with the installation, watch the training videos ([https://www
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/10.vcd/images/image15.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/10.vcd/images/image15.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -204,7 +204,7 @@ Before proceeding with the installation, watch the training videos ([https://www
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/10.vcd/images/image19.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/10.vcd/images/image19.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>Register the vCenter plugin by selecting <em>Register</em>
@@ -230,7 +230,7 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/10.vcd/images/image17.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/10.vcd/images/image17.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -258,7 +258,7 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/10.vcd/images/image18.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/10.vcd/images/image18.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -282,7 +282,7 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
    <td>
 
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/10.vcd/images/image20.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/10.vcd/images/image20.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -310,7 +310,7 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/10.vcd/images/image21.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/10.vcd/images/image21.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -339,7 +339,7 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
    <td>
 
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/10.vcd/images/image24.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/10.vcd/images/image24.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -361,7 +361,7 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
    <td>
 
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/10.vcd/images/image25.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/10.vcd/images/image25.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -386,7 +386,7 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/10.vcd/images/image26.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/10.vcd/images/image26.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -408,7 +408,7 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
    <td>
 
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/10.vcd/images/image27.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/10.vcd/images/image27.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -430,7 +430,7 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/10.vcd/images/image2.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/10.vcd/images/image2.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -449,7 +449,7 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
 <table>
   <tr>
    <td>
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/10.vcd/images/image3.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/10.vcd/images/image3.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -469,7 +469,7 @@ Navigate to the _Licensing_ page on the HDM vCenter Plugin
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/10.vcd/images/image4.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/10.vcd/images/image4.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -503,7 +503,7 @@ Before migration is triggered, ensure that the health of all HDM components is g
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/10.vcd/images/image5.jpg" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/10.vcd/images/image5.jpg" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -526,7 +526,7 @@ Before migration is triggered, ensure that the health of all HDM components is g
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/10.vcd/images/image6.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/10.vcd/images/image6.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -545,7 +545,7 @@ Before migration is triggered, ensure that the health of all HDM components is g
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/10.vcd/images/image7.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/10.vcd/images/image7.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>

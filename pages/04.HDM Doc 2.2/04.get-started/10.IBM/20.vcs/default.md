@@ -87,7 +87,7 @@ Estimated time 5 minutes
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image14.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/20.vcs/images/image14.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -108,7 +108,7 @@ Estimated time 5 minutes
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image2.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/20.vcs/images/image2.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -135,7 +135,7 @@ Estimated time 10 minutes
 <table>
   <tr>
    <td>
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image1.png" width="" alt="alt_text" title="image_tooltip">   
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/20.vcs/images/image1.png" width="" alt="alt_text" title="image_tooltip">   
    </td>
    <td>
 <ul>
@@ -152,7 +152,7 @@ Estimated time 10 minutes
 <table>
   <tr>
    <td>
-   <img src="/user/pages/01.HDM Documentation/04.get-started/20.vcs/images/image6.png" width="" alt="alt_text" title="image_tooltip">
+   <img src="/user/pages/04.HDM Doc 2.2/04.get-started/20.vcs/images/image6.png" width="" alt="alt_text" title="image_tooltip">
    </td>
    <td>
 <ul>
@@ -187,7 +187,7 @@ Estimated time 10 minutes
 
 
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image16.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/20.vcs/images/image16.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -207,7 +207,7 @@ Estimated time 10 minutes
    <td>
 
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image15.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/20.vcs/images/image15.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -228,7 +228,7 @@ Estimated time 10 minutes
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image18.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/20.vcs/images/image18.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>Register the vCenter plugin by selecting the <b>Register</b> button.
@@ -256,7 +256,7 @@ Navigate to the Licensing page on the HDM vCenter Plugin
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image17.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/20.vcs/images/image17.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -284,7 +284,7 @@ Navigate to the Licensing page on the HDM vCenter Plugin
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image19.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/20.vcs/images/image19.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -307,7 +307,7 @@ Navigate to the Licensing page on the HDM vCenter Plugin
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image23.jpg" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/20.vcs/images/image23.jpg" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -331,7 +331,7 @@ Navigate to the Licensing page on the HDM vCenter Plugin
    <td>
 
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image7.jpg" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/20.vcs/images/image7.jpg" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -359,7 +359,7 @@ Navigate to the Licensing page on the HDM vCenter Plugin
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image20.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/20.vcs/images/image20.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -380,7 +380,7 @@ Navigate to the Licensing page on the HDM vCenter Plugin
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image10.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/20.vcs/images/image10.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -407,7 +407,7 @@ Navigate to the Licensing page on the HDM vCenter Plugin
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image30.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/20.vcs/images/image30.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -424,7 +424,7 @@ Navigate to the Licensing page on the HDM vCenter Plugin
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/ESXi Route.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/20.vcs/images/ESXi Route.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -442,7 +442,7 @@ Navigate to the Licensing page on the HDM vCenter Plugin
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image22.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/20.vcs/images/image22.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -463,7 +463,7 @@ Navigate to the Licensing page on the HDM vCenter Plugin
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image11.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/20.vcs/images/image11.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -501,7 +501,7 @@ Before migration is triggered, ensure that the health of HDM componentes is gree
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image9.jpg" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/20.vcs/images/image9.jpg" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
@@ -524,8 +524,8 @@ Before migration is triggered, ensure that the health of HDM componentes is gree
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image5.png" width="" alt="alt_text" title="image_tooltip">
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/cold-migration.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/20.vcs/images/image5.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/20.vcs/images/cold-migration.png" width="" alt="alt_text" title="image_tooltip">
    </td>
    <td>
 <ul>
@@ -545,7 +545,7 @@ Before migration is triggered, ensure that the health of HDM componentes is gree
   <tr>
    <td>
 
-<img src="/user/pages/01.HDM Documentation/04.get-started/10.IBM/20.vcs/images/image8.png" width="" alt="alt_text" title="image_tooltip">
+<img src="/user/pages/04.HDM Doc 2.2/04.get-started/10.IBM/20.vcs/images/image8.png" width="" alt="alt_text" title="image_tooltip">
 
    </td>
    <td>
