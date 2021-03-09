@@ -9,9 +9,13 @@ The following operations are done on the guest VM for prepare to migrate.
 ### Linux
 
 For a Support Linux OS we will
-1. Check iscsi initiator drivers installed (install if not)
-1. Add iscsi driver to initrd.
-1. Add flag in kernel boot to allow iSCSI booting.
+1. Check VMware tools installed and running
+1. Appliance copy prepare to migrate tool to Guest in User’s home directory->.PIO->hyc
+1. Check iSCSI initiator package installed (install it if not)
+1. Add iSCSI driver/module to initrd
+1. Install grub scripts to support customized Grub entries and to support EFI
+1. Configure and Update grub to allow iSCSI booting
+1. Get network configuration pre-migration and then Set post migration network configuration
 
 
 ### Windows
