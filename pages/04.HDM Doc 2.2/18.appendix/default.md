@@ -22,11 +22,14 @@ For a Support Linux OS we will
 
 
 For a Supported Windows OS we will
-1. Disable WFP(Windows Filtering Platform) Lightweight Filter bindings from the NIC which will be used for iSCSI booting.
-1. Turning on the 'msiscsi' service and setting 'service_start_mode' to 'automatic' so it will be going to autostart on each boot.
-1. [add what packages will be added]
-1. [what files are added with what permissions]
-1. [Which site are we downloading additional packages.]
+1. Check VMware tools installed and running
+1. Appliance copy prepare to migrate tool to Guest in ProgramData->PIO->hyc directory
+1. Appliance copy NVSPBIND package in tmp directory of Guest (if not copied earlier)
+1. Check NVSPBIND package installed (install it if not)
+1. Disable WFP(Windows Filtering Platform) Lightweight Filter driver like ms_wfplwf_upper, ms_ndiscap_lower and ms_ndiscap to unblock iSCSI traffic
+1. Configure ISCSI initiator service by turning on 'msiscsi' service and setting 'service_start_mode' to 'automatic' so it will be going to autostart on each boot.
+1. Schedule a task which makes offline devices online.  
+1. Get network configuration pre-migration and then Set post migration network configuration
 
 
 # HDM - Component Interactions
