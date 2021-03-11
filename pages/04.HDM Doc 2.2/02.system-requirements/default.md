@@ -51,7 +51,7 @@ title: 'System Requirements'
    *   VMware Cloud on AWS
    *   IBM Cloud for VMware Solution
    *   VMware Cloud Foundation SDDC
-   *   VMware Cloud Director
+   *   VMware Cloud Director (10.1, 10.2)
 *   Shared Datastore for HDM components.
 
 ##### Network Environment
