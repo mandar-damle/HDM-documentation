@@ -30,4 +30,7 @@ Since version 2.2.1 we have created a m4 based macro layer which does macro subs
 
 The structure is as follows
 /macros/build-doc.sh - Script to generate final .md documents in /pages/
- 
+
+# References
+
+* https://www.gnu.org/software/m4//manual/m4-1.4.16/m4.html
