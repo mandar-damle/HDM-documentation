@@ -1,3 +1,15 @@
+
+
+
+
+
+
+
+
+
+
+
+
 ---
 title: 'Performing Migrations'
 ---
@@ -741,3 +753,4 @@ If a VM snapshot has been bulk transferred to the cloud and a failure occurs whi
 **Refer to the Troubleshooting Guide if failure issues are not resolved. The failure might have been caused by a known product issue. **
 
 **PrimaryIO support may be required. Refer to the Install Guide for the details. **
+

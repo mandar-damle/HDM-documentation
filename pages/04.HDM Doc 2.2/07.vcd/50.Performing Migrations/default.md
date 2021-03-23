@@ -1,193 +1,469 @@
+
+
+
+
+
+
+
+
+
+
+
+
 ---
 title: 'Performing Migrations'
-media_order: ''
-body_classes: ''
-order_by: ''
-order_manual: ''
 ---
 
-<!-- Copy and paste the converted output. -->
+# HDM Migrations
 
+HDM is used to migrate VMs from on-premises to cloud environments. HDM supports the following migration types:
 
+1. Agile Rapid Migration (ARM)
+2. Try Before Commit (TBC)
+3. Cold Migration
 
 ## Migrate a VM using vCenter 
 
-This section describes the steps for executing the migration operation through vCenter. As noted above, only Cold Migration is supported in HDM 2.2.1. 
+**Note:** The migration operation can be performed using the PrimaryIO GUI interface in vCenter, or through the SQS interface library. The following sections describe the steps for executing the migration operation using vCenter. 
+
+**Note**: Currently, HDM migration support is limited to one simultaneous cluster per vCenter. If the VMs to be migrated are from multiple clusters, the process will need to be repeated for each of them.
 
 Pre-requisites
 
-
-
-1. HDM must be fully deployed in the on-premises and cloud environments
-2. Target vApp should have HDM_INTERNAL_NETWORK connected
-
-
-### Migrate the VM
+1. HDM deployment must be complete in the on-premises and cloud environments.
+2. The HDM SPBM policy must be configured. 
 
 Steps
 
+1. Prepare the VM to migrate
+2. Migrate the VM
 
 
-1. In the on-premises vCenter, right click on the VM/Cluster to be migrated
-2. Select _HDM _followed by_ Migrate_
+### Prepare to Migrate
 
-_Figure 2: On-premises vCenter_
+The VMs to be migrated will first need to be prepared:
 
+1. Perform various checks to ensure that the VM's OS type and configuration are supported for migration.
+2. If required, make the necessary configuration updates.
 
-![alt_text](images/image7.png?classes=content-img "image_tooltip")
+Pre-requisites
 
-
-
-
-3. This will initiate the Migrate Wizard. Select the desired migration type, then _NEXT_
-
-_Figure 3: Migration Wizard - Step 2_
-
-
-
-![alt_text](images/image10.png?classes=content-img "image_tooltip")
-
-
-
-
-4. Review the target environment for the migration to ensure adequate resources are available, then select _NEXT_
-
-_Figure 4: Migration Wizard – Step 3_
-
-
-
-![alt_text](images/image9.png?classes=content-img "image_tooltip")
-
-
-
-
-5. Select which VMs you wish to migrate, then _NEXT_
-
-    **NOTES: **
-
-*   **Be sure to review the CPU and memory required in the cloud**
-*   **Leave “Application Dependency” selected**
-*   **If the VM being migrated has the substring "HDM" or "hdm" (case-insensity) in the name the VM will not be listed in the migration list. Example "test-hdm-vm", "video-hdmi" or  will not be 
-migrated.**
-
-_Figure 5: Migration Wizard - Step 4_
+1. The VM must be powered on.
+2. The VM's OS type must be supported for migration.
+3. The latest version of VMware tools must be installed on the VM, and the tools service must be running and functional.
+4. Administrator/root credentials of the VM must be available.
+5. The OS must be present on the first VMDK of the VM
+6. All OS related partitions must be present on the same disk/device. For example:
+    *   The 'System Reserved' and 'System' partitions must be on the same disk
+    *   /boot or /home must be present on the same disk
+    *   LVM must be created from partitions on the same disk
+7. The E1000E and VMXNet3 network adapters must be available in the on-premises and cloud vCenters
+8. The VM must have access to the Internet.
+9. A minimum of 50 MB must be available in the system partition
+10. The OS or repository must configured to download the required install packages from the Internet.
+11. For Ubuntu 16.04, LVM is not supported.
+12. For all versions of Ubuntu, ensure that either the static IP is configured for internal network, or the DHCP lease is set to 30 days or greater.
+13. If the OS is Linux, the sudo user’s home directory must be <code><em>/home</em></code>.
+14. Wait for the boot process to complete. For example, on Linux:
+    *   Use command <code>systemctl is-system-running </code>to ensure the system is fully operational
+15. The VM cannot have UEFI BIOS. Only IBM PC BIOS is supported.
+16. For a Windows VM, firewalls must be disabled for the duration of the _prepare to migrate_ operation.
+17. For the Windows Domain user, the local security policy must be modified for the duration of the _prepare to migrate_ operation:
+    *   Select _Local Security Policy_, followed by _Local Policies_, then _Security Options_
+    *   On the policy <code>User Account Control: Behavior of the elevation prompt for administrators in Admin Approval Mode, </code>choose the <code>Elevate without prompting </code>option
+    *   Disable the policy _User Account Control: Turn on Admin Approval Mode_
+    *   Reboot the VM
 
 
-![alt_text](images/image12.png?classes=content-img "image_tooltip")
+Steps
+
+1. In the on-premises vCenter, right click on the VM to be migrated.
+2. Select the **HDM -> Prepare to Migrate** option
+
+![alt_text](images/image30.png?classes=content-img "image_tooltip")
+
+3. Specify the administrator/root user credentials in the pop-up wizard 
+
+![alt_text](images/image33.png?classes=content-img "image_tooltip")
 
 
+**Note:  A full clone or linked clone of a VM must go through the “prepare to migrate” operation, even if its base VM has already has. For example, in the HDM migrate wizard in vCenter, clones are not shown in the list of available VMs for migration unless they have been explicitly prepared for migration.**
 
 
-6. Select the vApp target for the migration and the storage profile to be applied to the VM once the migration is complete, then _NEXT_
+### Apply SPBM Policy
 
-    **NOTE: The target vApp should have HDM_INTERNAL_NETWORK connected**
+The migrate operation requires the VM to have the HDM SPBM policy applied to its disks. This may have already been attached when the _Enable I/O Monitoring_ was performed (see the Enable I/O Monitoring section for more details). But in cases where either the attempt to attach the VM policy failed at that time, or the VM was created at a later point in time, the following steps can be taken to verify - and, if required, apply - SPBM policy:
+
+Pre-requisites
+
+1. Enable I/O Monitoring has already been executed.
 
 
-_Figure 6: Migration Wizard - Step 5_
+Steps
+
+1. In the on-premises vCenter, right click on the VM to be migrated.
+2. Select _VM Policies_, followed by _Edit VM Storage Policies_
+
+![alt_text](images/image32.png?classes=content-img "image_tooltip")
+
+3. In the popup window, there is no need to do anything if the VM storage policy has already been set to the HDM Analyzer Profile. However, if it is set to **Datastore Default**, change it to _HDM Analyzer Profile_ and select _Apply to all_.
+
+![alt_text](images/image35.png?classes=content-img "image_tooltip")
+
+### Migrate the VM
+
+Pre-requisites
+
+1. _Prepare to Migrate_ has been successful on the VM
+2. The HDM SPBM policy has been applied to all disks within the VM
 
 
+Steps
+
+1. In the on-premises vCenter, right click on the VM to be migrated.
+2. Select the **HDM -> Migrate** option
+
+![alt_text](images/image34.png?classes=content-img "image_tooltip")
+
+3. The Migrate wizard will open. Select the migration type to be used to migrate the VM to the cloud.
+
+![alt_text](images/image37.png?classes=content-img "image_tooltip")
+
+4. On the **Select Cloud** page, review the cloud where the VM is to be migrated and ensure that adequate resources are available
+
+![alt_text](images/image36.png?classes=content-img "image_tooltip")
+
+5. Choose the list of VMs to migrate:
+    *   Keep the option “Application Dependency” checked. 
+    *   Review the cache size, CPU, and memory required in the cloud
+
+![alt_text](images/image40.png?classes=content-img "image_tooltip")
+
+6. If the Warm and Cold Migration type has been chosen, select the target resources on the cloud where the virtual machine will be migrated
+
+![alt_text](images/image38.png?classes=content-img "image_tooltip")
+
+7. If the Warm and Cold Migration type has been selected, map the network for the VM
+
+![alt_text](images/image39.png?classes=content-img "image_tooltip")
+
+8. Confirm all selections and select _MIGRATE_
+
+![alt_text](images/image41.png?classes=content-img "image_tooltip")
+
+9. The migration status page will display the status of the migration as it progresses.
+
+![alt_text](images/image42.png?classes=content-img "image_tooltip")
+
+10. The migration status can also be tracked in vCenter tasks.
+
+![alt_text](images/image43.png?classes=content-img "image_tooltip")
+
+11. The migrated VM can be seen in a new resource pool _HDM_MIGRATE_POOL_ in the on-premises vCenter in a powered off state, while the same VM will be in a powered on state in the cloud vCenter.
+
+![alt_text](images/image44.png?classes=content-img "image_tooltip")
+
+12. All migrations can be monitored by selected _Cluster_, followed by _Monitor_, _HDM_, _Migration_, then the _In Progress_ tab.
+
+![alt_text](images/image28.png?classes=content-img "image_tooltip")
+
+13.  For virtual machines that have been migrated using Warm Migration, the following steps are required to complete the migration workflow:
+    *   START TRANSFER : This is an optional step where the virtual machine data can be transferred using **HDM Bulktransfer**. Select the virtual machine, then select **Start Transfer **.
+
+![alt_text](images/image-start-transfer.png?classes=content-img "image_tooltip")
+
+![alt_text](images/image45.png?classes=content-img "image_tooltip")
+
+    *   CONFIGURE & SYNC : Once the virtual machine data has been moved to the cloud, select the newly-moved virtual machine to sync the latest changes.
+
+![alt_text](images/image46.png?classes=content-img "image_tooltip")
+
+    *   COMMIT :  Once the data has been synced, commit all changes to the migrated virtual machine on the cloud and clean up the HDM configuration.
+
+![alt_text](images/image47.png?classes=content-img "image_tooltip")
+
+14. VMs that have been migrated to the cloud will be shown in _Cluster_, followed by _Monitor_, _HDM_, _Migration_, then _Summary_ 
 
 ![alt_text](images/image11.png?classes=content-img "image_tooltip")
 
 
 
+### Migrate Time Snapshot
 
-7. Select the network where the virtual machine should be placed once the migration is complete, then _NEXT_
+As part of the VM migration, HDM creates a “migrate time snapshot”  for the VM. This snapshot is useful to restore data in the event of certain failures.
 
-_Figure 7: Migration Wizard - Step 6_
+**Note**: Restoring the VM from the migrate time snapshot will result in loss of data for the time the VM was in the Cloud.
 
+To view the snapshot:
 
+1. In the on-premises vCenter, right click on the VM in the resource pool _HDM_MIGRATE_POOL_
+2. Select _Snapshots_, followed by _Manage Snapshots_
 
-![alt_text](images/image14.png?classes=content-img "image_tooltip")
-
-
-
-
-8. Confirm your selections, then select _MIGRATE_
-
-_Figure 8: Migration Wizard – Step 7_
-
-
-![alt_text](images/image13.png?classes=content-img "image_tooltip")
-
-
-The progress of the migration can be seen either on the migration status page (figure 9), or in the vCenter task page (figure 10). The migrated VM can be seen in a new resource pool HDM_MIGRATE_POOL in the on-premises vCenter and will be in a powered off state (figure 11). All migrations can be monitored in vCenter by selecting _Cluster 🡪 Monitor 🡪 HDM_, and then selecting the _Migration_ tab, followed by the _In Progress_ tab (figure 12). Virtual machines that have been migrated to the cloud can be seen in vCenter by selecting _Cluster 🡪 Monitor 🡪 HDM_, and then selecting the _Migration _tab, followed by the_ Summary_ tab.
-
-_Figure 9: Migration Wizard – VM Migration Status Page_
-
-
-![alt_text](images/image17.png?classes=content-img "image_tooltip")
-
-
-_Figure 10: vCenter Task Page_
-
-
-![alt_text](images/image15.png?classes=content-img "image_tooltip")
-
-
-_Figure 11: vCenter Resource Pool Page_
-
-![alt_text](images/image16.png?classes=content-img "image_tooltip")
-
-
-_Figure 12: vCenter HDM Migration Progress Tab_
-
-
-![alt_text](images/image18.png?classes=content-img "image_tooltip")
-
-
-_Figure 13: vCenter HDM Migration Summary Tab_
-
-
-![alt_text](images/image19.png?classes=content-img "image_tooltip")
-
-
-
-# HDM Disk Controller Support
-
-There are known limitations with virtual machine disk controller configurations when migrating to VMware Cloud Director. HDM does not support the following migrations:
-
-
-
-1. Virtual machines having IDE and NVMe based virtual disks.
-2. Virtual machines with USB or ISO attached during migration.
-
-
-# HDM System Health
-
-HDM keeps track of the health of its constituent components using periodic messages (heartbeat). This also enables it to determine the overall health of the system. If the heartbeat from a component is missed for two minutes, the component is marked as failed. Additional probes are made to understand the nature of the failure. Once the reason for the failure is understood, the recovery process will be initiated.
-
-
-## HDM in a Healthy State 
-
-Determine system and component health by selecting _Menu_ followed by _HDM_ in the appliance control panel, then selecting the _Administration_ tab, followed by the _HDM Health_ tab, and then the _Component Health_ tab.
-
-When there are no failures, the status of all HDM components are listed as _Good_ and will appear with a green checkmark icon in the Appliance control panel (figure 14). Red or yellow icons with corresponding negative messages in the status column indicate troubles (figure 15). This information is also available on vCenter on the HDM plug-in (figure 16).
-
-_Figure 14: Healthy Components_
-
-
-![alt_text](images/image20.png?classes=content-img "image_tooltip")
-
-
-_Figure 15: Component Troubles_
-
+The Manage Snapshots popup should display a snapshot named _hdm_xx_. For example, _hdm_1_ shown below:
 
 ![alt_text](images/image21.png?classes=content-img "image_tooltip")
 
 
-_Figure 16: vCenter on the HDM Plug-in_
+
+### Cache Size For Migrated VMs
+
+HDM allocates a cache quota in the cloud for all migrated VMs to ensure optimal performance of the applications running in the cloud. The cache size allocation follows these rules:
+
+*   If the on-premises VM has been monitored for I/Os for a sufficient amount of time, the working set is derived by the I/O analysis and the cache size is based on the working set size. Note that this is only valid for _Standard_ and _Performance_ modes of deployment.
+*   If the VM is not monitored, the cache size is based on the size of the VMDKs:
+    *   15% for _Standard_ and _Performance_ modes of deployment
+    *   25% for the _Lite_ mode of deployment 
+*   There is also a minimum cache size per deployment mode:
+    *   5 GB for _Lite_ and _Performance_ modes of deployment
+    *   3 GB for the _Standard_ mode of deployment
 
 
-![alt_text](images/image22.png?classes=content-img "image_tooltip")
+## Migrate a VM using the SQS Interface 
 
+HDM migration for the ARM use case is supported through the SQS interface. The prerequisites for using the SQS interface for migration are:
+
+1. The HDM appliance must have access to Internet.
+2. The SQS queues for command and response must be created in the Amazon SQS service.
+3. The HDM appliance should be configured for the SQS message bus with the correct message bus token
+
+Some important command messages exchanged between the client and HDM are:
+
+1. **Heartbeat**: This message is from HDM to the client, to communicatethe state of HDM. Clients usually look for a ‘Ready’ state before sending the next migration request to HDM. 
+2. **SourceInventoryRequest**: This message provides the list of on-premises VMs and their details. Clients select what to migrate from this list.
+3. **SourceCloneRequest**: This is essentially the migration request to HDM. It has parameters to specify the migration type and associated details.
+4. **BulkMigrationDoneRequest**: This message is important for migrations initiated using the offline bulk transfer option, because it tells HDM whether or not the offline bulk transfer is complete. 
+
+Details for how these are used for warm and cold migration are provided below.
+
+
+### Cold Migration
+
+Follow these steps to perform a cold migration using the SQS interface:
+
+1. Wait until system status is ‘Ready’. This is indicated by the heartbeat between HDM and the SQS client. 
+2. Send a ‘SourceInventoryRequest’ message to get the list of VMs that can be migrated using HDM.
+3. Choose a VM from the list in the response message.
+4. Set the mode of migration to ‘cold’.
+5. Submit a request for migration using ‘SourceCloneRequest’.
+6. After submission, periodic responses will be sent with the status of the submitted request.
+
+Cold migration of a VM will entail the following steps:
+
+1. A bulk transfer of the VM will be initiated.
+    1. Progress and updates will be sent via message bus responses.
+    2. vCenter Tasks will show the progress of the export and import of ovf on the source and target vCenters, respectively.
+    3. This operation may get queued, depending on the resource profile, the number of migrations in progress, and total number of VMs migrated. A maximum of eight migrations can run concurrently. 
+2. Necessary network changes will be performed on the migrated VM.
+
+If the bulk transfer fails, it will be automatically retried a few times. The failure will be reported in the response message on the final failure only. In the vCenter, however, the retries and their statuses can also be seen.
+
+
+### Warm Migration
+
+Pre-requisites
+
+1. The HDM deployment mode cannot be ‘Appliance Only’. Any other mode is acceptable.
+2. The VM must be in a powered-on state and must have the latest VMware tools installed.
+
+
+Steps
+
+1. Wait until system status is ‘Ready’. This is indicated by the heartbeat between HDM and the SQS client. 
+2. Send a ‘SourceInventoryRequest’ to get the list of VMs that can be migrated using HDM.
+3. Choose a VM from the list returned in the response message.
+4. Set the mode of migration to ‘warm’ and the bulk transfer mode to 'online' or 'offline'.
+5. The root user credentials of the VM for the “prepare to migrate” step will be required.
+6. Submit the request for migration using ‘SourceCloneRequest’.
+7. After submission, periodic responses will be sent with the status of the submitted request.
+
+Warm migration of a VM will entail the following steps:
+
+1. Prepare to migrate the VM.
+2. Apply the HDM SPBM policy to the VM.
+3. Take a snapshot of the VM and create a linked clone on it.
+4. Migrate the compute VM, where the cloud cache is created and the data path to the on-premises environment is also maintained.
+5. Bulk transfer the previously created VM snapshot to the cloud
+6. Reconcile the new data in the cloud cache with the VM image transferred to the cloud
+7. Power off the running VM and reboot from the reconciled VM image. 
+
+If any of the above steps fail, HDM will retry the step before declaring that the entire migration has failed.
+
+
+## Migrate Back a VM
+
+**Note**: The flow described here is useful for the TBC use case. 
+
+
+Prerequisites
+
+1. The VM must be in a migrated state. It should be listed in _HDM_MIGRATE_POOL_ in the on-premises vCenter.
+
+
+Steps
+
+1. In the on-premises vCenter, right click on the VM to be migrated back. Select _HDM_, followed by _Migrate Back_.
+
+![alt_text](images/image30.png?classes=content-img "image_tooltip")
+
+2. Select the VMs to be migrated back. The dependent VMs will be migrated back together.
+
+![alt_text](images/image23.png?classes=content-img "image_tooltip")
+
+3. Review the selection and select _MIGRATE BACK_.
+
+![alt_text](images/image24.png?classes=content-img "image_tooltip")
+
+4. The status of the migration back can be seen in the wizard.
+
+![alt_text](images/image25.png?classes=content-img "image_tooltip")
+
+5. The migrate back task can also be tracked in vCenter.
+
+![alt_text](images/image26.png?classes=content-img "image_tooltip")
+
+6. Once the migration back is successful, the VM will be deleted from the cloud vCenter. It will then be moved from the _HDM_MIGRATE_POOL_ to the original resource pool where it resided prior to the migration. At this point, the VM will have to be explicitly powered on.
+
+
+# HDM Monitoring
+
+HDM monitors the VMs in a cluster for I/O and resource usage activity. The following data will be provided:
+
+*   Active data set identification for VMs
+*   Recommendation of what VMs to migrate
+*   Cache size required on the cloud to meet the VM’s workload requirements
+*   CPU resource utilization of the VMs
+*   I/O performance statistics for the VMs
+*   Network and cache usage statistics for the migrated VMs
+
+**Note**: In Lite mode (Standalone and Cluster), the monitoring of VMs is limited to applying the HDM SPBM policy. The detailed monitoring of VMs is only present in the Standard and Performance modes. 
+
+
+## Monitoring VMs On-Premise
+
+HDM monitors the I/O activity on all on-premises VMs on the cluster where it is installed. To view monitored data for these VMs:
+
+1. In the on-premises vCenter, select the cluster
+2. On the right-hand panel, select _Monitor_, followed by _HDM_, then _Profiling_
+
+![alt_text](images/image27.png?classes=content-img "image_tooltip")
+
+**Note**: In Lite mode (both standalone and cluster), this view is not present. Instead, the following message will be displayed:
+
+![alt_text](images/image10.png?classes=content-img "image_tooltip")
+
+3. You should see the doughnuts for:
+    1. Storage monitored: The amount of storage monitored within vCenter. Monitoring is only active on the selected cluster within vCenter.
+    2. Active dataset: The size of the active dataset, compared with the total. I/O activity is recorded periodically.
+    3. Active VM storage health: The health of the storage is determined by its latency and throughput.
+    4. Top storage utilized VMs: The VMs that access the storage most frequently.
+4. A table summarizing the activity of the VMs is presented below the doughnuts. Some columns of particular importance are:
+    5. Storage: The storage capacity of the VMs.
+    6. Cache size: The estimated size of the VM's working set. If the VM is migrated to the cloud, this represents the minimum amount of cache that needs to be provisioned to maintain optimal performance.
+    7. Read IOPs: The observed rate of reads happening on the VM.
+    8. Write IOPs: The observed rate of writes happening on the VM.
+    9. Health : The health of the VM storage, based on the observed read/write IOPs.
+
+
+## Monitoring VMs in the Cloud
+
+
+### Migration Status
+
+HDM keeps track of the number of VMs migrated and migrated back, as well as their statuses and other essential information. This data is accessible through the following steps:
+
+1. In the on-premises vCenter, select the cluster
+2. On the right hand panel, select _Monitor_, followed by _HDM_, _Migration_, then _In Progress_
+
+![alt_text](images/image28.png?classes=content-img "image_tooltip")
+
+
+
+### I/O And Resource Usage
+
+The VMs that have been migrated to the cloud are also monitored for resource utilization and I/O activity. To view monitored data for these VMs:
+
+1. In the on-premises vCenter, select the cluster
+2. On the right hand panel, select _Monitor_, followed by _HDM_, then _Monitoring_
+
+![alt_text](images/image9.png?classes=content-img "image_tooltip")
+
+**Note**: In Lite mode (both Standalone and Cluster), this view is not present. Instead, the following message will be displayed:
+
+![alt_text](images/image10.png?classes=content-img "image_tooltip")
+
+3. You can view graphs for:
+    1. Utilization for compute, memory, and cache resources
+    2. Read and write data transferred over the WAN
+4. Detailed statistics for each migrated VM is displayed in tabular form
+
+
+### Dashboard
+
+A summary of the migration statistics and cloud resource utilization can be found in a single dashboard. To view this dashboard data:
+
+1. In the on-premises vCenter, select the cluster.
+2. On the right hand panel, select _Monitor_, followed by _HDM_, _Cloud Burst_, then _Dashboard_.
+
+![alt_text](images/image11.png?classes=content-img "image_tooltip")
+
+4. A detailed log of the migrate and migrate back activities are also displayed in tabular form.
+
+
+# HDM Policies
+
+
+## Recovery Time Objective/Recovery Point Objective (RTO/RPO)
+
+HDM maintains an optimal cache in the cloud for migrated VMs to provide superior I/O performance. The cache maintains the working set of VM to serve read requests without having to traverse the WAN for every I/O. The cache also absorbs writes, which are flushed to the on-premises environment at regular intervals.
+
+The frequency of the write flush is based on the Recovery Time Objective/Recovery Point Objective (RTO/RPO) requirements. By default it is set to flush to the on-premises environment every 20 minutes. Therefore, in the event of a failure, the application can only lose up to 20 minutes worth of data.
+
+
+### Guidelines to Configure RTO/RPO policies
+
+Configuring RTO/RPO should be based on the application need. The trade-offs are:
+
+1. If the time is reduced, the write data flush will be triggered more often. This can cause additional WAN traffic, especially for applications that perform frequent overwrites.
+2. If the time is increased, the write data flush will be triggered less frequently. In the event of a failure that results in VMs having to migrate back to the on-premises environment, more data will reside on the VMs since the last RTO/RPO flush, which can result in higher data loss. 
+
+The setting is maintained at the cluster level, so it will be inherited by all VMs within the cluster. 
+
+**Note**: **RTO/RPO is set to the default value of 20 minutes, which is acceptable for most applications. Care should be taken prior to reconfiguring it, keeping in mind the recovery trade-offs for the application.**
+
+
+### Steps to Configure
+
+To configure the RTO/RPO policy:
+
+1. In the on-premises vCenter, select the cluster
+2. On the right hand panel, select _Configure_, followed by _HDM_, then _Administration_
+3. Modify the default value of the Recovery Time Objective (RTO) according to the needs of the application
+
+![alt_text](images/image12.png?classes=content-img "image_tooltip")
+
+
+
+# HDM System Health
+
+HDM uses periodic messages (heartbeat) to monitor the health of its components and determine the overall health of the system. If the heartbeat from a component is missed for two minutes, the component will be marked as failed. Additional probes will be conducted to understand the nature of the failure. Once the reason for the failure is understood, the recovery process will be initiated.
+
+
+## HDM in a Healthy State 
+
+When there are no failures, all HDM components will show the state as ‘Healthy’ and their color will be seen as blue in the appliance control panel. The overall state of the HDM is good if nothing is colored red or yellow. This can be seen in the appliance’s control panel, or on the HDM plugin within vCenter. To view this data, select _Menu_, followed by _HDM_, _Administration_, _HDM Health_, then _Component Health_.
+
+![alt_text](images/image19.png?classes=content-img "image_tooltip")
+
+In the event of a failure, the affected components will be shown here.
+
+![alt_text](images/image4.png?classes=content-img "image_tooltip")
+
+![alt_text](images/image13.png?classes=content-img "image_tooltip")
 
 
 ## HDM in a Degraded State
 
-When system health is degraded, it can be viewed using any of the following tools:
-
-
+When the system is in a degraded state due to a failure, it can be seen in the following locations:
 
 1. The vCenter dashboard
 2. The appliance control panel
@@ -197,71 +473,97 @@ When system health is degraded, it can be viewed using any of the following tool
 
 ### vCenter Dashboard
 
-Access the vCenter dashboard by selecting HDM, followed by the _Dashboard_ tab. It will contain a notification such as, “Services not ready or down ...” (figure 17)
+*   Select _vCenter HDM_, followed by _Dashboard_ to view a notification mentioning **Services not ready or down...**
 
-_Figure 17: vCenter Dashboard_
-
-
-![alt_text](images/image23.png?classes=content-img "image_tooltip")
-
+![alt_text](images/image14.png?classes=content-img "image_tooltip")
 
 
 ### Appliance Control Panel
 
-The appliance control panel will update the status of failed components as “Poor” and HDM overall state will be set to “Not Ready”. The component color will also change from blue to red (figure 18). To get details about the error, hover your cursor over the failed component (figure 19).
+In the event of a failure, some components may be affected. The state of those components will be listed in the appliance control panel as **Poor** and the overall state of HDM will be set to _Not Ready_. The component color will change from blue to red. 
 
-     
+![alt_text](images/image15.png?classes=content-img "image_tooltip")
 
-_Figure 18: Appliance Control Panel: Determining Failed Components_
+*   Simply hover over the faulted component to view details regarding the error.
 
-
-![alt_text](images/image24.png?classes=content-img "image_tooltip")
-
-
-_Figure 19: Appliance Control Panel: Details on Failed Components_
-
-![alt_text](images/image25.png?classes=content-img "image_tooltip")
-
+![alt_text](images/image16.png?classes=content-img "image_tooltip")
 
 
 ### vCenter Event Log
 
-Access the vCenter event log by selecting _HDM_ from the menu, followed by the _Administration, HDM Health,_ and _Event Logs_ tabs (figure 20). All failure events that impact the operation of HDM will be recorded here (NOTE: repair and recovery events will also be shown). In the example in figure 20, the most recent failure is unrecoverable and therefore requires an HDM reset. You can obtain additional details on any failure messages by selecting _vCenter_ from the menu, followed by the _Monitor_ and _Events_ tabs (figure 21).
+If failure events impact HDM operations, they will be recorded in the vCenter events log, as well as the HDM events logs. The HDM events logs can be accessed by selecting _Menu_, followed by _HDM_, _Administration_, then _Event Logs_.  
 
-_Figure 20: vCenter Event Log_
+![alt_text](images/image8.png?classes=content-img "image_tooltip")
+
+The screenshot below illustrates the types of failure and repair events that will appear in the events logs. These include component failure events and their successful recovery. The failure listed at the top of the log is an unrecoverable failure that will require an HDM reset.
+
+![alt_text](images/image20.png?classes=content-img "image_tooltip")
+
+These failure messages can also be seen in the vCenter events log, which can be accessed by selecting _vCenter_, followed by _Monitor_, then _Events_:
+
+![alt_text](images/image17.png?classes=content-img "image_tooltip")
+
+*   To narrow down the events generated by HDM, apply a filter on the event type ID. On the extreme right column, apply the filter _“com.hdm”_
+
+![alt_text](images/image18.png?classes=content-img "image_tooltip")
+
+*   After applying the filter, the view will be limited to the event generated by HDM. The selected event illustrated below corresponds to a failure of an HDM service:
 
 ![alt_text](images/image1.png?classes=content-img "image_tooltip")
 
 
-_Figure 21: Event Log Details_
+### Health State in the SQS Heartbeat
 
+The changes in system health are also reported through the SQS heartbeats. The typical SQS heartbeat messages (which can be retrieved from the sqs-python client) correspond to the various events listed below.
 
-![alt_text](images/image2.png?classes=content-img "image_tooltip")
+*   A fully deployed system that is functional and is free of failed components will have a heartbeat similar to the one listed below:
 
+    ```
+'status': 'Ready', 
+'status_details': 'All the components are deployed and up.', 
+'appliance_id': 'fa142afc-3c64-4086-b442-4ffcdc1580b2', 
+```
 
-To isolate the events generated by the HDM, a filter can be applied to the “Event Type ID” on the extreme right hand column. Figure 22 illustrates this by applying the filter, _“com.hdm”_ which limits the view to the events generated by HDM.
+*   When a component failure is detected, it will have a heartbeat containing details of the failed component, similar to the one below:
 
-_Figure 22: Applying Filters_
+    ```
+'status': 'Not Ready', 
+'status_details': 'Services not ready or down On Prem IO Manager, On Prem 
+                   Message Gateway'
+'appliance_id': 'fa142afc-3c64-4086-b442-4ffcdc1580b2', 
+```
 
+*   When a reboot of a component VM host is detected, the heartbeat will display the details of the failed VM host, like the one illustrated below:
 
-![alt_text](images/image3.png?classes=content-img "image_tooltip")
-
-
+    ```
+'status': 'Not Ready',
+'status_details': "HDM infrastructure VM rebooted or faulted 
+                   ['HDM_OnPrem_ESXi_Manager-0']", 
+'appliance_id': 'fa142afc-3c64-4086-b442-4ffcdc1580b2', 
+```
 
 # Failure Handling in HDM 
 
-HDM handles failures in the following manner:
+HDM strives to meet the following requirements for handling failures:
 
-
-
-*   In the case of specific HDM component failures, cold VM migration will be resumed automatically, following the repair.
-*   In pathological cases where migration cannot be automatically resumed, VM availability will be maintained, so all data can be recovered following the failure. 
-*   HDM system state will be recovered so that new migrations can be served, even if prior migrations have been cancelled and the migrated VMs migrated back. 
+*   Cold VM migration will be resumed automatically after repair in case of specific HDM component failures.
+*   In the event of a specific HDM component failure during cold VM migration, the migration will be automatically resumed following repair.
+*   In the event of pathological scenarios where migration can’t be resumed after a failure and subsequent recovery, VM availability will be ensured. 
+*   HDM system state will be recovered to enable new migrations to be served, even if ongoing migrations had to be cancelled and migrated VMs were migrated back. 
 
 
 ## Ensuring VM Availability 
 
-As a component of failure recovery, HDM will resume the transfer of any VM in the process of a cold migration. In the case of a TBC migration, HDM may identify that some VMs that were already migrated, or some ongoing migrations, can no longer continue to run in the cloud. This is typically due to a failure in the component that was used by the VM to connect to the on-premises environment. To ensure application availability, these VMs are migrated back to the on-premises environment. 
+As part of failure recovery, HDM will resume the transfers of VMs that were in the process of being cold migrated. Under pathological conditions, or in the event of warm migration, HDM may identify that some VMs that were already migrated or some ongoing migrations can no longer continue to run in the cloud. This is typically due to a component failure that was used by the VM to connect to the on-premises environment. To ensure application availability, these VMs will be migrated back to the on-premises environment. 
+
+
+## Data Consistency and Data Loss
+
+VMs being cold migrated can never experience data loss. Conversely, VMs utilizing “Try Before Commit” that are migrated back as part of failure recovery do not get the opportunity to synchronize the on-premises environment with the latest cloud data. Since the on-premises environment is synchronized using an RTO/RPO interval, these VMs will hold data since the last RTO/RPO flush. 
+
+Since the RTO/RPO flushes occur through point-in-time snapshots of the cloud data, this data is expected to be crash consistent. Modern applications and file systems are designed to withstand crashes. Therefore, they should be able to use this data on-premises.
+
+In an extreme case, if the OS or the application is incapable of utilizing the data, the data can be restored from the migrate time snapshot, with the caveat that it causes the loss of all data that was written while the VM was in the cloud.
 
 
 ## HDM Failure Recovery
@@ -269,17 +571,15 @@ As a component of failure recovery, HDM will resume the transfer of any VM in th
 
 ### Nature of Failures
 
-HDM mainly deals with the following types of errors:
+While there can be a wide range of failures, HDM mainly deals with the following:
 
-
-
-*   HDM Component Failures
-    *   Appliance Restarts
-    *   HDM component VM restarts
+*   HDM Component Failures:
+    *   Appliance restart
+    *   HDM component VM restart
     *   HDM individual component failure due to software issues 
 *   Network failures
-    *   Transient network disconnects
-    *   Permanent network disconnects
+    *   Transient network disconnect
+    *   Permanent network disconnect
 *   System failures
     *   Storage failures
     *   Memory errors
@@ -287,176 +587,170 @@ HDM mainly deals with the following types of errors:
 
 ### Single Component Failure
 
-The impact of the failure can result in a single HDM component failing. HDM is designed to automatically recover from these failures. The following scenarios are possible:
+The impact of the failure can result in the failure of a single HDM component, which HDM is designed to recover from automatically. The following scenarios are possible:
 
+#### Failure When There is No Activity
 
+Even when the system is idle following a successful deployment, a component failure may cause it to go from “Healthy” to “Degraded”. The HDM system health will be in the degraded state. It can be viewed in vCenter, as well as the appliance (See the _System Health_ section for details).
 
-*   Failure when there is no activity
-*   Failure during migrations
-*   Failure when there are migrated VMs
-*   Recovery resource pools
+*   vCenter Events will list a new event for a component failure
 
+HDM will attempt to recover from the failure and bring the system back to a “Healthy” state. There are three important stages of the recovery process:
 
-### Failure When There is No Activity
-
-Even when the system is idle after a successful deployment, a component failure may cause it to go from “Healthy” to “Degraded”. 
-
-The HDM system health in the degraded state can be viewed in vCenter and Appliance (See System Health section for details). The vCenter events log would also list the component failure as a new event.
-
-HDM would attempt to recover from the failure and bring the system back to a “Healthy” state. The recovery process would include three important stages:
-
-
-
-*   Failure detection and move to a degraded state
+*   Failure detection and moving to degraded state
 *   HDM system repair
-*   Return to a healthy state
-
-After recovery, a message is logged in the vCenter events log:
-
-_Figure 23: Post-Recovery Message in vCenter Events Log_
+*   Healthy state
 
 
-![alt_text](images/image4.png?classes=content-img "image_tooltip")
+![drawing](images/image6.png?classes=content-img)
+
+Following recovery, the following message is logged into vCenter Events:
 
 
-
-### Failure During Migrations
-
-If a failure occurs during the migration operation, HDM will move to a degraded state. HDM will repair itself and return to a healthy state. The ongoing migration operation will be paused once the failure is detected and resumed once the repair operation is completed and the system has returned to a healthy state.
-
-For redundant components like the HDM message gateway, recovery can only be considered complete after the required level of redundancy has been restored. Any migration operation attempted before the recovery is complete will result in a failure.
+![alt_text](images/image2.png?classes=content-img?classes=content-img "image_tooltip")
 
 
-#### Failure When There are Migrated VMs
+#### Failure during Migrations
 
-(Applicable for TBC)
-
-Some VMs that have already migrated to the cloud may be affected by a component failure, causing them to be migrated back to the on-premises environment. The VMs would contain the data until after the last RTO/RPO flush.
-
-**NOTES: **
+If a failure occurs during the migration operation, HDM will enter a degraded state. HDM will repair itself and will return to a healthy state. The ongoing migration operation may fail and those VMs can be migrated back as part of this recovery. The recovery process will look like this:
 
 
+![drawing](images/image5.png?classes=content-img)
 
-1. As part of the failure recovery, if the VMs that were migrated back can be successfully booted, they will be in the HDM_RECOVERY_SUCCESS pool. Otherwise, they will be placed in the HDM_RECOVERY_FAILED pool. 
-2. There are cases where HDM is unable to automatically repair its failed component. This could be due to a software issue, or if the error condition is permanent (e.g., a permanent network or storage disconnect). In such cases, users can issue an HDM reset to start over again. See the Troubleshooting section for more details.
+For redundant components like HDM message gateway, recovery is complete only when the required level of redundancy is restored. If a migration operation is attempted before the recovery is complete, it will fail.
+
+
+#### Failure when there are Migrated VMs
+
+Some VMs already migrated to the cloud may be affected by a component failure. This will result in those VMs getting migrated back from the cloud to the on-premises environment. The VMs will hold data since the last RTO/RPO flush. 
+
+The recovery process will look like this:
+
+![drawing](images/image7.png?classes=content-img)
+
+**Note: **
+1. As part of the failure recovery, if the migrated back VMs can be booted successfully, they will appear in the _HDM_RECOVERY_SUCCESS_ pool. Otherwise, they will be placed in the _HDM_RECOVERY_FAILED_ pool. 
+2. There are cases where HDM is not able to perform the auto repair of its failed components. This could be due to either a software issue, or the error condition is permanent (e.g., permanent network or storage disconnect). In these cases, an HDM reset can be issued to recover fro the error and restart the entire process. See the _Troubleshooting_ section for more details.
 
 
 #### Recovery Resource Pools
 
-(Applicable for TBC)
-
-VMs that are migrated back as part of a failure recovery are kept in one of two types of recovery resource pools:
+VMs migrated back as part of failure recovery are kept in recovery resource pools. There are two types:
 
 
 ##### **HDM_RECOVERY_SUCCESS **
 
-This resource pool hosts the VMs that have been migrated back as part of failure handling and are likely to be successfully booted using the on-premises vCenter. However, they may have some data loss equivalent to the last RTO/RPO flush cycle (default 20 minutes).
+This resource pool hosts the VMs that have been migrated back as part of failure handling, and are likely to be successfully booted in the on-premises vCenter. They may have some data loss equivalent to the last RTO/RPO flush cycle (default 20 minutes).
 
-
-![alt_text](images/image5.png?classes=content-img "image_tooltip")
-
+![alt_text](images/image3.png?classes=content-img "image_tooltip")
 
 
 ##### **HDM_RECOVERY_FAILED **
 
-This resource pool hosts the VMs that have been migrated back as part of failure handling but are unlikely to have consistent data. These VMs will be required to restore their data from the migration time snapshot.
+This resource pool hosts the VMs that have been migrated back as part of failure handling, but are unlikely to have consistent data. These VMs will be required to restore their data from the migration time snapshot.
 
-**NOTE: **Restoring data from the migrate time snapshot means that all data from the time the VM was in the cloud environment will be lost.
-
-
-##### **Recovering VMs From the HDM Recovery Pools**
-
-Follow these steps to recover VMs from the recovery source pools:
+**Note: **Restoring data from the migrate time snapshot will cause the loss of all data written while the VM was in the cloud.
 
 
+##### **Recovering VMs from the HDM Recovery Pools**
 
-1. Power on the VM and verify the sanity of the data
-2. If the power-on and data sanity checks pass:
-    1. Delete the HDM migration time snapshot
-    2. Move the VM to its pre-migration resource pool
-3. If the power-on or the data sanity fail:
-    3. Restore the data from the migrate time snapshot
-    4. Delete the HDM migrate time snapshot
-    5. Move the VM to its pre-migration resource pool
+The following steps should be followed to recover VMs from recovery resource pools:
+
+1. Power on the VM and verify the sanity of the data. 
+2. If the power on and data sanity checks pass:
+    1. delete the HDM migration time snapshot.
+    2. Move the VM to the resource pool where it originally resided prior to the migration.
+3. If the power on or the data sanity failed:
+    3. Restore the data from the migrate time snapshot.
+    4. Delete the HDM migrate time snapshot.
+    5. Move the VM to the resource pool where it originally resided prior to the migration.
     6. Power on the VM 
 
-**NOTE: **Failure to move the VMs to their original resource pool will cause their subsequent migration and migration back from the HDM to be limited to the recovery pool. 
+**Note: **Failure to move the VMs to their original resource pool will cause their subsequent migration and migration back to only occur from the HDM recovery pool. 
 
 
 ### Multiple Component Failure
 
-If second component fails while the system is still recovering from the failure of a single component, HDM will detect the failure and notify the user through vCenter events. This is also applicable if simultaneous multiple HDM component hosts restart. HDM components may not fully recover and ongoing migrations will not resume. Multiple component failures may require an HDM reset to restore the system.
+If a second component fails while the system is recovering from the failure of a single component, HDM will detect the failure send a notification through vCenter events. This will also be the case if multiple HDM component hosts restart simultaneously. HDM components may not fully recover and migrated VMs may not migrate back. 
+
+Multiple component failures may require an HDM reset to restore the system.
 
 
 ### HDM Appliance Restart
 
-Restarting the Appliance does not impact migrated VMs, nor does it impact future migration operations.
+Restarting the appliance does not impact migrated VMs, nor does it impact future migration operations. Operations in progress during the appliance restart will be affected as follows:
 
-Operations that are in progress during the appliance restart will be affected in the following way:
-
-
-
-1. The ongoing bulk transfer of an ARM cold migration will pause and resume once the appliance has successfully restarted
-2. VM migration to the cloud will resume after restart and should successfully complete without any problems
-3. The vCenter plug-in will display a message that it cannot connect with the appliance until after restart
+1. ARM cold migration of a VM: The ongoing bulk transfer will fail and the operation will be retried from the beginning.
+2. VM migration to the cloud will resume after restart and complete successfully
+3. ARM warm migration:
+    *   If the appliance reboot occurs while migrating the compute VM, the migration and the bulk transfer will both fail.
+    *   If the appliance reboot occurs after the successful migration of the compute VM, only the bulk transfer will be retried.
+4. VMs running in the cloud will continue to run. Some operations such as RTO/RPO periodic flush will resume after the reboot completes.
+5. SQS heartbeats will be missing throughout the duration of the reboot, which should last approximately two minutes.
+6. vCenter plugin will display a message throughout the duration of the reboot, that it cannot connect with the appliance.
 
 
 ### HDM Component VM Restart
 
-The HDM deployment consists of a set of microservices that are packaged as Docker containers inside the VM that are deployed on-premises, as well as in the cloud. Depending on the deployment type, one or both of the following VMs may be present:
+An HDM deployment consists of a set of microservices running as containers in a VM that are deployed on-premises, as well as in the cloud. Depending on the deployment type, some or all of the following VMs will be included:
 
-
-
+*   HDM_Cloud_Manager
 *   HDM_Cloud_Cache
+*   HDM_OnPrem_Manager
 *   HDM_OnPrem_ESXi_Manager
 
- 
+Rebooting any of these VMs triggers the following repair actions:
 
-When either of these are rebooted, the following repair actions are triggered:
-
-
-
-1. All components within that VM are repaired
-2. A vCenter event is logged specifying a “Docker reboot” has occurred, specifying the particular VM which has restarted
-3. Ongoing cold migrations are paused, and then resumed once the HDM component VM has been restarted
-4. All future operations involving the repaired components should work correctly
-5. TBC migrations will roll back to their on-premises locations and be restored to their previous RTO/RPO checkpoints
+1. All affected VMs are migrated back to the last RTO/RPO state.
+2. A vCenter event is logged, communicating that a “Docker reboot” has occurred on the identified VM.
+3. All components within that VM are repaired.
+4. All future operations involving the repaired components should work correctly.
 
 
-### WAN Disconnect
+### WAN Network Disconnect
 
-The WAN disconnect may result in HDM components losing network connectivity with the central heartbeat monitoring entity. 
+The WAN network disconnect may result in HDM components losing network connectivity with the central heartbeat monitoring entity. 
 
 
 #### Transient Network Failure
 
-HDM can recover from short network outages (those lasting less than 2 minutes) by retrying ongoing operations.
+HDM can recover from short network outages (those lasting less than 5 minutes) by retrying ongoing operations.
 
 
 #### Permanent Network Failure
 
-If the network outage lasts for an extended period of time (greater than 2 minutes), the HDM recovery may not succeed and an HDM reset may be required.
+If the network outage lasts for an extended period of time (greater than 5 minutes), the HDM recovery may not succeed and an HDM reset may be required.
 
 
-### ESXi Host Restart
+### ESXii Host Restart
 
-If the on-premises ESXi host is restarted, the ongoing migrations will be paused and will resume once the host is back up. 
+If an on-premises ESXi host is restarted or the PRAAPA iofilter daemon service is restarted, the ongoing migrations will fail, VMs already migrated to the cloud will be migrated back, and new VM migrations will fail. An HDM reset and re-deployment of HDM on-premises and cloud components will be required prior to retrying the migration operation.
 
 
 ### System Failures
 
-System failures such as storage or memory may result in some HDM component failures, or their impact could be limited to a few operations or IOs. In these cases, the impacted process will be retried.
+Failures such as storage or memory may result in some HDM component failures, or their impact could be limited to few operations or I/Os. If I/Os or some operations fail, they will be retried.
 
 
-#### Boot Failure During Migrate (TBC Use Case)
+#### Boot Failure During Migrate
 
-Guest VM boot may fail due to reasons such as VMware tools not starting early enough to detect a successful boot. HDM will retry (in this case reboot) the operation a few times. 
+A guest VM boot may fail if VMware tools are not available early enough to detect the successful boot. HDM will retry (or, in this case, reboot) the operation a few times. 
 
-**NOTE**: Multiple retries can delay the boot. In these cases, the user may have to wait up to 30 minutes for the migration operation to complete.
+**Note**: Multiple retries can delay the boot. In this case, wait 30 minutes for the migration operation to complete.
+
+
+#### Bulk Transfer Failure During ARM Migration
+
+If the bulk transfer fails during cold migration, the operation will be retried a few times. Errors such as transient network issues can be dealt with using this mechanism.
+
+**Note:** All retries will be attempted a fixed number of times. Once the number of retries has been exhausted, the operation will be marked as _failed_.
+
+If a VM snapshot has been bulk transferred to the cloud and a failure occurs while the cloud cache syncs with it, the portion that has already transferred to the cloud must be explicitly deleted. HDM failure handling does not automatically delete the bulk transferred VM.
 
 
 ### Unresolved Issues
 
-Refer to the HDM 2.2.1 Troubleshooting Guide if the failure issues are not resolved. The failure may have been caused by a known product issue. 
+**Refer to the Troubleshooting Guide if failure issues are not resolved. The failure might have been caused by a known product issue. **
 
-If PrimaryIO technical support is required, refer to the Install Guide for the details. 
+**PrimaryIO support may be required. Refer to the Install Guide for the details. **
+
