@@ -102,9 +102,9 @@ Steps
 
 Pre-requisites
 
-1. _Prepare to Migrate_ has been successful on the VM
-2. The HDM SPBM policy has been applied to all disks within the VM
-
+1. _Prepare to Migrate_ has been successful on the VM (For warm migration only)
+2. The HDM SPBM policy has been applied to all disks within the VM (For warm migration only)
+3. VM migration with multiple CD/DVD Devices is not supported. If you attempt to migrate such a VM an error will be reported. Please remove and retry migration
 
 Steps
 
