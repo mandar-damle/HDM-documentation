@@ -150,11 +150,10 @@ A pool of IP addresses need to be allocated. The number of IPs for each category
 **ESXi_Network: **2 IPs required
 
 
-    **Note:  **
-
-
-
-1. **The subnet range 172.17.0.0/16 is not available for the deployment; it is internally used by HDM microservices.**
+> **Note:**
+> 1. **The subnet range 172.17.0.0/16 is not available for the deployment; it is internally used by HDM microservices.**
+> 2. Please check the static ip usage using arping command before using it to ensure that ip should not be in use.
+*arping  -c  2 -w 20  -I ens192  [IP]*
 
 Please fill the table below for reference during the installation process.
 
