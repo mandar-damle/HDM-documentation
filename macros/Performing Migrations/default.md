@@ -1,7 +1,7 @@
 ---
 title: 'Performing Migrations'
 ---
-
+NOTICE_FOR_MACRO_PREPROCESSOR
 # HDM Migrations
 
 HDM is used to migrate VMs from on-premises to cloud environments. HDM supports the following migration types:
