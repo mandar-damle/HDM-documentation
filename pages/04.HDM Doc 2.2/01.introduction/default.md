@@ -18,7 +18,7 @@ _Figure 1: HDM Architecture_
 ## Why Hybrid Cloud Data Management (HDM)?
 
 1. **Rapid VM migration:** HDM allows for VMs to be powered up in the target cloud environment using only the hot data.  The cold data is efficiently transferred as a background process.
-1. **Trial Migrations:** Migrations can be complicated and may take several maintenance windows before they are successful.  HDM’s flexible approach allows for VMs to be rapidly powered up in the target cloud and reverted to the onpremise environment if needed. 
+1. **Trial Migrations:** Migrations can be complicated and may take several maintenance windows before they are successful.  HDM’s flexible approach allows for VMs to be rapidly powered up in the target cloud and reverted to the on-premise environment if needed. 
 
 The HDM product binaries can be used on
 * VMware Cloud Director
