@@ -171,7 +171,7 @@ Steps
     *   START TRANSFER : This is an optional step where the virtual machine data can be transferred using **HDM Bulktransfer**. Select the virtual machine, then select **Start Transfer **.
 ![alt_text](images/image-start-transfer.png?classes=content-img "image_tooltip")
 ![alt_text](images/image45.png?classes=content-img "image_tooltip")
-    *   CONFIGURE & SYNC : Once the virtual machine data has been moved to the cloud, select the newly-moved virtual machine to sync the latest changes. If there is an error "Failed to post message for sync. Please retry after sometime". If seen please retry the operation in a few minutes.
+    *   CONFIGURE & SYNC : Once the virtual machine data has been moved to the cloud, select the newly-moved virtual machine to sync the latest changes. If there is an error "Failed to post message for sync. Please retry after sometime". If seen please retry the operation in a few minutes. (Ref CP-5862)
 ![alt_text](images/image46.png?classes=content-img "image_tooltip")
     *   COMMIT :  Once the data has been synced, commit all changes to the migrated virtual machine on the cloud and clean up the HDM configuration.
 ![alt_text](images/image47.png?classes=content-img "image_tooltip")
