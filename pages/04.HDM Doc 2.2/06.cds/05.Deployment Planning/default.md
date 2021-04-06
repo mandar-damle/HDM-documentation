@@ -43,23 +43,149 @@ More details on the resource requirements for these deployment options is availa
 
 
 
+
 ### Concurrency and Scale Support 
 
-HDM queues all migrations requests and is capable of processing eight VMDKs per HDM cluster node. 
+HDM queues all migration requests and is capable of processing eight VMDKs per HDM cluster node. 
 
 	
 
 
 ### HDM Resource Requirements
 
-Table 1 lists the resource requirements for each ultra-lite deployment type.
+
+
+The following table highlights the amount of concurrency and scalability supported by each HDM deployment type:
+
+**Notes: 
+1. The names _ESXMgr_ and _CloudCache_ are abbreviated names for the VMs containing HDM components. These are created as part of the HDM deployment.**
+2. The N in _Cluster (N)_ refers to the number of nodes in the cloud cluster where HDM is deployed.
+
+
+<table>
+  <tr>
+   <td>
+   </td>
+   <td><strong>Concurrent</strong>
+<p>
+<strong>Cold Migrations</strong>
+   </td>
+   <td><strong>Compute</strong>
+<p>
+<strong>Migrated VMs</strong>
+<p>
+<strong>On-Cloud</strong>
+   </td>
+   <td><strong>Concurrent</strong>
+<p>
+<strong>Warm Migrations</strong>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Lite</strong>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>Standalone
+   </td>
+   <td>8
+   </td>
+   <td>10
+   </td>
+   <td>2
+   </td>
+  </tr>
+  <tr>
+   <td>Cluster (N)
+   </td>
+   <td>8
+   </td>
+   <td>2 x 10
+   </td>
+   <td>N x 2
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Standard</strong>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>Standalone
+   </td>
+   <td>8
+   </td>
+   <td>20
+   </td>
+   <td>4
+   </td>
+  </tr>
+  <tr>
+   <td>Cluster (N)
+   </td>
+   <td>8
+   </td>
+   <td>N x 20
+   </td>
+   <td>N x 4
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Performance</strong>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>Standalone
+   </td>
+   <td>8
+   </td>
+   <td>25
+   </td>
+   <td>8
+   </td>
+  </tr>
+  <tr>
+   <td>Cluster (N)
+   </td>
+   <td>8
+   </td>
+   <td>N x 25
+   </td>
+   <td>N x 8
+   </td>
+  </tr>
+</table>
+
+
+
+
+
+Table 1 lists the resource requirements for each deployment type.
 
 _Table 1: Resource Requirements_
 
 
 <table>
   <tr>
-   <td><em> </em>
+   <td>
+<em> </em>
    </td>
    <td><strong>Standalone</strong>
    </td>
@@ -67,43 +193,130 @@ _Table 1: Resource Requirements_
    </td>
   </tr>
   <tr>
-   <td><strong>Ultra-Lite</strong>
+   <td><strong>Ultra Lite</strong>
    </td>
    <td>
    </td>
-   <td><em>NA</em>
+   <td>
    </td>
   </tr>
   <tr>
-   <td>On-premises
+   <td>On-Premise
    </td>
    <td><strong>1</strong> Appliance (4 vCPU, 8 GB RAM, 144 GB disk)
 <p>
-<strong>1</strong> ESXMgr (4 vCPU, 4 GB RAM, 128 GB disk)
+<strong>1</strong> ESXMgr (8 vCPU, 8 GB RAM, 128 GB disk)
    </td>
    <td>1 Appliance (4 vCPU, 8 GB RAM, 144 GB disk)
 <p>
-2 ESXMgr (4 vCPU, 4 GB RAM, 128 GB disk)
+2 ESXMgr (8 vCPU, 8 GB RAM, 128 GB disk)
    </td>
   </tr>
   <tr>
-   <td>Cloud
+   <td>On-Cloud
    </td>
-   <td><strong>1</strong> CloudCache (6 vCPU, 5 GB RAM, 64 GB disk)
+   <td><strong>1</strong> CloudCache (6 vCPU, 12 GB RAM, 64 GB disk)
    </td>
-   <td>2 CloudCache (6 vCPU, 5 GB RAM, 64 GB disk)
+   <td>2 CloudCache (6 vCPU, 12 GB RAM, 64 GB disk)
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Lite</strong>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>On-Premise
+   </td>
+   <td><strong>1</strong> Appliance (4 vCPU, 8 GB RAM, 144 GB disk), \
+<strong>1</strong> ESXMgr (8 vCPU, 8 GB RAM, 96 GB disk)
+   </td>
+   <td><strong>1 </strong>Appliance \
+<strong>2</strong> ESXMgr
+   </td>
+  </tr>
+  <tr>
+   <td>On-Cloud
+   </td>
+   <td><strong>1</strong> CloudCache (6 vCPU, 12 GB RAM, 32 GB disk, 512 GB cache)
+   </td>
+   <td><strong>2</strong> CloudCache
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Standard</strong>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>On-Premise
+   </td>
+   <td><strong>1</strong> Appliance (4 vCPU, 8 GB RAM, 144 GB disk), \
+<strong>1</strong> PremMgr (3 vCPU, 4 GB RAM, 32 GB disk),
+<p>
+<strong>1</strong> ESXMgr (4 vCPU, 4GB RAM, 160 GB disk)
+   </td>
+   <td><strong>1</strong> Appliance
+<p>
+<strong>2</strong> PremMgr, 
+<p>
+<strong>N</strong> ESXMgr
+   </td>
+  </tr>
+  <tr>
+   <td>On-Cloud
+   </td>
+   <td><strong>1 </strong>CloudMgr (4 vCPU, 6 GB RAM, 32 GB disk), \
+<strong>1</strong> CloudCache (6 vCPU, 20 GB RAM, 32 GB disk, 512 GB cache)
+   </td>
+   <td><strong>2</strong> CloudMgr, \
+<strong>N</strong> CloudCache
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Performance</strong>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>On-Premise
+   </td>
+   <td><strong>1</strong> Appliance (4 vCPU, 8 GB RAM, 144 GB disk) \
+<strong>1</strong> PremMgr (3 vCPU, 4 GB RAM, 32 GB disk),
+<p>
+<strong>1</strong> ESXMgr (5 vCPU, 9 GB RAM, 288 GB disk)
+   </td>
+   <td><strong>1</strong> Appliance \
+<strong>2</strong> PremMgr,
+<p>
+<strong>N</strong> ESXMgr
+   </td>
+  </tr>
+  <tr>
+   <td>On-Cloud
+   </td>
+   <td><strong>1</strong> CloudMgr (6 vCPU, 6 GB RAM, 32 GB disk), \
+<strong>1</strong> CloudCache (8 vCPU, 40 GB RAM, 32 GB disk, 2 TB cache)
+   </td>
+   <td><strong>2</strong> CloudMgr, \
+<strong>N</strong> CloudCache
    </td>
   </tr>
 </table>
 
 
-**NOTES**: 
 
 
-
-1. The names _ESXMgr_ and _CloudCache_ are abbreviated names for the VMs containing HDM components. These are created as part of the HDM deployment.
-2. The N in _Cluster (N)_ refers to the number of nodes in the cloud cluster.
-
+**Recommendation**: While any of the cluster modes can be used in the production environment, the Standard-Standalone mode is recommended for the test environment.
 
 ### Prepare Cloud for Deployment
 
