@@ -15,7 +15,7 @@ HDM provides a flexible deployment model to support a wide range of user needs w
 
 
 ### HDM Deployment Types 
-While deploying HDM users need to select a combination of Deployment Mode and Resource Allocation type. The features of the available options are provided below to guide the user to choose the deployment type that is best suited for their requirements.
+While deploying HDM, users need to select a combination of Deployment Mode and Resource Allocation type. The features of the available options are provided below to guide the user to choose the deployment type that is best suited for their requirements.
 
 #### Deployment Mode : Standalone or Cluster
 
@@ -39,7 +39,6 @@ HDM provides _ultra-lite_, _lite_, _standard_, and _performance_ deployment opti
 
 More details on the resource requirements for these deployment options is available in the next section.**_ _**
 
-**NOTE:_ _**Ultra-lite is the only mode that supports migration to vCD.
 
 
 
